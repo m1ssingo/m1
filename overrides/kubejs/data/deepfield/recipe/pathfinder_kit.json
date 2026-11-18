@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "immersiveengineering:plate_steel"
+    },
+    "G": {
+      "item": "minecraft:tinted_glass"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "R": {
+      "item": "mekanism:elite_control_circuit"
+    },
+    "C": {
+      "item": "minecraft:copper_block"
+    },
+    "B": {
+      "item": "minecraft:blast_furnace"
+    }
+  },
+  "pattern": [
+    "PGP",
+    "IRI",
+    "CBC"
+  ],
+  "result": {
+    "id": "deepfield:pathfinder_kit",
+    "count": 1
+  }
+}

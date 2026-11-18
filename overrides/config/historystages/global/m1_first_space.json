@@ -1,0 +1,33 @@
+{
+  "display_name": "От грязи к звёздам",
+  "icon": "deepfield:pathfinder_kit",
+  "mode": "default",
+  "items": [
+    {
+      "id": "mekanism:elite_control_circuit",
+      "unlock_actions": [
+        "pickup",
+        "loot"
+      ]
+    },
+    {
+      "id": "deepfield:pathfinder_kit",
+      "unlock_actions": [
+        "pickup",
+        "loot"
+      ]
+    },
+    {
+      "id": "deepfield:launch_kit",
+      "unlock_actions": [
+        "pickup",
+        "loot"
+      ]
+    }
+  ],
+  "recipes": [
+    "mekanism:control_circuit/elite",
+    "deepfield:pathfinder_kit",
+    "deepfield:launch_kit"
+  ]
+}
