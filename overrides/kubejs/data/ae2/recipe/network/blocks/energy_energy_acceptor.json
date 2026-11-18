@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {"tag": "c:ingots/iron"},
+    "G": {"item": "ae2:quartz_glass"},
+    "B": {"item": "mekanism:basic_control_circuit"}
+  },
+  "pattern": ["IGI", "GBG", "IGI"],
+  "result": {"id": "ae2:energy_acceptor", "count": 1}
+}

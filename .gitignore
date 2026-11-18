@@ -1,0 +1,7 @@
+/work/
+/dist/
+__pycache__/
+*.jar
+*.zip
+/client/resources/assets/m1packclient/sounds/ignition.ogg
+/client/resources/assets/m1packclient/textures/menu/background.png

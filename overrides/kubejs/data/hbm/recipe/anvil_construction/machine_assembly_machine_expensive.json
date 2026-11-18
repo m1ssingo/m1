@@ -1,0 +1,31 @@
+{
+  "type": "hbm:anvil_construction",
+  "inputs": [
+    {
+      "ingredient": "#c:ingots/steel",
+      "count": 8
+    },
+    {
+      "ingredient": "#c:plates/copper",
+      "count": 4
+    },
+    {
+      "ingredient": "hbm:motor",
+      "count": 2
+    },
+    {
+      "ingredient": "mekanism:advanced_control_circuit",
+      "count": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "hbm:machine_assembly_machine"
+    }
+  ],
+  "tier": 2,
+  "requires": [
+    "expensive_mode"
+  ],
+  "order": 58
+}

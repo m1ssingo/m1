@@ -1,0 +1,16 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+[[mods]]
+modId="m1packclient"
+version="0.3.1"
+displayName="M1 Pack Menu"
+description='''Pack title screen, menu music and default key mapping audit.'''
+[[mixins]]
+config="m1packclient.mixins.json"
+[[dependencies.m1packclient]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.267,)"
+ordering="NONE"
+side="CLIENT"

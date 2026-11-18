@@ -1,0 +1,1297 @@
+{
+  "minecraft": "1.21.1",
+  "loader": "neoforge",
+  "files": [
+    {
+      "slug": "ae2-network-analyser",
+      "project_id": 961856,
+      "file_id": 7622554,
+      "file_name": "AE2NetworkAnalyzer-1.21-2.1.5-neoforge.jar",
+      "display_name": "AE2NetworkAnalyzer-1.21-2.1.5-neoforge.jar",
+      "size": 1686091,
+      "published": "2026-02-14T06:21:19.387Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "applied-energistics-2",
+          "project_id": 223794
+        },
+        {
+          "slug": "glodium",
+          "project_id": 957920
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/ae2-network-analyser/files/7622554",
+      "download_url": "https://edge.forgecdn.net/files/7622/554/AE2NetworkAnalyzer-1.21-2.1.5-neoforge.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "74b68e9ec57dbf21a0417ce099d61b834f88efb0de3cccba4413e5dcf9d69f3c",
+      "sha512": "49fce362c9874952fc2c8259573f4ac00a075571786a41374f947408d19caa09bdb817ef5302f4b453b06498f603cd9e153c1589a50043945b4614c5665862e1"
+    },
+    {
+      "slug": "applied-energistics-2",
+      "project_id": 223794,
+      "file_id": 9519988,
+      "file_name": "appliedenergistics2-19.2.19.jar",
+      "display_name": "AE2 19.2.19 [NEOFORGE]",
+      "size": 8238387,
+      "published": "2026-11-09T01:29:09.837Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "guideme",
+          "project_id": 1173950
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2/files/9519988",
+      "download_url": "https://edge.forgecdn.net/files/9519/988/appliedenergistics2-19.2.19.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "7db959595ca8734acccac51c963567460e7db9f31b145b23dea72778b692777b",
+      "sha512": "36385eb9c41e1b1eb4632cac297f9b5560f9d56c061622e99ea2e1fb74f6ff3b9ad09d9e332547d30a3c7559fd4444ee9536a6e1ae12af57c8a8826932a09b29"
+    },
+    {
+      "slug": "applied-energistics-2-wireless-terminals",
+      "project_id": 459929,
+      "file_id": 8450398,
+      "file_name": "ae2wtlib-19.5.1.jar",
+      "display_name": "ae2wtlib-19.5.1.jar",
+      "size": 252091,
+      "published": "2026-07-17T10:08:10.203Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "applied-energistics-2",
+          "project_id": 223794
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2-wireless-terminals/files/8450398",
+      "download_url": "https://edge.forgecdn.net/files/8450/398/ae2wtlib-19.5.1.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "407e7300351353cb4cb7698286e180aef2bd6e7a97ec7efc6493f9daa4dbffe5",
+      "sha512": "0659d755c6ae91551d30c20b948d5bde0a39b2ae9825b1a4e132f0bbd10e032f18d82b6847261360589f36980ed3597ef6c6947b680523a1de767a9b7953682e"
+    },
+    {
+      "slug": "applied-mekanistics",
+      "project_id": 574300,
+      "file_id": 7096962,
+      "file_name": "Applied-Mekanistics-1.6.3.jar",
+      "display_name": "1.6.3",
+      "size": 149709,
+      "published": "2025-10-12T01:09:52.93Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "applied-energistics-2",
+          "project_id": 223794
+        },
+        {
+          "slug": "mekanism",
+          "project_id": 268560
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/applied-mekanistics/files/7096962",
+      "download_url": "https://edge.forgecdn.net/files/7096/962/Applied-Mekanistics-1.6.3.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "8946fea39451dbce8e709dedbef40a52ba337bdf7a25ac0c4b503800b1bf0773",
+      "sha512": "1a693c3c05862805bd88cf1265fd4b9b98b2da4efe986c9ff26efa0e675df14373983ffdf7ededb26f07864b6702fabc299ac1a06fb8fa35de0b341b596dbf9b"
+    },
+    {
+      "slug": "architectury-api",
+      "project_id": 419699,
+      "file_id": 9608861,
+      "file_name": "architectury-13.0.12-neoforge.jar",
+      "display_name": "[NeoForge 1.21] v13.0.12",
+      "size": 584731,
+      "published": "2026-11-14T11:30:39.443Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/architectury-api/files/9608861",
+      "download_url": "https://edge.forgecdn.net/files/9608/861/architectury-13.0.12-neoforge.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "aa558d884c9d35399bf5471e042d6be30c32e4a1cf0a5d06a4480ad49dba3ac0",
+      "sha512": "286127f99708d1e2723e1dcc9104ebcab258f04db92040fc2394e5b7faf36d731ef3b84e592d94ec0d0f7f899eca84f806b1e012223da4894d4d8af5030ffe0f"
+    },
+    {
+      "slug": "athena",
+      "project_id": 841890,
+      "file_id": 8061947,
+      "file_name": "athena-neoforge-1.21.1-4.0.6.jar",
+      "display_name": "[NeoForge] Athena 4.0.6",
+      "size": 99944,
+      "published": "2026-05-09T08:07:36.44Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/athena/files/8061947",
+      "download_url": "https://edge.forgecdn.net/files/8061/947/athena-neoforge-1.21.1-4.0.6.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "43699885bbce3343916d4c5c4940cf0e3f9f6f02fdeb46e8655e121b42282ec5",
+      "sha512": "ab40a306a26ce834daae921a1e87768cd2538a4bfe27a4480f97af854084cc334e7416b1bd0b7583834a32a86951283f29fd4b1df7b98a967a6b26a3ec05e2cf"
+    },
+    {
+      "slug": "better-advanced-tooltips",
+      "project_id": 1637623,
+      "file_id": 8576077,
+      "file_name": "better-advanced-tooltips-2101.1.0-build.5.jar",
+      "display_name": "better-advanced-tooltips-2101.1.0-build.5.jar",
+      "size": 37653,
+      "published": "2026-08-04T14:10:10.52Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/better-advanced-tooltips/files/8576077",
+      "download_url": "https://edge.forgecdn.net/files/8576/77/better-advanced-tooltips-2101.1.0-build.5.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "0f76d46f2f18eb67e67c7974170d7b27deb66473396461c8dc50d6949de1449b",
+      "sha512": "05b5cdad948d1735eab7a67a16aaf32814678c392014ec2ada61b8341c0ed1c1ac181cab1de9da3f2c4632592f4a1a5db254bd0543e6778897c8ccd260894142"
+    },
+    {
+      "slug": "carry-on",
+      "project_id": 274259,
+      "file_id": 8512888,
+      "file_name": "carryon-neoforge-1.21.1-2.2.6.13.jar",
+      "display_name": "carryon-neoforge-1.21.1-2.2.6.13",
+      "size": 361486,
+      "published": "2026-07-26T12:40:08.217Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/carry-on/files/8512888",
+      "download_url": "https://edge.forgecdn.net/files/8512/888/carryon-neoforge-1.21.1-2.2.6.13.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "d4f9576b6593db9486a89d35c1d84c31ee89141d99dbae2aa470350ab53c4e09",
+      "sha512": "e097b11d6f14e0957bab6c0276b81542e786cb86b9c31d9f25975f8c9fb04a734188b8790683298bbc5c695dc3de7d6e947616a20ad26d4a728a3beb0bb78667"
+    },
+    {
+      "slug": "chipped",
+      "project_id": 456956,
+      "file_id": 5813117,
+      "file_name": "chipped-neoforge-1.21.1-4.0.2.jar",
+      "display_name": "[NeoForge] Chipped 4.0.2",
+      "size": 15020578,
+      "published": "2024-10-15T00:52:54.37Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "resourceful-lib",
+          "project_id": 570073
+        },
+        {
+          "slug": "athena",
+          "project_id": 841890
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/chipped/files/5813117",
+      "download_url": "https://edge.forgecdn.net/files/5813/117/chipped-neoforge-1.21.1-4.0.2.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "18ac6fd6b30db4922ccc6ee8bea5b113f69587505b7529834f37ace506427291",
+      "sha512": "f3083b01267e7c674c4b42f45a317c93ee7723443cba2051fe5bc593638b533b0fe90699e2101661c934dff458eab693cce4e188533bfe977778c249563a2fa5"
+    },
+    {
+      "slug": "chunk-loaders",
+      "project_id": 402924,
+      "file_id": 6832703,
+      "file_name": "chunkloaders-1.2.9-neoforge-mc1.21.jar",
+      "display_name": "Chunk Loaders 1.2.9 for NeoForge 1.21",
+      "size": 146058,
+      "published": "2025-07-31T15:26:48.74Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "supermartijn642s-config-lib",
+          "project_id": 438332
+        },
+        {
+          "slug": "supermartijn642s-core-lib",
+          "project_id": 454372
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/chunk-loaders/files/6832703",
+      "download_url": "https://edge.forgecdn.net/files/6832/703/chunkloaders-1.2.9-neoforge-mc1.21.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "6802c2b7ea859711462f64114c9e7ff4352a92c844a9a8f195056c8383a29147",
+      "sha512": "3cd043e66f5b8fbbf81ae690d4d76fc9f11088e3b0e1c7a3693d3dee5d089ab10e787eab80132857d0c42b67f08f5566ebc0dd37b89e64063c7d9ba1592b7cee"
+    },
+    {
+      "slug": "cucumber",
+      "project_id": 272335,
+      "file_id": 8035802,
+      "file_name": "Cucumber-1.21.1-8.0.16.jar",
+      "display_name": "Cucumber-1.21.1-8.0.16.jar",
+      "size": 275588,
+      "published": "2026-05-04T02:17:14.053Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/cucumber/files/8035802",
+      "download_url": "https://edge.forgecdn.net/files/8035/802/Cucumber-1.21.1-8.0.16.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "371f9551c676b76a39d5580be28f5cfeff364e131ad138fbf7108aeb2712f43f",
+      "sha512": "fbc63f23f827061b2a45f33a3867e105268b5a51d9ca92ba3bacd2e2a0af847eb4c367e726a62a455b841e503f8ce73ea9e180285670ddf3ec18a8ba4e72da7d"
+    },
+    {
+      "slug": "deepfield-project",
+      "project_id": 1759685,
+      "file_id": 9598774,
+      "file_name": "deepfield-neoforge-1.21.1-5.1.2.jar",
+      "display_name": "deepfield-neoforge-1.21.1-5.1.2",
+      "size": 137049665,
+      "published": "2026-11-13T20:22:30.817Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/deepfield-project/files/9598774",
+      "download_url": "https://edge.forgecdn.net/files/9598/774/deepfield-neoforge-1.21.1-5.1.2.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "07ba9f4c8e25800abcd998298570501e7087a5131383c1c3cbe38283e9095d25",
+      "sha512": "aa388604c0031e3ceb1c051812f15e83ada65a3679cf5249dd2898248daf0028807ff1808847846d2b34f3d98675cd9040635de0c70628eaab0fb37656c324a0"
+    },
+    {
+      "slug": "ex-pattern-provider",
+      "project_id": 892005,
+      "file_id": 9391213,
+      "file_name": "ExtendedAE-1.21-2.2.43-neoforge.jar",
+      "display_name": "ExtendedAE-1.21-2.2.43-neoforge.jar",
+      "size": 5913764,
+      "published": "2026-11-01T02:54:11.04Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "applied-energistics-2",
+          "project_id": 223794
+        },
+        {
+          "slug": "glodium",
+          "project_id": 957920
+        },
+        {
+          "slug": "guideme",
+          "project_id": 1173950
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/ex-pattern-provider/files/9391213",
+      "download_url": "https://edge.forgecdn.net/files/9391/213/ExtendedAE-1.21-2.2.43-neoforge.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "d723ad922d51868eaa393aa6c5439ce21ead37562dc48f29a08ef5828e841838",
+      "sha512": "78b0fdbb93a194df6e5b600d226640ff7af94dd417e3be08c4014c4cdd8d3afd70df33e3b6b671ce5fb855def8f2e0d9550582c8eee7a29790aa198128bfe62b"
+    },
+    {
+      "slug": "falling-tree",
+      "project_id": 349559,
+      "file_id": 6835168,
+      "file_name": "FallingTree-1.21.1-1.21.1.11.jar",
+      "display_name": "1.21.1-1.21.1.11",
+      "size": 496356,
+      "published": "2025-08-01T07:44:58.427Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/falling-tree/files/6835168",
+      "download_url": "https://edge.forgecdn.net/files/6835/168/FallingTree-1.21.1-1.21.1.11.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml",
+        "META-INF/mods.toml",
+        "fabric.mod.json"
+      ],
+      "sha256": "70ee147602d2239e7a093e166fdf0c0abcef959d5d457c0f8f3669ef9b483dc4",
+      "sha512": "b59056e34a827b4feb14c7c6706a1b612d21126fb8331943f7217e6c82e7f731e9f6e1909c1840e40923c69746affac4f481bd6e3f84a4e118847e29c312ab00"
+    },
+    {
+      "slug": "farmers-delight",
+      "project_id": 398521,
+      "file_id": 8765184,
+      "file_name": "FarmersDelight-1.21.1-1.3.4.jar",
+      "display_name": "Farmer's Delight 1.3.4 - 1.21.1",
+      "size": 3160490,
+      "published": "2026-08-29T23:17:30.443Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/farmers-delight/files/8765184",
+      "download_url": "https://edge.forgecdn.net/files/8765/184/FarmersDelight-1.21.1-1.3.4.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "139ad7696462c89c03eea463f805abffa552526c5dadaadae221dd9624cb197c",
+      "sha512": "1f6f8796469f747cff36f477b4f589a3d69613882399f9ee7f86db36c7bca9aa4828731f43db15dc6c7f5a4c1bbe3d4092a232e8cef010b09cec0581848fda90"
+    },
+    {
+      "slug": "ferritecore",
+      "project_id": 429235,
+      "file_id": 7524151,
+      "file_name": "ferritecore-7.0.3-neoforge.jar",
+      "display_name": "ferritecore-7.0.3-neoforge",
+      "size": 121559,
+      "published": "2026-01-25T12:59:44.447Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/ferritecore/files/7524151",
+      "download_url": "https://edge.forgecdn.net/files/7524/151/ferritecore-7.0.3-neoforge.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "d87ea28262715ebff45b8a82d493e6b468e7a4521bc021df5d88302196d030a8",
+      "sha512": "19af89a2075bb10a63884fa853ebf84b02c79dc3242430ecdad056fd764fdcde367a7303276b329df01b0736e2ef264c5d80c7dc92c6aebd244f556a230bb417"
+    },
+    {
+      "slug": "ftb-backups-3",
+      "project_id": 1294188,
+      "file_id": 8078605,
+      "file_name": "ftb-backups-3-21.1.5.jar",
+      "display_name": "FTB Backups 3 21.1.5",
+      "size": 91354,
+      "published": "2026-05-12T16:16:06.343Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "ftb-library-forge",
+          "project_id": 404465
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/ftb-backups-3/files/8078605",
+      "download_url": "https://edge.forgecdn.net/files/8078/605/ftb-backups-3-21.1.5.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "b769eb27e8a26c8a894d87ae0bea5c544ebb3ef6712af2f79cd6ef16afe685d4",
+      "sha512": "fd621376ab7e08a042878052ef27d3d18d3e91b9e39089fa871703d4f3289684b720a3c7ad3874b6b593083452fbf645d77040aa03f8c77390779b05982fb7b2"
+    },
+    {
+      "slug": "ftb-library-forge",
+      "project_id": 404465,
+      "file_id": 9650381,
+      "file_name": "ftb-library-neoforge-2101.1.40.jar",
+      "display_name": "[NEOFORGE][1.21.1] FTB Library 2101.1.40",
+      "size": 1643436,
+      "published": "2026-11-16T16:06:18.857Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "architectury-api",
+          "project_id": 419699
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/ftb-library-forge/files/9650381",
+      "download_url": "https://edge.forgecdn.net/files/9650/381/ftb-library-neoforge-2101.1.40.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "d97d8ae91b5049406f1bac5634ecbceafe7ff0f00e850047792deef4aec05d50",
+      "sha512": "e8c6b9670b8fbf20b3e7fde910ed7b3b5a6827180a3373bab3041e6f764a32e8048cbfaed66bc3bea8ace0ba8fd6bf60289ec00e68054c6505ab80a0b11168a1"
+    },
+    {
+      "slug": "ftb-quests-forge",
+      "project_id": 289412,
+      "file_id": 9650792,
+      "file_name": "ftb-quests-neoforge-2101.1.39.jar",
+      "display_name": "[NEOFORGE][1.21.1] FTB Quests 2101.1.39",
+      "size": 1670999,
+      "published": "2026-11-16T16:30:42.777Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "architectury-api",
+          "project_id": 419699
+        },
+        {
+          "slug": "ftb-library-forge",
+          "project_id": 404465
+        },
+        {
+          "slug": "ftb-teams-forge",
+          "project_id": 404468
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/ftb-quests-forge/files/9650792",
+      "download_url": "https://edge.forgecdn.net/files/9650/792/ftb-quests-neoforge-2101.1.39.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "40f9bea7bb96e8129303b0dc1b9e47b38234f52018ff332f967be03df07a466e",
+      "sha512": "7fcb961c60fef951b4c3cbfd33c86fbffb22359a73794e78379398fd2254361dd318984b6311ad67919f4d6a0d049bf8782064c7a939f19fba813dd41d2a4c99"
+    },
+    {
+      "slug": "ftb-teams-forge",
+      "project_id": 404468,
+      "file_id": 9434081,
+      "file_name": "ftb-teams-neoforge-2101.1.12.jar",
+      "display_name": "[NEOFORGE][1.21.1] FTB Teams 2101.1.12",
+      "size": 308430,
+      "published": "2026-11-04T14:09:06.373Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "architectury-api",
+          "project_id": 419699
+        },
+        {
+          "slug": "ftb-library-forge",
+          "project_id": 404465
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/ftb-teams-forge/files/9434081",
+      "download_url": "https://edge.forgecdn.net/files/9434/81/ftb-teams-neoforge-2101.1.12.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "b3f33436070b7ae4a706280561f1d2f1d1eb1a089cb13ec9851e99646165aed2",
+      "sha512": "c2c8853615c1ec97e0ace07c320db8f0ad4a18c59746e1d30c86f7af0e6ad36d9bbfe0ca6a365aa63d29244e1690323296fb29d99a38bab97e2c19181a57e376"
+    },
+    {
+      "slug": "gemrender",
+      "project_id": 1735539,
+      "file_id": 9668087,
+      "file_name": "gemrender-0.1.22.jar",
+      "display_name": "GemRender 0.1.22 (NeoForge 1.21.1)",
+      "size": 9505906,
+      "published": "2026-11-17T15:26:58.413Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/gemrender/files/9668087",
+      "download_url": "https://edge.forgecdn.net/files/9668/87/gemrender-0.1.22.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "fa42b3c6197d846dd47fc3076dc33baddff9becd9415c22da67e51037e064b63",
+      "sha512": "a052c3a175fb535dfd51a2503f053e3de9454d34fbc2cd186fae6a6f2e95a51e60fdfed90e9086345080667f3d2ea20584da19f0c92b143355d645632e87984d"
+    },
+    {
+      "slug": "glitchcore",
+      "project_id": 955399,
+      "file_id": 8109792,
+      "file_name": "GlitchCore-neoforge-1.21.1-2.1.0.2.jar",
+      "display_name": "GlitchCore NeoForge 1.21.1-2.1.0.2",
+      "size": 90717,
+      "published": "2026-05-18T17:16:01.96Z",
+      "release_type": 2,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/glitchcore/files/8109792",
+      "download_url": "https://edge.forgecdn.net/files/8109/792/GlitchCore-neoforge-1.21.1-2.1.0.2.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "d9ea421e7449a35cf3adc41c9f740156342b7b17a08b1be843660608af7b60f9",
+      "sha512": "ec7619393b110e625e8e21508b1e4370de865f9f1262e79bba53a9ba8934c8939ad5c0184344c800fde531c650fbb810a2a02c87c3daaffe6f6eb305ff3167b5"
+    },
+    {
+      "slug": "glodium",
+      "project_id": 957920,
+      "file_id": 5821676,
+      "file_name": "Glodium-1.21-2.2-neoforge.jar",
+      "display_name": "Glodium-1.21-2.2-neoforge.jar",
+      "size": 61377,
+      "published": "2024-10-18T12:40:20.117Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/glodium/files/5821676",
+      "download_url": "https://edge.forgecdn.net/files/5821/676/Glodium-1.21-2.2-neoforge.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "369e99753df0bdc90a38a8c52df4abb37baf6b18c6ca130af4c7bc75fb160a85",
+      "sha512": "56a387a1bdaf0146c9a7e14de0aca8b6f53f25d3ba9d46255f142043387282ed9e4fa0011d309e32d9ffe5362b129c07e301226dd4ac11eda9a4f42f27c0b5d1"
+    },
+    {
+      "slug": "golem-core",
+      "project_id": 1719361,
+      "file_id": 9667993,
+      "file_name": "golemcore-neoforge-1.0.6-1.21.1.jar",
+      "display_name": "Golem Core 1.0.6 (NeoForge 1.21.1)",
+      "size": 1909629,
+      "published": "2026-11-17T15:20:49.69Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/golem-core/files/9667993",
+      "download_url": "https://edge.forgecdn.net/files/9667/993/golemcore-neoforge-1.0.6-1.21.1.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "cb26988c799dfd151f9e1fef5de2253fbc306f96e8a05c16f251445636a33491",
+      "sha512": "1ffb859d55d2dfaf1eddfda2aad28262a5af5e42a013a1f98242aae6ccf216fe411e38b497c792b753ecd8d36b892738b1dc2e18edc90037b8f631653085f7d1"
+    },
+    {
+      "slug": "gravestone-mod",
+      "project_id": 238551,
+      "file_id": 8671622,
+      "file_name": "gravestone-neoforge-1.21.1-1.0.40.jar",
+      "display_name": "[NEOFORGE][1.21.1] Gravestone Mod 1.21.1-1.0.40",
+      "size": 322082,
+      "published": "2026-08-17T17:58:58.15Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/gravestone-mod/files/8671622",
+      "download_url": "https://edge.forgecdn.net/files/8671/622/gravestone-neoforge-1.21.1-1.0.40.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "204be9ccb8632a56a87aee9aab4c7874d0f6749f566c07f5dd420d24e24dc8b0",
+      "sha512": "5504a222d4085da1898ff6d4dff8eb1821fd14a8caaaac785554277147f984262e63925a411db3f1a34e9c7874652fb6737176bea4c0c3f01243f5eae4ea6eaa"
+    },
+    {
+      "slug": "guideme",
+      "project_id": 1173950,
+      "file_id": 9366366,
+      "file_name": "guideme-21.1.22.jar",
+      "display_name": "GuideME 21.1.22",
+      "size": 9332340,
+      "published": "2026-10-29T22:19:02.98Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/guideme/files/9366366",
+      "download_url": "https://edge.forgecdn.net/files/9366/366/guideme-21.1.22.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "108337ff98c706b18ed2fbec077b3337ba72c08f8b46a273534886280e89ef0d",
+      "sha512": "2a7b29143c1bef18375f221c337c6e744d04b79bc3cc10cadac46b7d6bb217ad78c51a3c33cd802b221cc7b38ff04a3f7064bd63d292e53bf9f3e09047eeda24"
+    },
+    {
+      "slug": "history-stages",
+      "project_id": 1473453,
+      "file_id": 9209318,
+      "file_name": "historystages-6.1.0-1.21.1.jar",
+      "display_name": "History Stages 6.1.0-1.21.1",
+      "size": 3547739,
+      "published": "2026-10-16T17:56:09.113Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "lootr",
+          "project_id": 361276
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/history-stages/files/9209318",
+      "download_url": "https://edge.forgecdn.net/files/9209/318/historystages-6.1.0-1.21.1.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "573d114049d26ee7a54d6f4aec01c36e12ddac09eaa61977d2bbc5c659a62730",
+      "sha512": "82b5927226a25395edbade76d5c6e32a89066cde2c009a3ee4c0d2b85817e818c198aaca01fd84003c62568659407958a3b53d5b204185b23b3e6d10c39a78a9"
+    },
+    {
+      "slug": "immersive-engineering",
+      "project_id": 231951,
+      "file_id": 6733669,
+      "file_name": "ImmersiveEngineering-1.21.1-12.4.2-194.jar",
+      "display_name": "ImmersiveEngineering-1.21.1-12.4.2-194",
+      "size": 14232121,
+      "published": "2025-07-05T15:42:00.557Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/immersive-engineering/files/6733669",
+      "download_url": "https://edge.forgecdn.net/files/6733/669/ImmersiveEngineering-1.21.1-12.4.2-194.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "45942985a4a4aebf265b8e22a0c54a96208637471f36f2532ff5d4911322debc",
+      "sha512": "862523e84747a8b7eaa65f9b3c337fa832ef9efd0545c27f68e350e01f482c7a1242d0e4bdc2caff3d7eb033508b43a353fcd7150c9b544d0c05765ca2a551b3"
+    },
+    {
+      "slug": "immersive-petroleum",
+      "project_id": 268250,
+      "file_id": 8420142,
+      "file_name": "ImmersivePetroleum-1.21.1-4.5.0-39.jar",
+      "display_name": "ImmersivePetroleum-1.21.1-4.5.0-39.jar",
+      "size": 2005502,
+      "published": "2026-07-12T17:33:16.367Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "immersive-engineering",
+          "project_id": 231951
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/immersive-petroleum/files/8420142",
+      "download_url": "https://edge.forgecdn.net/files/8420/142/ImmersivePetroleum-1.21.1-4.5.0-39.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "c1bfef3290dd8c2c68519155e395059766f5d258a52d5e08faf63eb627312e8b",
+      "sha512": "a8ac744ef639dec0ca64c5b4d1905351f5d476ecae955754231e09674684a7915fdfab0a16ccecbf5dfe302e1fa91ca6a861ab6cbc8ef83d9d6a7d9dd9d65319"
+    },
+    {
+      "slug": "iron-chests",
+      "project_id": 228756,
+      "file_id": 5491156,
+      "file_name": "ironchest-1.21-neoforge-16.0.7.jar",
+      "display_name": "ironchest-1.21-neoforge-16.0.7.jar",
+      "size": 305975,
+      "published": "2024-07-01T02:17:48.403Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/iron-chests/files/5491156",
+      "download_url": "https://edge.forgecdn.net/files/5491/156/ironchest-1.21-neoforge-16.0.7.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "dae66a38a33c2adac6ca0b7a4fbf4b365ba37a6a1f7a10961028617965c1fcaf",
+      "sha512": "8cd23bf931f3334e1d9c1b0a5fac0e92b022039c4cd01ee0ee95e74310a91588b72a350fb45bf542a242ab2fa271d182721b53a618cf841dd8c56f78ca0e1a97"
+    },
+    {
+      "slug": "iron-jetpacks",
+      "project_id": 284497,
+      "file_id": 7105279,
+      "file_name": "IronJetpacks-1.21.1-8.0.11.jar",
+      "display_name": "IronJetpacks-1.21.1-8.0.11.jar",
+      "size": 154859,
+      "published": "2025-10-14T04:14:00.13Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "cucumber",
+          "project_id": 272335
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/iron-jetpacks/files/7105279",
+      "download_url": "https://edge.forgecdn.net/files/7105/279/IronJetpacks-1.21.1-8.0.11.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "aa589c0a9cec53f554cacef95dd4af45c1bbd351aab4c12104240f8a8d79b909",
+      "sha512": "944821c20be19c2e55262f606de392ce491ab4998fe3469030fb00fc95d47f3e1c87389c4f132c1accbbc2774692b90dbeae3c168c0301d3f4b52b7a2658705a"
+    },
+    {
+      "slug": "jade",
+      "project_id": 324717,
+      "file_id": 8591319,
+      "file_name": "Jade-1.21.1-NeoForge-15.10.6.jar",
+      "display_name": "[NeoForge 1.21.1] 15.10.6",
+      "size": 726853,
+      "published": "2026-08-06T23:11:53.513Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/jade/files/8591319",
+      "download_url": "https://edge.forgecdn.net/files/8591/319/Jade-1.21.1-NeoForge-15.10.6.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "276f1f65a20d04f536989c4f311949d770b52c440c23c2b904a08860f3c93810",
+      "sha512": "dad9755dce8d85d914fc4df2baa0211f13e5839a71c1925fdd01f69081a95e30a2934e6273f8b01f0169adebe7a9dae57a8d904de0c4cb36dc17369bb474f0f2"
+    },
+    {
+      "slug": "jei",
+      "project_id": 238222,
+      "file_id": 9205121,
+      "file_name": "jei-1.21.1-neoforge-19.64.0.455.jar",
+      "display_name": "19.64.0.455 for NeoForge 1.21.1",
+      "size": 2375741,
+      "published": "2026-10-16T08:32:27.66Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "mezzconfig",
+          "project_id": 1689768
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/jei/files/9205121",
+      "download_url": "https://edge.forgecdn.net/files/9205/121/jei-1.21.1-neoforge-19.64.0.455.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "f7a9de3d7ee07eed8d293a1a1a0f6afaac556eb43c103523457bd07ebb551e7b",
+      "sha512": "fdd02e57ce4dcf20b69860a5ace1b97d9a771486241179cf9edfe71e30c69bb4003b046d0cce8d8c4913b9689f1d8b04cf0542b0b04a6cf0b3b0465f3bb11702"
+    },
+    {
+      "slug": "kubejs",
+      "project_id": 238086,
+      "file_id": 9396059,
+      "file_name": "kubejs-neoforge-2101.7.2-build.381.jar",
+      "display_name": "KubeJS NeoForge 2101.7.2-build.381",
+      "size": 2295092,
+      "published": "2026-11-01T15:39:59.293Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "better-advanced-tooltips",
+          "project_id": 1637623
+        },
+        {
+          "slug": "rhino",
+          "project_id": 416294
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/kubejs/files/9396059",
+      "download_url": "https://edge.forgecdn.net/files/9396/59/kubejs-neoforge-2101.7.2-build.381.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "e4539156a6e93badf140d050306d2b4d7975037541b3c51f746cf78bf6fe14a2",
+      "sha512": "a77488c2ead57b1195244a7176abbe982d6197ccce09996376c36c78560cd7795c1b09bad9053037d3931d47b921bb5de0d58149d0704207c39e21f024361b58"
+    },
+    {
+      "slug": "lithostitched",
+      "project_id": 936015,
+      "file_id": 9170709,
+      "file_name": "lithostitched-1.8.1-neoforge-21.1.jar",
+      "display_name": "v1.8.1 ~ Neoforge 21.1",
+      "size": 1023751,
+      "published": "2026-10-14T08:23:50.537Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/lithostitched/files/9170709",
+      "download_url": "https://edge.forgecdn.net/files/9170/709/lithostitched-1.8.1-neoforge-21.1.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "e0da669fa5facc61a09b9b7bae21b322993de1fcd1eb05787adffb7309598cca",
+      "sha512": "6c02b8b269269d5aa84cb03bf824a1b5d52838e806c2fec8727eb4049925592dac9bb65c996858751fbb722f22ac59c4be09860e1f01e8f7b97c95be3faf7a57"
+    },
+    {
+      "slug": "lootr",
+      "project_id": 361276,
+      "file_id": 8968561,
+      "file_name": "lootr-neoforge-1.21.1-1.11.38.127.jar",
+      "display_name": "lootr-neoforge-1.21.1-1.11.38.127",
+      "size": 1075929,
+      "published": "2026-09-25T01:34:36.803Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/lootr/files/8968561",
+      "download_url": "https://edge.forgecdn.net/files/8968/561/lootr-neoforge-1.21.1-1.11.38.127.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "5c74de4709d1c13b25880fdd241a89d5d9f331346d20edc76f80ccd4d99dc66c",
+      "sha512": "7496051c1ba98f8801b8eb81773d1baec16166c3d2c5682476bd6f9433f794095099cea609fd5610525edb7c450b1bacd0011a31763e91c77c9a0034c8245ca3"
+    },
+    {
+      "slug": "mega-cells",
+      "project_id": 622112,
+      "file_id": 7952621,
+      "file_name": "megacells-4.11.0.jar",
+      "display_name": "4.11.0 (NeoForge 1.21.1)",
+      "size": 1137276,
+      "published": "2026-04-19T20:48:16.79Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "applied-energistics-2",
+          "project_id": 223794
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/mega-cells/files/7952621",
+      "download_url": "https://edge.forgecdn.net/files/7952/621/megacells-4.11.0.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "a386bbf12afb11729b0dcf77f64221893d250f22e6185a4d728b9799b230bc55",
+      "sha512": "1f5c30f5c6516eae20eb3d8502eebc8f3fa43d42815ecd182beea2c244c7dacf450fa0fafa6f6f7ab836d7f68e6de2b2366fbb0eb2938823f3d370217a4e8671"
+    },
+    {
+      "slug": "mekanism",
+      "project_id": 268560,
+      "file_id": 7904058,
+      "file_name": "Mekanism-1.21.1-10.7.19.85.jar",
+      "display_name": "Mekanism-1.21.1-10.7.19.85.jar",
+      "size": 11976009,
+      "published": "2026-04-10T10:30:11.627Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/mekanism/files/7904058",
+      "download_url": "https://edge.forgecdn.net/files/7904/58/Mekanism-1.21.1-10.7.19.85.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "004dbc9f3106f4d192aeaa1ee1190dd16ec9ca8059ed3d093b80034f4c574f43",
+      "sha512": "66745825330a98f3e4a5ea3a44aff8b00870f715c144edc38dd2f61b4240589600b58ae89efac3b54dbb5aa430b1059dac1a28fd71cac5cc9002bbeb5ba3f22b"
+    },
+    {
+      "slug": "mezzconfig",
+      "project_id": 1689768,
+      "file_id": 9527937,
+      "file_name": "mezz_config-1.21.1-neoforge-0.7.1-standalone.jar",
+      "display_name": "MezzConfig 0.7.1 for NeoForge 1.21.1",
+      "size": 347249,
+      "published": "2026-11-09T15:28:11.637Z",
+      "release_type": 2,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/mezzconfig/files/9527937",
+      "download_url": "https://edge.forgecdn.net/files/9527/937/mezz_config-1.21.1-neoforge-0.7.1-standalone.jar",
+      "metadata_paths": [],
+      "sha256": "c42510938584eda0aae134003e367d745fd32ceac1836221cecac4cbc7bfa3a1",
+      "sha512": "e3576344d96b4734d35c7ceb969020ef728a666b771fb6da0465d08d940daff3c48352f6f3ca989edbe7fff57737d2fea4621f6422e858f95efe9fa70b46dfb2"
+    },
+    {
+      "slug": "mutant-monsters",
+      "project_id": 852665,
+      "file_id": 7232511,
+      "file_name": "MutantMonsters-v21.1.1-1.21.1-NeoForge.jar",
+      "display_name": "[NEOFORGE] [1.21.1] MutantMonsters-v21.1.1",
+      "size": 1346730,
+      "published": "2025-11-17T14:05:55.843Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "puzzles-lib",
+          "project_id": 495476
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/mutant-monsters/files/7232511",
+      "download_url": "https://edge.forgecdn.net/files/7232/511/MutantMonsters-v21.1.1-1.21.1-NeoForge.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "1e20340a6642dcd6e43399292825f8cd84a079e0b917e36cf7341e787b626a4f",
+      "sha512": "4d969c457a01e49a242ebc03112031bd338be08fc4ab36540b222b0a64e72a778a6534ad2be7c5cf72a5a74e1ce58e66e2999957f68c189c868dbc48bef44708"
+    },
+    {
+      "slug": "ntm-continuum",
+      "project_id": 1719328,
+      "file_id": 9668367,
+      "file_name": "hbm-neoforge-1.0.6-1.21.1.jar",
+      "display_name": "NTM - Continuum 1.0.6 (NeoForge 1.21.1)",
+      "size": 71710502,
+      "published": "2026-11-17T15:47:02.463Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "gemrender",
+          "project_id": 1735539
+        },
+        {
+          "slug": "golem-core",
+          "project_id": 1719361
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/ntm-continuum/files/9668367",
+      "download_url": "https://edge.forgecdn.net/files/9668/367/hbm-neoforge-1.0.6-1.21.1.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "fcbb0aace0c828cd92e63e4445d45066590cc50ce4a054d70370f8fe452009cb",
+      "sha512": "6ac909f7f3a2706a67e93f6722a0f362f18a146ea188fb934a24c440f0145856582580fc01938334a607d61ec08260e23be37aa7ce80fabed938920400738f7e"
+    },
+    {
+      "slug": "openfm",
+      "project_id": 236839,
+      "file_id": 8555115,
+      "file_name": "openfm-neoforge-1.21.1-0.0.4.jar",
+      "display_name": "openfm-neoforge-1.21.1-0.0.4.jar",
+      "size": 853802,
+      "published": "2026-08-01T15:44:42.797Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/openfm/files/8555115",
+      "download_url": "https://edge.forgecdn.net/files/8555/115/openfm-neoforge-1.21.1-0.0.4.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "3ca9be66c45e4d07ad75f7d579cfb46fb6b8ddce02e16ac942de750ce2929939",
+      "sha512": "bad3edf2d5adf6c0c11375260315ffa4ca75acfdc26d7815727ed5780d20f425098ce0158a50b9803a9e1fb6a760e56b7879dec92e5c3049dd9a33a3e823f433"
+    },
+    {
+      "slug": "puzzles-lib",
+      "project_id": 495476,
+      "file_id": 9331322,
+      "file_name": "puzzleslib-v21.1.66-mc1.21.1+neoforge.jar",
+      "display_name": "v21.1.66-mc1.21.1+neoforge",
+      "size": 1451120,
+      "published": "2026-10-26T08:47:59.03Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/puzzles-lib/files/9331322",
+      "download_url": "https://edge.forgecdn.net/files/9331/322/puzzleslib-v21.1.66-mc1.21.1%2Bneoforge.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "cb02de7e1d4a133746ec7b43a64eddc2cb621122cdc49e134a15272f456c31f2",
+      "sha512": "d265016586d39d7e0ac63b064fcad6fd64df79ce885ae81aa1d7a51ba32b4c6849c4b3021b563667eb392599512fe193adfa52b40d99a101ab411dd0b5c5d484"
+    },
+    {
+      "slug": "resourceful-lib",
+      "project_id": 570073,
+      "file_id": 5973188,
+      "file_name": "resourcefullib-neoforge-1.21-3.0.12.jar",
+      "display_name": "[NeoForge] Resourceful Lib 3.0.12",
+      "size": 484332,
+      "published": "2024-12-08T04:44:11.193Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/resourceful-lib/files/5973188",
+      "download_url": "https://edge.forgecdn.net/files/5973/188/resourcefullib-neoforge-1.21-3.0.12.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "5e36f2c69de008dc5795f730c84ab767688f15c810944b585485349a0c911261",
+      "sha512": "a9d20e345faa9bcb297bd95ac9524205834804d1bb13518397dd4f7f62b352b08c3339ee7f7870d3669078ceeb33d5c31ea527aecce4b31d62ec1ff7d8b562c8"
+    },
+    {
+      "slug": "rhino",
+      "project_id": 416294,
+      "file_id": 8218748,
+      "file_name": "rhino-2101.2.7-build.85.jar",
+      "display_name": "Rhino 2101.2.7-build.85",
+      "size": 882075,
+      "published": "2026-06-08T22:08:39.857Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/rhino/files/8218748",
+      "download_url": "https://edge.forgecdn.net/files/8218/748/rhino-2101.2.7-build.85.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml",
+        "META-INF/mods.toml",
+        "fabric.mod.json"
+      ],
+      "sha256": "95df92ce578b2504cb16d8c9fc285303bf062eb15452246a18e57b7cf091c19a",
+      "sha512": "ef9dc03e13ebcc2c8c3507396e5b0de551bb2376b966507efcd0c0140b74dfd3e17859ab8672ed3ddd37cda9999e689ae83f155a7dcdbb663cfcf7dcf50ecee7"
+    },
+    {
+      "slug": "serene-seasons",
+      "project_id": 291874,
+      "file_id": 6182596,
+      "file_name": "SereneSeasons-neoforge-1.21.1-10.1.0.3.jar",
+      "display_name": "Serene Seasons NeoForge 1.21.1-10.1.0.3",
+      "size": 159205,
+      "published": "2025-02-11T19:35:48.86Z",
+      "release_type": 2,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "glitchcore",
+          "project_id": 955399
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/serene-seasons/files/6182596",
+      "download_url": "https://edge.forgecdn.net/files/6182/596/SereneSeasons-neoforge-1.21.1-10.1.0.3.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "86d89fce593f868cb6b542943c0f82850ca56970fe0327e401966d8d0420861d",
+      "sha512": "9df9c5bebe0a97ac026676ac49c27e5f5412ffdf1ff9370fc9194e014e8fab8d029fb8cda214932a71a1154e6bf1f211e657ff4b353018b974a85f72fb4a005c"
+    },
+    {
+      "slug": "sodium",
+      "project_id": 394468,
+      "file_id": 8756580,
+      "file_name": "sodium-neoforge-0.8.13+mc1.21.1.jar",
+      "display_name": "Sodium 0.8.13 for NeoForge 1.21.1",
+      "size": 1292934,
+      "published": "2026-08-28T20:54:55.687Z",
+      "release_type": 1,
+      "side": "client",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/sodium/files/8756580",
+      "download_url": "https://edge.forgecdn.net/files/8756/580/sodium-neoforge-0.8.13%2Bmc1.21.1.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "575d187b15328d7bddd8a9b1bee64333c22c14735f5780ec49eac0cd5503c08d",
+      "sha512": "4f537696af95411e9daf15795fb5fcbc49913d488a96fa912fa8f1d7db408710995e8a1461190f3cd0f8217bf9e35e9539176592428ed587ca2d7aa84450a390"
+    },
+    {
+      "slug": "sophisticated-backpacks",
+      "project_id": 422301,
+      "file_id": 9524812,
+      "file_name": "sophisticatedbackpacks-1.21.1-3.26.21.2249.jar",
+      "display_name": "sophisticatedbackpacks-1.21.1-3.26.21.2249.jar",
+      "size": 1265683,
+      "published": "2026-11-09T10:50:49.58Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "sophisticated-core",
+          "project_id": 618298
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks/files/9524812",
+      "download_url": "https://edge.forgecdn.net/files/9524/812/sophisticatedbackpacks-1.21.1-3.26.21.2249.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "a1b865474155922e3a9e83fc02aa32db968d43d35b2ef31b1fc50537f8536bf5",
+      "sha512": "9b163db3b2f885110aa0e6d12c3404e9914bb5c2627044e34547433d69535b8010260446b5c3e2816c5da75877c532e10644440c41efbbfba5e9e0f7093ea562"
+    },
+    {
+      "slug": "sophisticated-core",
+      "project_id": 618298,
+      "file_id": 9651537,
+      "file_name": "sophisticatedcore-1.21.1-1.5.38.2484.jar",
+      "display_name": "sophisticatedcore-1.21.1-1.5.38.2484.jar",
+      "size": 1855172,
+      "published": "2026-11-16T17:20:01.293Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core/files/9651537",
+      "download_url": "https://edge.forgecdn.net/files/9651/537/sophisticatedcore-1.21.1-1.5.38.2484.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "a06e4c371d30ed5f552673bbd8129866e210bd54dfb3975052214dc6384dbbc7",
+      "sha512": "7cced68bf66330aaffb2026183843dea411bb7f7edc98ee6458c5c65f7641a9e4e48639a49549ff2a03c3b24dff75566a248fd08003e9adb964e1f311a1de4ec"
+    },
+    {
+      "slug": "spark",
+      "project_id": 361579,
+      "file_id": 6225208,
+      "file_name": "spark-1.10.124-neoforge.jar",
+      "display_name": "1.10.124 (NeoForge 1.21.1)",
+      "size": 3642581,
+      "published": "2025-02-23T11:38:31.027Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/spark/files/6225208",
+      "download_url": "https://edge.forgecdn.net/files/6225/208/spark-1.10.124-neoforge.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "647e8a81afbe414dba1df4ba15fd06c5d32d4cb544e68828405e8e074c2e16db",
+      "sha512": "f86ce34f2759c69df82578c397ff55b666c84626229a98f598458b960c21b38c95d6bfef4772af7f963c4f4868e5e2d9aef6b99c1d51bab55bf45e0e6e6b5ed4"
+    },
+    {
+      "slug": "stellarview",
+      "project_id": 865273,
+      "file_id": 8734053,
+      "file_name": "Stellar.View-1.21.1-0.5.3-NeoForge.jar",
+      "display_name": "v0.5.3",
+      "size": 566497,
+      "published": "2026-08-25T19:44:27.877Z",
+      "release_type": 1,
+      "side": "client",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/stellarview/files/8734053",
+      "download_url": "https://edge.forgecdn.net/files/8734/53/Stellar.View-1.21.1-0.5.3-NeoForge.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "44bc557d13e92bb05db5f6ffdec1392e681a029a3807b53612afd0d471eee73d",
+      "sha512": "a8e44decd95bacfafb19a2b70130e750328ba11a0ad9fc88dbfbcfb80bfacb11a80e7f7c47a7517490dc149b9e39d42576d417576cb0e338608f3dfca06d2d08"
+    },
+    {
+      "slug": "supermartijn642s-config-lib",
+      "project_id": 438332,
+      "file_id": 5546996,
+      "file_name": "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+      "display_name": "SuperMartijn642's Config Library 1.1.8 for NeoForge 1.21",
+      "size": 207514,
+      "published": "2024-07-19T22:10:58.73Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-config-lib/files/5546996",
+      "download_url": "https://edge.forgecdn.net/files/5546/996/supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "d2ba7b839a2268e4e223457e813d11aa2476c3bf708a7bba691d8fc851778a4b",
+      "sha512": "768d8ca178c5e653986f5131b7aeb7fa57ce7d32c16ed399ced01b273565a2b640130c55c7092747efeff40dbb0348876b18b415f59b0d16dd2c7f32f1798ce2"
+    },
+    {
+      "slug": "supermartijn642s-core-lib",
+      "project_id": 454372,
+      "file_id": 9447150,
+      "file_name": "supermartijn642corelib-1.1.26a-neoforge-mc1.21.jar",
+      "display_name": "SuperMartijn642's Core Lib 1.1.26a for NeoForge 1.21",
+      "size": 593442,
+      "published": "2026-11-05T01:29:05.98Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-core-lib/files/9447150",
+      "download_url": "https://edge.forgecdn.net/files/9447/150/supermartijn642corelib-1.1.26a-neoforge-mc1.21.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "f7e032e74ab404062e2fa2fe224ba97e29b8f618ffbbdcf4cecb01076b3a41b6",
+      "sha512": "e90a1f1a2a4b1b095b6692e82b3f1bbf3aafa5653fa80759ac4243385ac1d10605b8713107847a9d0f5e8e4da161009aa3380ae20ca8f70784abfaa85e868492"
+    },
+    {
+      "slug": "tectonic",
+      "project_id": 686836,
+      "file_id": 8855043,
+      "file_name": "tectonic-3.0.28-neoforge-21.1.jar",
+      "display_name": "v3.0.28 ~ Neoforge 21.1",
+      "size": 451757,
+      "published": "2026-09-11T03:42:58.09Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/tectonic/files/8855043",
+      "download_url": "https://edge.forgecdn.net/files/8855/43/tectonic-3.0.28-neoforge-21.1.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "cf188c70e7dd94f6e3a81cef9fe99f1151f13217809f7576aaedb0c3e6547ae1",
+      "sha512": "e07b9cb54f078b7bf74c925c5cebd6643f0b4c210b8f94474e68659b69468ece7d61432f70eafe7abaa1dfa798e4638aad297987c121dc127588c2623b7f7a81"
+    },
+    {
+      "slug": "terralith",
+      "project_id": 513688,
+      "file_id": 8222737,
+      "file_name": "Terralith_1.21.x_v2.6.2.jar",
+      "display_name": "v2.6.2 ~ Neoforge Mod 1.21.1",
+      "size": 2814865,
+      "published": "2026-06-09T17:42:56.33Z",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "slug": "lithostitched",
+          "project_id": 936015
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/terralith/files/8222737",
+      "download_url": "https://edge.forgecdn.net/files/8222/737/Terralith_1.21.x_v2.6.2.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "d38bd304897731b42f6c013cdc07e082e74411e80c74aabcee385251beb3b546",
+      "sha512": "35298f1682567f63dc16658b04cee5498b30819f1c05f9712b4480d7f5eb17059db3b13ab14f81a05fe257149d11ced2cce2030d3727c1747edd8657c53e2a85"
+    },
+    {
+      "slug": "xaeros-minimap",
+      "project_id": 263420,
+      "file_id": 9067173,
+      "file_name": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
+      "display_name": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
+      "size": 2186351,
+      "published": "2026-10-05T06:54:48.163Z",
+      "release_type": 1,
+      "side": "client",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap/files/9067173",
+      "download_url": "https://edge.forgecdn.net/files/9067/173/xaerominimap-neoforge-1.21.1-26.6.0.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "d3398221b2262abfe2d394b588122e5b3fd2e4d8c4bf66a5fd357352fcf51b2e",
+      "sha512": "d56b93ddb921285624b491d6a85aba23748bec9974867399c881c257eb25a746df92a735473adf3a6875e0928a56ff78245d5238eb9207b0e45c3fec20c896dc"
+    },
+    {
+      "slug": "xaeros-world-map",
+      "project_id": 317780,
+      "file_id": 9067277,
+      "file_name": "xaeroworldmap-neoforge-1.21.1-1.47.0.jar",
+      "display_name": "xaeroworldmap-neoforge-1.21.1-1.47.0.jar",
+      "size": 1427078,
+      "published": "2026-10-05T07:09:27.77Z",
+      "release_type": 1,
+      "side": "client",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map/files/9067277",
+      "download_url": "https://edge.forgecdn.net/files/9067/277/xaeroworldmap-neoforge-1.21.1-1.47.0.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "6a42b6f01bd96b496e5fcc07d4541bad1a699d9ec8ad58ad40d5dcfe23a7d4c7",
+      "sha512": "4d2d78bc85afa002f682ef344b7284cf1baa4903cc5a11cd1d7bd260ac63952580ae717bab47079540ead633cdd5d8e4fdf230dc99a68bcb7a269500e7dada13"
+    }
+  ],
+  "errors": [],
+  "pack": {
+    "name": "M1 SciFi Prototype",
+    "version": "0.4.0",
+    "status": "heavy-industry-quests-prototype"
+  },
+  "neoforge": "21.1.267",
+  "neoforge_installer": {
+    "url": "https://maven.neoforged.net/releases/net/neoforged/neoforge/21.1.267/neoforge-21.1.267-installer.jar",
+    "sha256": "25bbe66e82205abeccdfd23bdac61e6a8e9ff1333885f3c9f31d392a5ec97e60"
+  },
+  "extra_files": [
+    {
+      "path": "mods/m1packcompat-0.2.0.jar",
+      "file_name": "m1packcompat-0.2.0.jar",
+      "sha256": "67d4e11658ca63ad55033eec4dbe4db13ea01922665e9aabc016381a420edfe1",
+      "side": "both",
+      "license": "MIT",
+      "source": "compat/src"
+    },
+    {
+      "path": "mods/m1packclient-0.3.1.jar",
+      "file_name": "m1packclient-0.3.1.jar",
+      "sha256": "24bdc5f61de9f2b31ab73d518ead324c5586d90decf9acea2130df6584167d91",
+      "side": "client",
+      "source": "client/src",
+      "license": "MIT (code); supplied image and audio assets"
+    }
+  ],
+  "locked_at_utc": "2026-11-17T22:45:30.322333+00:00",
+  "changes": [
+    {
+      "version": "0.1.1",
+      "description": "Include pinned FTB Backups 3 21.1.5 on both client and server; prevents backup_progress payload crash when first player joins."
+    },
+    {
+      "version": "0.2.0",
+      "description": "First industrial quest chapter, IE to Mekanism to AE2 recipes, and live checks on cached Mekanism basic-circuit operations."
+    },
+    {
+      "version": "0.3.0",
+      "description": "Supplied menu artwork and Ignition music, industrial menu buttons, 19 default key mappings, second production chapter."
+    },
+    {
+      "version": "0.3.1",
+      "description": "Show a concise localized login error when Authlib receives HTML."
+    },
+    {
+      "version": "0.4.0",
+      "description": "43 quests in three chapters, including 20 optional engineering tasks. Parallel chemistry and ore processing, NTM workshop, and two advanced control circuits for the first NTM assembler."
+    }
+  ]
+}
