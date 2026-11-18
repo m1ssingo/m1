@@ -6,8 +6,8 @@ $java = Get-Java21 $JavaPath
 $server = Join-Path $PSScriptRoot 'server'
 $lock = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'mods.lock.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 $argsFile = 'libraries/net/neoforged/neoforge/' + $lock.neoforge + '/win_args.txt'
-if (-not (Test-Path -LiteralPath (Join-Path $server $argsFile))) {
-    throw 'Server is not installed. Run Install-Server.ps1 first.'
+if (-not (Test-NeoForgeServer -ServerPath $server -Version $lock.neoforge)) {
+    throw 'NeoForge installation is incomplete. Run Install-Server.ps1 first.'
 }
 Push-Location $server
 try {

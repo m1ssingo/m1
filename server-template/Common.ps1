@@ -38,6 +38,24 @@ function Test-PinnedFile {
     return (Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToLowerInvariant() -eq $Sha256.ToLowerInvariant()
 }
 
+function Test-NeoForgeServer {
+    param([string]$ServerPath, [string]$Version)
+    $library = Join-Path $ServerPath "libraries\net\neoforged\neoforge\$Version"
+    $winArgs = Join-Path $library 'win_args.txt'
+    $patchedJar = Join-Path $library "neoforge-$Version-server.jar"
+    # The installer extracts win_args.txt before running its patch processors.
+    if (-not (Test-Path -LiteralPath $winArgs -PathType Leaf) -or
+        -not (Test-Path -LiteralPath $patchedJar -PathType Leaf)) { return $false }
+
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    try {
+        $archive = [IO.Compression.ZipFile]::OpenRead($patchedJar)
+        try { return $archive.Entries.Count -gt 0 } finally { $archive.Dispose() }
+    } catch [System.IO.InvalidDataException], [System.IO.IOException] {
+        return $false
+    }
+}
+
 function Get-PinnedFile {
     param([string]$Url, [string]$Path, [string]$Sha256)
     if (Test-PinnedFile $Path $Sha256) { return }

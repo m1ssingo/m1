@@ -62,11 +62,22 @@ Get-ChildItem -LiteralPath $overrides -Recurse -File | ForEach-Object {
 }
 
 $installer = Join-Path $PSScriptRoot ('neoforge-' + $lock.neoforge + '-installer.jar')
-$winArgs = Join-Path $server ('libraries\net\neoforged\neoforge\' + $lock.neoforge + '\win_args.txt')
-if (-not (Test-Path -LiteralPath $winArgs)) {
+if (-not (Test-NeoForgeServer -ServerPath $server -Version $lock.neoforge)) {
     Get-PinnedFile $lock.neoforge_installer.url $installer $lock.neoforge_installer.sha256
-    & $java '-jar' $installer '--installServer' $server
-    if ($LASTEXITCODE -ne 0) { throw ('NeoForge installer failed with exit code ' + $LASTEXITCODE) }
+    Push-Location $PSScriptRoot
+    try {
+        & $java '-jar' $installer '--installServer' $server
+        $installExit = $LASTEXITCODE
+        if ($installExit -ne 0) {
+            Write-Warning 'NeoForge installation failed. Retrying with the libraries already downloaded.'
+            Start-Sleep -Seconds 2
+            & $java '-jar' $installer '--installServer' $server
+            $installExit = $LASTEXITCODE
+        }
+    } finally { Pop-Location }
+    if ($installExit -ne 0 -or -not (Test-NeoForgeServer -ServerPath $server -Version $lock.neoforge)) {
+        throw "NeoForge installation incomplete (exit code $installExit). See ${installer}.log."
+    }
 }
 $properties = Join-Path $server 'server.properties'
 if (-not (Test-Path -LiteralPath $properties)) {
