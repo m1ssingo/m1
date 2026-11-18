@@ -6,6 +6,7 @@
 - [Согласованное ТЗ](docs/minecraft_modpack_spec_v1.md)
 - [Моды и версии](docs/MODS.md)
 - [Исходники и технические проверки](SOURCE_RU.md)
+- [Первый реактор ZIRNOX](docs/FIRST_REACTOR_RU.md)
 
 Для игры установите готовый клиентский профиль и серверный комплект из `M1-SciFi-Prototype-0.4.0.zip`.
 
