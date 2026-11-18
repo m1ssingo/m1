@@ -40,7 +40,7 @@ def main():
     lock = json.loads((ROOT / 'mods.lock.json').read_text())
     assert not lock['errors']
     files = lock['files']
-    assert len(files) == 57
+    assert len(files) == 58
     backups = next(f for f in files if f['slug'] == 'ftb-backups-3')
     assert backups['side'] == 'both', 'FTB Backups 3 requires matching client and server installation'
     ids = {f['project_id'] for f in files}
@@ -100,8 +100,8 @@ def main():
     PACK.mkdir(parents=True)
     copy(ROOT / 'README_RU.md', PACK / 'README_RU.md')
     for name in ['TEST_PROTOCOL_RU.md', 'RADIO_RU.md', 'STATUS_RU.md', 'HOTFIX_0.1.1_RU.md',
-                 'FIRST_INDUSTRY_RU.md', 'UPDATE_0.2.0_RU.md', 'UPDATE_0.3.0_RU.md', 'KEYS_RU.md',
-                 'HOTFIX_0.3.1_RU.md', 'UPDATE_0.4.0_RU.md']:
+                 'FIRST_INDUSTRY_RU.md', 'FIRST_REACTOR_RU.md', 'FIRST_SPACE_RU.md', 'LUNAR_OUTPOST_RU.md', 'UPDATE_0.2.0_RU.md', 'UPDATE_0.3.0_RU.md', 'KEYS_RU.md',
+                 'HOTFIX_0.3.1_RU.md', 'UPDATE_0.4.0_RU.md', 'QUEST_POLISH_RU.md']:
         copy(ROOT / 'docs' / name, PACK / 'docs' / name)
     copy(ROOT / 'docs/minecraft_modpack_spec_v1.md', PACK / 'docs/minecraft_modpack_spec_v1.md')
     for p in (ROOT / 'server-template').iterdir():
@@ -112,7 +112,7 @@ def main():
 
     client_files = [f for f in files if f['side'] != 'server']
     server_files = [f for f in files if f['side'] != 'client']
-    assert len(client_files) == 57 and len(server_files) == 53
+    assert len(client_files) == 58 and len(server_files) == 53
     assert backups in client_files and backups in server_files
     manifest = {
         'minecraft': {'version': lock['minecraft'], 'modLoaders': [
@@ -145,7 +145,7 @@ def main():
         assert 'overrides/config/ftbquests/quests/chapters/first_industry.snbt' in z.namelist()
 
     inventory = [f'# Зафиксированный состав {VERSION}', '',
-        f'57 файлов CurseForge: 57 на клиенте, 53 на сервере. На обеих сторонах также есть свой `{own["file_name"]}`; только на клиенте — `{client_own["file_name"]}`.', '',
+        f'58 файлов CurseForge: 58 на клиенте, 53 на сервере. На обеих сторонах также есть свой `{own["file_name"]}`; только на клиенте — `{client_own["file_name"]}`.', '',
         'Значение `both` означает включение в оба набора, `client` — только клиент, `server` — только выделенный сервер.', '',
         '| Проект | Зафиксированный файл | Сторона |', '|---|---|---|']
     for f in files:
@@ -236,6 +236,7 @@ def main():
     shutil.copytree(datapack, source / 'testing/disposable-datapack')
     copy(ROOT / 'testing/industry_fixture.js', source / 'testing/industry_fixture.js')
     copy(ROOT / 'testing/quest_book_fixture.js', source / 'testing/quest_book_fixture.js')
+    copy(ROOT / 'testing/quest_polish_fixture.js', source / 'testing/quest_polish_fixture.js')
 
     sums = []
     for p in sorted(PACK.rglob('*')):
