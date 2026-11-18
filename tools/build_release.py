@@ -51,7 +51,14 @@ def main():
     own = lock['extra_files'][0]
     assert digest(ROOT / 'overrides' / own['path']) == own['sha256']
     client_own = next(file for file in lock['extra_files'] if file['side'] == 'client')
-    assert digest(ROOT / 'client-overrides' / client_own['path']) == client_own['sha256']
+    client_overrides = ROOT / 'client-overrides'
+    assert digest(client_overrides / client_own['path']) == client_own['sha256']
+    # A local rebuild can leave the preceding client addon beside the locked version.
+    client_override_files = [
+        p for p in sorted(client_overrides.rglob('*'))
+        if p.is_file() and (not p.match('mods/m1packclient-*.jar')
+                            or p == client_overrides / client_own['path'])
+    ]
     assert digest(ROOT / 'work/neoforge-21.1.267-installer.jar') == lock['neoforge_installer']['sha256']
 
     cycle = read_result('industry-first-boot')
@@ -127,9 +134,8 @@ def main():
         for p in sorted((ROOT / 'overrides').rglob('*')):
             if p.is_file():
                 z.write(p, p.relative_to(ROOT).as_posix())
-        for p in sorted((ROOT / 'client-overrides').rglob('*')):
-            if p.is_file():
-                z.write(p, 'overrides/' + p.relative_to(ROOT / 'client-overrides').as_posix())
+        for p in client_override_files:
+            z.write(p, 'overrides/' + p.relative_to(client_overrides).as_posix())
     with zipfile.ZipFile(client_path) as z:
         assert z.testzip() is None
         assert json.loads(z.read('manifest.json')) == manifest
@@ -218,7 +224,8 @@ def main():
     source.mkdir()
     shutil.copytree(ROOT / 'compat', source / 'compat')
     shutil.copytree(ROOT / 'client', source / 'client')
-    shutil.copytree(ROOT / 'client-overrides', source / 'client-overrides')
+    for p in client_override_files:
+        copy(p, source / 'client-overrides' / p.relative_to(client_overrides))
     shutil.copytree(ROOT / 'overrides', source / 'overrides')
     copy(ROOT / 'mods.lock.json', source / 'mods.lock.json')
     for p in (ROOT / 'tools').glob('*'):

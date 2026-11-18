@@ -12,4 +12,6 @@
 
 Для игры установите готовый клиентский профиль и серверный комплект из `M1-SciFi-Prototype-0.4.0.zip`.
 
-Из архива можно восстановить локальные файлы для полной сборки. Из `source/` скопируйте с сохранением путей оригинальные файлы `client/resources/assets/m1packclient/textures/menu/background.png` и `client/resources/assets/m1packclient/sounds/ignition.ogg`. При повторной упаковке 0.4.0 понадобятся также JAR из `source/overrides/mods/` и `source/client-overrides/mods/` и результаты тестового стенда, перечисленные в `tools/build_release.py`.
+Для обновления меню замените прежний `m1packclient-*.jar` в папке `mods` клиентского профиля на `m1packclient-0.4.1.jar`. Для локальной сборки воспользуйтесь [инструкцией к исходникам](SOURCE_RU.md).
+
+Для повторной упаковки понадобятся JAR совместимости из `source/overrides/mods/`, актуальный клиентский JAR из `client-overrides/mods/` и результаты тестового стенда, перечисленные в `tools/build_release.py`.

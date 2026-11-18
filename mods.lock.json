@@ -1263,9 +1263,9 @@
       "source": "compat/src"
     },
     {
-      "path": "mods/m1packclient-0.3.1.jar",
-      "file_name": "m1packclient-0.3.1.jar",
-      "sha256": "24bdc5f61de9f2b31ab73d518ead324c5586d90decf9acea2130df6584167d91",
+      "path": "mods/m1packclient-0.4.1.jar",
+      "file_name": "m1packclient-0.4.1.jar",
+      "sha256": "ca916ac7fd00dd3fb203ff9b870c4a6726b6d415e467be108bb6c67e2e795834",
       "side": "client",
       "source": "client/src",
       "license": "MIT (code); supplied image and audio assets"
