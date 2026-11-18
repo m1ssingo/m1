@@ -8,6 +8,7 @@
 - [Исходники и технические проверки](SOURCE_RU.md)
 - [Первый реактор ZIRNOX](docs/FIRST_REACTOR_RU.md)
 - [Первая космическая экспедиция](docs/FIRST_SPACE_RU.md)
+- [Лунный форпост](docs/LUNAR_OUTPOST_RU.md)
 
 Для игры установите готовый клиентский профиль и серверный комплект из `M1-SciFi-Prototype-0.4.0.zip`.
 

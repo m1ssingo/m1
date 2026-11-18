@@ -1,0 +1,17 @@
+{
+  "display_name": "Лунная промышленность",
+  "icon": "mekanism:ultimate_control_circuit",
+  "mode": "default",
+  "items": [
+    {
+      "id": "mekanism:ultimate_control_circuit",
+      "unlock_actions": [
+        "pickup",
+        "loot"
+      ]
+    }
+  ],
+  "recipes": [
+    "mekanism:control_circuit/ultimate"
+  ]
+}
