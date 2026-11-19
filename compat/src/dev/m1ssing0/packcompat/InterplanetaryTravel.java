@@ -17,9 +17,13 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 @Mod("m1packcompat")
 public final class InterplanetaryTravel {
     private static final String STAGE = "m1_interplanetary_logistics";
+    private static final String MARS_STAGE = "m1_mars_logistics";
     private static final ResourceLocation MOON = ResourceLocation.fromNamespaceAndPath("deepfield", "moon");
-    private static final ResourceLocation OUTBOUND = id("earth_to_moon");
-    private static final ResourceLocation RETURN = id("moon_to_earth");
+    private static final ResourceLocation MARS = ResourceLocation.fromNamespaceAndPath("deepfield", "mars");
+    private static final ResourceLocation EARTH_TO_MOON = id("earth_to_moon");
+    private static final ResourceLocation MOON_TO_EARTH = id("moon_to_earth");
+    private static final ResourceLocation EARTH_TO_MARS = id("earth_to_mars");
+    private static final ResourceLocation MARS_TO_EARTH = id("mars_to_earth");
     private final Map<ServerPlayer, Crossing> departures = new WeakHashMap<>();
 
     public InterplanetaryTravel() {
@@ -30,14 +34,16 @@ public final class InterplanetaryTravel {
     private void beforeTravel(MekanismTeleportEvent.GlobalTeleport event) {
         if (!(event.getEntity() instanceof ServerPlayer player) || !event.isTransDimensional()) return;
         var server = player.serverLevel().getServer();
-        if (!StageStates.isUnlockedGlobal(STAGE, server.overworld())) {
+        var from = player.level().dimension();
+        var to = event.getTargetDimension();
+        boolean involvesMars = MARS.equals(from.location()) || MARS.equals(to.location());
+        if (!StageStates.isUnlockedGlobal(STAGE, server.overworld())
+                || (involvesMars && !StageStates.isUnlockedGlobal(MARS_STAGE, server.overworld()))) {
             event.setCanceled(true);
             return;
         }
         if (!(event instanceof MekanismTeleportEvent.Teleporter)
                 || event instanceof MekanismTeleportEvent.PortableTeleporter) return;
-        var from = player.level().dimension();
-        var to = event.getTargetDimension();
         var advancement = route(from, to);
         if (advancement != null) {
             departures.put(player, new Crossing(from, to, event.getTarget(), server.getTickCount(), advancement));
@@ -56,8 +62,13 @@ public final class InterplanetaryTravel {
     }
 
     private static ResourceLocation route(ResourceKey<Level> from, ResourceKey<Level> to) {
-        if (Level.OVERWORLD.equals(from) && MOON.equals(to.location())) return OUTBOUND;
-        if (MOON.equals(from.location()) && Level.OVERWORLD.equals(to)) return RETURN;
+        if (Level.OVERWORLD.equals(from)) {
+            if (MOON.equals(to.location())) return EARTH_TO_MOON;
+            if (MARS.equals(to.location())) return EARTH_TO_MARS;
+        } else if (Level.OVERWORLD.equals(to)) {
+            if (MOON.equals(from.location())) return MOON_TO_EARTH;
+            if (MARS.equals(from.location())) return MARS_TO_EARTH;
+        }
         return null;
     }
 
