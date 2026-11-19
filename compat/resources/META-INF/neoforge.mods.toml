@@ -1,12 +1,12 @@
-modLoader="lowcodefml"
-loaderVersion="[1,)"
+modLoader="javafml"
+loaderVersion="[4,)"
 license="MIT"
 
 [[mods]]
 modId="m1packcompat"
-version="0.2.0"
+version="0.2.1"
 displayName="M1 Pack Compatibility"
-description='''Keeps research-locked recipes intact during Golem Core filtering and checks the electronics stage during Mekanism processing.'''
+description='''Applies M1 research rules to recipe filtering, machine processing and interplanetary travel.'''
 
 [[mixins]]
 config="m1packcompat.mixins.json"

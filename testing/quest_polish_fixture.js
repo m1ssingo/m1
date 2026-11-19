@@ -9,7 +9,7 @@ ServerEvents.commandRegistry(event => {
       const CommandReward = Java.loadClass('dev.ftb.mods.ftbquests.quest.reward.CommandReward')
       const dependencies = {}
       const nodes = {}
-      const chapterSizes = [25, 24, 21, 20, 22, 23]
+      const chapterSizes = [25, 24, 21, 20, 22, 23, 25]
       const books = new Set()
       const gates = []
       let optional = 0
@@ -19,7 +19,7 @@ ServerEvents.commandRegistry(event => {
       }
 
       const chapters = QuestFile.getInstance().orElseThrow().getAllChapters()
-      require(chapters.size() === 6, 'Six chapters must load')
+      require(chapters.size() === chapterSizes.length, 'All seven chapters must load')
       chapters.forEach(chapter => {
         const code = String(chapter.getCodeString())
         const chapterIndex = Number(code.charAt(2)) - 1
@@ -47,7 +47,7 @@ ServerEvents.commandRegistry(event => {
           })
         })
       })
-      require(optional === 84, 'Expected 84 optional quests, got ' + optional)
+      require(optional === 99, 'Expected 99 optional quests, got ' + optional)
 
       const visited = new Set()
       function checkDependencies(id, path) {
@@ -64,8 +64,9 @@ ServerEvents.commandRegistry(event => {
       }
 
       Object.keys(nodes).forEach(id => checkDependencies(id, new Set()))
-      const requiredGates = ['4A10000000000106', '4A50000000000101', '4A60000000000108']
+      const requiredGates = ['4A10000000000106', '4A50000000000101', '4A60000000000108', '4A70000000000102']
       require(gates.sort().join(',') === requiredGates.join(','), 'Progression reward IDs changed')
+      require(dependencies['4A70000000000101'].includes('4A60000000000109'), 'Mature circuit must precede interplanetary logistics')
       const bootstrap = '4A60000000000129'
       ;['4A60000000000102', '4A60000000000103', '4A60000000000104'].forEach(id => {
         require(dependencies[id].indexOf(bootstrap) >= 0, 'Titanium equipment before bootstrap ' + id)
@@ -82,7 +83,7 @@ ServerEvents.commandRegistry(event => {
       require(smelting.isPresent(), 'Manual titanium bootstrap needs the furnace recipe')
       const output = smelting.get().value().getResultItem(server.registryAccess())
       require(String(output.getId()) === 'deepfield:titanium_ingot', 'Manual smelting must give titanium')
-      console.info('[M1-QUEST-POLISH] OK: ' + Object.keys(nodes).length + ' quests, ' + optional + ' optional, four guides and three release gates')
+      console.info('[M1-QUEST-POLISH] OK: ' + Object.keys(nodes).length + ' quests, ' + optional + ' optional, four guides and four research gates')
       return 1
     }))
 })

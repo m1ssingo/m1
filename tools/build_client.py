@@ -1,5 +1,6 @@
 """Build the client menu addon against the installed NeoForge client."""
 import argparse
+import gzip
 import os
 from pathlib import Path
 import shutil
@@ -8,7 +9,9 @@ import tempfile
 import tomllib
 import zipfile
 
-from pack_menu_animation import pack
+from PIL import Image
+
+from pack_menu_animation import HEADER, HEIGHT, WIDTH, pack
 
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCES = ROOT / 'client/resources'
@@ -24,12 +27,16 @@ def add_file(archive, file, name, compression=zipfile.ZIP_DEFLATED):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--animation', type=Path, default=ROOT / 'work/M1-menu-animation-v2.webp')
+    parser.add_argument('--animation', type=Path, default=ROOT / 'work/M1-menu-animated-v4.gif')
+    parser.add_argument('--libraries', type=Path, default=ROOT / 'work/client-test/libraries')
+    parser.add_argument('--java', default='java')
     args = parser.parse_args()
 
-    libraries = sorted((ROOT / 'work/client-test/libraries').rglob('*.jar'))
+    priority = {'neoforge-21.1.267-client.jar': 0, 'client-1.21.1-20240808.144430-srg.jar': 1}
+    libraries = sorted((path.resolve() for path in args.libraries.rglob('*.jar') if zipfile.is_zipfile(path)),
+                       key=lambda path: (priority.get(path.name, 2), path))
     sources = sorted((ROOT / 'client/src').rglob('*.java'))
-    metadata = tomllib.loads((RESOURCES / 'META-INF/neoforge.mods.toml').read_text())
+    metadata = tomllib.loads((RESOURCES / 'META-INF/neoforge.mods.toml').read_text(encoding='utf-8'))
     version = metadata['mods'][0]['version']
     out = ROOT / f'client-overrides/mods/m1packclient-{version}.jar'
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -37,12 +44,26 @@ def main():
         staging = Path(temp)
         classes = staging / 'classes'
         classes.mkdir()
-        subprocess.run(['java', '-m', 'jdk.compiler/com.sun.tools.javac.Main', '-source', '21',
-                        '-target', '21', '-proc:none', '-cp', os.pathsep.join(map(str, libraries)),
-                        '-d', str(classes), *map(str, sources)], check=True)
+        compiler_args = ['-encoding', 'UTF-8', '-source', '21', '-target', '21', '-proc:none',
+                         '-cp', os.pathsep.join(map(str, libraries)), '-d', str(classes), *map(str, sources)]
+        argfile = staging / 'javac.args'
+        argfile.write_text('\n'.join('"' + arg.replace('\\', '/').replace('"', '\\"') + '"'
+                                     for arg in compiler_args), encoding='utf-8')
+        subprocess.run([args.java, '-m', 'jdk.compiler/com.sun.tools.javac.Main', '@' + str(argfile)], check=True)
         animation = staging / 'background.m1a'
         fallback = staging / 'background.png'
-        pack(args.animation, animation, fallback)
+        if args.animation.suffix.lower() == '.m1a':
+            with gzip.open(args.animation, 'rb') as stream:
+                if stream.read(len(HEADER)) != HEADER:
+                    raise ValueError('Unexpected packed menu animation header')
+            original_fallback = args.animation.with_suffix('.png')
+            with Image.open(original_fallback) as image:
+                if image.size != (WIDTH, HEIGHT) or image.format != 'PNG':
+                    raise ValueError('Expected the packed animation’s first frame as a PNG next to it')
+            shutil.copyfile(args.animation, animation)
+            shutil.copyfile(original_fallback, fallback)
+        else:
+            pack(args.animation, animation, fallback)
 
         jar = staging / out.name
         with zipfile.ZipFile(jar, 'w') as archive:

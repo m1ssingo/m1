@@ -92,7 +92,7 @@ public final class PackTitleScreen extends Screen {
             LogUtils.getLogger().info("[M1-MENU] menu music is playing");
             musicObserved = true;
         }
-        if (height >= 300) graphics.drawString(font, "M1 SciFi 0.4.0", 8, height - 12, 0xffc6b69d);
+        if (height >= 300) graphics.drawString(font, "M1 SciFi 0.7.0", 8, height - 12, 0xffc6b69d);
     }
 
     @Override

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["EPE", "SCS", "EPE"],
+  "key": {
+    "E": {"tag": "c:ender_pearls"},
+    "P": {"item": "deepfield:titanium_plate"},
+    "S": {"item": "deepfield:moonglass_shard"},
+    "C": {"item": "mekanism:ultimate_control_circuit"}
+  },
+  "result": {"id": "mekanism:teleportation_core", "count": 1}
+}

@@ -1264,8 +1264,8 @@
   "errors": [],
   "pack": {
     "name": "M1 SciFi Prototype",
-    "version": "0.6.0",
-    "status": "branching-quest-polish"
+    "version": "0.7.0",
+    "status": "interplanetary-logistics"
   },
   "neoforge": "21.1.267",
   "neoforge_installer": {
@@ -1274,17 +1274,17 @@
   },
   "extra_files": [
     {
-      "path": "mods/m1packcompat-0.2.0.jar",
-      "file_name": "m1packcompat-0.2.0.jar",
-      "sha256": "67d4e11658ca63ad55033eec4dbe4db13ea01922665e9aabc016381a420edfe1",
+      "path": "mods/m1packcompat-0.2.1.jar",
+      "file_name": "m1packcompat-0.2.1.jar",
+      "sha256": "a147fa5557317e24babce0ef4cfdae3cb21a4657afbc40c15bbb3f322abd172a",
       "side": "both",
       "license": "MIT",
       "source": "compat/src"
     },
     {
-      "path": "mods/m1packclient-0.4.1.jar",
-      "file_name": "m1packclient-0.4.1.jar",
-      "sha256": "ca916ac7fd00dd3fb203ff9b870c4a6726b6d415e467be108bb6c67e2e795834",
+      "path": "mods/m1packclient-0.4.2.jar",
+      "file_name": "m1packclient-0.4.2.jar",
+      "sha256": "1f1a1fa56017275de38200d72e0df06ee9aaec832db1e7554a5bf8d198add504",
       "side": "client",
       "source": "client/src",
       "license": "MIT (code); supplied image and audio assets"
@@ -1315,6 +1315,10 @@
     {
       "version": "0.6.0",
       "description": "Quest text and logic audit, 52 optional quests, manual lunar titanium bootstrap, four guide rewards, and client-side Inventory Tweaks ReFoxed."
+    },
+    {
+      "version": "0.7.0",
+      "description": "Earth–Moon logistics chapter, research-gated transport and successful-crossing quests, full-color V4 title animation."
     }
   ]
 }
