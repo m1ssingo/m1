@@ -1,6 +1,6 @@
-# Зафиксированный состав 0.4.0
+# Зафиксированный состав 0.7.0
 
-57 файлов CurseForge: 57 на клиенте, 53 на сервере. На обеих сторонах также есть свой `m1packcompat-0.2.0.jar`; только на клиенте — `m1packclient-0.3.1.jar`.
+Из CurseForge устанавливаются 58 файлов на клиент и 53 файла на сервер. На обе стороны устанавливается `m1packcompat-0.2.1.jar`. Клиентский профиль также содержит `m1packclient-0.4.2.jar`.
 
 Значение `both` означает включение в оба набора, `client` — только клиент, `server` — только выделенный сервер.
 
@@ -35,6 +35,7 @@
 | [history-stages](https://www.curseforge.com/minecraft/mc-mods/history-stages/files/9209318) | `historystages-6.1.0-1.21.1.jar` | both |
 | [immersive-engineering](https://www.curseforge.com/minecraft/mc-mods/immersive-engineering/files/6733669) | `ImmersiveEngineering-1.21.1-12.4.2-194.jar` | both |
 | [immersive-petroleum](https://www.curseforge.com/minecraft/mc-mods/immersive-petroleum/files/8420142) | `ImmersivePetroleum-1.21.1-4.5.0-39.jar` | both |
+| [inventory-tweaks-refoxed](https://www.curseforge.com/minecraft/mc-mods/inventory-tweaks-refoxed/files/9488021) | `invtweaks-1.21.1-1.4.0.jar` | client |
 | [iron-chests](https://www.curseforge.com/minecraft/mc-mods/iron-chests/files/5491156) | `ironchest-1.21-neoforge-16.0.7.jar` | both |
 | [iron-jetpacks](https://www.curseforge.com/minecraft/mc-mods/iron-jetpacks/files/7105279) | `IronJetpacks-1.21.1-8.0.11.jar` | both |
 | [jade](https://www.curseforge.com/minecraft/mc-mods/jade/files/8591319) | `Jade-1.21.1-NeoForge-15.10.6.jar` | both |

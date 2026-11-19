@@ -1,5 +1,8 @@
 package dev.m1ssing0.packclient;
 
+import java.io.IOException;
+import com.mojang.logging.LogUtils;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
@@ -17,7 +20,10 @@ public final class PackTitleScreen extends Screen {
     private static final ResourceLocation BACKGROUND = ResourceLocation.fromNamespaceAndPath(
         "m1packclient", "textures/menu/background.png");
     private static final Music MUSIC = new Music(SoundEvents.MUSIC_MENU, 0, 0, true);
+    private MenuAnimation animation;
+    private Artwork artwork;
     private boolean musicObserved;
+    private boolean animationChecked;
 
     public PackTitleScreen() {
         super(Component.literal("Лютая технологическая сборка"));
@@ -25,41 +31,78 @@ public final class PackTitleScreen extends Screen {
 
     @Override
     protected void init() {
-        int buttonWidth = Math.min(176, (width - 36) / 2);
-        int y = Math.min(height - 80, (int) (height * 0.72));
-        int left = width / 2 - buttonWidth - 4;
-        int right = width / 2 + 4;
-        add(left, y, buttonWidth, "menu.singleplayer", () -> minecraft.setScreen(new SelectWorldScreen(this)));
-        add(right, y, buttonWidth, "menu.multiplayer", () -> minecraft.setScreen(new JoinMultiplayerScreen(this)));
-        add(left, y + 25, buttonWidth, "menu.options", () -> minecraft.setScreen(new OptionsScreen(this, minecraft.options)));
-        add(right, y + 25, buttonWidth, "m1pack.menu.mods", () -> minecraft.setScreen(new ModListScreen(this)));
-        add(left, y + 50, buttonWidth, "m1pack.menu.sound", () -> minecraft.setScreen(new SoundOptionsScreen(this, minecraft.options)));
-        add(right, y + 50, buttonWidth, "menu.quit", () -> minecraft.stop());
+        artwork = Artwork.fit(width, height);
+        // Keep controls below the byline, between the two foreground characters.
+        int gap = 8;
+        int rowGap = 4;
+        int buttonWidth = Math.min(140, (Math.round(artwork.width() * 0.44f) - gap) / 2);
+        int y = artwork.y() + Math.round(artwork.height() * 0.68f);
+        int bottom = artwork.y() + Math.round(artwork.height() * 0.96f);
+        int buttonHeight = Math.min(21, (bottom - y - 2 * rowGap) / 3);
+        int pitch = buttonHeight + rowGap;
+        int left = (width - 2 * buttonWidth - gap) / 2;
+        int right = left + buttonWidth + gap;
+        add(left, y, buttonWidth, buttonHeight, "menu.singleplayer",
+            () -> minecraft.setScreen(new SelectWorldScreen(this)));
+        add(right, y, buttonWidth, buttonHeight, "menu.multiplayer",
+            () -> minecraft.setScreen(new JoinMultiplayerScreen(this)));
+        add(left, y + pitch, buttonWidth, buttonHeight, "menu.options",
+            () -> minecraft.setScreen(new OptionsScreen(this, minecraft.options)));
+        add(right, y + pitch, buttonWidth, buttonHeight, "m1pack.menu.mods",
+            () -> minecraft.setScreen(new ModListScreen(this)));
+        add(left, y + 2 * pitch, buttonWidth, buttonHeight, "m1pack.menu.sound",
+            () -> minecraft.setScreen(new SoundOptionsScreen(this, minecraft.options)));
+        add(right, y + 2 * pitch, buttonWidth, buttonHeight, "menu.quit", () -> minecraft.stop());
+        if (Boolean.getBoolean("m1pack.smoke")) {
+            LogUtils.getLogger().info("[M1-MENU-LAYOUT] {} {} {} {} {} {} {} {} {} {} {} {}",
+                width, height, artwork.x(), artwork.y(), artwork.width(), artwork.height(),
+                left, right, y, buttonWidth, buttonHeight, pitch);
+        }
     }
 
-    private void add(int x, int y, int w, String label, Runnable action) {
-        addRenderableWidget(new SteelButton(x, y, w, Component.translatable(label), button -> action.run()));
+    private void add(int x, int y, int w, int h, String label, Runnable action) {
+        addRenderableWidget(new SteelButton(x, y, w, h, Component.translatable(label), button -> action.run()));
     }
 
     @Override
     public void renderBackground(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+        if (!animationChecked) {
+            animation = MenuAnimation.find(minecraft);
+            animationChecked = true;
+        }
+        ResourceLocation background = BACKGROUND;
+        if (animation != null) {
+            try {
+                background = animation.advance();
+            } catch (IOException e) {
+                LogUtils.getLogger().warn("Could not play the menu animation", e);
+                animation.close();
+                animation = null;
+            }
+        }
         graphics.fill(0, 0, width, height, 0xff090e13);
-        // Fit the complete supplied image so its embedded title remains readable.
-        double scale = Math.min(width / 1672.0, height / 941.0);
-        int w = (int) Math.round(1672 * scale);
-        int h = (int) Math.round(941 * scale);
-        graphics.blit(BACKGROUND, (width - w) / 2, (height - h) / 2, w, h, 0, 0, 1672, 941, 1672, 941);
+        graphics.blit(background, artwork.x(), artwork.y(), artwork.width(), artwork.height(),
+            0, 0, MenuAnimation.WIDTH, MenuAnimation.HEIGHT, MenuAnimation.WIDTH, MenuAnimation.HEIGHT);
     }
 
     @Override
     public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
-        renderBackground(graphics, mouseX, mouseY, partialTick);
         super.render(graphics, mouseX, mouseY, partialTick);
         if (Boolean.getBoolean("m1pack.smoke") && !musicObserved && minecraft.getMusicManager().isPlayingMusic(MUSIC)) {
-            com.mojang.logging.LogUtils.getLogger().info("[M1-MENU] menu music is playing");
+            LogUtils.getLogger().info("[M1-MENU] menu music is playing");
             musicObserved = true;
         }
-        if (height >= 300) graphics.drawString(font, "M1 SciFi 0.3.1", 8, height - 12, 0xffc6b69d);
+        if (height >= 300) graphics.drawString(font, "M1 SciFi 0.7.0", 8, height - 12, 0xffc6b69d);
+    }
+
+    @Override
+    public void removed() {
+        if (animation != null) {
+            animation.close();
+            animation = null;
+        }
+        animationChecked = false;
+        super.removed();
     }
 
     @Override
@@ -72,9 +115,18 @@ public final class PackTitleScreen extends Screen {
         return false;
     }
 
+    private record Artwork(int x, int y, int width, int height) {
+        static Artwork fit(int width, int height) {
+            double scale = Math.min((double) width / MenuAnimation.WIDTH, (double) height / MenuAnimation.HEIGHT);
+            int fitWidth = (int) Math.round(MenuAnimation.WIDTH * scale);
+            int fitHeight = (int) Math.round(MenuAnimation.HEIGHT * scale);
+            return new Artwork((width - fitWidth) / 2, (height - fitHeight) / 2, fitWidth, fitHeight);
+        }
+    }
+
     private static final class SteelButton extends Button {
-        private SteelButton(int x, int y, int width, Component text, OnPress action) {
-            super(x, y, width, 21, text, action, DEFAULT_NARRATION);
+        private SteelButton(int x, int y, int width, int height, Component text, OnPress action) {
+            super(x, y, width, height, text, action, DEFAULT_NARRATION);
         }
 
         @Override
@@ -92,8 +144,15 @@ public final class PackTitleScreen extends Screen {
                 graphics.fill(rivetX, y + 4, rivetX + 2, y + 6, 0xffa59d8b);
                 graphics.fill(rivetX, y + h - 6, rivetX + 2, y + h - 4, 0xff676760);
             }
-            graphics.drawCenteredString(net.minecraft.client.Minecraft.getInstance().font,
-                getMessage(), x + w / 2, y + (h - 8) / 2, focus ? 0xffffe1aa : 0xffeee4d4);
+            var font = Minecraft.getInstance().font;
+            int textWidth = font.width(getMessage());
+            float scale = Math.min(1.0f, (w - 22) / (float) Math.max(1, textWidth));
+            var pose = graphics.pose();
+            pose.pushPose();
+            pose.translate(x + w / 2.0f, y + h / 2.0f, 0);
+            pose.scale(scale, scale, 1);
+            graphics.drawCenteredString(font, getMessage(), 0, -4, focus ? 0xffffe1aa : 0xffeee4d4);
+            pose.popPose();
         }
     }
 }

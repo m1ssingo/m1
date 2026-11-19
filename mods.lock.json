@@ -657,6 +657,25 @@
       "sha512": "a8ac744ef639dec0ca64c5b4d1905351f5d476ecae955754231e09674684a7915fdfab0a16ccecbf5dfe302e1fa91ca6a861ab6cbc8ef83d9d6a7d9dd9d65319"
     },
     {
+      "slug": "inventory-tweaks-refoxed",
+      "project_id": 976858,
+      "file_id": 9488021,
+      "file_name": "invtweaks-1.21.1-1.4.0.jar",
+      "display_name": "invtweaks-1.21.1-1.4.0.jar",
+      "size": 102283,
+      "published": "2026-11-07T07:42:50.373Z",
+      "release_type": 1,
+      "side": "client",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/inventory-tweaks-refoxed/files/9488021",
+      "download_url": "https://edge.forgecdn.net/files/9488/21/invtweaks-1.21.1-1.4.0.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "1a3b54d390c784daab0548fdf0273a1a88c8259e0d6b236630546d24f869fc95",
+      "sha512": "907bace942aa3e9ad898a7700668936ed36bcd874798179099e42eebd322c4c0541bb6e445b99308a59789240e882fd2ec6da1825ec7ba7ee2ff6ffae6327bbc"
+    },
+    {
       "slug": "iron-chests",
       "project_id": 228756,
       "file_id": 5491156,
@@ -1245,8 +1264,8 @@
   "errors": [],
   "pack": {
     "name": "M1 SciFi Prototype",
-    "version": "0.4.0",
-    "status": "heavy-industry-quests-prototype"
+    "version": "0.7.0",
+    "status": "interplanetary-logistics"
   },
   "neoforge": "21.1.267",
   "neoforge_installer": {
@@ -1255,17 +1274,17 @@
   },
   "extra_files": [
     {
-      "path": "mods/m1packcompat-0.2.0.jar",
-      "file_name": "m1packcompat-0.2.0.jar",
-      "sha256": "67d4e11658ca63ad55033eec4dbe4db13ea01922665e9aabc016381a420edfe1",
+      "path": "mods/m1packcompat-0.2.1.jar",
+      "file_name": "m1packcompat-0.2.1.jar",
+      "sha256": "a147fa5557317e24babce0ef4cfdae3cb21a4657afbc40c15bbb3f322abd172a",
       "side": "both",
       "license": "MIT",
       "source": "compat/src"
     },
     {
-      "path": "mods/m1packclient-0.3.1.jar",
-      "file_name": "m1packclient-0.3.1.jar",
-      "sha256": "24bdc5f61de9f2b31ab73d518ead324c5586d90decf9acea2130df6584167d91",
+      "path": "mods/m1packclient-0.4.2.jar",
+      "file_name": "m1packclient-0.4.2.jar",
+      "sha256": "1f1a1fa56017275de38200d72e0df06ee9aaec832db1e7554a5bf8d198add504",
       "side": "client",
       "source": "client/src",
       "license": "MIT (code); supplied image and audio assets"
@@ -1292,6 +1311,14 @@
     {
       "version": "0.4.0",
       "description": "43 quests in three chapters, including 20 optional engineering tasks. Parallel chemistry and ore processing, NTM workshop, and two advanced control circuits for the first NTM assembler."
+    },
+    {
+      "version": "0.6.0",
+      "description": "Quest text and logic audit, 52 optional quests, manual lunar titanium bootstrap, four guide rewards, and client-side Inventory Tweaks ReFoxed."
+    },
+    {
+      "version": "0.7.0",
+      "description": "Earth–Moon logistics chapter, research-gated transport and successful-crossing quests, full-color V4 title animation."
     }
   ]
 }

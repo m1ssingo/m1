@@ -2,13 +2,18 @@
 
 Индустриальная сборка для двух игроков на Minecraft Java 1.21.1 и NeoForge.
 
-- [Установка прототипа 0.4.0](README_RU.md)
+- [Установка прототипа 0.7.0](README_RU.md)
 - [Согласованное ТЗ](docs/minecraft_modpack_spec_v1.md)
 - [Моды и версии](docs/MODS.md)
 - [Исходники и технические проверки](SOURCE_RU.md)
 - [Первый реактор ZIRNOX](docs/FIRST_REACTOR_RU.md)
 - [Первая космическая экспедиция](docs/FIRST_SPACE_RU.md)
+- [Лунный форпост](docs/LUNAR_OUTPOST_RU.md)
+- [Полировка квестов 0.6.0](docs/QUEST_POLISH_RU.md)
+- [Межпланетная логистика](docs/INTERPLANETARY_LOGISTICS_RU.md)
 
-Для игры установите готовый клиентский профиль и серверный комплект из `M1-SciFi-Prototype-0.4.0.zip`.
+Для игры установите готовый клиентский профиль и серверный комплект из `M1-SciFi-Prototype-0.7.0.zip`.
 
-Из архива можно восстановить локальные файлы для полной сборки. Из `source/` скопируйте с сохранением путей оригинальные файлы `client/resources/assets/m1packclient/textures/menu/background.png` и `client/resources/assets/m1packclient/sounds/ignition.ogg`. При повторной упаковке 0.4.0 понадобятся также JAR из `source/overrides/mods/` и `source/client-overrides/mods/` и результаты тестового стенда, перечисленные в `tools/build_release.py`.
+Клиентский профиль уже содержит заставку v4 и `m1packclient-0.4.2.jar`. Локальная сборка описана в [инструкции к исходникам](SOURCE_RU.md).
+
+Для повторной упаковки используйте `tools/build_release.py` и оба собственных JAR из комплекта 0.7.0.

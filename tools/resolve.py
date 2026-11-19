@@ -54,6 +54,7 @@ ROOTS = [
  ('stellarview',865273,'client'),
  ('mutant-monsters',852665,'both'),
  ('ferritecore',None,'both'),
+ ('inventory-tweaks-refoxed',976858,'client'),
  ('sodium',None,'client'),
  ('spark',None,'both'),
 ]

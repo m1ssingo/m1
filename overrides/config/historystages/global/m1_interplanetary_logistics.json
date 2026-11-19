@@ -1,0 +1,25 @@
+{
+  "display_name": "Межпланетная логистика",
+  "icon": "mekanism:teleportation_core",
+  "mode": "default",
+  "items": [
+    {"id": "mekanism:teleportation_core", "unlock_actions": ["pickup", "loot"]},
+    {"id": "mekanism:teleporter", "unlock_actions": ["pickup", "loot"]},
+    {"id": "mekanism:teleporter_frame", "unlock_actions": ["pickup", "loot"]},
+    {"id": "mekanism:portable_teleporter", "unlock_actions": ["pickup", "loot"]},
+    {"id": "mekanism:quantum_entangloporter", "unlock_actions": ["pickup", "loot"]},
+    {"id": "mekanism:module_teleportation_unit", "unlock_actions": ["pickup", "loot"]},
+    {"id": "ae2:quantum_ring", "unlock_actions": ["pickup", "loot"]},
+    {"id": "ae2:quantum_link", "unlock_actions": ["pickup", "loot"]}
+  ],
+  "recipes": [
+    "mekanism:teleportation_core",
+    "mekanism:teleporter",
+    "mekanism:teleporter_frame",
+    "mekanism:portable_teleporter",
+    "mekanism:quantum_entangloporter",
+    "mekanism:module_teleportation_unit",
+    "ae2:network/blocks/quantum_ring",
+    "ae2:network/blocks/quantum_link"
+  ]
+}

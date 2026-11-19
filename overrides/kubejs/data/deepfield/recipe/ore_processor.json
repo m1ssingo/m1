@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "P": {
+      "item": "deepfield:titanium_plate"
+    },
+    "F": {
+      "item": "minecraft:flint"
+    },
+    "G": {
+      "item": "minecraft:grindstone"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "R": {
+      "item": "mekanism:elite_control_circuit"
+    }
+  },
+  "pattern": [
+    "PFP",
+    "PGP",
+    "CRC"
+  ],
+  "result": {
+    "id": "deepfield:ore_processor",
+    "count": 1
+  }
+}
