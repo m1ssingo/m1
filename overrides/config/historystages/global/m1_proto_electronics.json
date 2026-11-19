@@ -7,7 +7,11 @@
     {"id": "ae2:controller", "unlock_actions": ["pickup", "loot"]},
     {"id": "ae2:energy_acceptor", "unlock_actions": ["pickup", "loot"]},
     {"id": "ae2:cable_energy_acceptor", "unlock_actions": ["pickup", "loot"]},
-    {"id": "ae2:vibration_chamber", "unlock_actions": ["pickup", "loot"]}
+    {"id": "ae2:vibration_chamber", "unlock_actions": ["pickup", "loot"]},
+    {"id": "openfm:radio_block", "unlock_actions": ["pickup", "loot"]},
+    {"id": "openfm:speaker_block", "unlock_actions": ["pickup", "loot"]},
+    {"id": "openfm:tuner", "unlock_actions": ["pickup", "loot"]},
+    {"id": "openfm:memory_card", "unlock_actions": ["pickup", "loot"]}
   ],
   "recipes": [
     "mekanism:control_circuit/basic",
@@ -15,6 +19,10 @@
     "ae2:network/blocks/energy_energy_acceptor",
     "ae2:network/blocks/energy_energy_acceptor_alt",
     "ae2:network/parts/energy_acceptor",
-    "ae2:network/blocks/energy_vibration_chamber"
+    "ae2:network/blocks/energy_vibration_chamber",
+    "m1prototype:openfm/radio_block",
+    "m1prototype:openfm/speaker_block",
+    "m1prototype:openfm/tuner",
+    "m1prototype:openfm/memory_card"
   ]
 }

@@ -1,502 +1,360 @@
 {
-  "id": "4A60000000000001",
-  "filename": "lunar_outpost",
-  "group": "",
-  "order_index": 5,
-  "icon": {
-    "id": "deepfield:mining_drill",
-    "count": 1
-  },
-  "title": "Лунный форпост",
-  "quests": [
+  id: "4A60000000000001"
+  filename: "lunar_outpost"
+  group: "4AC0000000000003"
+  order_index: 6
+  icon: { id: "deepfield:mining_drill", count: 1 }
+  quests: [
     {
-      "id": "4A60000000000101",
-      "x": 0.0,
-      "y": 0.0,
-      "title": "Рабочая экспедиция",
-      "dependencies": [
-        "4A5000000000010A"
-      ],
-      "description": [
-        "После разведки можно закладывать добывающий участок. Для панели, накопителя, кислорода и бура сначала понадобится небольшая партия титана из ручной добычи."
-        "Если привёз ильменит первым рейсом, используй его. Иначе запланируй короткий выход за рудой с личным запасом воздуха и местом для груза."
-      ],
-      "tasks": [
-        {
-          "id": "4A60000000010000",
-          "type": "checkmark"
-        }
-      ],
-      "icon": {
-        "id": "deepfield:pathfinder_kit",
-        "count": 1
-      }
-    },
-    {
-      "id": "4A60000000000102",
-      "x": 2.4,
-      "y": -2.0,
-      "title": "Источник и запас",
-      "dependencies": ["4A60000000000129"],
-      "description": [
-        "Переработка руды и жилой модуль требуют энергии в разное время. Панель с накопителем помогает увидеть, сколько выработки можно оставить на паузу между рейсами."
-        "Собери солнечную панель из лунного стекла и титановых деталей, приготовь Battery Bank. Под панелью нужна площадка с доступом к открытому небу."
-      ],
-      "tasks": [
-        {
-          "id": "4A60000000020000",
-          "type": "item",
-          "item": "deepfield:solar_panel"
-        },
-        {
-          "id": "4A60000000020001",
-          "type": "item",
-          "item": "deepfield:battery_bank"
-        }
+      id: "4A60000000000101"
+      x: 0d
+      y: 0d
+      dependencies: ["4A5000000000010A"]
+      tasks: [
+        { id: "4A60000000010000", type: "checkmark" }
       ]
-    },
+      icon: { id: "deepfield:pathfinder_kit", count: 1 }
+      shape: "hexagon"
+      size: 1.32d
+    }
     {
-      "id": "4A60000000000103",
-      "x": 2.4,
-      "y": 2.0,
-      "title": "Лунный воздух",
-      "dependencies": ["4A60000000000129"],
-      "description": [
-        "Личный баллон ограничивает вылазку, а рабочий модуль даёт место для передышки и подготовки. Генератор кислорода стоит строить после получения первого титана."
-        "Подай FE в генератор, закрой стены, пол, крышу и вход. Проверь воздух по HUD на Луне. Уже построенное герметичное убежище подходит."
-      ],
-      "tasks": [
-        {
-          "id": "4A60000000030000",
-          "type": "dimension",
-          "dimension": "deepfield:moon"
-        },
-        {
-          "id": "4A60000000030001",
-          "type": "checkmark"
-        }
-      ],
-      "icon": {
-        "id": "deepfield:oxygen_generator",
-        "count": 1
-      }
-    },
-    {
-      "id": "4A60000000000104",
-      "x": 2.4,
-      "y": 0.0,
-      "title": "Груз для добычи",
-      "dependencies": ["4A60000000000129"],
-      "description": [
-        "Ручная руда дала материал для запуска. Бур и переработчик превращают разовую добычу в повторяемый маршрут снабжения."
-        "Подготовь Mining Drill и Ore Processor. В переработчике этой сборки нужна элитная схема Mekanism. Реши, везти ли целые блоки на Землю или перерабатывать на месте."
-      ],
-      "tasks": [
-        {
-          "id": "4A60000000040000",
-          "type": "item",
-          "item": "deepfield:mining_drill"
-        },
-        {
-          "id": "4A60000000040001",
-          "type": "item",
-          "item": "deepfield:ore_processor"
-        }
+      id: "4A60000000000102"
+      x: 3.1d
+      y: 0d
+      dependencies: ["4A60000000000129"]
+      tasks: [
+        { id: "4A60000000020000", type: "item", item: "deepfield:solar_panel" }
+        { id: "4A60000000020001", type: "item", item: "deepfield:battery_bank" }
       ]
-    },
+      shape: "square"
+      size: 1d
+      icon: { id: "deepfield:solar_panel", count: 1 }
+    }
     {
-      "id": "4A60000000000105",
-      "x": 4.8,
-      "y": -2.0,
-      "title": "Питание на Луне",
-      "dependencies": [
-        "4A60000000000102"
-      ],
-      "description": [
-        "Панель, накопитель и потребитель должны работать как единая линия. Пробный запуск на Луне покажет, хватит ли выработки на оборудование, которое ты привёз."
-        "Подключи источник под освещённым открытым небом, проверь заряд и выдачу FE. Сравни простои и пуск одного потребителя; воздух можно готовить параллельно."
-      ],
-      "tasks": [
-        {
-          "id": "4A60000000050000",
-          "type": "dimension",
-          "dimension": "deepfield:moon"
-        },
-        {
-          "id": "4A60000000050001",
-          "type": "checkmark"
-        }
-      ],
-      "icon": {
-        "id": "deepfield:battery_bank",
-        "count": 1
-      }
-    },
+      id: "4A60000000000103"
+      x: 3.1d
+      y: 6.2d
+      dependencies: ["4A60000000000129"]
+      tasks: [
+        { id: "4A60000000030000", type: "dimension", dimension: "deepfield:moon" }
+        { id: "4A60000000030001", type: "checkmark" }
+      ]
+      icon: { id: "deepfield:oxygen_generator", count: 1 }
+      shape: "square"
+      size: 1d
+    }
     {
-      "id": "4A60000000000106",
-      "x": 7.2,
-      "y": -0.9,
-      "title": "Первая руда",
-      "dependencies": [
-        "4A60000000000104",
-        "4A60000000000105"
-      ],
-      "description": [
-        "Бур предназначен для серийной добычи, поэтому расположение важнее удобства первой установки. Для переработчика нужен целый блок, а не сырой ильменит."
-        "Размести бур отдельно от опор и дорожек: он затрагивает квадрат 9×9 под установкой. Проверь питание и выдачу. Первый целый блок можно сравнить с добытым вручную «Шёлковым касанием»."
-      ],
-      "tasks": [
-        {
-          "id": "4A60000000060000",
-          "type": "item",
-          "item": "deepfield:ilmenite_ore"
-        },
-        {
-          "id": "4A60000000060001",
-          "type": "checkmark"
-        }
-      ],
-      "icon": {
-        "id": "deepfield:mining_drill",
-        "count": 1
-      }
-    },
+      id: "4A60000000000104"
+      x: 3.1d
+      y: -3.1d
+      dependencies: ["4A60000000000129"]
+      tasks: [
+        { id: "4A60000000040000", type: "item", item: "deepfield:mining_drill" }
+        { id: "4A60000000040001", type: "item", item: "deepfield:ore_processor" }
+      ]
+      shape: "square"
+      size: 1d
+      icon: { id: "deepfield:mining_drill", count: 1 }
+    }
     {
-      "id": "4A60000000000107",
-      "x": 9.6,
-      "y": -0.9,
-      "title": "Первая плавка",
-      "dependencies": [
-        "4A60000000000106"
-      ],
-      "description": [
-        "Здесь сравнивается результат механизированной линии с ручным запуском. Выход целых блоков через Ore Processor поможет решить, где разместить печи и сколько груза возить."
-        "Полученный сырой ильменит переплавь в титан. Подтверди пробу переработчика и зачти два слитка как отчётную партию. Остальное можно сразу пустить в детали базы."
-      ],
-      "tasks": [
-        {
-          "id": "4A60000000070000",
-          "type": "item",
-          "item": "deepfield:titanium_ingot",
-          "count": 2
-        },
+      id: "4A60000000000105"
+      x: 4.65d
+      y: 0d
+      dependencies: ["4A60000000000102"]
+      tasks: [
+        { id: "4A60000000050000", type: "dimension", dimension: "deepfield:moon" }
+        { id: "4A60000000050001", type: "checkmark" }
+      ]
+      icon: { id: "deepfield:battery_bank", count: 1 }
+      shape: "square"
+      size: 1d
+    }
+    {
+      id: "4A60000000000106"
+      x: 6.2d
+      y: -1.55d
+      dependencies: ["4A60000000000104", "4A60000000000105"]
+      tasks: [
+        { id: "4A60000000060000", type: "item", item: "deepfield:ilmenite_ore" }
+        { id: "4A60000000060001", type: "checkmark" }
+      ]
+      icon: { id: "deepfield:mining_drill", count: 1 }
+      shape: "square"
+      size: 1d
+    }
+    {
+      id: "4A60000000000107"
+      x: 7.75d
+      y: -1.55d
+      dependencies: ["4A60000000000106"]
+      tasks: [
+        { id: "4A60000000070000", type: "item", item: "deepfield:titanium_ingot", count: 2 }
         { id: "4A61000000000708", type: "checkmark" }
       ]
-    },
+      shape: "square"
+      size: 1d
+      icon: { id: "deepfield:titanium_ingot", count: 1 }
+    }
     {
-      "id": "4A60000000000108",
-      "x": 12.0,
-      "y": 0.0,
-      "title": "Отгрузка на Земле",
-      "dependencies": [
-        "4A60000000000103",
-        "4A60000000000107"
-      ],
-      "description": [
-        "Отчётная партия должна дойти до земного склада. Только после этого в сборке открывается следующий уровень вычислительной техники."
-        "Возьми титан с собой на Землю, прими его на складе и забери общую награду команды. Это откроет высшие схемы Mekanism на сервере."
-      ],
-      "tasks": [
-        {
-          "id": "4A60000000080000",
-          "type": "dimension",
-          "dimension": "minecraft:overworld"
-        },
-        {
-          "id": "4A60000000080001",
-          "type": "checkmark"
-        }
-      ],
-      "icon": {
-        "id": "deepfield:titanium_ingot",
-        "count": 1
-      },
-      "shape": "hexagon",
-      "rewards": [
-        {
-          "id": "4A60000000000301",
-          "type": "command",
-          "command": "history global unlock m1_lunar_industry",
-          "permission_level": 2,
-          "team_reward": true
-        }
+      id: "4A60000000000108"
+      x: 8.525d
+      y: 0d
+      dependencies: ["4A60000000000107", "4A60000000000103"]
+      tasks: [
+        { id: "4A60000000080000", type: "dimension", dimension: "minecraft:overworld" }
+        { id: "4A60000000080001", type: "checkmark" }
       ]
-    },
-    {
-      "id": "4A60000000000109",
-      "x": 14.4,
-      "y": 0.0,
-      "title": "Вычислительная техника",
-      "dependencies": [
-        "4A60000000000108"
-      ],
-      "description": [
-        "Высшая схема нужна, когда продолжение завода упирается в автоматизацию и выборочную добычу. После этого можно развивать земной склад или расширять лунный участок."
-        "Собери схему из элитной и атомных сплавов. Если рецепта нет в JEI, забери награду за отгрузку. Дальше выбери побочную ветку под свой проект."
-      ],
-      "tasks": [
-        {
-          "id": "4A60000000090000",
-          "type": "item",
-          "item": "mekanism:ultimate_control_circuit"
-        }
+      icon: { id: "deepfield:titanium_ingot", count: 1 }
+      shape: "hexagon"
+      rewards: [
+        { id: "4A60000000000301", type: "command", command: "history global unlock m1_lunar_industry", permission_level: 2, team_reward: true }
       ]
-    },
+      size: 1.32d
+    }
     {
-      "id": "4A6000000000010A",
-      "x": 4.8,
-      "y": -4.2,
-      "title": "Резерв на ночь",
-      "dependencies": [
-        "4A60000000000105"
-      ],
-      "description": [
-        "На короткое время отключи источник энергии от накопителя и проверь одного потребителя под нагрузкой.",
-        "По расходу заряда прикинь запас на паузу в генерации. Восстанови питание после проверки."
-      ],
-      "tasks": [
-        {
-          "id": "4A600000000A0000",
-          "type": "checkmark"
-        }
-      ],
-      "icon": {
-        "id": "deepfield:battery_bank",
-        "count": 1
-      },
-      "optional": true
-    },
+      id: "4A60000000000109"
+      x: 10.85d
+      y: 0d
+      dependencies: ["4A60000000000108"]
+      tasks: [
+        { id: "4A60000000090000", type: "item", item: "mekanism:ultimate_control_circuit" }
+      ]
+      shape: "hexagon"
+      size: 1.32d
+      icon: { id: "mekanism:ultimate_control_circuit", count: 1 }
+    }
     {
-      "id": "4A6000000000010B",
-      "x": 4.8,
-      "y": 3.5,
-      "title": "Защита жилого модуля",
-      "dependencies": [
-        "4A60000000000103"
-      ],
-      "description": [
-        "Сделай мешки с реголитом и размести их вокруг или над участком, где экипаж проводит больше всего времени.",
-        "Сравни показания радиации в укрытии и снаружи. Подбери покрытие под свою планировку."
-      ],
-      "tasks": [
-        {
-          "id": "4A600000000B0000",
-          "type": "item",
-          "item": "deepfield:regolith_bags",
-          "count": 4
-        },
-        {
-          "id": "4A600000000B0001",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A6000000000010A"
+      x: 4.65d
+      y: 1.55d
+      dependencies: ["4A60000000000105"]
+      tasks: [
+        { id: "4A600000000A0000", type: "checkmark" }
+      ]
+      icon: { id: "deepfield:solar_panel", count: 1 }
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A6000000000010C",
-      "x": 7.2,
-      "y": -3.2,
-      "title": "Добыча с выходным буфером",
-      "dependencies": [
-        "4A60000000000106"
-      ],
-      "description": [
-        "Поставь сундук над буром и проверь, что добытые блоки попадают в него. Отдели руду от породы любым удобным способом.",
-        "Проверь доступ к выходу и место для разгрузки перед следующим запуском."
-      ],
-      "tasks": [
-        {
-          "id": "4A600000000C0000",
-          "type": "checkmark"
-        }
-      ],
-      "icon": {
-        "id": "minecraft:chest",
-        "count": 1
-      },
-      "optional": true
-    },
+      id: "4A6000000000010B"
+      x: 3.1d
+      y: 7.75d
+      dependencies: ["4A60000000000103"]
+      tasks: [
+        { id: "4A600000000B0000", type: "item", item: "deepfield:regolith_bags", count: 4 }
+        { id: "4A600000000B0001", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "deepfield:regolith_bags", count: 1 }
+    }
     {
-      "id": "4A6000000000010D",
-      "x": 9.6,
-      "y": 2.9,
-      "title": "Расход на партию",
-      "dependencies": [
-        "4A60000000000107"
-      ],
-      "description": [
-        "Переработай два одинаковых образца разными способами. Сравни выход ручной добычи с дроблением целого блока, расход FE и ручные операции.",
-        "Выбери, какую часть цепочки оставить на Луне, а какую перенести на Землю."
-      ],
-      "tasks": [
-        {
-          "id": "4A600000000D0000",
-          "type": "checkmark"
-        }
-      ],
-      "icon": {
-        "id": "deepfield:ore_processor",
-        "count": 1
-      },
-      "optional": true
-    },
+      id: "4A6000000000010C"
+      x: 6.2d
+      y: -3.1d
+      dependencies: ["4A60000000000106"]
+      tasks: [
+        { id: "4A600000000C0000", type: "checkmark" }
+      ]
+      icon: { id: "minecraft:chest", count: 1 }
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
+    {
+      id: "4A6000000000010D"
+      x: 7.75d
+      y: -3.1d
+      dependencies: ["4A60000000000107"]
+      tasks: [
+        { id: "4A600000000D0000", type: "checkmark" }
+      ]
+      icon: { id: "deepfield:ore_processor", count: 1 }
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
       id: "4A60000000000120"
-      x: 7.2d
-      y: -5.3d
-      title: "Контур на одного потребителя"
+      x: 4.65d
+      y: 3.1d
       optional: true
       dependencies: ["4A6000000000010A"]
-      description: [
-        "Отключение общего питания не обязано останавливать и добычу, и жилой модуль одновременно. Отдельный буфер позволяет дать одному участку приоритет."
-        "Проверь свой запас на одном потребителе с отключённым источником. Выбери, какой контур должен оставаться доступным в первую очередь."
-      ]
       tasks: [
         { id: "4A61000000002000", type: "item", item: "deepfield:battery_bank" }
         { id: "4A61000000002001", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "deepfield:battery_bank", count: 1 }
+    }
     {
       id: "4A60000000000121"
-      x: 9.6d
-      y: -5.3d
-      title: "Сменный график форпоста"
+      x: 3.875d
+      y: 4.263d
       optional: true
       dependencies: ["4A60000000000120"]
-      description: [
-        "Под нагрузкой буфер выдаёт мощность, но его ещё нужно успеть зарядить. Иногда полезнее разделить бурение и переработку по времени."
-        "Испытай совместный старт и запуск по очереди. Оставь тот график, при котором склад наполняется, а запас энергии успевает восстановиться."
-      ]
       tasks: [
         { id: "4A61000000002100", type: "checkmark" }
       ]
-    },
+      icon: { id: "minecraft:clock", count: 1 }
+      shape: "circle"
+      size: 0.76d
+    }
     {
       id: "4A60000000000122"
-      x: 7.2d
-      y: 4.2d
-      title: "Дольше снаружи"
+      x: 3.1d
+      y: 9.3d
       optional: true
       dependencies: ["4A6000000000010B"]
-      description: [
-        "После появления титана можно вложиться в личный запас воздуха или в материалы базы. Выбор зависит от времени между рейсами и длины маршрута."
-        "Проверь большой баллон на безопасном участке. Сравни удобство защищённого подхода к базе с преимуществом большего резерва на вылазке."
-      ]
       tasks: [
         { id: "4A61000000002200", type: "item", item: "deepfield:insulated_panel" }
         { id: "4A61000000002201", type: "item", item: "deepfield:large_oxygen_tank" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "deepfield:insulated_panel", count: 1 }
+    }
     {
       id: "4A60000000000123"
-      x: 9.6d
-      y: -3.2d
-      title: "Поиск до прокладки кабеля"
+      x: 6.2d
+      y: -4.65d
       optional: true
       dependencies: ["4A6000000000010C"]
-      description: [
-        "Бур занимает место и требует питания. Разведка помогает решить, где стоит проложить линию и куда не стоит переносить весь участок."
-        "Собери сканер на первом титане. Проверь подсказки Deepfield, сравни два маршрута разведки и пометь точки, к которым удобно вернуться."
-      ]
       tasks: [
         { id: "4A61000000002300", type: "item", item: "deepfield:survey_scanner" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "deepfield:survey_scanner", count: 1 }
+    }
     {
       id: "4A60000000000124"
-      x: 12.0d
-      y: -3.4d
-      title: "Руда отдельно от лунной породы"
+      x: 6.2d
+      y: -6.2d
       optional: true
       dependencies: ["4A60000000000123"]
-      description: [
-        "Если выгружать всё в одну ёмкость, обычная порода забьёт выход. Разделение полезно и тогда, когда переработчик остаётся на Земле."
-        "Настрой фильтр на буфере до переработки. Проверь, что целый блок руды идёт в нужное хранилище и есть куда принять остальную добычу."
-      ]
       tasks: [
         { id: "4A61000000002400", type: "item", item: "mekanism:logistical_sorter" }
         { id: "4A61000000002401", type: "item", item: "minecraft:barrel" }
         { id: "4A61000000002402", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "mekanism:logistical_sorter", count: 1 }
+    }
     {
       id: "4A60000000000125"
-      x: 12.0d
-      y: 3.0d
-      title: "Земной приёмный терминал"
+      x: 9.3d
+      y: -4.65d
       optional: true
       dependencies: ["4A6000000000010D"]
-      description: [
-        "Объём рейса растёт, и ручная сортировка отнимает время от следующего полёта. Приёмный сундук может одновременно быть складской точкой и входом в сеть."
-        "Соедини сундук со складом по шине хранения. Проверь, что отчётная партия видна из терминала и что массовый груз не уходит в нежелательную ячейку."
-      ]
       tasks: [
         { id: "4A61000000002500", type: "item", item: "ae2:storage_bus" }
         { id: "4A61000000002501", type: "item", item: "ironchest:iron_chest" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "ae2:storage_bus", count: 1 }
+    }
     {
       id: "4A60000000000126"
-      x: 14.4d
-      y: 3.0d
-      title: "Порог на отгрузку"
+      x: 10.85d
+      y: -4.65d
       optional: true
       dependencies: ["4A60000000000125"]
-      description: [
-        "Титан нужен и земным станкам, и следующему рейсу. Автоматическая выдача полезна, если на складе остаётся согласованный резерв."
-        "Настрой выход на тестовом предмете. Проверь, что при уменьшении запаса ниже порога сеть прекращает выдачу."
-      ]
       tasks: [
         { id: "4A61000000002600", type: "item", item: "ae2:level_emitter" }
         { id: "4A61000000002601", type: "item", item: "extendedae:threshold_export_bus" }
         { id: "4A61000000002602", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "ae2:level_emitter", count: 1 }
+    }
     {
       id: "4A60000000000127"
-      x: 16.7d
-      y: 0.0d
-      title: "Добыча по запросу"
+      x: 10.85d
+      y: -1.55d
       optional: true
       dependencies: ["4A60000000000109"]
-      description: [
-        "Высшие технологии позволяют выбирать целевые блоки, а не вынимать всё подряд. У такой добычи свои расходы на питание и свои ограничения, поэтому обычный бур всё ещё может быть выгоден."
-        "Изучи фильтры цифрового шахтёра на знакомой земной руде. Сравни время установки и объём полезной выдачи с прежним методом."
-      ]
       tasks: [
         { id: "4A61000000002700", type: "item", item: "mekanism:robit" }
         { id: "4A61000000002701", type: "item", item: "mekanism:digital_miner" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "mekanism:robit", count: 1 }
+    }
     {
       id: "4A60000000000128"
-      x: 16.7d
-      y: 3.0d
-      title: "Хранить породу оптом"
+      x: 12.4d
+      y: 0d
       optional: true
       dependencies: ["4A60000000000109"]
-      description: [
-        "После нескольких рейсов главный объём склада приходится на один повторяющийся материал. Специализированная ячейка позволяет оставить обычные ячейки для деталей и редких образцов."
-        "Выбери массовый блок для отдельной ячейки. Проверь в терминале, как меняется хранение после карты сжатия, прежде чем переносить весь запас."
-      ]
       tasks: [
         { id: "4A61000000002800", type: "item", item: "megacells:bulk_item_cell" }
         { id: "4A61000000002801", type: "item", item: "megacells:compression_card" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "megacells:bulk_item_cell", count: 1 }
+    }
     {
       id: "4A60000000000129"
-      x: 1.2d
-      y: 0.0d
-      title: "Титан для первых установок"
+      x: 1.55d
+      y: -0.775d
       dependencies: ["4A60000000000101"]
-      description: [
-        "Лунные машины сами требуют титан, поэтому первая партия начинается с ручной добычи. Она даёт материал для панели, накопителя, кислородного генератора и бура."
-        "Возьми обычную кирку без «Шёлкового касания», добудь сырой ильменит и переплавь его в печи. Сверь в JEI, сколько пластин нужно для выбранного оборудования."
-      ]
       tasks: [
         { id: "4A61000000002900", type: "item", item: "deepfield:titanium_ingot" }
       ]
+      shape: "hexagon"
+      size: 1.32d
+      icon: { id: "deepfield:titanium_ingot", count: 1 }
+    }
+    {
+      id: "4A60000000000130"
+      tasks: [
+        { id: "4B60000000003000", type: "item", item: "deepfield:raw_ilmenite" }
+        { id: "4B60000000003001", type: "checkmark" }
+      ]
+      dependencies: ["4A60000000000129"]
+      optional: true
+      x: 0d
+      y: -1.55d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "deepfield:raw_ilmenite", count: 1 }
+    }
+    {
+      id: "4A60000000000131"
+      tasks: [
+        { id: "4B60000000003100", type: "item", item: "deepfield:airlock" }
+        { id: "4B60000000003101", type: "checkmark" }
+      ]
+      dependencies: ["4A60000000000103"]
+      optional: true
+      x: 1.55d
+      y: 7.75d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "deepfield:airlock", count: 1 }
+    }
+    {
+      id: "4A60000000000132"
+      tasks: [
+        { id: "4B60000000003200", type: "item", item: "megacells:compression_card" }
+        { id: "4B60000000003201", type: "checkmark" }
+      ]
+      dependencies: ["4A60000000000128"]
+      optional: true
+      x: 12.4d
+      y: 1.55d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "megacells:compression_card", count: 1 }
     }
   ]
 }

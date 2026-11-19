@@ -1,698 +1,381 @@
 {
-  "id": "4A70000000000001",
-  "filename": "interplanetary_logistics",
-  "group": "",
-  "order_index": 6,
-  "icon": {
-    "id": "mekanism:teleporter",
-    "count": 1
-  },
-  "title": "Межпланетная логистика",
-  "quests": [
+  id: "4A70000000000001"
+  filename: "interplanetary_logistics"
+  group: "4AC0000000000003"
+  order_index: 7
+  icon: { id: "mekanism:teleporter", count: 1 }
+  quests: [
     {
-      "id": "4A70000000000101",
-      "x": 0,
-      "y": 0,
-      "title": "Два берега",
-      "icon": {
-        "id": "deepfield:moonglass_shard",
-        "count": 1
-      },
-      "dependencies": [
-        "4A60000000000109"
-      ],
-      "description": [
-        "Лунный титан дал фабрике высшие схемы. Следующая задача — сократить рейсы между уже освоенными базами, чтобы возить экипаж и регулярно пополнять запасы.",
-        "Выбери земную и лунную площадки, к которым удобно подвести питание. Сохрани Pathfinder для монтажа и запасного возвращения."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100100",
-          "type": "checkmark"
-        }
+      id: "4A70000000000101"
+      x: -0.775d
+      y: 0d
+      icon: { id: "deepfield:moonglass_shard", count: 1 }
+      dependencies: ["4A60000000000109"]
+      tasks: [
+        { id: "4A70000000100100", type: "checkmark" }
       ]
-    },
+      shape: "hexagon"
+      size: 1.32d
+    }
     {
-      "id": "4A70000000000102",
-      "x": 2.5,
-      "y": -2,
-      "title": "Исследование связи",
-      "icon": {
-        "id": "mekanism:teleportation_core",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000101"
-      ],
-      "description": [
-        "Осколки лунного стекла станут частью ядра связи, титан удержит сборку, а высшая схема будет управлять переходом. Можно использовать образцы, привезённые с форпоста.",
-        "Собери материалы и забери общую награду команды. Она откроет на сервере рецепты порталов и квантового оборудования. Материалы останутся у тебя для первого ядра."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100200",
-          "type": "item",
-          "item": "deepfield:moonglass_shard",
-          "count": 2
-        },
-        {
-          "id": "4A70000000100201",
-          "type": "item",
-          "item": "deepfield:titanium_plate",
-          "count": 2
-        },
-        {
-          "id": "4A70000000100202",
-          "type": "item",
-          "item": "mekanism:ultimate_control_circuit"
-        }
-      ],
-      "shape": "hexagon",
-      "rewards": [
-        {
-          "id": "4A70000000000301",
-          "type": "command",
-          "command": "history global unlock m1_interplanetary_logistics",
-          "permission_level": 2,
-          "team_reward": true
-        }
+      id: "4A70000000000102"
+      x: 1.55d
+      y: 0d
+      icon: { id: "mekanism:teleportation_core", count: 1 }
+      dependencies: ["4A70000000000101"]
+      tasks: [
+        { id: "4A70000000100200", type: "item", item: "deepfield:moonglass_shard", count: 2 }
+        { id: "4A70000000100201", type: "item", item: "deepfield:titanium_plate", count: 2 }
+        { id: "4A70000000100202", type: "item", item: "mekanism:ultimate_control_circuit" }
       ]
-    },
-    {
-      "id": "4A70000000000103",
-      "x": 5,
-      "y": -2,
-      "title": "Ядра для двух станций",
-      "icon": {
-        "id": "mekanism:teleportation_core",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000102"
-      ],
-      "description": [
-        "Каждой стороне нужен свой контроллер. Ядро связывает раннюю механику варпа с материалами лунной промышленности.",
-        "Собери два ядра по рецепту JEI. Для обоих приготовь по две пластины, по два осколка и по одной высшей схеме. Если рецепт скрыт, проверь награду исследования."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100300",
-          "type": "item",
-          "item": "mekanism:teleportation_core",
-          "count": 2
-        }
+      shape: "hexagon"
+      rewards: [
+        { id: "4A70000000000301", type: "command", command: "history global unlock m1_interplanetary_logistics", permission_level: 2, team_reward: true }
       ]
-    },
+      size: 1.32d
+    }
     {
-      "id": "4A70000000000104",
-      "x": 7.5,
-      "y": -2,
-      "title": "Два терминала",
-      "icon": {
-        "id": "mekanism:teleporter",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000103"
-      ],
-      "description": [
-        "Разбей груз на две одинаковые партии. На установку нужен один блок Teleporter и девять деталей Teleporter Frame.",
-        "Положи оба комплекта в монтажный сундук. Один останется на Земле, второй отправится на Луну."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100400",
-          "type": "item",
-          "item": "mekanism:teleporter",
-          "count": 2
-        },
-        {
-          "id": "4A70000000100401",
-          "type": "item",
-          "item": "mekanism:teleporter_frame",
-          "count": 18
-        }
+      id: "4A70000000000103"
+      x: 3.1d
+      y: 0d
+      icon: { id: "mekanism:teleportation_core", count: 1 }
+      dependencies: ["4A70000000000102"]
+      tasks: [
+        { id: "4A70000000100300", type: "item", item: "mekanism:teleportation_core", count: 2 }
       ]
-    },
+      shape: "square"
+      size: 1d
+    }
     {
-      "id": "4A70000000000105",
-      "x": 5,
-      "y": 1.9,
-      "title": "Запас энергии на обоих берегах",
-      "icon": {
-        "id": "deepfield:battery_bank",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000101"
-      ],
-      "description": [
-        "Переход расходует энергию на стороне отправления. Буфер со своим источником на каждом берегу позволяет вернуться, даже если другой потребитель забрал часть выработки.",
-        "Подготовь подачу FE и накопитель на обеих площадках. Оставь независимый запас для лунного генератора кислорода."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100500",
-          "type": "checkmark"
-        }
+      id: "4A70000000000104"
+      x: 4.65d
+      y: 0d
+      icon: { id: "mekanism:teleporter", count: 1 }
+      dependencies: ["4A70000000000103", "4A70000000000105"]
+      tasks: [
+        { id: "4A70000000100400", type: "item", item: "mekanism:teleporter", count: 2 }
+        { id: "4A70000000100401", type: "item", item: "mekanism:teleporter_frame", count: 18 }
       ]
-    },
+      shape: "square"
+      size: 1d
+    }
     {
-      "id": "4A70000000000106",
-      "x": 10,
-      "y": -1.55,
-      "title": "Наземный терминал",
-      "icon": {
-        "id": "mekanism:teleporter",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000104",
-        "4A70000000000105"
-      ],
-      "description": [
-        "Земная станция будет точкой приёма экипажа и ремонта. Оставь свободный подход и место для безопасного выхода из портала.",
-        "Собери вертикальную раму шириной три и высотой четыре блока. Teleporter стоит снизу по центру, проём — один блок в ширину и два в высоту. Подай FE и создай частоту, которую сможет выбрать экипаж."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100600",
-          "type": "dimension",
-          "dimension": "minecraft:overworld"
-        },
-        {
-          "id": "4A70000000100601",
-          "type": "checkmark"
-        }
+      id: "4A70000000000105"
+      x: 4.65d
+      y: -3.1d
+      icon: { id: "deepfield:battery_bank", count: 1 }
+      dependencies: ["4A70000000000101"]
+      tasks: [
+        { id: "4A70000000100500", type: "checkmark" }
       ]
-    },
+      shape: "square"
+      size: 1d
+    }
     {
-      "id": "4A70000000000107",
-      "x": 10,
-      "y": 1.35,
-      "title": "Лунный терминал",
-      "icon": {
-        "id": "mekanism:teleporter_frame",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000104",
-        "4A70000000000105"
-      ],
-      "description": [
-        "Портал удобно разместить внутри уже проверенного герметичного модуля. Выход должен оставаться доступным при работах с аппаратурой.",
-        "Доставь второй комплект на Pathfinder. Повтори раму, подключи питание и выбери ту же частоту. Подготовь местного дежурного или загрузку чанка для периода испытаний."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100700",
-          "type": "dimension",
-          "dimension": "deepfield:moon"
-        },
-        {
-          "id": "4A70000000100701",
-          "type": "checkmark"
-        }
+      id: "4A70000000000106"
+      x: 6.2d
+      y: -1.55d
+      icon: { id: "mekanism:teleporter", count: 1 }
+      dependencies: ["4A70000000000104"]
+      tasks: [
+        { id: "4A70000000100600", type: "dimension", dimension: "minecraft:overworld" }
+        { id: "4A70000000100601", type: "checkmark" }
       ]
-    },
+      shape: "square"
+      size: 1d
+    }
     {
-      "id": "4A70000000000108",
-      "x": 12.7,
-      "y": -0.15,
-      "title": "Первый переход на Луну",
-      "icon": {
-        "id": "deepfield:moonglass_shard",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000106",
-        "4A70000000000107"
-      ],
-      "description": [
-        "Готовность обоих терминалов означает, что можно сделать контрольный переход. Дежурный на Луне проверит место выхода, питание и воздух.",
-        "Войди в стационарный портал на Земле. Задание отметится после перехода через Mekanism и фактического прибытия на Луну."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100800",
-          "type": "advancement",
-          "advancement": "m1prototype:logistics/earth_to_moon"
-        }
+      id: "4A70000000000107"
+      x: 7.75d
+      y: 0d
+      icon: { id: "deepfield:moon_globe", count: 1 }
+      dependencies: ["4A70000000000104"]
+      tasks: [
+        { id: "4A70000000100700", type: "dimension", dimension: "deepfield:moon" }
+        { id: "4A70000000100701", type: "checkmark" }
       ]
-    },
+      shape: "square"
+      size: 1d
+    }
     {
-      "id": "4A70000000000109",
-      "x": 15.25,
-      "y": -0.15,
-      "title": "Обратный переход",
-      "icon": {
-        "id": "mekanism:teleporter",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000108"
-      ],
-      "description": [
-        "Теперь работает только половина маршрута. Проверь, что лунная станция тоже может отправить человека и что приём на Земле доступен.",
-        "Выйди из проёма на Луне, затем зайди снова, когда наземная станция готова. Книга отметит реальное прибытие на Землю."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100900",
-          "type": "advancement",
-          "advancement": "m1prototype:logistics/moon_to_earth"
-        }
+      id: "4A70000000000108"
+      x: 9.3d
+      y: 0d
+      icon: { id: "deepfield:moonglass_shard", count: 1 }
+      dependencies: ["4A70000000000106", "4A70000000000107"]
+      tasks: [
+        { id: "4A70000000100800", type: "advancement", advancement: "m1prototype:logistics/earth_to_moon" }
       ]
-    },
+      shape: "square"
+      size: 1d
+    }
     {
-      "id": "4A7000000000010A",
-      "x": 17.8,
-      "y": -0.15,
-      "title": "Рабочая линия снабжения",
-      "icon": {
-        "id": "deepfield:titanium_ingot",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000109"
-      ],
-      "description": [
-        "Связь позволяет разделить производство между мирами. Проследи, где заряжается оборудование, кто отвечает за запас воздуха и куда складывать доставленный груз.",
-        "Выбери первый повторяемый маршрут. Начни с небольшой партии и проверь, сколько занимает оборот между складом и лунной площадкой."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100A00",
-          "type": "checkmark"
-        }
-      ],
-      "shape": "hexagon"
-    },
+      id: "4A70000000000109"
+      x: 10.85d
+      y: 0d
+      icon: { id: "mekanism:teleporter", count: 1 }
+      dependencies: ["4A70000000000108"]
+      tasks: [
+        { id: "4A70000000100900", type: "advancement", advancement: "m1prototype:logistics/moon_to_earth" }
+      ]
+      shape: "square"
+      size: 1d
+    }
     {
-      "id": "4A7000000000010B",
-      "x": 1.1,
-      "y": 3.4,
-      "title": "Площадка и ориентиры",
-      "icon": {
-        "id": "minecraft:compass",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000101"
-      ],
-      "description": [
-        "Хорошая навигация сокращает время ремонта и помогает найти аппаратуру после неудачной посадки.",
-        "Запиши координаты обеих станций и места для посадки ракеты. Поставь различимые метки базы и аварийного склада."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100B00",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A7000000000010A"
+      x: 12.4d
+      y: 0d
+      icon: { id: "deepfield:titanium_ingot", count: 1 }
+      dependencies: ["4A70000000000109"]
+      tasks: [
+        { id: "4A70000000100A00", type: "checkmark" }
+      ]
+      shape: "hexagon"
+      size: 1.32d
+    }
     {
-      "id": "4A7000000000010C",
-      "x": 3.45,
-      "y": 5.3,
-      "title": "Аварийный комплект экипажа",
-      "icon": {
-        "id": "deepfield:large_oxygen_tank",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000101"
-      ],
-      "description": [
-        "На случай остановки связи полезен запас, который можно взять без сети и питания.",
-        "Подготовь большой баллон и небольшую партию ракетного топлива. Заправь баллон в пригодной атмосфере и положи снаряжение в доступный сундук."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100C00",
-          "type": "item",
-          "item": "deepfield:large_oxygen_tank"
-        },
-        {
-          "id": "4A70000000100C01",
-          "type": "item",
-          "item": "deepfield:rocket_fuel",
-          "count": 4
-        },
-        {
-          "id": "4A70000000100C02",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A7000000000010B"
+      x: 0d
+      y: 1.55d
+      icon: { id: "minecraft:compass", count: 1 }
+      dependencies: ["4A70000000000101"]
+      tasks: [
+        { id: "4A70000000100B00", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A7000000000010D",
-      "x": 7,
-      "y": 3.55,
-      "title": "Приоритет для воздуха",
-      "icon": {
-        "id": "deepfield:oxygen_generator",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000105"
-      ],
-      "description": [
-        "Если заряд в общей сети упадёт, генератор кислорода останется важнее портала.",
-        "Отдельно проверь земной стенд или свободный лунный модуль. Выдели генератору резерв и убедись, что он получает FE при отключённом оборудовании перехода."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100D00",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A7000000000010C"
+      x: -1.55d
+      y: -1.55d
+      icon: { id: "deepfield:large_oxygen_tank", count: 1 }
+      dependencies: ["4A70000000000101"]
+      tasks: [
+        { id: "4A70000000100C00", type: "item", item: "deepfield:large_oxygen_tank" }
+        { id: "4A70000000100C01", type: "item", item: "deepfield:rocket_fuel", count: 4 }
+        { id: "4A70000000100C02", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A7000000000010E",
-      "x": 6.3,
-      "y": 6,
-      "title": "Буфер у терминала",
-      "icon": {
-        "id": "mekanism:advanced_energy_cube",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000105"
-      ],
-      "description": [
-        "Накопитель рядом с потребителем удобен для оценки стоимости перехода и восстановления заряда.",
-        "Собери Advanced Energy Cube и сравни его с накопителем форпоста. Сними показания до и после работы одного потребителя."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100E00",
-          "type": "item",
-          "item": "mekanism:advanced_energy_cube"
-        },
-        {
-          "id": "4A70000000100E01",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A7000000000010D"
+      x: 4.65d
+      y: -4.65d
+      icon: { id: "deepfield:oxygen_generator", count: 1 }
+      dependencies: ["4A70000000000105"]
+      tasks: [
+        { id: "4A70000000100D00", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A7000000000010F",
-      "x": 11.15,
-      "y": 3.8,
-      "title": "Один чанк для связи",
-      "icon": {
-        "id": "chunkloaders:single_chunk_loader",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000107"
-      ],
-      "description": [
-        "Портал ищет готовую станцию на той же частоте. Для редких визитов удобно держать загруженным один чанк со станцией и её источником.",
-        "Собери Single Chunk Loader и проверь границы чанка. Проверь доступность терминала, когда напарник отойдёт, затем отключи загрузчик, если он больше не нужен."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000100F00",
-          "type": "item",
-          "item": "chunkloaders:single_chunk_loader"
-        },
-        {
-          "id": "4A70000000100F01",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A7000000000010E"
+      x: 6.2d
+      y: -4.65d
+      icon: { id: "mekanism:advanced_energy_cube", count: 1 }
+      dependencies: ["4A70000000000105"]
+      tasks: [
+        { id: "4A70000000100E00", type: "item", item: "mekanism:advanced_energy_cube" }
+        { id: "4A70000000100E01", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A70000000000110",
-      "x": 10,
-      "y": -4.1,
-      "title": "Доступ для экипажа",
-      "icon": {
-        "id": "mekanism:teleporter",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000106"
-      ],
-      "description": [
-        "Оба терминала должны видеть одну частоту. Лишний терминал на ней может изменить ближайший пункт назначения.",
-        "На вашем сервере выбери отдельное имя частоты для пары. Пусть второй участник проверит доступ к настройкам и список видимых терминалов."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000101000",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A7000000000010F"
+      x: 7.75d
+      y: 1.55d
+      icon: { id: "chunkloaders:single_chunk_loader", count: 1 }
+      dependencies: ["4A70000000000107"]
+      tasks: [
+        { id: "4A70000000100F00", type: "item", item: "chunkloaders:single_chunk_loader" }
+        { id: "4A70000000100F01", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A70000000000111",
-      "x": 15.2,
-      "y": 2.35,
-      "title": "Запасной маршрут Pathfinder",
-      "icon": {
-        "id": "deepfield:pathfinder_kit",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000109"
-      ],
-      "description": [
-        "Даже после запуска линии корабль остаётся способом добраться на новую площадку и привезти запасные детали.",
-        "Проверь, где стоит Pathfinder и сколько готового топлива осталось у экипажа. Оставь запас на рейс, пока на обеих станциях ведутся работы."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000101100",
-          "type": "item",
-          "item": "deepfield:rocket_fuel",
-          "count": 4
-        },
-        {
-          "id": "4A70000000101101",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A70000000000110"
+      x: 7.75d
+      y: -3.1d
+      icon: { id: "mekanism:teleporter", count: 1 }
+      dependencies: ["4A70000000000106"]
+      tasks: [
+        { id: "4A70000000101000", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A70000000000112",
-      "x": 15.25,
-      "y": -2.6,
-      "title": "Карманный терминал",
-      "icon": {
-        "id": "mekanism:portable_teleporter",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000109"
-      ],
-      "description": [
-        "Переносной терминал может помочь вернуться к уже развёрнутой сети. Ему нужен заряд и доступная стационарная точка.",
-        "Собери и заряди Portable Teleporter. Проверь выбор частоты рядом с обычным комплектом, пока стационарная станция доступна."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000101200",
-          "type": "item",
-          "item": "mekanism:portable_teleporter"
-        },
-        {
-          "id": "4A70000000101201",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A70000000000111"
+      x: 10.85d
+      y: 1.55d
+      icon: { id: "deepfield:pathfinder_kit", count: 1 }
+      dependencies: ["4A70000000000109"]
+      tasks: [
+        { id: "4A70000000101100", type: "item", item: "deepfield:rocket_fuel", count: 4 }
+        { id: "4A70000000101101", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A70000000000113",
-      "x": 4.2,
-      "y": -5.1,
-      "title": "Квантовая пара для груза",
-      "icon": {
-        "id": "mekanism:quantum_entangloporter",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000102"
-      ],
-      "description": [
-        "Экипаж ходит через порталы, а регулярные партии материалов удобно передавать отдельно. Квантовый узел Mekanism связывает машины на двух площадках.",
-        "Собери два Quantum Entangloporter и выдели под них подходы. Сначала выбери один тип груза, чтобы было легко найти ошибку."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000101300",
-          "type": "item",
-          "item": "mekanism:quantum_entangloporter",
-          "count": 2
-        }
-      ],
-      "optional": true
-    },
+      id: "4A70000000000112"
+      x: 10.85d
+      y: -1.55d
+      icon: { id: "mekanism:portable_teleporter", count: 1 }
+      dependencies: ["4A70000000000109"]
+      tasks: [
+        { id: "4A70000000101200", type: "item", item: "mekanism:portable_teleporter" }
+        { id: "4A70000000101201", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A70000000000114",
-      "x": 7,
-      "y": -5.1,
-      "title": "Пробная передача партии",
-      "icon": {
-        "id": "minecraft:barrel",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000113"
-      ],
-      "description": [
-        "Отдельная частота и настроенные стороны упрощают поиск места, где груз застрял.",
-        "Подключи вход и выход квантовой пары. Проверь на небольшой партии обычных предметов, что ничего не осталось во входном буфере, а приёмник не переполнен."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000101400",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A70000000000113"
+      x: 1.55d
+      y: 1.55d
+      icon: { id: "mekanism:quantum_entangloporter", count: 1 }
+      dependencies: ["4A70000000000102"]
+      tasks: [
+        { id: "4A70000000101300", type: "item", item: "mekanism:quantum_entangloporter", count: 2 }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A70000000000115",
-      "x": 9.65,
-      "y": -5.9,
-      "title": "Защита линии от переполнения",
-      "icon": {
-        "id": "minecraft:comparator",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000114"
-      ],
-      "description": [
-        "Закрытый выход легко заметить на испытании, если подать несколько одинаковых партий.",
-        "Проверь заполнение приёмного буфера, останови подачу и освободи выход. Выбери размер партии, который склад принимает без ручной разгрузки."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000101500",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A70000000000114"
+      x: 1.55d
+      y: 3.1d
+      icon: { id: "minecraft:barrel", count: 1 }
+      dependencies: ["4A70000000000113"]
+      tasks: [
+        { id: "4A70000000101400", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A70000000000116",
-      "x": 5.2,
-      "y": -8,
-      "title": "Квантовый мост ME",
-      "icon": {
-        "id": "ae2:quantum_ring",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000102"
-      ],
-      "description": [
-        "Мост пригодится, если нужно работать с тем же складом AE2 с другой базы. Обе половины сети должны иметь питание и доступные каналы.",
-        "Подготовь шестнадцать блоков Quantum Ring и две камеры Quantum Link Chamber. На каждый мост нужно восемь блоков кольца и одна камера. Форму сверь со справочником AE2."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000101600",
-          "type": "item",
-          "item": "ae2:quantum_ring",
-          "count": 16
-        },
-        {
-          "id": "4A70000000101601",
-          "type": "item",
-          "item": "ae2:quantum_link",
-          "count": 2
-        }
-      ],
-      "optional": true
-    },
+      id: "4A70000000000115"
+      x: 1.55d
+      y: 4.65d
+      icon: { id: "minecraft:comparator", count: 1 }
+      dependencies: ["4A70000000000114"]
+      tasks: [
+        { id: "4A70000000101500", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A70000000000117",
-      "x": 8.7,
-      "y": -8.1,
-      "title": "Парные сингулярности",
-      "icon": {
-        "id": "ae2:quantum_entangled_singularity",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000116"
-      ],
-      "description": [
-        "У пары мостов должны быть согласованные сингулярности. Случайно взятые из разных партий могут выглядеть одинаково.",
-        "Изготовь пару по руководству AE2 и сразу отложи две связанные сингулярности для одного маршрута."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000101700",
-          "type": "item",
-          "item": "ae2:quantum_entangled_singularity",
-          "count": 2
-        }
-      ],
-      "optional": true
-    },
+      id: "4A70000000000116"
+      x: 3.1d
+      y: 1.55d
+      icon: { id: "ae2:quantum_ring", count: 1 }
+      dependencies: ["4A70000000000102"]
+      tasks: [
+        { id: "4A70000000101600", type: "item", item: "ae2:quantum_ring", count: 16 }
+        { id: "4A70000000101601", type: "item", item: "ae2:quantum_link", count: 2 }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A70000000000118",
-      "x": 13.3,
-      "y": -7.65,
-      "title": "Удалённая выдача из ME",
-      "icon": {
-        "id": "ae2:terminal",
-        "count": 1
-      },
-      "dependencies": [
-        "4A70000000000117",
-        "4A70000000000109"
-      ],
-      "description": [
-        "Тонкий тест проверяет всю цепочку, от питания моста до выдачи на другой площадке.",
-        "Оставь основной контроллер на базе. Подключи терминал на лунной стороне и запроси знакомый предмет со склада. Проверь питание и каналы, если терминал пуст."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000101800",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A70000000000117"
+      x: 4.65d
+      y: 3.1d
+      icon: { id: "ae2:quantum_entangled_singularity", count: 1 }
+      dependencies: ["4A70000000000116"]
+      tasks: [
+        { id: "4A70000000101700", type: "item", item: "ae2:quantum_entangled_singularity", count: 2 }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
     {
-      "id": "4A70000000000119",
-      "x": 18.65,
-      "y": 3.4,
-      "title": "Проверка резерва",
-      "icon": {
-        "id": "deepfield:battery_bank",
-        "count": 1
-      },
-      "dependencies": [
-        "4A7000000000010A",
-        "4A7000000000010D"
-      ],
-      "description": [
-        "После приёмки полезно знать, сколько времени остаётся на восстановление при остановке источника.",
-        "На безопасном стенде отключи подачу во время простоя, проверь доступ к аварийному запасу и верни линию к рабочему режиму."
-      ],
-      "tasks": [
-        {
-          "id": "4A70000000101900",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
+      id: "4A70000000000118"
+      x: 6.2d
+      y: 4.65d
+      icon: { id: "ae2:terminal", count: 1 }
+      dependencies: ["4A70000000000117"]
+      tasks: [
+        { id: "4A70000000101800", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
+    {
+      id: "4A70000000000119"
+      x: 12.4d
+      y: -1.55d
+      icon: { id: "deepfield:battery_bank", count: 1 }
+      dependencies: ["4A7000000000010A"]
+      tasks: [
+        { id: "4A70000000101900", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.76d
+    }
+    {
+      id: "4A70000000000130"
+      tasks: [
+        { id: "4B70000000003000", type: "item", item: "minecraft:oak_sign" }
+        { id: "4B70000000003001", type: "checkmark" }
+      ]
+      dependencies: ["4A7000000000010B"]
+      optional: true
+      x: 0d
+      y: 3.1d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "minecraft:oak_sign", count: 1 }
+    }
+    {
+      id: "4A70000000000131"
+      tasks: [
+        { id: "4B70000000003100", type: "item", item: "mekanism:teleporter" }
+        { id: "4B70000000003101", type: "checkmark" }
+      ]
+      dependencies: ["4A70000000000110"]
+      optional: true
+      x: 9.3d
+      y: -3.1d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "mekanism:teleporter", count: 1 }
+    }
+    {
+      id: "4A70000000000132"
+      tasks: [
+        { id: "4B70000000003200", type: "item", item: "ae2:network_tool" }
+        { id: "4B70000000003201", type: "checkmark" }
+      ]
+      dependencies: ["4A70000000000117"]
+      optional: true
+      x: 4.65d
+      y: 4.65d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "ae2:network_tool", count: 1 }
     }
   ]
 }

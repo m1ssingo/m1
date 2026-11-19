@@ -1,4 +1,5 @@
 {
   version: 13
   default_consume_items: false
+  fallback_locale: "ru_ru"
 }

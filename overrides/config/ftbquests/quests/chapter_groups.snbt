@@ -1,0 +1,7 @@
+{
+  chapter_groups: [
+    { id: "4AC0000000000001", order_index: 0 }
+    { id: "4AC0000000000002", order_index: 1 }
+    { id: "4AC0000000000003", order_index: 2 }
+  ]
+}

@@ -1,445 +1,459 @@
 {
   id: "4A10000000000001"
   filename: "first_industry"
-  group: ""
-  order_index: 0
-  icon: {"id": "immersiveengineering:hammer", "count": 1}
-  title: "От угля к автоматизации"
+  group: "4AC0000000000001"
+  order_index: 1
+  icon: { id: "immersiveengineering:hammer", count: 1 }
   quests: [
     {
       id: "4A10000000000101"
-      x: 0d
+      x: 1.55d
       y: 0d
-      title: "Инструменты инженера"
-      description: [
-        "Первые машины IE превращают привычную переплавку в производство. Молот собирает многоблочные установки, а руководство показывает их форму и точки подключения."
-        "Руководство можно изготовить из книги и рычага или забрать в боковой ветке. Начни со схемы коксовой печи: она даст топливо для следующей машины."
-      ]
       tasks: [
         { id: "4A10000000000201", type: "item", item: "immersiveengineering:hammer" }
         { id: "4A10000000000202", type: "item", item: "immersiveengineering:manual" }
       ]
+      dependencies: ["4A10000000000120"]
+      shape: "square"
+      size: 1d
+      icon: { id: "immersiveengineering:hammer", count: 1 }
     }
     {
       id: "4A10000000000102"
-      x: 1.6d
+      x: 4.65d
       y: 0d
-      dependencies: ["4A10000000000101"]
-      title: "Топливо для домны"
-      description: [
-        "Коксовая печь решает сразу две задачи: даёт топливо для стали и креозот для обработанной древесины."
-        "Собери печь из 27 коксовых кирпичей по руководству IE и запусти партию угля. Оставь место для вывода жидкости, если хочешь сохранить креозот для стройки."
+      dependencies: ["4A10000000000130"]
+      tasks: [
+        { id: "4A10000000000203", type: "item", item: "immersiveengineering:coal_coke" }
       ]
-      tasks: [{ id: "4A10000000000203", type: "item", item: "immersiveengineering:coal_coke" }]
+      shape: "square"
+      size: 1d
+      icon: { id: "immersiveengineering:coal_coke", count: 1 }
     }
     {
       id: "4A10000000000103"
-      x: 3.2d
+      x: 7.75d
       y: 0d
-      dependencies: ["4A10000000000102"]
-      title: "Стальная механика"
-      description: [
-        "Сталь нужна для деталей, которые выдержат нагрузку первых станков. Домна превращает железо и кокс в заготовки для механики."
-        "Сверь 27 доменных кирпичей со схемой IE. Из первых слитков сделай пластины и стальной компонент: он понадобится наполнителю Mekanism."
+      dependencies: ["4A10000000000131"]
+      tasks: [
+        { id: "4A10000000000204", type: "item", item: "immersiveengineering:component_steel" }
       ]
-      tasks: [{ id: "4A10000000000204", type: "item", item: "immersiveengineering:component_steel" }]
+      shape: "square"
+      size: 1d
+      icon: { id: "immersiveengineering:component_steel", count: 1 }
     }
     {
       id: "4A10000000000104"
-      x: 4.8d
-      y: -0.8d
+      x: 9.3d
+      y: -1.55d
       dependencies: ["4A10000000000103"]
-      title: "Первые FE"
-      description: [
-        "Термоэлектрический генератор даст первые FE, пока нет полноценной электростанции. Ему нужен перепад температуры, поэтому расположение блоков влияет на работу."
-        "Поставь горячий и холодный блоки по противоположным сторонам. Сверь подходящие варианты и вывод энергии в руководстве IE; испытать можно с магмой и снегом."
+      tasks: [
+        { id: "4A10000000000205", type: "item", item: "immersiveengineering:thermoelectric_generator" }
       ]
-      tasks: [{ id: "4A10000000000205", type: "item", item: "immersiveengineering:thermoelectric_generator" }]
+      shape: "square"
+      size: 1d
+      icon: { id: "immersiveengineering:thermoelectric_generator", count: 1 }
     }
     {
       id: "4A10000000000105"
-      x: 4.8d
-      y: 0.8d
+      x: 9.3d
+      y: 1.55d
       dependencies: ["4A10000000000103"]
-      title: "Металлургический наполнитель"
-      description: [
-        "Наполнитель превращает металл и химическую добавку в электронные компоненты. После первого питания он станет мостом между мастерской IE и машинами Mekanism."
-        "Рецепт сборки требует стального компонента IE. Выбери место, где удобно подвести FE и позже отдельно подавать сырьё и добавку."
+      tasks: [
+        { id: "4A10000000000206", type: "item", item: "mekanism:metallurgic_infuser" }
       ]
-      tasks: [{ id: "4A10000000000206", type: "item", item: "mekanism:metallurgic_infuser" }]
+      shape: "square"
+      size: 1d
+      icon: { id: "mekanism:metallurgic_infuser", count: 1 }
     }
     {
       id: "4A10000000000106"
-      x: 6.4d
+      x: 10.85d
       y: 0d
       shape: "hexagon"
       dependencies: ["4A10000000000104", "4A10000000000105"]
-      title: "Открытие электроники"
-      description: [
-        "Генератор и наполнитель уже собраны. Связав их, можно перейти от механики к электронике, которая откроет первые ME-устройства."
-        "Проверь, что буфер наполнителя заряжается от источника FE. Подтверди испытание и забери общую награду команды: она открывает рецепты электроники на сервере."
+      tasks: [
+        { id: "4A10000000000207", type: "checkmark" }
       ]
-      tasks: [{ id: "4A10000000000207", type: "checkmark" }]
       rewards: [
-        {
-          id: "4A10000000000301"
-          type: "command"
-          command: "history global unlock m1_proto_electronics"
-          permission_level: 2
-          team_reward: true
-        }
+        { id: "4A10000000000301", type: "command", command: "history global unlock m1_proto_electronics", permission_level: 2, team_reward: true }
       ]
+      icon: { id: "mekanism:metallurgic_infuser", count: 1 }
+      size: 1.32d
     }
     {
       id: "4A10000000000107"
-      x: 8d
+      x: 12.4d
       y: 0d
       dependencies: ["4A10000000000106"]
-      title: "Базовая схема"
-      description: [
-        "Первая базовая схема связывает механическую линию с электронным складом. Она пойдёт в приёмник энергии для ME-сети."
-        "После получения награды за исследование открой рецепт в JEI. Для схемы нужен осмий и красная добавка. Руководство AE2 из награды поможет собрать сеть и понять каналы."
+      tasks: [
+        { id: "4A10000000000208", type: "item", item: "mekanism:basic_control_circuit" }
       ]
-      tasks: [{ id: "4A10000000000208", type: "item", item: "mekanism:basic_control_circuit" }]
-      rewards: [{ id: "4A11000000000407", type: "item", item: "ae2:guide" }]
+      rewards: [
+        { id: "4A11000000000407", type: "item", item: "ae2:guide" }
+      ]
+      shape: "square"
+      size: 1d
+      icon: { id: "mekanism:basic_control_circuit", count: 1 }
     }
     {
       id: "4A10000000000108"
-      x: 9.6d
+      x: 15.5d
       y: 0d
-      dependencies: ["4A10000000000107"]
-      title: "Первая ME-сеть"
-      description: [
-        "Приёмник питает ME-сеть, но одного накопителя недостаточно: ячейка хранит предметы, а терминал даёт к ним доступ."
-        "Подключи приёмник FE, накопитель с ячейкой и терминал через кабель. Проверь запись и выдачу одной стопки. Без контроллера такая сеть обслуживает до восьми устройств, которым нужны каналы."
-      ]
+      dependencies: ["4A10000000000132"]
       tasks: [
         { id: "4A10000000000209", type: "item", item: "ae2:energy_acceptor" }
-        { id: "4A1000000000020A", type: "item", item: "ae2:drive" },
-        { id: "4A11000000000808", type: "item", item: "ae2:terminal" },
+        { id: "4A1000000000020A", type: "item", item: "ae2:drive" }
+        { id: "4A11000000000808", type: "item", item: "ae2:terminal" }
         { id: "4A11000000000809", type: "item", item: "ae2:item_storage_cell_1k" }
       ]
+      shape: "square"
+      size: 1d
+      icon: { id: "ae2:energy_acceptor", count: 1 }
     }
     {
       id: "4A10000000000109"
-      x: 11.2d
+      x: 18.6d
       y: 0d
-      dependencies: ["4A10000000000108"]
-      title: "Первый автокрафт"
-      description: [
-        "Когда склад доступен через ME, повторяющиеся детали можно заказывать готовыми. Этот опыт станет основой машинных заказов в химической главе."
-        "Подключи CPU 1k и Pattern Provider с Molecular Assembler. В терминале кодирования запиши простой шаблон и закажи одну партию по сети. Галочка — когда результат вернулся на склад."
-      ]
+      dependencies: ["4A10000000000133"]
       tasks: [
         { id: "4A1000000000020B", type: "item", item: "ae2:pattern_provider" }
         { id: "4A1000000000020C", type: "item", item: "ae2:molecular_assembler" }
         { id: "4A1000000000020D", type: "item", item: "ae2:1k_crafting_storage" }
         { id: "4A1000000000020E", type: "checkmark" }
       ]
+      shape: "hexagon"
+      size: 1.32d
+      icon: { id: "ae2:pattern_provider", count: 1 }
     }
     {
-      "id": "4A1000000000010A",
-      "x": 1.6,
-      "y": -2.5,
-      "title": "Креозот в дело",
-      "dependencies": [
-        "4A10000000000102"
-      ],
-      "description": [
-        "Забери креозот из коксовой печи и обработай доски. Они пригодятся для крепежа и деталей IE.",
-        "Когда печь замолчит при наличии угля, проверь, есть ли место для кокса и креозота."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A10000000010A00",
-          "type": "item",
-          "item": "immersiveengineering:treated_wood_horizontal"
-        }
+      id: "4A1000000000010A"
+      x: 4.65d
+      y: 1.55d
+      dependencies: ["4A10000000000102"]
+      optional: true
+      tasks: [
+        { id: "4A10000000010A00", type: "item", item: "immersiveengineering:treated_wood_horizontal" }
       ]
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "immersiveengineering:treated_wood_horizontal", count: 1 }
     }
     {
-      "id": "4A1000000000010B",
-      "x": 5.6,
-      "y": -2.8,
-      "title": "Медь под напряжением",
-      "dependencies": [
-        "4A10000000000104"
-      ],
-      "description": [
-        "Запитай удалённый станок через медную катушку и два LV-коннектора. Щёлкни катушкой по обоим разъёмам.",
-        "Для поворота трассы используй реле, а для входа в машину нужен коннектор. Проверь заряд буфера на стороне станка."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A10000000010B00",
-          "type": "item",
-          "item": "immersiveengineering:connector_lv",
-          "count": 2
-        },
-        {
-          "id": "4A10000000010B01",
-          "type": "item",
-          "item": "immersiveengineering:wirecoil_copper"
-        }
+      id: "4A1000000000010B"
+      x: 9.3d
+      y: -3.1d
+      dependencies: ["4A10000000000104"]
+      optional: true
+      tasks: [
+        { id: "4A10000000010B00", type: "item", item: "immersiveengineering:connector_lv", count: 2 }
+        { id: "4A10000000010B01", type: "item", item: "immersiveengineering:wirecoil_copper" }
       ]
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "immersiveengineering:connector_lv", count: 1 }
     }
     {
-      "id": "4A1000000000010C",
-      "x": 7.8,
-      "y": -2.8,
-      "title": "Запас на пуск",
-      "dependencies": [
-        "4A1000000000010B"
-      ],
-      "description": [
-        "Поставь LV-аккумулятор между двумя участками сети. Молотом IE задай вход и выход.",
-        "Сравни работу станка сразу после включения и при заряженном буфере. Если заряд падает от партии к партии, увеличь выработку или разведи нагрузку по времени."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A10000000010C00",
-          "type": "item",
-          "item": "immersiveengineering:capacitor_lv"
-        }
+      id: "4A1000000000010C"
+      x: 7.75d
+      y: -4.65d
+      dependencies: ["4A1000000000010B"]
+      optional: true
+      tasks: [
+        { id: "4A10000000010C00", type: "item", item: "immersiveengineering:capacitor_lv" }
       ]
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "immersiveengineering:capacitor_lv", count: 1 }
     }
     {
-      "id": "4A1000000000010D",
-      "x": 5.6,
-      "y": -4.8,
-      "title": "Вода или ветер",
-      "dependencies": [
-        "4A1000000000010B"
-      ],
-      "description": [
-        "Выбери водяное колесо или ветряк IE. Собери привод с кинетическим динамо по руководству IE.",
-        "Попробуй два места или две конфигурации и оставь ту, в которой буфер заряжается устойчивее. Отметь результат галочкой."
-      ],
-      "icon": {"id": "immersiveengineering:watermill", "count": 1},
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A10000000010D00",
-          "type": "checkmark"
-        }
+      id: "4A1000000000010D"
+      x: 10.85d
+      y: -4.65d
+      dependencies: ["4A1000000000010B"]
+      icon: { id: "immersiveengineering:waterwheel_segment", count: 1 }
+      optional: true
+      tasks: [
+        { id: "4A10000000010D00", type: "checkmark" }
       ]
+      shape: "circle"
+      size: 0.76d
     }
     {
-      "id": "4A1000000000010E",
-      "x": 3.2,
-      "y": 2.6,
-      "title": "Детали по ленте",
-      "dependencies": [
-        "4A10000000000103"
-      ],
-      "description": [
-        "Перевези пробную партию деталей по конвейеру IE в сундук. Подбери маршрут с поворотом или подъёмом.",
-        "Проверь, куда попадают предметы, если сундук заполнен. Оставь место для разборки затора."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A10000000010E00",
-          "type": "item",
-          "item": "immersiveengineering:conveyor_basic"
-        },
-        {
-          "id": "4A10000000010E01",
-          "type": "checkmark"
-        }
+      id: "4A1000000000010E"
+      x: 7.75d
+      y: 3.1d
+      dependencies: ["4A10000000000103"]
+      optional: true
+      tasks: [
+        { id: "4A10000000010E00", type: "item", item: "immersiveengineering:conveyor_basic" }
+        { id: "4A10000000010E01", type: "checkmark" }
       ]
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "immersiveengineering:conveyor_basic", count: 1 }
     }
     {
-      "id": "4A1000000000010F",
-      "x": 9.6,
-      "y": 2.6,
-      "title": "Склад уже есть",
-      "dependencies": [
-        "4A10000000000108"
-      ],
-      "description": [
-        "Поставь шину хранения AE2 на внешний сундук или ящик. Положи туда предмет и проверь, что он появился в терминале.",
-        "Для массового материала можно дать этому хранилищу более высокий приоритет. Смотри, куда уходит новая партия."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A10000000010F00",
-          "type": "item",
-          "item": "ae2:storage_bus"
-        }
+      id: "4A1000000000010F"
+      x: 13.95d
+      y: -1.55d
+      dependencies: ["4A10000000000108"]
+      optional: true
+      tasks: [
+        { id: "4A10000000010F00", type: "item", item: "ae2:storage_bus" }
       ]
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "ae2:storage_bus", count: 1 }
     }
     {
-      "id": "4A10000000000110",
-      "x": 11.6,
-      "y": 2.6,
-      "title": "Разобраться с каналами",
-      "dependencies": [
-        "4A10000000000108"
-      ],
-      "description": [
-        "Проверь небольшую ME-сеть сетевым инструментом. Сопоставь устройства с каналами и найди элемент, который можно временно отключить.",
-        "Если добавление устройства гасит терминал, проверь ветку по частям. Отметь, когда найдёшь причину в своей сети или на пробном стенде."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A10000000011000",
-          "type": "item",
-          "item": "ae2:network_tool"
-        },
-        {
-          "id": "4A10000000011001",
-          "type": "checkmark"
-        }
+      id: "4A10000000000110"
+      x: 15.5d
+      y: 1.55d
+      dependencies: ["4A10000000000108"]
+      optional: true
+      tasks: [
+        { id: "4A10000000011000", type: "item", item: "ae2:network_tool" }
+        { id: "4A10000000011001", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "ae2:network_tool", count: 1 }
+    }
     {
       id: "4A10000000000120"
       x: 0d
-      y: -2.5d
-      title: "Схемы, которые переживут сборку"
-      optional: true
-      description: [
-        "Пока завод помещается на верстаке, ошибки легко исправить. У коксовой печи и домны важны форма, точка активации и сторона выхода."
-        "Открой руководство IE и сравни схемы двух первых печей. Книгу можно забрать за это знакомство или сделать из книги и рычага."
-      ]
+      y: 0d
       tasks: [
         { id: "4A11000000002000", type: "checkmark" }
       ]
-      rewards: [{ id: "4A11000000000420", type: "item", item: "immersiveengineering:manual" }]
-    },
+      rewards: [
+        { id: "4A11000000000420", type: "item", item: "immersiveengineering:manual" }
+      ]
+      dependencies: ["4A00000000000106"]
+      icon: { id: "immersiveengineering:manual", count: 1 }
+      shape: "hexagon"
+      size: 1.32d
+    }
     {
       id: "4A10000000000121"
-      x: 3.2d
-      y: 4.8d
-      title: "Одна лента, два назначения"
+      x: 7.75d
+      y: 4.65d
       optional: true
       dependencies: ["4A1000000000010E"]
-      description: [
-        "Когда к прессу подойдут разные заготовки, общий выход смешает готовые детали с сырьём. Разделитель чередует поток, а сортировщик направляет выбранный предмет."
-        "Собери оба узла. Реши, где нужна развилка по содержимому, а где достаточно делить поток между двумя рабочими местами."
-      ]
       tasks: [
         { id: "4A11000000002100", type: "item", item: "immersiveengineering:conveyor_splitter" }
         { id: "4A11000000002101", type: "item", item: "immersiveengineering:sorter" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "immersiveengineering:conveyor_splitter", count: 1 }
+    }
     {
       id: "4A10000000000122"
-      x: 5.3d
-      y: 4.8d
-      title: "Затор видно до поломки"
+      x: 9.3d
+      y: 6.2d
       optional: true
       dependencies: ["4A10000000000121"]
-      description: [
-        "Переполненный приёмник способен остановить всю линию. На короткой ленте проще выяснить, как обслуживать затор, пока рядом ещё нет второго цеха."
-        "Собери управляемый конвейер. Останови подачу, освободи выход одного приёмника и проверь, что после пуска детали снова идут по нужной ветке."
-      ]
       tasks: [
         { id: "4A11000000002200", type: "item", item: "immersiveengineering:conveyor_redstone" }
         { id: "4A11000000002201", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "immersiveengineering:conveyor_redstone", count: 1 }
+    }
     {
       id: "4A10000000000123"
-      x: 1.6d
-      y: -4.7d
-      title: "Мастерская в ящике"
+      x: 4.65d
+      y: 3.1d
       optional: true
       dependencies: ["4A1000000000010A"]
-      description: [
-        "Креозот окупается не только в конструкциях: обработанная древесина годится для перевозки деталей на удалённую стройку."
-        "Сравни деревянный и усиленный ящики. Проверь перенос на пробной стопке и выбери, в каком ящике будут ездить проводка и соединители."
-      ]
       tasks: [
         { id: "4A11000000002300", type: "item", item: "immersiveengineering:crate" }
         { id: "4A11000000002301", type: "item", item: "immersiveengineering:reinforced_crate" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "immersiveengineering:crate", count: 1 }
+    }
     {
       id: "4A10000000000124"
-      x: 9.0d
-      y: -4.7d
-      title: "Креозот без вёдер"
+      x: 3.1d
+      y: 3.1d
       optional: true
-      dependencies: ["4A1000000000010C"]
-      description: [
-        "Если печь работает в фоне, жидкость становится таким же ресурсом, как кокс. Отдельный вывод освободит место в баке и освободит руки для остального завода."
-        "Поставь помпу и трубу между ёмкостями. На воде проверь, какой патрубок принимает жидкость, и только потом подключи креозот."
-      ]
+      dependencies: ["4A1000000000010A"]
       tasks: [
         { id: "4A11000000002400", type: "item", item: "immersiveengineering:fluid_pipe" }
         { id: "4A11000000002401", type: "item", item: "immersiveengineering:fluid_pump" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "immersiveengineering:fluid_pipe", count: 1 }
+    }
     {
       id: "4A10000000000125"
-      x: 11.8d
-      y: 4.8d
-      title: "Склад и доставка"
+      x: 13.95d
+      y: -3.1d
       optional: true
       dependencies: ["4A1000000000010F"]
-      description: [
-        "Шина хранения даёт посмотреть в чужой сундук. Для постоянной линии полезно решить, какие запасы должны переезжать в ME, а какие сеть должна сама выдавать."
-        "Проверь обе шины на тестовых ящиках. Один выдаёт сырьё в сеть, второй принимает выбранный предмет."
-      ]
       tasks: [
         { id: "4A11000000002500", type: "item", item: "ae2:import_bus" }
         { id: "4A11000000002501", type: "item", item: "ae2:export_bus" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "ae2:import_bus", count: 1 }
+    }
     {
       id: "4A10000000000126"
-      x: 14.2d
-      y: 4.8d
-      title: "Запас по потребности"
+      x: 13.95d
+      y: -4.65d
       optional: true
       dependencies: ["4A10000000000125"]
-      description: [
-        "Когда один станок кормят несколько игроков, бессмысленно держать выход открытым постоянно. Порог избавляет от переполнения и оставляет резерв другому цеху."
-        "Собери датчик уровня и пороговую экспортную шину. Поменяй запас в ME так, чтобы увидеть реакцию по обе стороны от порога."
-      ]
       tasks: [
         { id: "4A11000000002600", type: "item", item: "ae2:level_emitter" }
         { id: "4A11000000002601", type: "item", item: "extendedae:threshold_export_bus" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "ae2:level_emitter", count: 1 }
+    }
     {
       id: "4A10000000000127"
-      x: 14.2d
-      y: 2.6d
-      title: "Сеть читается с кабеля"
+      x: 15.5d
+      y: 3.1d
       optional: true
       dependencies: ["4A10000000000110"]
-      description: [
-        "Если оборудование добавляют два игрока, схема в голове неизбежно устаревает. Видимые каналы и перенос настроек экономят время на поиски ошибки."
-        "Проложи короткую ветку умного кабеля и посчитай занятые каналы. На двух однотипных устройствах проверь копирование подходящей настройки через карту памяти."
-      ]
       tasks: [
         { id: "4A11000000002700", type: "item", item: "ae2:fluix_smart_cable" }
         { id: "4A11000000002701", type: "item", item: "ae2:memory_card" }
       ]
-    },
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "ae2:fluix_smart_cable", count: 1 }
+    }
     {
       id: "4A10000000000128"
-      x: 14.2d
-      y: 0.0d
-      title: "Один каталог шаблонов"
+      x: 18.6d
+      y: -1.55d
       optional: true
       dependencies: ["4A10000000000109"]
-      description: [
-        "Рабочий автокрафт обычно начинает расти быстрее, чем успеваешь подписывать поставщики. Терминал шаблонов становится местом, где видно, кому поручена операция."
-        "Открой каталог и найди два разных шаблона. Перенеси один из них на другой подключённый поставщик и проверь, что заказ всё ещё выполняется."
-      ]
       tasks: [
         { id: "4A11000000002800", type: "item", item: "ae2:pattern_access_terminal" }
         { id: "4A11000000002801", type: "checkmark" }
       ]
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "ae2:pattern_access_terminal", count: 1 }
+    }
+    {
+      id: "4A10000000000130"
+      tasks: [
+        { id: "4B10000000003000", type: "item", item: "immersiveengineering:cokebrick", count: 27 }
+      ]
+      dependencies: ["4A10000000000101"]
+      x: 3.1d
+      y: 0d
+      shape: "square"
+      size: 1d
+      icon: { id: "immersiveengineering:cokebrick", count: 1 }
+    }
+    {
+      id: "4A10000000000131"
+      tasks: [
+        { id: "4B10000000003100", type: "item", item: "immersiveengineering:blastbrick", count: 27 }
+      ]
+      dependencies: ["4A10000000000102"]
+      x: 6.2d
+      y: 0d
+      shape: "square"
+      size: 1d
+      icon: { id: "immersiveengineering:blastbrick", count: 1 }
+    }
+    {
+      id: "4A10000000000132"
+      tasks: [
+        { id: "4B10000000003200", type: "item", item: "ae2:logic_processor" }
+      ]
+      dependencies: ["4A10000000000107"]
+      x: 13.95d
+      y: 0d
+      shape: "square"
+      size: 1d
+      icon: { id: "ae2:logic_processor", count: 1 }
+    }
+    {
+      id: "4A10000000000133"
+      tasks: [
+        { id: "4B10000000003300", type: "item", item: "ae2:blank_pattern" }
+        { id: "4B10000000003301", type: "item", item: "ae2:pattern_encoding_terminal" }
+      ]
+      dependencies: ["4A10000000000108"]
+      x: 17.05d
+      y: 0d
+      shape: "square"
+      size: 1d
+      icon: { id: "ae2:blank_pattern", count: 1 }
+    }
+    {
+      id: "4A10000000000134"
+      tasks: [
+        { id: "4B10000000003400", type: "item", item: "ae2netanalyser:network_analyser" }
+        { id: "4B10000000003401", type: "checkmark" }
+      ]
+      dependencies: ["4A10000000000110"]
+      optional: true
+      x: 17.05d
+      y: 3.1d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "ae2netanalyser:network_analyser", count: 1 }
+    }
+    {
+      id: "4A10000000000135"
+      tasks: [
+        { id: "4B10000000003500", type: "item", item: "ae2:fluid_storage_cell_1k" }
+        { id: "4B10000000003501", type: "item", item: "minecraft:water_bucket" }
+        { id: "4B10000000003502", type: "checkmark" }
+      ]
+      dependencies: ["4A1000000000010F"]
+      optional: true
+      x: 12.4d
+      y: -3.1d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "ae2:fluid_storage_cell_1k", count: 1 }
+    }
+    {
+      id: "4A10000000000136"
+      tasks: [
+        { id: "4B10000000003600", type: "item", item: "ae2:guide" }
+        { id: "4B10000000003601", type: "checkmark" }
+      ]
+      dependencies: ["4A10000000000133"]
+      optional: true
+      x: 18.6d
+      y: 1.55d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "ae2:guide", count: 1 }
+    }
+    {
+      id: "4A10000000000137"
+      tasks: [
+        { id: "4B10000000003700", type: "item", item: "openfm:radio_block" }
+        { id: "4B10000000003701", type: "item", item: "openfm:speaker_block" }
+        { id: "4B10000000003702", type: "item", item: "openfm:tuner" }
+        { id: "4B10000000003703", type: "checkmark" }
+      ]
+      dependencies: ["4A10000000000107"]
+      optional: true
+      x: 12.4d
+      y: 1.55d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "openfm:radio_block", count: 1 }
     }
   ]
 }
