@@ -15,11 +15,11 @@
         { id: "4A70000000100100", type: "checkmark" }
       ]
       shape: "hexagon"
-      size: 1.22d
+      size: 1.2d
     }
     {
       id: "4A70000000000102"
-      x: 3.6d
+      x: 2.03d
       y: 0d
       icon: { id: "mekanism:teleportation_core", count: 1 }
       dependencies: ["4A70000000000101"]
@@ -36,7 +36,7 @@
     }
     {
       id: "4A70000000000103"
-      x: 7.2d
+      x: 4.06d
       y: 0d
       icon: { id: "mekanism:teleportation_core", count: 1 }
       dependencies: ["4A70000000000102"]
@@ -44,11 +44,11 @@
         { id: "4A70000000100300", type: "item", item: "mekanism:teleportation_core", count: 2 }
       ]
       shape: "square"
-      size: 0.95d
+      size: 1d
     }
     {
       id: "4A70000000000104"
-      x: 10.8d
+      x: 6.1625d
       y: 0d
       icon: { id: "mekanism:teleporter", count: 1 }
       dependencies: ["4A70000000000103"]
@@ -57,12 +57,12 @@
         { id: "4A70000000100401", type: "item", item: "mekanism:teleporter_frame", count: 18 }
       ]
       shape: "square"
-      size: 0.95d
+      size: 1d
     }
     {
       id: "4A70000000000105"
-      x: 6.3d
-      y: 10.8d
+      x: 4.35d
+      y: 4.8575d
       icon: { id: "deepfield:battery_bank", count: 1 }
       dependencies: ["4A70000000000101"]
       tasks: [
@@ -73,8 +73,8 @@
     }
     {
       id: "4A70000000000106"
-      x: 14.4d
-      y: -2.88d
+      x: 8.0475d
+      y: -1.8125d
       icon: { id: "mekanism:teleporter", count: 1 }
       dependencies: ["4A70000000000104"]
       tasks: [
@@ -82,12 +82,12 @@
         { id: "4A70000000100601", type: "checkmark" }
       ]
       shape: "square"
-      size: 0.95d
+      size: 1d
     }
     {
       id: "4A70000000000107"
-      x: 14.4d
-      y: 2.88d
+      x: 8.0475d
+      y: 1.3775d
       icon: { id: "deepfield:moon_globe", count: 1 }
       dependencies: ["4A70000000000104"]
       tasks: [
@@ -95,11 +95,11 @@
         { id: "4A70000000100701", type: "checkmark" }
       ]
       shape: "square"
-      size: 0.95d
+      size: 1d
     }
     {
       id: "4A70000000000108"
-      x: 20.7d
+      x: 10.3675d
       y: 0d
       icon: { id: "deepfield:moonglass_shard", count: 1 }
       dependencies: ["4A70000000000106", "4A70000000000107", "4A70000000000105"]
@@ -107,11 +107,19 @@
         { id: "4A70000000100800", type: "advancement", advancement: "m1prototype:logistics/earth_to_moon" }
       ]
       shape: "hexagon"
-      size: 1.22d
+      size: 1.2d
+      dep_control_pts: {
+        4A70000000000105: [
+          6.873d
+          4.8575d
+          9.1495d
+          3.8135d
+        ]
+      }
     }
     {
       id: "4A70000000000109"
-      x: 23.94d
+      x: 12.3975d
       y: 0d
       icon: { id: "mekanism:teleporter", count: 1 }
       dependencies: ["4A70000000000108"]
@@ -119,11 +127,11 @@
         { id: "4A70000000100900", type: "advancement", advancement: "m1prototype:logistics/moon_to_earth" }
       ]
       shape: "square"
-      size: 0.95d
+      size: 1d
     }
     {
       id: "4A7000000000010A"
-      x: 27.18d
+      x: 14.4275d
       y: 0d
       icon: { id: "deepfield:titanium_ingot", count: 1 }
       dependencies: ["4A70000000000109"]
@@ -131,12 +139,12 @@
         { id: "4A70000000100A00", type: "checkmark" }
       ]
       shape: "hexagon"
-      size: 1.22d
+      size: 1.2d
     }
     {
       id: "4A7000000000010B"
-      x: 0d
-      y: -2.97d
+      x: -0.9425d
+      y: -1.885d
       icon: { id: "minecraft:compass", count: 1 }
       dependencies: ["4A70000000000101"]
       tasks: [
@@ -144,12 +152,12 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A7000000000010C"
-      x: -2.25d
-      y: 2.16d
+      x: -0.9425d
+      y: 1.885d
       icon: { id: "deepfield:large_oxygen_tank", count: 1 }
       dependencies: ["4A70000000000101"]
       tasks: [
@@ -159,12 +167,12 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A7000000000010D"
-      x: 3.6d
-      y: 12.24d
+      x: 2.465d
+      y: 5.22d
       icon: { id: "deepfield:oxygen_generator", count: 1 }
       dependencies: ["4A70000000000105"]
       tasks: [
@@ -172,12 +180,12 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A7000000000010E"
-      x: 10.8d
-      y: 10.35d
+      x: 6.3075d
+      y: 6.5975d
       icon: { id: "mekanism:advanced_energy_cube", count: 1 }
       dependencies: ["4A70000000000105"]
       tasks: [
@@ -186,12 +194,12 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A7000000000010F"
-      x: 12.6d
-      y: 3.69d
+      x: 6.96d
+      y: 2.61d
       icon: { id: "chunkloaders:single_chunk_loader", count: 1 }
       dependencies: ["4A70000000000107"]
       tasks: [
@@ -200,12 +208,12 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A70000000000110"
-      x: 14.4d
-      y: -5.58d
+      x: 8.0475d
+      y: -3.6975d
       icon: { id: "mekanism:teleporter", count: 1 }
       dependencies: ["4A70000000000106"]
       tasks: [
@@ -213,12 +221,12 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A70000000000111"
-      x: 23.4d
-      y: 2.97d
+      x: 12.5425d
+      y: 1.885d
       icon: { id: "deepfield:pathfinder_kit", count: 1 }
       dependencies: ["4A70000000000109"]
       tasks: [
@@ -227,12 +235,12 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A70000000000112"
-      x: 23.4d
-      y: -2.97d
+      x: 12.5425d
+      y: -1.885d
       icon: { id: "mekanism:portable_teleporter", count: 1 }
       dependencies: ["4A70000000000109"]
       tasks: [
@@ -241,12 +249,12 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A70000000000113"
-      x: 6.66d
-      y: -3.24d
+      x: 4.35d
+      y: -1.885d
       icon: { id: "mekanism:quantum_entangloporter", count: 1 }
       dependencies: ["4A70000000000102"]
       tasks: [
@@ -258,8 +266,8 @@
     }
     {
       id: "4A70000000000114"
-      x: 9.9d
-      y: -3.69d
+      x: 6.09d
+      y: -3.2625d
       icon: { id: "minecraft:barrel", count: 1 }
       dependencies: ["4A70000000000113"]
       tasks: [
@@ -267,12 +275,12 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A70000000000115"
-      x: 10.08d
-      y: -6.48d
+      x: 6.09d
+      y: -5.1475d
       icon: { id: "minecraft:comparator", count: 1 }
       dependencies: ["4A70000000000114"]
       tasks: [
@@ -280,12 +288,12 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A70000000000116"
-      x: 3.6d
-      y: -4.32d
+      x: 1.8125d
+      y: -2.1025d
       icon: { id: "ae2:quantum_ring", count: 1 }
       dependencies: ["4A70000000000102"]
       tasks: [
@@ -298,8 +306,8 @@
     }
     {
       id: "4A70000000000117"
-      x: 3.6d
-      y: -7.2d
+      x: 1.8125d
+      y: -4.06d
       icon: { id: "ae2:quantum_entangled_singularity", count: 1 }
       dependencies: ["4A70000000000116"]
       tasks: [
@@ -307,12 +315,12 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A70000000000118"
-      x: 6.39d
-      y: -7.92d
+      x: 0.3625d
+      y: -5.7275d
       icon: { id: "ae2:terminal", count: 1 }
       dependencies: ["4A70000000000117"]
       tasks: [
@@ -320,11 +328,11 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A70000000000119"
-      x: 30.06d
+      x: 16.356d
       y: 0d
       icon: { id: "deepfield:battery_bank", count: 1 }
       dependencies: ["4A7000000000010A"]
@@ -333,7 +341,7 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A70000000000130"
@@ -343,10 +351,10 @@
       ]
       dependencies: ["4A7000000000010B"]
       optional: true
-      x: 0d
-      y: -5.85d
+      x: -0.986d
+      y: -3.77d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "minecraft:oak_sign", count: 1 }
     }
     {
@@ -357,10 +365,10 @@
       ]
       dependencies: ["4A70000000000110"]
       optional: true
-      x: 15.84d
-      y: -8.1d
+      x: 9.9325d
+      y: -3.77d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "mekanism:teleporter", count: 1 }
     }
     {
@@ -371,20 +379,20 @@
       ]
       dependencies: ["4A70000000000117"]
       optional: true
-      x: 3.6d
-      y: -10.08d
+      x: 3.6975d
+      y: -4.93d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "ae2:network_tool", count: 1 }
     }
     {
       id: "4A70000000000140"
-      x: 20.7d
-      y: 7.92d
+      x: 10.3675d
+      y: 5.1475d
       optional: true
       icon: { id: "mekanism:advanced_energy_cube", count: 1 }
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       tasks: [
         { id: "4B70000000014000", type: "item", item: "mekanism:advanced_energy_cube" }
         { id: "4B70000000014001", type: "checkmark" }
@@ -393,12 +401,12 @@
     }
     {
       id: "4A70000000000141"
-      x: 10.08d
-      y: -9.27d
+      x: 7.975d
+      y: -5.655d
       optional: true
       icon: { id: "mekanism:logistical_sorter", count: 1 }
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       tasks: [
         { id: "4B70000000014100", type: "item", item: "mekanism:logistical_sorter" }
         { id: "4B70000000014101", type: "checkmark" }
@@ -407,12 +415,12 @@
     }
     {
       id: "4A70000000000142"
-      x: 3.6d
-      y: -12.78d
+      x: 3.77d
+      y: -6.815d
       optional: true
       icon: { id: "ae2:energy_cell", count: 1 }
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       tasks: [
         { id: "4B70000000014200", type: "item", item: "ae2:energy_cell" }
         { id: "4B70000000014201", type: "checkmark" }

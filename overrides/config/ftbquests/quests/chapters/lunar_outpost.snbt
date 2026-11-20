@@ -7,7 +7,7 @@
   quests: [
     {
       id: "4A60000000000101"
-      x: -0.9d
+      x: 0d
       y: 0d
       dependencies: ["4A5000000000010A"]
       tasks: [
@@ -15,25 +15,25 @@
       ]
       icon: { id: "deepfield:pathfinder_kit", count: 1 }
       shape: "hexagon"
-      size: 1.22d
+      size: 1.2d
     }
     {
       id: "4A60000000000102"
-      x: 5.4d
-      y: -4.5d
+      x: 3.915d
+      y: -2.291d
       dependencies: ["4A60000000000129"]
       tasks: [
         { id: "4A60000000020000", type: "item", item: "deepfield:solar_panel" }
         { id: "4A60000000020001", type: "item", item: "deepfield:battery_bank" }
       ]
       shape: "square"
-      size: 0.95d
+      size: 1d
       icon: { id: "deepfield:solar_panel", count: 1 }
     }
     {
       id: "4A60000000000103"
-      x: 9d
-      y: 4.5d
+      x: 5.8d
+      y: 2.349d
       dependencies: ["4A60000000000129"]
       tasks: [
         { id: "4A60000000030000", type: "dimension", dimension: "deepfield:moon" }
@@ -45,7 +45,7 @@
     }
     {
       id: "4A60000000000104"
-      x: 5.4d
+      x: 4.06d
       y: 0d
       dependencies: ["4A60000000000129"]
       tasks: [
@@ -53,13 +53,13 @@
         { id: "4A60000000040001", type: "item", item: "deepfield:ore_processor" }
       ]
       shape: "square"
-      size: 0.95d
+      size: 1d
       icon: { id: "deepfield:mining_drill", count: 1 }
     }
     {
       id: "4A60000000000105"
-      x: 8.37d
-      y: -4.5d
+      x: 5.945d
+      y: -2.291d
       dependencies: ["4A60000000000102"]
       tasks: [
         { id: "4A60000000050000", type: "dimension", dimension: "deepfield:moon" }
@@ -71,7 +71,7 @@
     }
     {
       id: "4A60000000000106"
-      x: 10.8d
+      x: 6.8875d
       y: 0d
       dependencies: ["4A60000000000104", "4A60000000000105"]
       tasks: [
@@ -84,7 +84,7 @@
     }
     {
       id: "4A60000000000107"
-      x: 14.4d
+      x: 9.019d
       y: 0d
       dependencies: ["4A60000000000106"]
       tasks: [
@@ -97,7 +97,7 @@
     }
     {
       id: "4A60000000000108"
-      x: 19.8d
+      x: 11.1505d
       y: 0d
       dependencies: ["4A60000000000107", "4A60000000000103"]
       tasks: [
@@ -109,11 +109,11 @@
       rewards: [
         { id: "4A60000000000301", type: "command", command: "history global unlock m1_lunar_industry", permission_level: 2, team_reward: true }
       ]
-      size: 1.22d
+      size: 1.2d
     }
     {
       id: "4A60000000000109"
-      x: 23.4d
+      x: 13.282d
       y: 0d
       dependencies: ["4A60000000000108"]
       tasks: [
@@ -125,8 +125,8 @@
     }
     {
       id: "4A6000000000010A"
-      x: 8.37d
-      y: -7.74d
+      x: 5.945d
+      y: -4.2775d
       dependencies: ["4A60000000000105"]
       tasks: [
         { id: "4A600000000A0000", type: "checkmark" }
@@ -134,12 +134,12 @@
       icon: { id: "deepfield:solar_panel", count: 1 }
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A6000000000010B"
-      x: 9d
-      y: 7.65d
+      x: 5.8d
+      y: 4.2485d
       dependencies: ["4A60000000000103"]
       tasks: [
         { id: "4A600000000B0000", type: "item", item: "deepfield:regolith_bags", count: 4 }
@@ -147,13 +147,13 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "deepfield:regolith_bags", count: 1 }
     }
     {
       id: "4A6000000000010C"
-      x: 12.33d
-      y: -3.69d
+      x: 8.758d
+      y: -1.4355d
       dependencies: ["4A60000000000106"]
       tasks: [
         { id: "4A600000000C0000", type: "checkmark" }
@@ -161,12 +161,12 @@
       icon: { id: "minecraft:chest", count: 1 }
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A6000000000010D"
-      x: 16.02d
-      y: -2.79d
+      x: 10.382d
+      y: -1.247d
       dependencies: ["4A60000000000107"]
       tasks: [
         { id: "4A600000000D0000", type: "checkmark" }
@@ -174,12 +174,12 @@
       icon: { id: "deepfield:ore_processor", count: 1 }
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A60000000000120"
-      x: 11.34d
-      y: -7.02d
+      x: 7.9605d
+      y: -4.2775d
       optional: true
       dependencies: ["4A6000000000010A"]
       tasks: [
@@ -187,13 +187,13 @@
         { id: "4A61000000002001", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "deepfield:battery_bank", count: 1 }
     }
     {
       id: "4A60000000000121"
-      x: 10.26d
-      y: -9.36d
+      x: 7.9605d
+      y: -6.1625d
       optional: true
       dependencies: ["4A60000000000120"]
       tasks: [
@@ -201,12 +201,12 @@
       ]
       icon: { id: "minecraft:clock", count: 1 }
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A60000000000122"
-      x: 9d
-      y: 10.62d
+      x: 5.8d
+      y: 6.1625d
       optional: true
       dependencies: ["4A6000000000010B"]
       tasks: [
@@ -214,26 +214,26 @@
         { id: "4A61000000002201", type: "item", item: "deepfield:large_oxygen_tank" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "deepfield:insulated_panel", count: 1 }
     }
     {
       id: "4A60000000000123"
-      x: 14.67d
-      y: -6.03d
+      x: 9.7875d
+      y: -3.132d
       optional: true
       dependencies: ["4A6000000000010C"]
       tasks: [
         { id: "4A61000000002300", type: "item", item: "deepfield:survey_scanner" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "deepfield:survey_scanner", count: 1 }
     }
     {
       id: "4A60000000000124"
-      x: 17.46d
-      y: -6.03d
+      x: 11.745d
+      y: -3.132d
       optional: true
       dependencies: ["4A60000000000123"]
       tasks: [
@@ -242,13 +242,13 @@
         { id: "4A61000000002402", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "mekanism:logistical_sorter", count: 1 }
     }
     {
       id: "4A60000000000125"
-      x: 19.8d
-      y: 3.24d
+      x: 11.5275d
+      y: 2.03d
       optional: true
       dependencies: ["4A60000000000108"]
       tasks: [
@@ -256,13 +256,13 @@
         { id: "4A61000000002501", type: "item", item: "ironchest:iron_chest" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "ae2:storage_bus", count: 1 }
     }
     {
       id: "4A60000000000126"
-      x: 19.8d
-      y: 6.12d
+      x: 11.745d
+      y: 3.9875d
       optional: true
       dependencies: ["4A60000000000125"]
       tasks: [
@@ -271,13 +271,13 @@
         { id: "4A61000000002602", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "ae2:level_emitter", count: 1 }
     }
     {
       id: "4A60000000000127"
-      x: 26.19d
-      y: -2.16d
+      x: 14.935d
+      y: -1.2325d
       optional: true
       dependencies: ["4A60000000000109"]
       tasks: [
@@ -285,13 +285,13 @@
         { id: "4A61000000002701", type: "item", item: "mekanism:digital_miner" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "mekanism:robit", count: 1 }
     }
     {
       id: "4A60000000000128"
-      x: 26.19d
-      y: 2.16d
+      x: 14.935d
+      y: 1.305d
       optional: true
       dependencies: ["4A60000000000109"]
       tasks: [
@@ -299,19 +299,19 @@
         { id: "4A61000000002801", type: "item", item: "megacells:compression_card" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "megacells:bulk_item_cell", count: 1 }
     }
     {
       id: "4A60000000000129"
-      x: 2.16d
+      x: 2.001d
       y: 0d
       dependencies: ["4A60000000000101"]
       tasks: [
         { id: "4A61000000002900", type: "item", item: "deepfield:titanium_ingot" }
       ]
       shape: "hexagon"
-      size: 1.22d
+      size: 1.2d
       icon: { id: "deepfield:titanium_ingot", count: 1 }
     }
     {
@@ -322,10 +322,10 @@
       ]
       dependencies: ["4A60000000000129"]
       optional: true
-      x: 2.16d
-      y: 2.97d
+      x: 1.6675d
+      y: 1.711d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "deepfield:raw_ilmenite", count: 1 }
     }
     {
@@ -336,10 +336,10 @@
       ]
       dependencies: ["4A60000000000103"]
       optional: true
-      x: 11.61d
-      y: 6.12d
+      x: 3.9875d
+      y: 3.9875d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "deepfield:airlock", count: 1 }
     }
     {
@@ -350,20 +350,20 @@
       ]
       dependencies: ["4A60000000000128"]
       optional: true
-      x: 28.8d
-      y: 2.16d
+      x: 16.7475d
+      y: 1.305d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "megacells:compression_card", count: 1 }
     }
     {
       id: "4A60000000000140"
-      x: 10.71d
-      y: -2.79d
+      x: 8.0765d
+      y: -2.291d
       optional: true
       icon: { id: "deepfield:power_cable", count: 1 }
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       tasks: [
         { id: "4B60000000014000", type: "item", item: "deepfield:power_cable" }
         { id: "4B60000000014001", type: "checkmark" }
@@ -372,12 +372,12 @@
     }
     {
       id: "4A60000000000141"
-      x: 9d
-      y: 13.5d
+      x: 7.685d
+      y: 6.1625d
       optional: true
       icon: { id: "deepfield:electrolyser", count: 1 }
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       tasks: [
         { id: "4B60000000014100", type: "item", item: "deepfield:electrolyser" }
         { id: "4B60000000014101", type: "checkmark" }
@@ -386,12 +386,12 @@
     }
     {
       id: "4A60000000000142"
-      x: 20.25d
-      y: -6.03d
+      x: 13.7025d
+      y: -3.132d
       optional: true
       icon: { id: "deepfield:cargo_inlet", count: 1 }
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       tasks: [
         { id: "4B60000000014200", type: "item", item: "deepfield:cargo_inlet" }
         { id: "4B60000000014201", type: "item", item: "deepfield:cargo_tube" }

@@ -7,7 +7,7 @@
   quests: [
     {
       id: "4A80000000000101"
-      x: -5.4d
+      x: 0d
       y: 0d
       icon: { id: "deepfield:moonglass_shard", count: 1 }
       dependencies: ["4A7000000000010A"]
@@ -15,11 +15,11 @@
         { id: "4A80000000100100", type: "checkmark" }
       ]
       shape: "square"
-      size: 0.95d
+      size: 1d
     }
     {
       id: "4A80000000000102"
-      x: -2.7d
+      x: 1.9575d
       y: 0d
       icon: { id: "deepfield:pathfinder_kit", count: 1 }
       dependencies: ["4A80000000000101"]
@@ -27,11 +27,11 @@
         { id: "4A80000000100200", type: "checkmark" }
       ]
       shape: "square"
-      size: 0.95d
+      size: 1d
     }
     {
       id: "4A80000000000103"
-      x: 0d
+      x: 3.915d
       y: 0d
       icon: { id: "deepfield:mars_globe", count: 1 }
       dependencies: ["4A80000000000102"]
@@ -39,12 +39,12 @@
         { id: "4A80000000100300", type: "advancement", advancement: "deepfield:visit/mars" }
       ]
       shape: "hexagon"
-      size: 1.22d
+      size: 1.2d
     }
     {
       id: "4A80000000000104"
-      x: 3.6d
-      y: -5.4d
+      x: 6.0175d
+      y: -3.1175d
       icon: { id: "deepfield:hematite", count: 1 }
       dependencies: ["4A80000000000103"]
       tasks: [
@@ -56,7 +56,7 @@
     }
     {
       id: "4A80000000000105"
-      x: 4.14d
+      x: 6.0175d
       y: 0d
       icon: { id: "deepfield:battery_bank", count: 1 }
       dependencies: ["4A80000000000103"]
@@ -69,8 +69,8 @@
     }
     {
       id: "4A80000000000106"
-      x: 3.6d
-      y: 5.4d
+      x: 6.0175d
+      y: 3.1175d
       icon: { id: "deepfield:oxygen_generator", count: 1 }
       dependencies: ["4A80000000000103"]
       tasks: [
@@ -82,8 +82,8 @@
     }
     {
       id: "4A80000000000107"
-      x: 12.6d
-      y: 6.12d
+      x: 9.135d
+      y: 3.045d
       icon: { id: "minecraft:wheat", count: 1 }
       dependencies: ["4A80000000000106"]
       tasks: [
@@ -95,8 +95,8 @@
     }
     {
       id: "4A80000000000108"
-      x: 9d
-      y: -3.6d
+      x: 8.7d
+      y: -3.1175d
       icon: { id: "minecraft:iron_ingot", count: 1 }
       dependencies: ["4A80000000000104", "4A80000000000105"]
       tasks: [
@@ -109,8 +109,8 @@
     }
     {
       id: "4A80000000000109"
-      x: 10.8d
-      y: 1.17d
+      x: 8.7d
+      y: 0d
       icon: { id: "mekanism:teleporter", count: 1 }
       dependencies: ["4A80000000000105", "4A80000000000106"]
       tasks: [
@@ -120,36 +120,36 @@
       rewards: [
         { id: "4A80000000000301", type: "command", command: "history global unlock m1_mars_logistics", permission_level: 2, team_reward: true }
       ]
-      size: 1.22d
+      size: 1.2d
     }
     {
       id: "4A8000000000010A"
-      x: 14.4d
-      y: 1.17d
+      x: 10.8025d
+      y: 0d
       icon: { id: "mekanism:teleporter", count: 1 }
       dependencies: ["4A80000000000109"]
       tasks: [
         { id: "4A80000000100A00", type: "advancement", advancement: "m1prototype:logistics/earth_to_mars" }
       ]
       shape: "square"
-      size: 0.95d
+      size: 1d
     }
     {
       id: "4A8000000000010B"
-      x: 18d
-      y: 1.17d
+      x: 12.905d
+      y: 0d
       icon: { id: "mekanism:teleporter", count: 1 }
       dependencies: ["4A8000000000010A"]
       tasks: [
         { id: "4A80000000100B00", type: "advancement", advancement: "m1prototype:logistics/mars_to_earth" }
       ]
       shape: "square"
-      size: 0.95d
+      size: 1d
     }
     {
       id: "4A8000000000010C"
-      x: 22.05d
-      y: 1.17d
+      x: 15.0075d
+      y: 0d
       icon: { id: "deepfield:mars_globe", count: 1 }
       dependencies: ["4A80000000000107", "4A80000000000108", "4A8000000000010B"]
       tasks: [
@@ -157,12 +157,12 @@
         { id: "4B80000000000C01", type: "dimension", dimension: "deepfield:mars" }
       ]
       shape: "hexagon"
-      size: 1.22d
+      size: 1.2d
     }
     {
       id: "4A8000000000010D"
-      x: -3.78d
-      y: -2.97d
+      x: 1.9575d
+      y: -1.885d
       icon: { id: "deepfield:oxygen_tank", count: 1 }
       dependencies: ["4A80000000000102"]
       optional: true
@@ -170,12 +170,12 @@
         { id: "4A80000000100D00", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A8000000000010E"
-      x: 0d
-      y: 3.6d
+      x: 3.683d
+      y: 2.1025d
       icon: { id: "minecraft:spyglass", count: 1 }
       dependencies: ["4A80000000000103"]
       optional: true
@@ -183,12 +183,12 @@
         { id: "4A80000000100E00", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A8000000000010F"
-      x: 1.8d
-      y: -7.74d
+      x: 4.64d
+      y: -4.495d
       icon: { id: "deepfield:perchlorate_fuel", count: 1 }
       dependencies: ["4A80000000000104"]
       optional: true
@@ -196,12 +196,12 @@
         { id: "4A80000000100F00", type: "item", item: "deepfield:perchlorate_fuel" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A80000000000110"
-      x: 0d
-      y: -3.06d
+      x: 3.451d
+      y: -2.059d
       icon: { id: "minecraft:barrel", count: 1 }
       dependencies: ["4A80000000000103"]
       optional: true
@@ -209,12 +209,12 @@
         { id: "4A80000000101000", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A80000000000111"
-      x: 6.84d
-      y: -0.99d
+      x: 7.4965d
+      y: -0.754d
       icon: { id: "deepfield:battery_bank", count: 1 }
       dependencies: ["4A80000000000105"]
       optional: true
@@ -222,12 +222,12 @@
         { id: "4A80000000101100", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A80000000000112"
-      x: 6.21d
-      y: 3.15d
+      x: 6.7135d
+      y: 1.2325d
       icon: { id: "deepfield:power_cable", count: 1 }
       dependencies: ["4A80000000000105", "4A80000000000106"]
       optional: true
@@ -235,12 +235,12 @@
         { id: "4A80000000101200", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A80000000000113"
-      x: 1.26d
-      y: 7.65d
+      x: 5.365d
+      y: 4.959d
       icon: { id: "minecraft:iron_door", count: 1 }
       dependencies: ["4A80000000000106"]
       optional: true
@@ -248,12 +248,12 @@
         { id: "4A80000000101300", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A80000000000114"
-      x: 6.03d
-      y: 7.83d
+      x: 7.2935d
+      y: 4.64d
       icon: { id: "minecraft:water_bucket", count: 1 }
       dependencies: ["4A80000000000106"]
       optional: true
@@ -261,12 +261,12 @@
         { id: "4A80000000101400", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A80000000000115"
-      x: 15.39d
-      y: 6.75d
+      x: 10.991d
+      y: 4.292d
       icon: { id: "minecraft:bread", count: 1 }
       dependencies: ["4A80000000000107"]
       optional: true
@@ -274,12 +274,12 @@
         { id: "4A80000000101500", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A80000000000116"
-      x: 11.79d
-      y: -4.77d
+      x: 10.179d
+      y: -4.35d
       icon: { id: "minecraft:hopper", count: 1 }
       dependencies: ["4A80000000000108"]
       optional: true
@@ -287,12 +287,12 @@
         { id: "4A80000000101600", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A80000000000117"
-      x: 10.8d
-      y: -6.66d
+      x: 8.062d
+      y: -4.93d
       icon: { id: "deepfield:research_terminal", count: 1 }
       dependencies: ["4A80000000000108"]
       optional: true
@@ -305,8 +305,8 @@
     }
     {
       id: "4A80000000000118"
-      x: 13.68d
-      y: -6.66d
+      x: 9.715d
+      y: -6.4525d
       icon: { id: "deepfield:fabricator", count: 1 }
       dependencies: ["4A80000000000117"]
       optional: true
@@ -315,12 +315,12 @@
         { id: "4A80000000101801", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A80000000000119"
-      x: 16.65d
-      y: -6.66d
+      x: 11.8175d
+      y: -6.4525d
       icon: { id: "deepfield:colony_core", count: 1 }
       dependencies: ["4A80000000000118"]
       optional: true
@@ -329,12 +329,12 @@
         { id: "4A80000000101901", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A8000000000011A"
-      x: 12.06d
-      y: 3.42d
+      x: 9.86d
+      y: 1.363d
       icon: { id: "mekanism:quantum_entangloporter", count: 1 }
       dependencies: ["4A80000000000109"]
       optional: true
@@ -342,12 +342,12 @@
         { id: "4A80000000101A00", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A8000000000011B"
-      x: 24.93d
-      y: 1.17d
+      x: 16.8925d
+      y: 0d
       icon: { id: "minecraft:writable_book", count: 1 }
       dependencies: ["4A8000000000010C"]
       optional: true
@@ -355,7 +355,7 @@
         { id: "4A80000000101B00", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
     }
     {
       id: "4A80000000000130"
@@ -364,10 +364,10 @@
       ]
       dependencies: ["4A8000000000010D"]
       optional: true
-      x: -6.39d
-      y: -3.96d
+      x: 0.174d
+      y: -2.3925d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "deepfield:suit_ration", count: 1 }
     }
     {
@@ -378,10 +378,10 @@
       ]
       dependencies: ["4A80000000000104"]
       optional: true
-      x: 5.13d
-      y: -8.28d
+      x: 6.0465d
+      y: -4.988d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "minecraft:blast_furnace", count: 1 }
     }
     {
@@ -392,10 +392,10 @@
       ]
       dependencies: ["4A80000000000114"]
       optional: true
-      x: 8.73d
-      y: 9.27d
+      x: 7.3225d
+      y: 6.5975d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "minecraft:water_bucket", count: 1 }
     }
     {
@@ -406,10 +406,10 @@
       ]
       dependencies: ["4A80000000000115"]
       optional: true
-      x: 17.91d
-      y: 7.74d
+      x: 12.876d
+      y: 4.292d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "farmersdelight:cooking_pot", count: 1 }
     }
     {
@@ -420,20 +420,20 @@
       ]
       dependencies: ["4A80000000000119"]
       optional: true
-      x: 19.53d
-      y: -6.66d
+      x: 13.92d
+      y: -6.4525d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "deepfield:colony_core", count: 1 }
     }
     {
       id: "4A80000000000140"
-      x: 12.6d
-      y: 10.62d
+      x: 9.28d
+      y: 7.0325d
       optional: true
       icon: { id: "deepfield:alien_soil", count: 1 }
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       tasks: [
         { id: "4B80000000014000", type: "item", item: "deepfield:alien_soil" }
         { id: "4B80000000014001", type: "checkmark" }
@@ -442,12 +442,12 @@
     }
     {
       id: "4A80000000000141"
-      x: 10.71d
-      y: -9.45d
+      x: 7.395d
+      y: -6.641d
       optional: true
       icon: { id: "deepfield:combustion_generator", count: 1 }
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       tasks: [
         { id: "4B80000000014100", type: "item", item: "deepfield:combustion_generator" }
         { id: "4B80000000014101", type: "checkmark" }
@@ -456,12 +456,12 @@
     }
     {
       id: "4A80000000000142"
-      x: 12.6d
-      y: 8.37d
+      x: 9.309d
+      y: 5.1185d
       optional: true
       icon: { id: "deepfield:biomass_press", count: 1 }
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       tasks: [
         { id: "4B80000000014200", type: "item", item: "deepfield:biomass_press" }
         { id: "4B80000000014201", type: "item", item: "deepfield:compost" }

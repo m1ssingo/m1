@@ -3,6 +3,6 @@
   "minVersion": "0.8",
   "package": "dev.m1ssing0.packclient.mixin",
   "compatibilityLevel": "JAVA_21",
-  "client": ["LoginErrorMixin", "OptionsFooterMixin", "MenuBackgroundMixin", "MenuBlurMixin"],
+  "client": ["LoginErrorMixin", "OptionsFooterMixin", "MenuBackgroundMixin", "MenuBlurMixin", "QuestViewportMixin"],
   "injectors": {"defaultRequire": 1}
 }

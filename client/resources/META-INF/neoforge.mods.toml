@@ -3,9 +3,9 @@ loaderVersion="[4,)"
 license="MIT"
 [[mods]]
 modId="m1packclient"
-version="0.4.3"
+version="0.4.4"
 displayName="M1 Pack Menu"
-description='''Pack menu, default key mappings and quest recipe lookup.'''
+description='''Pack menu, key mappings, quest recipe lookup and quest overview.'''
 [[mixins]]
 config="m1packclient.mixins.json"
 [[dependencies.m1packclient]]

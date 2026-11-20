@@ -16,7 +16,7 @@
       x: 0d
       y: 0d
       shape: "hexagon"
-      size: 1.22d
+      size: 1.2d
       icon: { id: "minecraft:stone_hoe", count: 1 }
     }
     {
@@ -27,10 +27,10 @@
       ]
       dependencies: ["4A00000000000115"]
       optional: true
-      x: -2.97d
-      y: -1.98d
+      x: 0d
+      y: -1.9575d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "minecraft:wheat", count: 1 }
     }
     {
@@ -40,10 +40,10 @@
       ]
       dependencies: ["4A00000000000115"]
       optional: true
-      x: -3.15d
-      y: 2.43d
+      x: -2.03d
+      y: -1.305d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "sereneseasons:calendar", count: 1 }
     }
     {
@@ -54,8 +54,8 @@
       ]
       dependencies: ["4A00000000000115"]
       optional: true
-      x: 3.24d
-      y: 0d
+      x: 2.1025d
+      y: 1.5225d
       shape: "circle"
       size: 1.04d
       icon: { id: "farmersdelight:cooking_pot", count: 1 }
@@ -67,16 +67,16 @@
       ]
       dependencies: ["4A00000000000118"]
       optional: true
-      x: 6.03d
-      y: 1.62d
+      x: 3.8425d
+      y: 1.9575d
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "farmersdelight:vegetable_soup", count: 1 }
     }
     {
       id: "4A90000000000101"
-      x: 3.24d
-      y: -3.6d
+      x: 1.9575d
+      y: -1.74d
       dependencies: ["4A00000000000115"]
       tasks: [
         { id: "4B90000000010100", type: "item", item: "farmersdelight:tomato" }
@@ -90,21 +90,21 @@
     }
     {
       id: "4A90000000000102"
-      x: 5.94d
-      y: -5.13d
+      x: 3.8425d
+      y: -2.175d
       dependencies: ["4A90000000000101"]
       tasks: [
         { id: "4B90000000010200", type: "item", item: "farmersdelight:rice" }
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "farmersdelight:rice", count: 1 }
     }
     {
       id: "4A90000000000103"
-      x: 3.24d
-      y: 3.6d
+      x: -2.03d
+      y: 1.5225d
       dependencies: ["4A00000000000115"]
       tasks: [
         { id: "4B90000000010300", type: "item", item: "farmersdelight:cutting_board" }
@@ -117,25 +117,25 @@
     }
     {
       id: "4A90000000000104"
-      x: 6.39d
-      y: 5.13d
+      x: -3.8425d
+      y: 2.1025d
       dependencies: ["4A90000000000103"]
       tasks: [
         { id: "4B90000000010400", type: "item", item: "farmersdelight:skillet" }
       ]
       optional: true
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       icon: { id: "farmersdelight:skillet", count: 1 }
     }
     {
       id: "4A90000000000140"
-      x: -5.76d
-      y: 3.15d
+      x: -3.8425d
+      y: -1.885d
       optional: true
       icon: { id: "farmersdelight:rich_soil", count: 1 }
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       tasks: [
         { id: "4B90000000014000", type: "item", item: "farmersdelight:organic_compost" }
         { id: "4B90000000014001", type: "item", item: "farmersdelight:rich_soil" }
@@ -145,12 +145,12 @@
     }
     {
       id: "4A90000000000141"
-      x: 6.39d
-      y: -1.62d
+      x: 3.8425d
+      y: -0.0725d
       optional: true
       icon: { id: "farmersdelight:cabbage_rolls", count: 1 }
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       tasks: [
         { id: "4B90000000014100", type: "item", item: "farmersdelight:cabbage_rolls" }
       ]
@@ -158,12 +158,12 @@
     }
     {
       id: "4A90000000000142"
-      x: 8.82d
-      y: -5.13d
+      x: 5.7275d
+      y: -2.175d
       optional: true
       icon: { id: "farmersdelight:rice_panicle", count: 1 }
       shape: "circle"
-      size: 0.8d
+      size: 0.88d
       tasks: [
         { id: "4B90000000014200", type: "item", item: "farmersdelight:rice_panicle" }
         { id: "4B90000000014201", type: "checkmark" }
