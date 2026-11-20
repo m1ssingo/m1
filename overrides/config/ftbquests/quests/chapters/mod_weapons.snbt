@@ -1,0 +1,61 @@
+{
+  id: "4AA0000000000001"
+  filename: "mod_weapons"
+  group: "4AC0000000000004"
+  order_index: 1
+  icon: { id: "mekanism:electric_bow", count: 1 }
+  quests: [
+    {
+      id: "4AA0000000000101"
+      x: 0d
+      y: 0d
+      dependencies: ["4A00000000000104"]
+      tasks: [
+        { id: "4BA0000000010100", type: "item", item: "mutantmonsters:hulk_hammer" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.85d
+      icon: { id: "mutantmonsters:hulk_hammer", count: 1 }
+    }
+    {
+      id: "4AA0000000000102"
+      x: 3.4d
+      y: 0d
+      dependencies: ["4A10000000000107"]
+      tasks: [
+        { id: "4BA0000000010200", type: "item", item: "mekanism:electric_bow" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.85d
+      icon: { id: "mekanism:electric_bow", count: 1 }
+    }
+    {
+      id: "4AA0000000000103"
+      x: 0d
+      y: 3.4d
+      dependencies: ["4A10000000000103"]
+      tasks: [
+        { id: "4BA0000000010300", type: "item", item: "immersiveengineering:revolver" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.85d
+      icon: { id: "immersiveengineering:revolver", count: 1 }
+    }
+    {
+      id: "4AA0000000000104"
+      x: 3.4d
+      y: 3.4d
+      dependencies: ["4A10000000000104"]
+      tasks: [
+        { id: "4BA0000000010400", type: "item", item: "immersiveengineering:railgun" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.85d
+      icon: { id: "immersiveengineering:railgun", count: 1 }
+    }
+  ]
+}

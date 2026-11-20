@@ -48,12 +48,13 @@ ServerEvents.commandRegistry(event => {
     const CommandReward = Java.loadClass('dev.ftb.mods.ftbquests.quest.reward.CommandReward')
     const dependencies = {}
     const nodes = {}
-    const chapterSizes = [18, 33, 29, 24, 23, 26, 26, 28, 32]
+    const chapterSizes = [15, 40, 29, 24, 23, 26, 26, 28, 32, 9, 4]
     const groups = new Set()
     const links = []
     const books = new Set()
     const gates = []
     let optional = 0
+    let textless = 0
 
     function require(condition, reason) {
       if (!condition) throw new Error(reason)
@@ -65,10 +66,10 @@ ServerEvents.commandRegistry(event => {
     const text = Java.loadClass('dev.ftb.mods.ftbquests.util.TextUtils')
     const registry = context.getSource().getServer().registryAccess()
     const chapters = file.getAllChapters()
-    require(chapters.size() === chapterSizes.length, 'All nine chapters must load')
+    require(chapters.size() === chapterSizes.length, 'All eleven chapters must load')
     chapters.forEach(chapter => {
       const code = String(chapter.getCodeString())
-      const chapterIndex = Number(code.charAt(2))
+      const chapterIndex = parseInt(code.charAt(2), 16)
       const group = chapter.getGroup()
       const groupTitle = translations.getStringTranslation(group, 'ru_ru', key.TITLE).orElseThrow()
       groups.add(String(groupTitle))
@@ -79,9 +80,9 @@ ServerEvents.commandRegistry(event => {
         nodes[id] = quest
         const title = String(translations.getStringTranslation(quest, 'ru_ru', key.TITLE).orElseThrow())
         require(title.length > 2 && title === String(translations.getStringTranslation(quest, 'en_us', key.TITLE).orElseThrow()), 'Missing title or stale fallback ' + id)
-        const description = translations.getStringListTranslation(quest, 'ru_ru', key.QUEST_DESC).orElseThrow()
-        require(description.size() > 0 && description.size() <= 4, 'Invalid description ' + id)
-        description.forEach(line => {
+        const description = translations.getStringListTranslation(quest, 'ru_ru', key.QUEST_DESC)
+        if (description.isEmpty()) textless++
+        else description.get().forEach(line => {
           if (String(line).startsWith('{')) {
             const component = text.parseRawText(String(line), registry)
             const click = component.getStyle().getClickEvent()
@@ -108,8 +109,9 @@ ServerEvents.commandRegistry(event => {
         })
       })
     })
-    require(optional === 155, 'Expected 155 optional quests, got ' + optional)
-    require(groups.size === 3, 'Missing chapter groups')
+    require(optional === 172, 'Expected 172 optional quests, got ' + optional)
+    require(textless === 13, 'Simple vanilla quests should have no description')
+    require(groups.size === 4 && groups.has('Разное'), 'Missing chapter groups')
     require(links.length === 18 && links.every(id => nodes[id]), 'Broken in-book guide link')
 
     const visited = new Set()
@@ -135,6 +137,14 @@ ServerEvents.commandRegistry(event => {
     }
     traceFinal('4A8000000000010C')
     require(mainPath.size === 84, 'A required quest is disconnected from the Mars finale')
+    const firstPower = '4A10000000000104'
+    ;['4A1000000000010B', '4A10000000000138', '4A10000000000105'].forEach(id => {
+      require(dependencies[id].length === 1 && dependencies[id][0] === firstPower, 'Workshop branch has an extra gate ' + id)
+    })
+    const poweredPress = '4A1000000000013E'
+    require(!mainPath.has(poweredPress) && dependencies[poweredPress].length === 2
+      && dependencies[poweredPress].includes('4A10000000000139')
+      && dependencies[poweredPress].includes('4A1000000000010C'), 'The press-project task must join the mold and the LV buffer')
     const requiredGates = ['4A10000000000106', '4A50000000000101', '4A60000000000108', '4A70000000000102', '4A80000000000109']
     require(gates.sort().join(',') === requiredGates.join(','), 'Progression reward IDs changed')
     require(dependencies['4A70000000000101'].includes('4A60000000000109'), 'Mature circuit must precede interplanetary logistics')
@@ -159,7 +169,7 @@ ServerEvents.commandRegistry(event => {
     ;['minecraft:adventure/sleep_in_bed', 'mutantmonsters:burn_zombie_burn'].forEach(id => {
       require(server.getAdvancements().get(advanceId.parse(id)) !== null, 'Missing advancement ' + id)
     })
-    console.info('[M1-QUEST-POLISH] OK: ' + Object.keys(nodes).length + ' quests, ' + optional + ' optional, ' + links.length + ' in-book links, three groups and five research gates')
+    console.info('[M1-QUEST-POLISH] OK: ' + Object.keys(nodes).length + ' quests, ' + optional + ' optional, ' + links.length + ' in-book links, four groups and five research gates')
     return 1
   }
 })

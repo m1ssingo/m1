@@ -1264,8 +1264,8 @@
   "errors": [],
   "pack": {
     "name": "M1 SciFi Prototype",
-    "version": "0.8.1",
-    "status": "quest-polish"
+    "version": "0.8.2",
+    "status": "quest-redesign-trial"
   },
   "neoforge": "21.1.267",
   "neoforge_installer": {
@@ -1274,17 +1274,17 @@
   },
   "extra_files": [
     {
-      "path": "mods/m1packcompat-0.2.2.jar",
-      "file_name": "m1packcompat-0.2.2.jar",
-      "sha256": "bde6240f3646c459a984a2106cc9996e54c0329ae1aff54bb180d837011fac03",
+      "path": "mods/m1packcompat-0.2.3.jar",
+      "file_name": "m1packcompat-0.2.3.jar",
+      "sha256": "eb4f1ab703ba49065caaea6982c90d4871bb5a20bfcf7bc198b7a745a028e663",
       "side": "both",
       "license": "MIT",
       "source": "compat/src"
     },
     {
-      "path": "mods/m1packclient-0.4.2.jar",
-      "file_name": "m1packclient-0.4.2.jar",
-      "sha256": "1f1a1fa56017275de38200d72e0df06ee9aaec832db1e7554a5bf8d198add504",
+      "path": "mods/m1packclient-0.4.3.jar",
+      "file_name": "m1packclient-0.4.3.jar",
+      "sha256": "422236622549f14bc56431b33ae4f770d2cf48d108576a1bd4f95e427e032f4a",
       "side": "client",
       "source": "client/src",
       "license": "MIT (code); supplied image and audio assets"

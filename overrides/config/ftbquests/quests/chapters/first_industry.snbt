@@ -7,7 +7,7 @@
   quests: [
     {
       id: "4A10000000000101"
-      x: 1.55d
+      x: 1.7d
       y: 0d
       tasks: [
         { id: "4A10000000000201", type: "item", item: "immersiveengineering:hammer" }
@@ -20,7 +20,7 @@
     }
     {
       id: "4A10000000000102"
-      x: 4.65d
+      x: 5.1d
       y: 0d
       dependencies: ["4A10000000000130"]
       tasks: [
@@ -32,7 +32,7 @@
     }
     {
       id: "4A10000000000103"
-      x: 7.75d
+      x: 8.5d
       y: 0d
       dependencies: ["4A10000000000131"]
       tasks: [
@@ -44,34 +44,34 @@
     }
     {
       id: "4A10000000000104"
-      x: 9.3d
-      y: -1.55d
+      x: 11.05d
+      y: 0d
       dependencies: ["4A10000000000103"]
       tasks: [
         { id: "4A10000000000205", type: "item", item: "immersiveengineering:thermoelectric_generator" }
       ]
-      shape: "square"
-      size: 1d
+      shape: "hexagon"
+      size: 1.45d
       icon: { id: "immersiveengineering:thermoelectric_generator", count: 1 }
     }
     {
       id: "4A10000000000105"
-      x: 9.3d
-      y: 1.55d
-      dependencies: ["4A10000000000103"]
+      x: 13.6d
+      y: 1.7d
+      dependencies: ["4A10000000000104"]
       tasks: [
         { id: "4A10000000000206", type: "item", item: "mekanism:metallurgic_infuser" }
       ]
-      shape: "square"
-      size: 1d
+      shape: "hexagon"
+      size: 1.17d
       icon: { id: "mekanism:metallurgic_infuser", count: 1 }
     }
     {
       id: "4A10000000000106"
-      x: 10.85d
-      y: 0d
+      x: 15.3d
+      y: 1.7d
       shape: "hexagon"
-      dependencies: ["4A10000000000104", "4A10000000000105"]
+      dependencies: ["4A10000000000105"]
       tasks: [
         { id: "4A10000000000207", type: "checkmark" }
       ]
@@ -83,8 +83,8 @@
     }
     {
       id: "4A10000000000107"
-      x: 12.4d
-      y: 0d
+      x: 17d
+      y: 1.7d
       dependencies: ["4A10000000000106"]
       tasks: [
         { id: "4A10000000000208", type: "item", item: "mekanism:basic_control_circuit" }
@@ -98,8 +98,8 @@
     }
     {
       id: "4A10000000000108"
-      x: 15.5d
-      y: 0d
+      x: 20.4d
+      y: 1.7d
       dependencies: ["4A10000000000132"]
       tasks: [
         { id: "4A10000000000209", type: "item", item: "ae2:energy_acceptor" }
@@ -113,8 +113,8 @@
     }
     {
       id: "4A10000000000109"
-      x: 18.6d
-      y: 0d
+      x: 24.65d
+      y: 1.7d
       dependencies: ["4A10000000000133"]
       tasks: [
         { id: "4A1000000000020B", type: "item", item: "ae2:pattern_provider" }
@@ -128,8 +128,8 @@
     }
     {
       id: "4A1000000000010A"
-      x: 4.65d
-      y: 1.55d
+      x: 5.1d
+      y: 2.55d
       dependencies: ["4A10000000000102"]
       optional: true
       tasks: [
@@ -141,22 +141,22 @@
     }
     {
       id: "4A1000000000010B"
-      x: 9.3d
-      y: -3.1d
+      x: 11.05d
+      y: -2.89d
       dependencies: ["4A10000000000104"]
       optional: true
       tasks: [
         { id: "4A10000000010B00", type: "item", item: "immersiveengineering:connector_lv", count: 2 }
         { id: "4A10000000010B01", type: "item", item: "immersiveengineering:wirecoil_copper" }
       ]
-      shape: "circle"
-      size: 0.76d
+      shape: "hexagon"
+      size: 1.17d
       icon: { id: "immersiveengineering:connector_lv", count: 1 }
     }
     {
       id: "4A1000000000010C"
-      x: 7.75d
-      y: -4.65d
+      x: 11.05d
+      y: -5.525d
       dependencies: ["4A1000000000010B"]
       optional: true
       tasks: [
@@ -168,8 +168,8 @@
     }
     {
       id: "4A1000000000010D"
-      x: 10.85d
-      y: -4.65d
+      x: 8.67d
+      y: -4.59d
       dependencies: ["4A1000000000010B"]
       icon: { id: "immersiveengineering:waterwheel_segment", count: 1 }
       optional: true
@@ -181,9 +181,9 @@
     }
     {
       id: "4A1000000000010E"
-      x: 7.75d
-      y: 3.1d
-      dependencies: ["4A10000000000103"]
+      x: 11.05d
+      y: 3.06d
+      dependencies: ["4A10000000000104"]
       optional: true
       tasks: [
         { id: "4A10000000010E00", type: "item", item: "immersiveengineering:conveyor_basic" }
@@ -195,8 +195,8 @@
     }
     {
       id: "4A1000000000010F"
-      x: 13.95d
-      y: -1.55d
+      x: 20.4d
+      y: -1.7d
       dependencies: ["4A10000000000108"]
       optional: true
       tasks: [
@@ -208,8 +208,8 @@
     }
     {
       id: "4A10000000000110"
-      x: 15.5d
-      y: 1.55d
+      x: 20.4d
+      y: 4.25d
       dependencies: ["4A10000000000108"]
       optional: true
       tasks: [
@@ -237,8 +237,8 @@
     }
     {
       id: "4A10000000000121"
-      x: 7.75d
-      y: 4.65d
+      x: 11.05d
+      y: 5.44d
       optional: true
       dependencies: ["4A1000000000010E"]
       tasks: [
@@ -251,8 +251,8 @@
     }
     {
       id: "4A10000000000122"
-      x: 9.3d
-      y: 6.2d
+      x: 12.92d
+      y: 7.31d
       optional: true
       dependencies: ["4A10000000000121"]
       tasks: [
@@ -265,8 +265,8 @@
     }
     {
       id: "4A10000000000123"
-      x: 4.65d
-      y: 3.1d
+      x: 5.1d
+      y: 5.1d
       optional: true
       dependencies: ["4A1000000000010A"]
       tasks: [
@@ -279,8 +279,8 @@
     }
     {
       id: "4A10000000000124"
-      x: 3.1d
-      y: 3.1d
+      x: 3.4d
+      y: 5.1d
       optional: true
       dependencies: ["4A1000000000010A"]
       tasks: [
@@ -293,8 +293,8 @@
     }
     {
       id: "4A10000000000125"
-      x: 13.95d
-      y: -3.1d
+      x: 20.4d
+      y: -4.505d
       optional: true
       dependencies: ["4A1000000000010F"]
       tasks: [
@@ -307,8 +307,8 @@
     }
     {
       id: "4A10000000000126"
-      x: 13.95d
-      y: -4.65d
+      x: 20.4d
+      y: -7.055d
       optional: true
       dependencies: ["4A10000000000125"]
       tasks: [
@@ -321,8 +321,8 @@
     }
     {
       id: "4A10000000000127"
-      x: 15.5d
-      y: 3.1d
+      x: 20.4d
+      y: 6.8d
       optional: true
       dependencies: ["4A10000000000110"]
       tasks: [
@@ -335,8 +335,8 @@
     }
     {
       id: "4A10000000000128"
-      x: 18.6d
-      y: -1.55d
+      x: 24.65d
+      y: -1.7d
       optional: true
       dependencies: ["4A10000000000109"]
       tasks: [
@@ -353,7 +353,7 @@
         { id: "4B10000000003000", type: "item", item: "immersiveengineering:cokebrick", count: 27 }
       ]
       dependencies: ["4A10000000000101"]
-      x: 3.1d
+      x: 3.4d
       y: 0d
       shape: "square"
       size: 1d
@@ -365,7 +365,7 @@
         { id: "4B10000000003100", type: "item", item: "immersiveengineering:blastbrick", count: 27 }
       ]
       dependencies: ["4A10000000000102"]
-      x: 6.2d
+      x: 6.8d
       y: 0d
       shape: "square"
       size: 1d
@@ -377,8 +377,8 @@
         { id: "4B10000000003200", type: "item", item: "ae2:logic_processor" }
       ]
       dependencies: ["4A10000000000107"]
-      x: 13.95d
-      y: 0d
+      x: 18.7d
+      y: 1.7d
       shape: "square"
       size: 1d
       icon: { id: "ae2:logic_processor", count: 1 }
@@ -390,8 +390,8 @@
         { id: "4B10000000003301", type: "item", item: "ae2:pattern_encoding_terminal" }
       ]
       dependencies: ["4A10000000000108"]
-      x: 17.05d
-      y: 0d
+      x: 22.44d
+      y: 1.7d
       shape: "square"
       size: 1d
       icon: { id: "ae2:blank_pattern", count: 1 }
@@ -404,8 +404,8 @@
       ]
       dependencies: ["4A10000000000110"]
       optional: true
-      x: 17.05d
-      y: 3.1d
+      x: 22.525d
+      y: 6.8d
       shape: "circle"
       size: 0.76d
       icon: { id: "ae2netanalyser:network_analyser", count: 1 }
@@ -419,8 +419,8 @@
       ]
       dependencies: ["4A1000000000010F"]
       optional: true
-      x: 12.4d
-      y: -3.1d
+      x: 18.7d
+      y: -5.95d
       shape: "circle"
       size: 0.76d
       icon: { id: "ae2:fluid_storage_cell_1k", count: 1 }
@@ -433,8 +433,8 @@
       ]
       dependencies: ["4A10000000000133"]
       optional: true
-      x: 18.6d
-      y: 1.55d
+      x: 22.78d
+      y: 4.25d
       shape: "circle"
       size: 0.76d
       icon: { id: "ae2:guide", count: 1 }
@@ -449,11 +449,119 @@
       ]
       dependencies: ["4A10000000000107"]
       optional: true
-      x: 12.4d
-      y: 1.55d
+      x: 17d
+      y: 4.25d
       shape: "circle"
       size: 0.76d
       icon: { id: "openfm:radio_block", count: 1 }
+    }
+    {
+      id: "4A10000000000138"
+      x: 14.11d
+      y: -2.805d
+      dependencies: ["4A10000000000104"]
+      tasks: [
+        { id: "4B10000000013800", type: "item", item: "immersiveengineering:conveyor_basic", count: 2 }
+        { id: "4B10000000013801", type: "item", item: "immersiveengineering:heavy_engineering" }
+        { id: "4B10000000013802", type: "item", item: "immersiveengineering:rs_engineering" }
+        { id: "4B10000000013803", type: "item", item: "immersiveengineering:steel_scaffolding_standard", count: 2 }
+        { id: "4B10000000013804", type: "item", item: "minecraft:piston" }
+        { id: "4B10000000013805", type: "checkmark" }
+      ]
+      optional: true
+      shape: "hexagon"
+      size: 1.23d
+      icon: { id: "immersiveengineering:metal_press", count: 1 }
+    }
+    {
+      id: "4A10000000000139"
+      x: 14.11d
+      y: -5.525d
+      dependencies: ["4A10000000000138"]
+      tasks: [
+        { id: "4B10000000013900", type: "item", item: "immersiveengineering:mold_plate" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.85d
+      icon: { id: "immersiveengineering:mold_plate", count: 1 }
+    }
+    {
+      id: "4A1000000000013A"
+      x: 18.02d
+      y: -2.635d
+      dependencies: ["4A10000000000104"]
+      tasks: [
+        { id: "4B10000000013A00", type: "item", item: "immersiveengineering:light_engineering", count: 10 }
+        { id: "4B10000000013A01", type: "item", item: "immersiveengineering:rs_engineering" }
+        { id: "4B10000000013A02", type: "item", item: "immersiveengineering:steel_fence", count: 8 }
+        { id: "4B10000000013A03", type: "item", item: "immersiveengineering:steel_scaffolding_standard", count: 10 }
+        { id: "4B10000000013A04", type: "item", item: "minecraft:hopper", count: 9 }
+        { id: "4B10000000013A05", type: "checkmark" }
+      ]
+      optional: true
+      shape: "hexagon"
+      size: 1.12d
+      icon: { id: "immersiveengineering:crusher", count: 1 }
+    }
+    {
+      id: "4A1000000000013B"
+      x: 9.01d
+      y: -7.99d
+      dependencies: ["4A1000000000010C"]
+      tasks: [
+        { id: "4B10000000013B00", type: "item", item: "immersiveengineering:voltmeter" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.85d
+      icon: { id: "immersiveengineering:voltmeter", count: 1 }
+    }
+    {
+      id: "4A1000000000013C"
+      x: 7.14d
+      y: -10.115d
+      dependencies: ["4A1000000000013B"]
+      tasks: [
+        { id: "4B10000000013C00", type: "item", item: "immersiveengineering:capacitor_mv" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.85d
+      icon: { id: "immersiveengineering:capacitor_mv", count: 1 }
+    }
+    {
+      id: "4A1000000000013D"
+      x: 9.01d
+      y: 5.78d
+      dependencies: ["4A1000000000010E"]
+      tasks: [
+        { id: "4B10000000013D00", type: "item", item: "immersiveengineering:conveyor_basic", count: 2 }
+        { id: "4B10000000013D01", type: "item", item: "immersiveengineering:light_engineering", count: 2 }
+        { id: "4B10000000013D02", type: "item", item: "immersiveengineering:rs_engineering", count: 2 }
+        { id: "4B10000000013D03", type: "item", item: "immersiveengineering:sheetmetal_iron", count: 9 }
+        { id: "4B10000000013D04", type: "item", item: "immersiveengineering:slab_sheetmetal_iron", count: 6 }
+        { id: "4B10000000013D05", type: "item", item: "immersiveengineering:steel_scaffolding_standard", count: 6 }
+        { id: "4B10000000013D06", type: "checkmark" }
+      ]
+      optional: true
+      shape: "hexagon"
+      size: 1.12d
+      icon: { id: "immersiveengineering:assembler", count: 1 }
+    }
+    {
+      id: "4A1000000000013E"
+      x: 12.58d
+      y: -8.33d
+      dependencies: ["4A10000000000139", "4A1000000000010C"]
+      tasks: [
+        { id: "4B10000000013E00", type: "item", item: "immersiveengineering:plate_copper", count: 8 }
+        { id: "4B10000000013E01", type: "checkmark" }
+      ]
+      optional: true
+      shape: "hexagon"
+      size: 1.15d
+      icon: { id: "immersiveengineering:plate_copper", count: 1 }
     }
   ]
 }

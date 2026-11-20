@@ -1,0 +1,132 @@
+{
+  id: "4A90000000000001"
+  filename: "farming_and_cooking"
+  group: "4AC0000000000004"
+  order_index: 0
+  icon: { id: "farmersdelight:cooking_pot", count: 1 }
+  quests: [
+    {
+      id: "4A00000000000115"
+      tasks: [
+        { id: "4B00000000001500", type: "item", item: "minecraft:stone_hoe" }
+        { id: "4B00000000001501", type: "item", item: "minecraft:wheat_seeds" }
+      ]
+      dependencies: ["4A00000000000101"]
+      optional: true
+      x: 0d
+      y: 0d
+      shape: "hexagon"
+      size: 1.25d
+      icon: { id: "minecraft:stone_hoe", count: 1 }
+    }
+    {
+      id: "4A00000000000116"
+      tasks: [
+        { id: "4B00000000001600", type: "item", item: "minecraft:wheat" }
+        { id: "4B00000000001601", type: "item", item: "minecraft:bread" }
+      ]
+      dependencies: ["4A00000000000115"]
+      optional: true
+      x: 3.4d
+      y: 0d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "minecraft:wheat", count: 1 }
+    }
+    {
+      id: "4A00000000000117"
+      tasks: [
+        { id: "4B00000000001700", type: "item", item: "sereneseasons:calendar" }
+      ]
+      dependencies: ["4A00000000000115"]
+      optional: true
+      x: 2.21d
+      y: -3.23d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "sereneseasons:calendar", count: 1 }
+    }
+    {
+      id: "4A00000000000118"
+      tasks: [
+        { id: "4B00000000001800", type: "item", item: "farmersdelight:cooking_pot" }
+        { id: "4B00000000001801", type: "checkmark" }
+      ]
+      dependencies: ["4A00000000000115"]
+      optional: true
+      x: 3.4d
+      y: 3.4d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "farmersdelight:cooking_pot", count: 1 }
+    }
+    {
+      id: "4A00000000000119"
+      tasks: [
+        { id: "4B00000000001900", type: "item", item: "farmersdelight:vegetable_soup" }
+      ]
+      dependencies: ["4A00000000000118"]
+      optional: true
+      x: 6.8d
+      y: 3.4d
+      shape: "circle"
+      size: 0.76d
+      icon: { id: "farmersdelight:vegetable_soup", count: 1 }
+    }
+    {
+      id: "4A90000000000101"
+      x: 5.27d
+      y: -3.23d
+      dependencies: ["4A00000000000115"]
+      tasks: [
+        { id: "4B90000000010100", type: "item", item: "farmersdelight:tomato" }
+        { id: "4B90000000010101", type: "item", item: "farmersdelight:onion" }
+        { id: "4B90000000010102", type: "item", item: "farmersdelight:cabbage" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.85d
+      icon: { id: "farmersdelight:tomato", count: 1 }
+    }
+    {
+      id: "4A90000000000102"
+      x: 8.5d
+      y: -3.23d
+      dependencies: ["4A90000000000101"]
+      tasks: [
+        { id: "4B90000000010200", type: "item", item: "farmersdelight:rice" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.85d
+      icon: { id: "farmersdelight:rice", count: 1 }
+    }
+    {
+      id: "4A90000000000103"
+      x: 2.04d
+      y: 6.46d
+      dependencies: ["4A00000000000115"]
+      tasks: [
+        { id: "4B90000000010300", type: "item", item: "farmersdelight:cutting_board" }
+        { id: "4B90000000010301", type: "item", item: "farmersdelight:flint_knife" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.85d
+      icon: { id: "farmersdelight:cutting_board", count: 1 }
+    }
+    {
+      id: "4A90000000000104"
+      x: 5.1d
+      y: 6.46d
+      dependencies: ["4A90000000000103"]
+      tasks: [
+        { id: "4B90000000010400", type: "item", item: "farmersdelight:skillet" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.85d
+      icon: { id: "farmersdelight:skillet", count: 1 }
+    }
+  ]
+}

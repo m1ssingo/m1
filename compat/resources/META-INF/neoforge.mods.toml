@@ -4,9 +4,9 @@ license="MIT"
 
 [[mods]]
 modId="m1packcompat"
-version="0.2.2"
+version="0.2.3"
 displayName="M1 Pack Compatibility"
-description='''Applies M1 research rules to recipe filtering, machine processing and interplanetary travel.'''
+description='''Applies M1 research rules to recipe filtering, machine processing and interplanetary travel, and adjusts natural weather.'''
 
 [[mixins]]
 config="m1packcompat.mixins.json"

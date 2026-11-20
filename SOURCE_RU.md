@@ -2,7 +2,7 @@
 
 `compat/` — собственный мод `m1packcompat` (MIT). Golem Core при удалении рецептов с невыполненными зависимостями получает полную таблицу RecipeManager. В Mekanism проверка этапа добавлена к условию работы машин для рецептов с базовой схемой на выходе. Она вызывается даже для уже сохранённого в кэше рецепта наполнителя и фабрики. Точки внедрения рассчитаны на зафиксированные версии Golem Core и Mekanism.
 
-`overrides/` содержит девять глав FTB Quests и таблицы текстов книги в `config/ftbquests/quests/lang/`, глобальные этапы History Stages, рецепты и достижения для переходов. Сторонние JAR берутся из зафиксированных релизов.
+`overrides/` содержит одиннадцать глав FTB Quests и таблицы текстов книги в `config/ftbquests/quests/lang/`, глобальные этапы History Stages, рецепты и достижения для переходов. Сторонние JAR берутся из зафиксированных релизов.
 
 `mods.lock.json` — источник точных URL и контрольных сумм, а не перечень «последних версий». `tools/resolve.py download` скачивает закреплённый набор в `work/jars`; команда `resolve` заново выбирает версии и перезаписывает lock-файл — для воспроизведения её запускать не нужно.
 
@@ -22,7 +22,7 @@
 
 `client/` содержит мод `m1packclient` для главного меню. Он воспроизводит анимацию v4 и потоковую Vorbis-дорожку, размещает кнопки под заголовком между персонажами, исправляет ряд с кнопкой OpenFM в настройках и однократно меняет выбранные назначения клавиш. Лицензия MIT распространяется на код. Иллюстрация и музыка предоставлены авторами сборки. `client-overrides/` устанавливается только на клиент.
 
-Для сборки нужны Java 21 и Python 3.11+ с Pillow и NumPy. Из выпущенного `m1packclient-0.4.2.jar` извлеките `ignition.ogg` в `client/resources/assets/m1packclient/sounds/` и положите рядом друг с другом `background.m1a` и `background.png` из `assets/m1packclient/textures/menu/`. Выполните `python tools/build_client.py --animation путь/к/background.m1a --libraries путь/к/Install/libraries`. Генератор также принимает GIF или WebP с кадрами 1672×941, длительностью 80 мс и 250 кадрами. В выпущенном JAR фон собран из полноцветных кадров v4.
+Для сборки нужны Java 21 и Python 3.11+ с Pillow и NumPy. Из выпущенного `m1packclient-0.4.2.jar` извлеките `ignition.ogg` в `client/resources/assets/m1packclient/sounds/` и положите рядом друг с другом `background.m1a` и `background.png` из `assets/m1packclient/textures/menu/`. Выполните `python tools/build_client.py --animation путь/к/background.m1a --libraries путь/к/Install/libraries --mods путь/к/закреплённым/модам`. В этой папке нужны JEI, FTB Quests, FTB Library и Architectury. Генератор также принимает GIF или WebP с кадрами 1672×941, длительностью 80 мс и 250 кадрами. В выпущенном JAR фон собран из полноцветных кадров v4.
 
 `tools/client_smoke.py` запускает NeoForge-клиент в Xorg с виртуальным экраном и тестовым OpenAL-выходом. Он проверяет зацикливание анимации, расположение кнопок и переходы между главным меню, штатными настройками и настройками OpenFM. Скриншоты сохраняются в `work/`.
 

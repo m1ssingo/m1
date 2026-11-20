@@ -29,6 +29,17 @@ public final class PackTitleScreen extends Screen {
         super(Component.literal("Лютая технологическая сборка"));
     }
 
+    public static void drawSubmenuBackdrop(GuiGraphics graphics, int screenWidth, int screenHeight) {
+        double scale = Math.max((double) screenWidth / MenuAnimation.WIDTH,
+            (double) screenHeight / MenuAnimation.HEIGHT);
+        int imageWidth = (int) Math.ceil(MenuAnimation.WIDTH * scale);
+        int imageHeight = (int) Math.ceil(MenuAnimation.HEIGHT * scale);
+        graphics.blit(BACKGROUND, (screenWidth - imageWidth) / 2, (screenHeight - imageHeight) / 2,
+            imageWidth, imageHeight, 0, 0, MenuAnimation.WIDTH, MenuAnimation.HEIGHT,
+            MenuAnimation.WIDTH, MenuAnimation.HEIGHT);
+        graphics.flush();
+    }
+
     @Override
     protected void init() {
         artwork = Artwork.fit(width, height);
@@ -92,7 +103,7 @@ public final class PackTitleScreen extends Screen {
             LogUtils.getLogger().info("[M1-MENU] menu music is playing");
             musicObserved = true;
         }
-        if (height >= 300) graphics.drawString(font, "M1 SciFi 0.7.0", 8, height - 12, 0xffc6b69d);
+        if (height >= 300) graphics.drawString(font, "M1 SciFi 0.8.2", 8, height - 12, 0xffc6b69d);
     }
 
     @Override

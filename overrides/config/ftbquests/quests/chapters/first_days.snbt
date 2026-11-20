@@ -141,74 +141,6 @@
       icon: { id: "ironchest:iron_chest", count: 1 }
     }
     {
-      id: "4A00000000000115"
-      tasks: [
-        { id: "4B00000000001500", type: "item", item: "minecraft:stone_hoe" }
-        { id: "4B00000000001501", type: "item", item: "minecraft:wheat_seeds" }
-      ]
-      dependencies: ["4A00000000000103"]
-      optional: true
-      x: 3.1d
-      y: -1.55d
-      shape: "circle"
-      size: 0.76d
-      icon: { id: "minecraft:stone_hoe", count: 1 }
-    }
-    {
-      id: "4A00000000000116"
-      tasks: [
-        { id: "4B00000000001600", type: "item", item: "minecraft:wheat" }
-        { id: "4B00000000001601", type: "item", item: "minecraft:bread" }
-      ]
-      dependencies: ["4A00000000000115"]
-      optional: true
-      x: 3.1d
-      y: -3.1d
-      shape: "circle"
-      size: 0.76d
-      icon: { id: "minecraft:wheat", count: 1 }
-    }
-    {
-      id: "4A00000000000117"
-      tasks: [
-        { id: "4B00000000001700", type: "item", item: "sereneseasons:calendar" }
-      ]
-      dependencies: ["4A00000000000116"]
-      optional: true
-      x: 1.55d
-      y: -4.65d
-      shape: "circle"
-      size: 0.76d
-      icon: { id: "sereneseasons:calendar", count: 1 }
-    }
-    {
-      id: "4A00000000000118"
-      tasks: [
-        { id: "4B00000000001800", type: "item", item: "farmersdelight:cooking_pot" }
-        { id: "4B00000000001801", type: "checkmark" }
-      ]
-      dependencies: ["4A00000000000116"]
-      optional: true
-      x: 4.65d
-      y: -4.65d
-      shape: "circle"
-      size: 0.76d
-      icon: { id: "farmersdelight:cooking_pot", count: 1 }
-    }
-    {
-      id: "4A00000000000119"
-      tasks: [
-        { id: "4B00000000001900", type: "item", item: "farmersdelight:vegetable_soup" }
-      ]
-      dependencies: ["4A00000000000118"]
-      optional: true
-      x: 6.2d
-      y: -3.1d
-      shape: "circle"
-      size: 0.76d
-      icon: { id: "farmersdelight:vegetable_soup", count: 1 }
-    }
-    {
       id: "4A0000000000011A"
       tasks: [
         { id: "4B00000000001A00", type: "item", item: "minecraft:shears" }
@@ -235,6 +167,32 @@
       shape: "circle"
       size: 0.76d
       icon: { id: "chipped:carpenters_table", count: 1 }
+    }
+    {
+      id: "4A00000000000140"
+      x: 3.4d
+      y: 2.21d
+      dependencies: ["4A00000000000102"]
+      tasks: [
+        { id: "4B00000000014000", type: "item", item: "minecraft:stone_sword" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.85d
+      icon: { id: "minecraft:stone_sword", count: 1 }
+    }
+    {
+      id: "4A00000000000141"
+      x: 6.12d
+      y: -2.21d
+      dependencies: ["4A00000000000104"]
+      tasks: [
+        { id: "4B00000000014100", type: "item", item: "minecraft:shield" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.85d
+      icon: { id: "minecraft:shield", count: 1 }
     }
   ]
   group: "4AC0000000000001"
