@@ -17,73 +17,73 @@
         { id: "4A40000000010003", type: "item", item: "hbm:hazmat_boots" }
       ]
       shape: "hexagon"
-      size: 1.32d
+      size: 1.22d
       icon: { id: "hbm:hazmat_helmet", count: 1 }
     }
     {
       id: "4A40000000000102"
-      x: 3.1d
-      y: -3.1d
+      x: 5.85d
+      y: -3.78d
       dependencies: ["4A40000000000101"]
       tasks: [
         { id: "4A40000000020000", type: "item", item: "hbm:rod_zirnox_natural_uranium_fuel", count: 6 }
       ]
-      shape: "square"
-      size: 1d
+      shape: "hexagon"
+      size: 1.04d
       icon: { id: "hbm:rod_zirnox_natural_uranium_fuel", count: 1 }
     }
     {
       id: "4A40000000000103"
-      x: 4.65d
-      y: 0d
+      x: 3.6d
+      y: -9d
       dependencies: ["4A40000000000101"]
       icon: { id: "hbm:barrel_steel", count: 1 }
       tasks: [
         { id: "4A40000000030000", type: "checkmark" }
       ]
-      shape: "square"
-      size: 1d
+      shape: "hexagon"
+      size: 1.04d
     }
     {
       id: "4A40000000000104"
-      x: 1.55d
-      y: 3.1d
+      x: 3.6d
+      y: 0d
       dependencies: ["4A40000000000101"]
       tasks: [
         { id: "4A40000000040000", type: "item", item: "hbm:machine_zirnox" }
       ]
       shape: "square"
-      size: 1d
+      size: 0.95d
       icon: { id: "hbm:machine_zirnox", count: 1 }
     }
     {
       id: "4A40000000000105"
-      x: 4.65d
-      y: 3.1d
+      x: 9d
+      y: 0d
       dependencies: ["4A40000000000104"]
       icon: { id: "hbm:machine_large_turbine", count: 1 }
       tasks: [
         { id: "4A40000000050000", type: "checkmark" }
         { id: "4B40000000000501", type: "item", item: "hbm:machine_large_turbine" }
       ]
-      shape: "square"
-      size: 1d
+      shape: "hexagon"
+      size: 1.04d
     }
     {
       id: "4A40000000000106"
-      x: 7.75d
-      y: -0.775d
+      x: 14.4d
+      y: 0d
       dependencies: ["4A40000000000102", "4A40000000000103", "4A40000000000105"]
       icon: { id: "hbm:machine_zirnox", count: 1 }
       tasks: [
         { id: "4A40000000060000", type: "checkmark" }
       ]
       shape: "hexagon"
-      size: 1.32d
+      size: 1.22d
     }
     {
       id: "4A40000000000107"
-      x: 9.3d
+      x: 18d
       y: 0d
       dependencies: ["4A40000000000106"]
       icon: { id: "hbm:machine_large_turbine", count: 1 }
@@ -91,11 +91,11 @@
         { id: "4A40000000070000", type: "checkmark" }
       ]
       shape: "square"
-      size: 1d
+      size: 0.95d
     }
     {
       id: "4A40000000000108"
-      x: 10.85d
+      x: 21.6d
       y: 0d
       dependencies: ["4A40000000000107"]
       icon: { id: "minecraft:lever", count: 1 }
@@ -103,12 +103,12 @@
       tasks: [
         { id: "4A40000000080000", type: "checkmark" }
       ]
-      size: 1.32d
+      size: 1.22d
     }
     {
       id: "4A40000000000109"
-      x: 4.65d
-      y: -1.55d
+      x: 5.4d
+      y: -11.34d
       dependencies: ["4A40000000000103"]
       optional: true
       icon: { id: "hbm:fluid_tank", count: 1 }
@@ -116,12 +116,12 @@
         { id: "4A40000000090000", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
     }
     {
       id: "4A4000000000010A"
-      x: 3.1d
-      y: -4.65d
+      x: 6.12d
+      y: -6.12d
       dependencies: ["4A40000000000102"]
       optional: true
       icon: { id: "hbm:rod_zirnox_empty", count: 1 }
@@ -129,12 +129,12 @@
         { id: "4A400000000A0000", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
     }
     {
       id: "4A4000000000010B"
-      x: 9.3d
-      y: 1.55d
+      x: 18d
+      y: 3.6d
       dependencies: ["4A40000000000107"]
       optional: true
       tasks: [
@@ -142,13 +142,13 @@
         { id: "4A400000000B0001", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 1.04d
       icon: { id: "hbm:machine_condenser", count: 1 }
     }
     {
       id: "4A4000000000010C"
-      x: 12.4d
-      y: 0d
+      x: 22.95d
+      y: 3.06d
       dependencies: ["4A40000000000108"]
       optional: true
       icon: { id: "hbm:red_cable_gauge", count: 1 }
@@ -156,12 +156,12 @@
         { id: "4A400000000C0000", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
     }
     {
       id: "4A40000000000120"
-      x: 3.1d
-      y: -1.55d
+      x: 8.1d
+      y: -11.34d
       optional: true
       dependencies: ["4A40000000000109"]
       tasks: [
@@ -169,13 +169,13 @@
         { id: "4A41000000002001", type: "item", item: "hbm:fluid_duct_gauge" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:fluid_switch", count: 1 }
     }
     {
       id: "4A40000000000121"
-      x: 2.325d
-      y: -0.775d
+      x: 10.8d
+      y: -11.34d
       optional: true
       dependencies: ["4A40000000000120"]
       tasks: [
@@ -183,13 +183,13 @@
         { id: "4A41000000002101", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:fluid_counter_valve", count: 1 }
     }
     {
       id: "4A40000000000122"
-      x: 3.1d
-      y: -6.2d
+      x: 3.78d
+      y: -5.4d
       optional: true
       dependencies: ["4A4000000000010A"]
       tasks: [
@@ -197,13 +197,13 @@
         { id: "4A41000000002201", type: "item", item: "minecraft:lectern" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:dosimeter", count: 1 }
     }
     {
       id: "4A40000000000123"
-      x: 4.65d
-      y: 4.65d
+      x: 9.18d
+      y: 3.06d
       optional: true
       dependencies: ["4A40000000000105"]
       tasks: [
@@ -211,27 +211,27 @@
         { id: "4A41000000002301", type: "item", item: "hbm:fluid_tank" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:fluid_duct_gauge", count: 1 }
     }
     {
       id: "4A40000000000124"
-      x: 9.3d
-      y: 3.1d
+      x: 14.4d
+      y: 5.4d
       optional: true
-      dependencies: ["4A4000000000010B"]
+      dependencies: ["4A4000000000010B", "4A40000000000123"]
       tasks: [
         { id: "4A41000000002400", type: "item", item: "hbm:machine_condenser" }
         { id: "4A41000000002401", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:machine_condenser", count: 1 }
     }
     {
       id: "4A40000000000125"
-      x: 9.3d
-      y: 4.65d
+      x: 14.4d
+      y: 8.28d
       optional: true
       dependencies: ["4A40000000000124"]
       tasks: [
@@ -239,12 +239,12 @@
       ]
       icon: { id: "hbm:machine_condenser", count: 1 }
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
     }
     {
       id: "4A40000000000126"
-      x: 13.95d
-      y: 0d
+      x: 25.65d
+      y: 4.86d
       optional: true
       dependencies: ["4A4000000000010C"]
       tasks: [
@@ -252,13 +252,13 @@
         { id: "4A41000000002601", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:machine_battery_socket", count: 1 }
     }
     {
       id: "4A40000000000127"
-      x: 10.85d
-      y: -1.55d
+      x: 24.3d
+      y: 0d
       optional: true
       dependencies: ["4A40000000000108"]
       tasks: [
@@ -266,7 +266,7 @@
       ]
       icon: { id: "minecraft:clock", count: 1 }
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
     }
     {
       id: "4A40000000000130"
@@ -276,10 +276,10 @@
       ]
       dependencies: ["4A40000000000102"]
       optional: true
-      x: 6.2d
-      y: -4.65d
+      x: 9.45d
+      y: -2.97d
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:rod_zirnox_empty", count: 1 }
     }
     {
@@ -290,10 +290,10 @@
       ]
       dependencies: ["4A40000000000106"]
       optional: true
-      x: 7.75d
-      y: 1.55d
+      x: 14.85d
+      y: 2.7d
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:book_guide_starter", count: 1 }
     }
     {
@@ -304,11 +304,53 @@
       ]
       dependencies: ["4A40000000000108"]
       optional: true
-      x: 10.85d
-      y: 1.55d
+      x: 22.95d
+      y: -2.52d
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:geiger_counter", count: 1 }
+    }
+    {
+      id: "4A40000000000140"
+      x: 1.26d
+      y: -10.62d
+      optional: true
+      icon: { id: "hbm:fluid_duct_gauge", count: 1 }
+      shape: "circle"
+      size: 0.8d
+      tasks: [
+        { id: "4B40000000014000", type: "item", item: "hbm:fluid_duct_gauge" }
+        { id: "4B40000000014001", type: "checkmark" }
+      ]
+      dependencies: ["4A40000000000103"]
+    }
+    {
+      id: "4A40000000000141"
+      x: 11.34d
+      y: 7.56d
+      optional: true
+      icon: { id: "hbm:fluid_duct_neo", count: 1 }
+      shape: "circle"
+      size: 0.8d
+      tasks: [
+        { id: "4B40000000014100", type: "item", item: "hbm:fluid_duct_neo" }
+        { id: "4B40000000014101", type: "checkmark" }
+      ]
+      dependencies: ["4A40000000000124"]
+    }
+    {
+      id: "4A40000000000142"
+      x: 28.35d
+      y: 4.86d
+      optional: true
+      icon: { id: "hbm:red_cable_gauge", count: 1 }
+      shape: "circle"
+      size: 0.8d
+      tasks: [
+        { id: "4B40000000014200", type: "item", item: "hbm:red_cable_gauge" }
+        { id: "4B40000000014201", type: "checkmark" }
+      ]
+      dependencies: ["4A40000000000126"]
     }
   ]
 }

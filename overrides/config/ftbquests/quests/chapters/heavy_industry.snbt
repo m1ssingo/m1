@@ -7,15 +7,15 @@
   quests: [
     {
       id: "4A30000000000101"
-      x: 1.55d
+      x: 2.7d
       y: 0d
       dependencies: ["4A30000000000102"]
       tasks: [
         { id: "4A30000000010100", type: "item", item: "hbm:book_guide_starter" }
         { id: "4A30000000010101", type: "item", item: "hbm:machine_press" }
       ]
-      shape: "square"
-      size: 1d
+      shape: "hexagon"
+      size: 1.04d
       icon: { id: "hbm:book_guide_starter", count: 1 }
     }
     {
@@ -30,48 +30,48 @@
         { id: "4A31000000000402", type: "item", item: "hbm:book_guide_starter" }
       ]
       shape: "hexagon"
-      size: 1.32d
+      size: 1.22d
       icon: { id: "hbm:anvil_steel", count: 1 }
     }
     {
       id: "4A30000000000103"
-      x: 3.1d
+      x: 5.4d
       y: 0d
       dependencies: ["4A30000000000101"]
       tasks: [
         { id: "4A30000000010300", type: "item", item: "hbm:template_folder" }
       ]
       shape: "square"
-      size: 1d
+      size: 0.95d
       icon: { id: "hbm:template_folder", count: 1 }
     }
     {
       id: "4A30000000000104"
-      x: 4.65d
+      x: 8.1d
       y: 0d
       dependencies: ["4A30000000000103"]
       tasks: [
         { id: "4A30000000010400", type: "item", item: "hbm:machine_assembly_machine" }
       ]
-      shape: "square"
-      size: 1d
+      shape: "hexagon"
+      size: 1.04d
       icon: { id: "hbm:machine_assembly_machine", count: 1 }
     }
     {
       id: "4A30000000000105"
-      x: 6.2d
+      x: 10.8d
       y: 0d
       dependencies: ["4A30000000000104"]
       tasks: [
         { id: "4A30000000010500", type: "item", item: "hbm:machine_chemical_plant" }
       ]
       shape: "square"
-      size: 1d
+      size: 0.95d
       icon: { id: "hbm:machine_chemical_plant", count: 1 }
     }
     {
       id: "4A30000000000106"
-      x: 7.75d
+      x: 13.5d
       y: 0d
       dependencies: ["4A30000000000105"]
       tasks: [
@@ -79,26 +79,26 @@
         { id: "4A30000000010601", type: "item", item: "hbm:barrel_steel" }
         { id: "4A30000000010602", type: "checkmark" }
       ]
-      shape: "square"
-      size: 1d
+      shape: "hexagon"
+      size: 1.04d
       icon: { id: "hbm:fluid_duct_neo", count: 1 }
     }
     {
       id: "4A30000000000107"
-      x: 6.2d
-      y: -1.55d
-      dependencies: ["4A30000000000104"]
+      x: 4.5d
+      y: -4.5d
+      dependencies: ["4A30000000000102"]
       tasks: [
         { id: "4A30000000010700", type: "item", item: "hbm:geiger_counter" }
         { id: "4A30000000010701", type: "checkmark" }
       ]
-      shape: "square"
-      size: 1d
+      shape: "hexagon"
+      size: 1.04d
       icon: { id: "hbm:geiger_counter", count: 1 }
     }
     {
       id: "4A30000000000108"
-      x: 9.3d
+      x: 18d
       y: 0d
       dependencies: ["4A30000000000107", "4A30000000000106"]
       icon: { id: "hbm:machine_zirnox", count: 1 }
@@ -106,25 +106,25 @@
       tasks: [
         { id: "4A30000000010800", type: "checkmark" }
       ]
-      size: 1.32d
+      size: 1.22d
     }
     {
       id: "4A30000000000109"
-      x: 1.55d
-      y: 1.55d
+      x: 2.7d
+      y: 2.7d
       dependencies: ["4A30000000000101"]
       optional: true
       tasks: [
         { id: "4A30000000010900", type: "item", item: "hbm:plate_steel" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:plate_steel", count: 1 }
     }
     {
       id: "4A3000000000010A"
-      x: 4.65d
-      y: -1.55d
+      x: 8.1d
+      y: 2.7d
       dependencies: ["4A30000000000104"]
       optional: true
       tasks: [
@@ -132,26 +132,26 @@
         { id: "4A30000000010A01", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:red_cable_gauge", count: 1 }
     }
     {
       id: "4A3000000000010B"
-      x: 4.65d
-      y: 1.55d
+      x: 6.3d
+      y: 2.7d
       dependencies: ["4A30000000000104"]
       optional: true
       tasks: [
         { id: "4A30000000010B00", type: "item", item: "hbm:machine_centrifuge" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:machine_centrifuge", count: 1 }
     }
     {
       id: "4A3000000000010C"
-      x: 6.2d
-      y: -3.1d
+      x: 6.3d
+      y: -7.2d
       dependencies: ["4A30000000000107"]
       optional: true
       tasks: [
@@ -161,13 +161,13 @@
         { id: "4A30000000010C03", type: "item", item: "hbm:hazmat_boots" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:hazmat_helmet", count: 1 }
     }
     {
       id: "4A30000000000120"
-      x: 1.55d
-      y: 3.1d
+      x: 2.7d
+      y: 5.4d
       optional: true
       dependencies: ["4A30000000000109"]
       tasks: [
@@ -175,13 +175,13 @@
         { id: "4A31000000002001", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:machine_press", count: 1 }
     }
     {
       id: "4A30000000000121"
-      x: 4.65d
-      y: -3.1d
+      x: 8.1d
+      y: 5.4d
       optional: true
       dependencies: ["4A3000000000010A"]
       tasks: [
@@ -189,13 +189,13 @@
         { id: "4A31000000002101", type: "item", item: "hbm:red_cable_gauge" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:machine_battery_socket", count: 1 }
     }
     {
       id: "4A30000000000122"
-      x: 6.2d
-      y: 1.55d
+      x: 15.84d
+      y: 2.52d
       optional: true
       dependencies: ["4A30000000000106"]
       tasks: [
@@ -203,13 +203,13 @@
         { id: "4A31000000002201", type: "item", item: "hbm:fluid_switch" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:fluid_duct_gauge", count: 1 }
     }
     {
       id: "4A30000000000123"
-      x: 6.2d
-      y: 3.1d
+      x: 18.54d
+      y: 4.5d
       optional: true
       dependencies: ["4A30000000000122"]
       tasks: [
@@ -217,26 +217,26 @@
         { id: "4A31000000002301", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:fluid_counter_valve", count: 1 }
     }
     {
       id: "4A30000000000124"
-      x: 9.3d
-      y: 1.55d
+      x: 13.5d
+      y: 2.88d
       optional: true
       dependencies: ["4A30000000000106"]
       tasks: [
         { id: "4A31000000002400", type: "item", item: "immersivepetroleum:projector" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 1.04d
       icon: { id: "immersivepetroleum:projector", count: 1 }
     }
     {
       id: "4A30000000000125"
-      x: 10.85d
-      y: 1.55d
+      x: 13.5d
+      y: 5.58d
       optional: true
       dependencies: ["4A30000000000124"]
       tasks: [
@@ -244,40 +244,40 @@
         { id: "4A31000000002501", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "immersiveengineering:sample_drill", count: 1 }
     }
     {
       id: "4A30000000000126"
-      x: 12.4d
-      y: 1.55d
+      x: 16.56d
+      y: 10.98d
       optional: true
-      dependencies: ["4A30000000000125"]
+      dependencies: ["4A30000000000142"]
       tasks: [
         { id: "4A31000000002600", type: "checkmark" }
       ]
       icon: { id: "immersivepetroleum:projector", count: 1 }
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
     }
     {
       id: "4A30000000000127"
-      x: 13.95d
-      y: 1.55d
+      x: 22.68d
+      y: 10.98d
       optional: true
-      dependencies: ["4A30000000000126"]
+      dependencies: ["4A30000000000141"]
       tasks: [
         { id: "4A31000000002700", type: "item", item: "immersivepetroleum:auto_lubricator" }
         { id: "4A31000000002701", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "immersivepetroleum:auto_lubricator", count: 1 }
     }
     {
       id: "4A30000000000128"
-      x: 7.75d
-      y: -4.65d
+      x: 9d
+      y: -8.1d
       optional: true
       dependencies: ["4A3000000000010C"]
       tasks: [
@@ -285,7 +285,7 @@
         { id: "4A31000000002801", type: "checkmark" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:dosimeter", count: 1 }
     }
     {
@@ -296,10 +296,10 @@
       ]
       dependencies: ["4A30000000000120"]
       optional: true
-      x: 3.1d
-      y: 3.1d
+      x: 2.7d
+      y: 8.1d
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:plate_steel", count: 1 }
     }
     {
@@ -310,10 +310,10 @@
       ]
       dependencies: ["4A30000000000125"]
       optional: true
-      x: 10.85d
-      y: 3.1d
+      x: 16.2d
+      y: 6.3d
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "minecraft:barrel", count: 1 }
     }
     {
@@ -324,11 +324,83 @@
       ]
       dependencies: ["4A30000000000108"]
       optional: true
-      x: 9.3d
-      y: -1.55d
+      x: 20.7d
+      y: 0d
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "hbm:red_cable_gauge", count: 1 }
+    }
+    {
+      id: "4A30000000000140"
+      x: 8.1d
+      y: 8.1d
+      optional: true
+      icon: { id: "hbm:machine_battery_socket", count: 1 }
+      shape: "circle"
+      size: 0.8d
+      tasks: [
+        { id: "4B30000000014000", type: "item", item: "hbm:red_cable_gauge" }
+        { id: "4B30000000014001", type: "checkmark" }
+      ]
+      dependencies: ["4A30000000000121"]
+    }
+    {
+      id: "4A30000000000143"
+      x: 13.5d
+      y: 8.28d
+      optional: true
+      icon: { id: "immersiveengineering:light_engineering", count: 1 }
+      shape: "circle"
+      size: 1.04d
+      tasks: [
+        { id: "4B30000000014300", type: "item", item: "immersiveengineering:fluid_pipe", count: 9 }
+        { id: "4B30000000014301", type: "item", item: "immersiveengineering:heavy_engineering", count: 2 }
+        { id: "4B30000000014302", type: "item", item: "immersiveengineering:light_engineering", count: 8 }
+        { id: "4B30000000014303", type: "item", item: "immersiveengineering:rs_engineering" }
+        { id: "4B30000000014304", type: "item", item: "immersiveengineering:slab_steel_scaffolding_grate_top", count: 4 }
+        { id: "4B30000000014305", type: "item", item: "immersiveengineering:steel_fence", count: 16 }
+        { id: "4B30000000014306", type: "item", item: "immersiveengineering:steel_scaffolding_standard", count: 19 }
+        { id: "4B30000000014307", type: "checkmark" }
+      ]
+      dependencies: ["4A30000000000125"]
+    }
+    {
+      id: "4A30000000000142"
+      x: 13.5d
+      y: 10.98d
+      optional: true
+      icon: { id: "immersiveengineering:heavy_engineering", count: 1 }
+      shape: "circle"
+      size: 1.04d
+      tasks: [
+        { id: "4B30000000014200", type: "item", item: "immersiveengineering:fluid_pipe", count: 4 }
+        { id: "4B30000000014201", type: "item", item: "immersiveengineering:heavy_engineering", count: 2 }
+        { id: "4B30000000014202", type: "item", item: "immersiveengineering:light_engineering", count: 2 }
+        { id: "4B30000000014203", type: "item", item: "immersiveengineering:rs_engineering" }
+        { id: "4B30000000014204", type: "item", item: "immersiveengineering:sheetmetal_steel", count: 4 }
+        { id: "4B30000000014205", type: "item", item: "immersiveengineering:steel_scaffolding_standard", count: 11 }
+        { id: "4B30000000014206", type: "item", item: "immersiveengineering:storage_steel", count: 2 }
+        { id: "4B30000000014207", type: "item", item: "immersiveengineering:treated_fence", count: 6 }
+      ]
+      dependencies: ["4A30000000000143"]
+    }
+    {
+      id: "4A30000000000141"
+      x: 19.62d
+      y: 10.98d
+      optional: true
+      icon: { id: "immersiveengineering:rs_engineering", count: 1 }
+      shape: "circle"
+      size: 1.04d
+      tasks: [
+        { id: "4B30000000014100", type: "item", item: "immersiveengineering:fluid_pipe", count: 17 }
+        { id: "4B30000000014101", type: "item", item: "immersiveengineering:heavy_engineering", count: 4 }
+        { id: "4B30000000014102", type: "item", item: "immersiveengineering:rs_engineering" }
+        { id: "4B30000000014103", type: "item", item: "immersiveengineering:sheetmetal_iron", count: 60 }
+        { id: "4B30000000014104", type: "item", item: "immersiveengineering:slab_steel_scaffolding_grate_top", count: 30 }
+        { id: "4B30000000014105", type: "item", item: "immersiveengineering:steel_scaffolding_standard", count: 25 }
+      ]
+      dependencies: ["4A30000000000126"]
     }
   ]
 }

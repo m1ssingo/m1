@@ -15,12 +15,12 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.85d
+      size: 1.04d
       icon: { id: "mutantmonsters:hulk_hammer", count: 1 }
     }
     {
       id: "4AA0000000000102"
-      x: 3.4d
+      x: 4.68d
       y: 0d
       dependencies: ["4A10000000000107"]
       tasks: [
@@ -28,34 +28,90 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.85d
+      size: 1.04d
       icon: { id: "mekanism:electric_bow", count: 1 }
     }
     {
       id: "4AA0000000000103"
-      x: 0d
-      y: 3.4d
+      x: 9.36d
+      y: 0d
       dependencies: ["4A10000000000103"]
       tasks: [
         { id: "4BA0000000010300", type: "item", item: "immersiveengineering:revolver" }
       ]
       optional: true
       shape: "circle"
-      size: 0.85d
+      size: 1.04d
       icon: { id: "immersiveengineering:revolver", count: 1 }
     }
     {
       id: "4AA0000000000104"
-      x: 3.4d
-      y: 3.4d
+      x: 14.04d
+      y: 0d
       dependencies: ["4A10000000000104"]
       tasks: [
         { id: "4BA0000000010400", type: "item", item: "immersiveengineering:railgun" }
       ]
       optional: true
       shape: "circle"
-      size: 0.85d
+      size: 1.04d
       icon: { id: "immersiveengineering:railgun", count: 1 }
+    }
+    {
+      id: "4AA0000000000140"
+      x: 0d
+      y: 2.88d
+      optional: true
+      icon: { id: "minecraft:shield", count: 1 }
+      shape: "circle"
+      size: 0.8d
+      tasks: [
+        { id: "4BA0000000014000", type: "item", item: "minecraft:shield" }
+        { id: "4BA0000000014001", type: "item", item: "minecraft:iron_chestplate" }
+      ]
+      dependencies: ["4AA0000000000101"]
+    }
+    {
+      id: "4AA0000000000141"
+      x: 4.68d
+      y: 2.88d
+      optional: true
+      icon: { id: "mekanism:chargepad", count: 1 }
+      shape: "circle"
+      size: 0.8d
+      tasks: [
+        { id: "4BA0000000014100", type: "item", item: "mekanism:chargepad" }
+        { id: "4BA0000000014101", type: "checkmark" }
+      ]
+      dependencies: ["4AA0000000000102"]
+    }
+    {
+      id: "4AA0000000000142"
+      x: 9.36d
+      y: 2.88d
+      optional: true
+      icon: { id: "immersiveengineering:bullet_casull", count: 1 }
+      shape: "circle"
+      size: 0.8d
+      tasks: [
+        { id: "4BA0000000014200", type: "item", item: "immersiveengineering:bullet_casull", count: 4 }
+        { id: "4BA0000000014201", type: "checkmark" }
+      ]
+      dependencies: ["4AA0000000000103"]
+    }
+    {
+      id: "4AA0000000000143"
+      x: 14.04d
+      y: 2.88d
+      optional: true
+      icon: { id: "immersiveengineering:stick_iron", count: 1 }
+      shape: "circle"
+      size: 0.8d
+      tasks: [
+        { id: "4BA0000000014300", type: "item", item: "immersiveengineering:stick_iron", count: 4 }
+        { id: "4BA0000000014301", type: "checkmark" }
+      ]
+      dependencies: ["4AA0000000000104"]
     }
   ]
 }

@@ -48,13 +48,12 @@ ServerEvents.commandRegistry(event => {
     const CommandReward = Java.loadClass('dev.ftb.mods.ftbquests.quest.reward.CommandReward')
     const dependencies = {}
     const nodes = {}
-    const chapterSizes = [15, 40, 29, 24, 23, 26, 26, 28, 32, 9, 4]
+    const chapterSizes = [18, 40, 32, 28, 26, 28, 29, 31, 35, 12, 8]
     const groups = new Set()
     const links = []
     const books = new Set()
     const gates = []
     let optional = 0
-    let textless = 0
 
     function require(condition, reason) {
       if (!condition) throw new Error(reason)
@@ -81,15 +80,20 @@ ServerEvents.commandRegistry(event => {
         const title = String(translations.getStringTranslation(quest, 'ru_ru', key.TITLE).orElseThrow())
         require(title.length > 2 && title === String(translations.getStringTranslation(quest, 'en_us', key.TITLE).orElseThrow()), 'Missing title or stale fallback ' + id)
         const description = translations.getStringListTranslation(quest, 'ru_ru', key.QUEST_DESC)
-        if (description.isEmpty()) textless++
-        else description.get().forEach(line => {
-          if (String(line).startsWith('{')) {
-            const component = text.parseRawText(String(line), registry)
+        require(description.isPresent(), 'Missing description ' + id)
+        const fallback = translations.getStringListTranslation(quest, 'en_us', key.QUEST_DESC).orElseThrow()
+        require(description.get().equals(fallback), 'Stale description fallback ' + id)
+        let hasProse = false
+        description.get().forEach(paragraph => {
+          const line = String(paragraph)
+          if (line.startsWith('{')) {
+            const component = text.parseRawText(line, registry)
             const click = component.getStyle().getClickEvent()
             require(click !== null && String(click.getAction().getSerializedName()) === 'change_page', 'Unreadable guide link ' + id)
             links.push(String(click.getValue()))
-          }
+          } else if (line.trim()) hasProse = true
         })
+        require(hasProse, 'Missing quest text ' + id)
         const parents = []
         quest.streamDependencies().forEach(parent => parents.push(String(parent.getCodeString())))
         dependencies[id] = parents
@@ -109,8 +113,7 @@ ServerEvents.commandRegistry(event => {
         })
       })
     })
-    require(optional === 172, 'Expected 172 optional quests, got ' + optional)
-    require(textless === 13, 'Simple vanilla quests should have no description')
+    require(optional === 203, 'Expected 203 optional quests, got ' + optional)
     require(groups.size === 4 && groups.has('Разное'), 'Missing chapter groups')
     require(links.length === 18 && links.every(id => nodes[id]), 'Broken in-book guide link')
 
@@ -145,6 +148,23 @@ ServerEvents.commandRegistry(event => {
     require(!mainPath.has(poweredPress) && dependencies[poweredPress].length === 2
       && dependencies[poweredPress].includes('4A10000000000139')
       && dependencies[poweredPress].includes('4A1000000000010C'), 'The press-project task must join the mold and the LV buffer')
+    function expectParents(chapter, suffix, parents) {
+      const id = part => part.length === 3 ? '4A' + chapter + '0000000000' + part : part
+      require(dependencies[id(suffix)].slice().sort().join(',') === parents.map(id).sort().join(','),
+        'Incorrect branch convergence at ' + id(suffix))
+    }
+    expectParents('2', '141', ['10B', '10C'])
+    expectParents('2', '142', ['102', '10A'])
+    expectParents('3', '142', ['143'])
+    expectParents('3', '126', ['142'])
+    expectParents('4', '106', ['102', '103', '105'])
+    expectParents('4', '124', ['10B', '123'])
+    expectParents('5', '107', ['103', '105', '106'])
+    expectParents('6', '140', ['106', '120'])
+    expectParents('7', '104', ['103'])
+    expectParents('7', '108', ['105', '106', '107'])
+    expectParents('8', '140', ['132', '142'])
+    expectParents('9', '141', ['101', '4A00000000000118'])
     const requiredGates = ['4A10000000000106', '4A50000000000101', '4A60000000000108', '4A70000000000102', '4A80000000000109']
     require(gates.sort().join(',') === requiredGates.join(','), 'Progression reward IDs changed')
     require(dependencies['4A70000000000101'].includes('4A60000000000109'), 'Mature circuit must precede interplanetary logistics')

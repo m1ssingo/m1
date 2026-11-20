@@ -19,36 +19,36 @@
         { id: "4A51000000000401", type: "item", item: "deepfield:field_guide" }
       ]
       shape: "hexagon"
-      size: 1.32d
+      size: 1.22d
     }
     {
       id: "4A50000000000102"
-      x: 1.55d
-      y: -3.1d
+      x: 3.6d
+      y: 0d
       dependencies: ["4A50000000000101"]
       tasks: [
         { id: "4A50000000020000", type: "item", item: "mekanism:elite_control_circuit" }
       ]
-      shape: "square"
-      size: 1d
+      shape: "hexagon"
+      size: 1.04d
       icon: { id: "mekanism:elite_control_circuit", count: 1 }
     }
     {
       id: "4A50000000000103"
-      x: 3.1d
-      y: 0d
+      x: 7.65d
+      y: -3.96d
       dependencies: ["4A50000000000101"]
       tasks: [
         { id: "4A50000000030000", type: "item", item: "deepfield:rocket_fuel", count: 4 }
       ]
       shape: "square"
-      size: 1d
+      size: 0.95d
       icon: { id: "deepfield:rocket_fuel", count: 1 }
     }
     {
       id: "4A50000000000104"
-      x: 1.55d
-      y: 3.1d
+      x: 3.6d
+      y: 4.14d
       dependencies: ["4A50000000000101"]
       tasks: [
         { id: "4A50000000040000", type: "item", item: "deepfield:space_suit_helmet" }
@@ -56,38 +56,38 @@
         { id: "4A50000000040002", type: "item", item: "deepfield:space_suit_leggings" }
         { id: "4A50000000040003", type: "item", item: "deepfield:space_suit_boots" }
       ]
-      shape: "square"
-      size: 1d
+      shape: "hexagon"
+      size: 1.04d
       icon: { id: "deepfield:space_suit_helmet", count: 1 }
     }
     {
       id: "4A50000000000105"
-      x: 4.65d
-      y: 3.1d
+      x: 7.65d
+      y: 4.14d
       dependencies: ["4A50000000000104"]
       tasks: [
         { id: "4A50000000050000", type: "item", item: "deepfield:oxygen_tank" }
         { id: "4A50000000050001", type: "checkmark" }
       ]
       shape: "square"
-      size: 1d
+      size: 0.95d
       icon: { id: "deepfield:oxygen_tank", count: 1 }
     }
     {
       id: "4A50000000000106"
-      x: 4.65d
-      y: -3.1d
+      x: 7.65d
+      y: 0d
       dependencies: ["4A50000000000102"]
       tasks: [
         { id: "4A50000000060000", type: "item", item: "deepfield:pathfinder_kit" }
       ]
       shape: "square"
-      size: 1d
+      size: 0.95d
       icon: { id: "deepfield:pathfinder_kit", count: 1 }
     }
     {
       id: "4A50000000000107"
-      x: 6.2d
+      x: 12.6d
       y: 0d
       dependencies: ["4A50000000000103", "4A50000000000105", "4A50000000000106"]
       tasks: [
@@ -95,35 +95,35 @@
       ]
       icon: { id: "deepfield:pathfinder_kit", count: 1 }
       shape: "hexagon"
-      size: 1.32d
+      size: 1.22d
     }
     {
       id: "4A50000000000108"
-      x: 7.75d
+      x: 16.2d
       y: 0d
       dependencies: ["4A50000000000107"]
       tasks: [
         { id: "4A50000000080000", type: "advancement", advancement: "deepfield:visit/moon" }
       ]
       icon: { id: "deepfield:moon_globe", count: 1 }
-      shape: "square"
-      size: 1d
+      shape: "hexagon"
+      size: 1.04d
     }
     {
       id: "4A50000000000109"
-      x: 9.3d
+      x: 19.8d
       y: 0d
       dependencies: ["4A50000000000108"]
       tasks: [
         { id: "4A50000000090000", type: "item", item: "deepfield:moonglass_shard" }
       ]
       shape: "square"
-      size: 1d
+      size: 0.95d
       icon: { id: "deepfield:moonglass_shard", count: 1 }
     }
     {
       id: "4A5000000000010A"
-      x: 10.85d
+      x: 23.4d
       y: 0d
       dependencies: ["4A50000000000109"]
       tasks: [
@@ -132,25 +132,25 @@
       ]
       icon: { id: "minecraft:compass", count: 1 }
       shape: "hexagon"
-      size: 1.32d
+      size: 1.22d
     }
     {
       id: "4A5000000000010B"
       x: 0d
-      y: -1.55d
+      y: -3.6d
       dependencies: ["4A50000000000101"]
       tasks: [
         { id: "4A500000000B0000", type: "item", item: "deepfield:field_guide" }
       ]
       optional: true
       shape: "circle"
-      size: 0.76d
+      size: 1.04d
       icon: { id: "deepfield:field_guide", count: 1 }
     }
     {
       id: "4A5000000000010C"
-      x: 1.55d
-      y: 4.65d
+      x: 3.6d
+      y: 7.2d
       dependencies: ["4A50000000000104"]
       tasks: [
         { id: "4A500000000C0000", type: "item", item: "deepfield:oxygen_tank" }
@@ -158,13 +158,13 @@
       ]
       optional: true
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "deepfield:oxygen_tank", count: 1 }
     }
     {
       id: "4A5000000000010D"
-      x: 7.75d
-      y: 1.55d
+      x: 16.2d
+      y: 3.06d
       dependencies: ["4A50000000000108", "4A60000000000129"]
       tasks: [
         { id: "4A500000000D0000", type: "advancement", advancement: "deepfield:survival/sealed_room" }
@@ -172,25 +172,25 @@
       icon: { id: "deepfield:airlock", count: 1 }
       optional: true
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
     }
     {
       id: "4A5000000000010E"
-      x: 10.85d
-      y: 1.55d
+      x: 23.4d
+      y: 3.06d
       dependencies: ["4A5000000000010A", "4A60000000000129"]
       tasks: [
         { id: "4A500000000E0000", type: "item", item: "deepfield:research_terminal" }
       ]
       optional: true
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "deepfield:research_terminal", count: 1 }
     }
     {
       id: "4A50000000000120"
       x: 0d
-      y: -3.1d
+      y: -6.48d
       optional: true
       dependencies: ["4A5000000000010B"]
       tasks: [
@@ -198,26 +198,26 @@
         { id: "4A51000000002001", type: "item", item: "minecraft:map" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "minecraft:compass", count: 1 }
     }
     {
       id: "4A50000000000121"
-      x: 0d
-      y: -4.65d
+      x: 0.72d
+      y: -9.36d
       optional: true
       dependencies: ["4A50000000000120"]
       tasks: [
         { id: "4A51000000002100", type: "item", item: "sophisticatedbackpacks:backpack" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 1.04d
       icon: { id: "sophisticatedbackpacks:backpack", count: 1 }
     }
     {
       id: "4A50000000000122"
-      x: -1.55d
-      y: -6.2d
+      x: 3.6d
+      y: -9d
       optional: true
       dependencies: ["4A50000000000121"]
       tasks: [
@@ -225,13 +225,13 @@
         { id: "4A51000000002201", type: "item", item: "sophisticatedbackpacks:filter_upgrade" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "sophisticatedbackpacks:pickup_upgrade", count: 1 }
     }
     {
       id: "4A50000000000123"
-      x: 1.55d
-      y: -6.2d
+      x: 0.72d
+      y: -12.24d
       optional: true
       dependencies: ["4A50000000000121"]
       tasks: [
@@ -239,13 +239,13 @@
         { id: "4A51000000002301", type: "item", item: "sophisticatedbackpacks:feeding_upgrade" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "sophisticatedbackpacks:refill_upgrade", count: 1 }
     }
     {
       id: "4A50000000000124"
-      x: 1.55d
-      y: 6.2d
+      x: 3.6d
+      y: 10.08d
       optional: true
       dependencies: ["4A5000000000010C"]
       tasks: [
@@ -253,13 +253,13 @@
         { id: "4A51000000002401", type: "item", item: "minecraft:iron_door" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "minecraft:glass", count: 1 }
     }
     {
       id: "4A50000000000125"
-      x: 3.1d
-      y: 7.75d
+      x: 3.6d
+      y: 12.78d
       optional: true
       dependencies: ["4A50000000000124"]
       tasks: [
@@ -267,12 +267,12 @@
       ]
       icon: { id: "deepfield:oxygen_tank", count: 1 }
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
     }
     {
       id: "4A50000000000126"
-      x: 10.85d
-      y: 3.1d
+      x: 26.1d
+      y: 4.5d
       optional: true
       dependencies: ["4A5000000000010E"]
       tasks: [
@@ -280,13 +280,13 @@
         { id: "4A51000000002601", type: "item", item: "minecraft:item_frame" }
       ]
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "minecraft:barrel", count: 1 }
     }
     {
       id: "4A50000000000127"
-      x: 7.75d
-      y: 3.1d
+      x: 14.4d
+      y: 5.4d
       optional: true
       dependencies: ["4A5000000000010D"]
       tasks: [
@@ -294,7 +294,7 @@
       ]
       icon: { id: "minecraft:compass", count: 1 }
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
     }
     {
       id: "4A50000000000130"
@@ -303,12 +303,12 @@
         { id: "4B50000000003001", type: "item", item: "deepfield:rocket_fuel" }
         { id: "4B50000000003002", type: "checkmark" }
       ]
-      dependencies: ["4A50000000000102"]
+      dependencies: ["4A50000000000102", "4A50000000000103"]
       optional: true
-      x: 3.1d
-      y: -4.65d
+      x: 6.48d
+      y: -2.052d
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "mekanism:elite_control_circuit", count: 1 }
     }
     {
@@ -318,10 +318,10 @@
       ]
       dependencies: ["4A50000000000105"]
       optional: true
-      x: 4.65d
-      y: 4.65d
+      x: 8.37d
+      y: 7.2d
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "deepfield:suit_ration", count: 1 }
     }
     {
@@ -332,10 +332,10 @@
       ]
       dependencies: ["4A50000000000107"]
       optional: true
-      x: 6.2d
-      y: -1.55d
+      x: 13.77d
+      y: -2.88d
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "deepfield:field_guide", count: 1 }
     }
     {
@@ -346,11 +346,38 @@
       ]
       dependencies: ["4A50000000000109"]
       optional: true
-      x: 9.3d
-      y: -1.55d
+      x: 19.8d
+      y: -2.7d
       shape: "circle"
-      size: 0.76d
+      size: 0.8d
       icon: { id: "minecraft:barrel", count: 1 }
+    }
+    {
+      id: "4A50000000000140"
+      x: 2.7d
+      y: -14.04d
+      optional: true
+      icon: { id: "minecraft:ender_chest", count: 1 }
+      shape: "circle"
+      size: 0.8d
+      tasks: [
+        { id: "4B50000000014000", type: "item", item: "minecraft:ender_chest" }
+      ]
+      dependencies: ["4A50000000000123"]
+    }
+    {
+      id: "4A50000000000141"
+      x: 18d
+      y: 5.58d
+      optional: true
+      icon: { id: "deepfield:airlock", count: 1 }
+      shape: "circle"
+      size: 0.8d
+      tasks: [
+        { id: "4B50000000014100", type: "item", item: "deepfield:airlock" }
+        { id: "4B50000000014101", type: "checkmark" }
+      ]
+      dependencies: ["4A5000000000010D"]
     }
   ]
 }
