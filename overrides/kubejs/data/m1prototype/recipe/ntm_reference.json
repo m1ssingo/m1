@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "minecraft:book" },
+    { "tag": "c:plates/steel" }
+  ],
+  "result": {
+    "id": "guideme:guide",
+    "count": 1,
+    "components": { "guideme:guide_id": "m1prototype:ntm" }
+  }
+}

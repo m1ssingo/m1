@@ -28,6 +28,15 @@
       ]
       rewards: [
         { id: "4A31000000000402", type: "item", item: "hbm:book_guide_starter" }
+        {
+          id: "4A31000000000502"
+          type: "item"
+          item: {
+            id: "guideme:guide"
+            count: 1
+            components: { "guideme:guide_id": "m1prototype:ntm" }
+          }
+        }
       ]
       shape: "hexagon"
       size: 1.2d

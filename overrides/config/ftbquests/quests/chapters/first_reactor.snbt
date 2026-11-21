@@ -61,10 +61,10 @@
       x: 4.7125d
       y: 0d
       dependencies: ["4A40000000000104"]
-      icon: { id: "hbm:machine_large_turbine", count: 1 }
+      icon: { id: "hbm:machine_industrial_turbine", count: 1 }
       tasks: [
         { id: "4A40000000050000", type: "checkmark" }
-        { id: "4B40000000000501", type: "item", item: "hbm:machine_large_turbine" }
+        { id: "4B40000000000501", type: "item", item: "hbm:machine_industrial_turbine" }
       ]
       shape: "hexagon"
       size: 1.04d
@@ -86,7 +86,7 @@
       x: 10.0775d
       y: 0d
       dependencies: ["4A40000000000106"]
-      icon: { id: "hbm:machine_large_turbine", count: 1 }
+      icon: { id: "hbm:machine_industrial_turbine", count: 1 }
       tasks: [
         { id: "4A40000000070000", type: "checkmark" }
       ]

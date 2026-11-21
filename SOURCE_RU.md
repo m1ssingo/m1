@@ -4,6 +4,8 @@
 
 `overrides/` содержит одиннадцать глав FTB Quests и таблицы текстов книги в `config/ftbquests/quests/lang/`, глобальные этапы History Stages, рецепты и достижения для переходов. Сторонние JAR берутся из зафиксированных релизов.
 
+Русский справочник NTM использует GuideME. Регистрация книги находится в `overrides/kubejs/assets/m1prototype/guideme_guides/ntm.json`, а Markdown-страницы и сцены в `overrides/kubejs/assets/m1prototype/guides/m1prototype/ntm/`.
+
 `mods.lock.json` — источник точных URL и контрольных сумм, а не перечень «последних версий». `tools/resolve.py download` скачивает закреплённый набор в `work/jars`; команда `resolve` заново выбирает версии и перезаписывает lock-файл — для воспроизведения её запускать не нужно.
 
 `tools/build_compat.py` собирает мод через javac Java 21. Передайте путь к установленной NeoForge через `--libraries`, путь к закреплённым JAR через `--mods` и при необходимости Java 21 через `--java`. Код совместимости проверяет этап связи перед межмировым переходом Mekanism и выдаёт квестовое достижение при прибытии.
