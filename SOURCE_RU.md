@@ -2,7 +2,7 @@
 
 `compat/` — собственный мод `m1packcompat` (MIT). Golem Core при удалении рецептов с невыполненными зависимостями получает полную таблицу RecipeManager. В Mekanism проверка этапа добавлена к условию работы машин для рецептов с базовой схемой на выходе. Она вызывается даже для уже сохранённого в кэше рецепта наполнителя и фабрики. Точки внедрения рассчитаны на зафиксированные версии Golem Core и Mekanism.
 
-`overrides/` содержит одиннадцать глав FTB Quests и таблицы текстов книги в `config/ftbquests/quests/lang/`, глобальные этапы History Stages, рецепты и достижения для переходов. Сторонние JAR берутся из зафиксированных релизов.
+`overrides/` содержит главы FTB Quests и их переводы в `config/ftbquests/quests/lang/`, глобальные этапы History Stages, рецепты и достижения. Сторонние JAR берутся из зафиксированных релизов.
 
 Русский справочник NTM использует GuideME. Регистрация книги находится в `overrides/kubejs/assets/m1prototype/guideme_guides/ntm.json`, а Markdown-страницы и сцены в `overrides/kubejs/assets/m1prototype/guides/m1prototype/ntm/`.
 

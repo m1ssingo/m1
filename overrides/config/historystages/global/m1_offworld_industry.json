@@ -1,0 +1,10 @@
+{
+  "display_name": "Внеземная промышленность",
+  "icon": "megacells:cell_component_16m",
+  "mode": "default",
+  "items": [],
+  "recipes": [
+    "megacells:cells/cell_component_16m",
+    "megacells:cells/cell_component_64m"
+  ]
+}

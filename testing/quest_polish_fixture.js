@@ -49,6 +49,7 @@ ServerEvents.commandRegistry(event => {
     const dependencies = {}
     const nodes = {}
     const chapterSizes = [18, 40, 32, 28, 26, 28, 29, 31, 35, 12, 8]
+    chapterSizes[0xD] = 24
     const groups = new Set()
     const links = []
     const books = new Set()
@@ -65,7 +66,7 @@ ServerEvents.commandRegistry(event => {
     const text = Java.loadClass('dev.ftb.mods.ftbquests.util.TextUtils')
     const registry = context.getSource().getServer().registryAccess()
     const chapters = file.getAllChapters()
-    require(chapters.size() === chapterSizes.length, 'All eleven chapters must load')
+    require(chapters.size() === Object.keys(chapterSizes).length, 'All twelve chapters must load')
     chapters.forEach(chapter => {
       const code = String(chapter.getCodeString())
       const chapterIndex = parseInt(code.charAt(2), 16)
@@ -113,9 +114,9 @@ ServerEvents.commandRegistry(event => {
         })
       })
     })
-    require(optional === 203, 'Expected 203 optional quests, got ' + optional)
+    require(optional === 207, 'Expected 207 optional quests, got ' + optional)
     require(groups.size === 4 && groups.has('Разное'), 'Missing chapter groups')
-    require(links.length === 18 && links.every(id => nodes[id]), 'Broken in-book guide link')
+    require(links.length === 19 && links.every(id => nodes[id]), 'Broken in-book guide link')
 
     const visited = new Set()
     function checkDependencies(id, path) {
@@ -165,7 +166,12 @@ ServerEvents.commandRegistry(event => {
     expectParents('7', '108', ['105', '106', '107'])
     expectParents('8', '140', ['132', '142'])
     expectParents('9', '141', ['101', '4A00000000000118'])
-    const requiredGates = ['4A10000000000106', '4A50000000000101', '4A60000000000108', '4A70000000000102', '4A80000000000109']
+    expectParents('D', '101', ['4A8000000000010C'])
+    expectParents('D', '10A', ['109', '118'])
+    expectParents('D', '110', ['107', '10B', '10F'])
+    traceFinal('4AD0000000000112')
+    require(mainPath.size === Object.keys(nodes).length - optional, 'A required quest is disconnected from the offworld workshop')
+    const requiredGates = ['4A10000000000106', '4A50000000000101', '4A60000000000108', '4A70000000000102', '4A80000000000109', '4AD0000000000112']
     require(gates.sort().join(',') === requiredGates.join(','), 'Progression reward IDs changed')
     require(dependencies['4A70000000000101'].includes('4A60000000000109'), 'Mature circuit must precede interplanetary logistics')
     require(dependencies['4A80000000000101'].includes('4A7000000000010A'), 'Lunar logistics must precede the Mars base')
@@ -186,10 +192,10 @@ ServerEvents.commandRegistry(event => {
     const output = smelting.get().value().getResultItem(server.registryAccess())
     require(String(output.getId()) === 'deepfield:titanium_ingot', 'Manual smelting must give titanium')
     const advanceId = Java.loadClass('net.minecraft.resources.ResourceLocation')
-    ;['minecraft:adventure/sleep_in_bed', 'mutantmonsters:burn_zombie_burn'].forEach(id => {
+    ;['minecraft:adventure/sleep_in_bed', 'mutantmonsters:burn_zombie_burn', 'm1prototype:industry/mars_reactor_controller'].forEach(id => {
       require(server.getAdvancements().get(advanceId.parse(id)) !== null, 'Missing advancement ' + id)
     })
-    console.info('[M1-QUEST-POLISH] OK: ' + Object.keys(nodes).length + ' quests, ' + optional + ' optional, ' + links.length + ' in-book links, four groups and five research gates')
+    console.info('[M1-QUEST-POLISH] OK: ' + Object.keys(nodes).length + ' quests, ' + optional + ' optional, ' + links.length + ' in-book links, four groups and six research gates')
     return 1
   }
 })
