@@ -1,0 +1,7 @@
+{
+  "m1packcompat.colony.link_locked": "Для этого маршрута нужна награда «Разрешение на связь с колонией».",
+  "m1packcompat.colony.pending": "Жители — %s. Кровати с воздухом — %s. Выпуск за смену — %s. Нужны двое жителей, две кровати с воздухом и работающий Colony Core с запасом еды.",
+  "m1packcompat.colony.operational": "Первая рабочая смена Colony Core подтверждена.",
+  "m1packcompat.colony.shift_title": "Первая смена",
+  "m1packcompat.colony.shift_description": "Подтвердить работу Colony Core на Wolf 1069 b после первой смены колонистов."
+}

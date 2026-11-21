@@ -1,0 +1,16 @@
+{
+  "parent": "deepfield:visit/wolf1069b",
+  "display": {
+    "icon": {"id": "deepfield:colony_core", "count": 1},
+    "title": {"translate": "m1packcompat.colony.shift_title"},
+    "description": {"translate": "m1packcompat.colony.shift_description"},
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "verified_shift": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

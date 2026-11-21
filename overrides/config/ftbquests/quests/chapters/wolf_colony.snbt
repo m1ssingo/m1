@@ -1,0 +1,304 @@
+{
+  id: "4AE0000000000001"
+  filename: "wolf_colony"
+  group: "4AC0000000000003"
+  order_index: 10
+  icon: { id: "deepfield:colony_core", count: 1 }
+  quests: [
+    {
+      id: "4AE0000000000101"
+      x: 0d
+      y: 0d
+      icon: { id: "deepfield:wolf1069b_globe", count: 1 }
+      dependencies: ["4AD0000000000112"]
+      tasks: [
+        { id: "4BE0000000000101", type: "checkmark" }
+      ]
+      shape: "hexagon"
+      size: 1.26d
+    }
+    {
+      id: "4AE0000000000102"
+      x: 2.6d
+      y: 0d
+      icon: { id: "deepfield:research_terminal", count: 1 }
+      dependencies: ["4AE0000000000101"]
+      tasks: [
+        { id: "4BE0000000000201", type: "checkmark" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE0000000000103"
+      x: 5.2d
+      y: 0d
+      icon: { id: "deepfield:oxygen_tank", count: 1 }
+      dependencies: ["4AE0000000000102"]
+      tasks: [
+        { id: "4BE0000000000301", type: "item", item: "deepfield:oxygen_tank", count: 2L }
+        { id: "4BE0000000000302", type: "checkmark" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE0000000000104"
+      x: 7.8d
+      y: 0d
+      icon: { id: "deepfield:wolf1069b_globe", count: 1 }
+      dependencies: ["4AE0000000000103"]
+      tasks: [
+        { id: "4BE0000000000401", type: "advancement", advancement: "deepfield:visit/wolf1069b" }
+        { id: "4BE0000000000402", type: "dimension", dimension: "deepfield:wolf1069b" }
+      ]
+      shape: "hexagon"
+      size: 1.26d
+    }
+    {
+      id: "4AE0000000000105"
+      x: 10.5d
+      y: -5d
+      icon: { id: "deepfield:wind_turbine", count: 1 }
+      dependencies: ["4AE0000000000104"]
+      tasks: [
+        { id: "4BE0000000000501", type: "item", item: "deepfield:wind_turbine" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE0000000000106"
+      x: 13.2d
+      y: -5d
+      icon: { id: "deepfield:battery_bank", count: 1 }
+      dependencies: ["4AE0000000000105"]
+      tasks: [
+        { id: "4BE0000000000601", type: "item", item: "deepfield:battery_bank" }
+        { id: "4BE0000000000602", type: "item", item: "deepfield:power_cable" }
+        { id: "4BE0000000000603", type: "checkmark" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE0000000000107"
+      x: 10.5d
+      y: -2.5d
+      icon: { id: "deepfield:habitat_panel", count: 1 }
+      dependencies: ["4AE0000000000104"]
+      tasks: [
+        { id: "4BE0000000000701", type: "item", item: "deepfield:airlock" }
+        { id: "4BE0000000000702", type: "checkmark" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE0000000000108"
+      x: 13.2d
+      y: -2.5d
+      icon: { id: "deepfield:oxygen_generator", count: 1 }
+      dependencies: ["4AE0000000000107"]
+      tasks: [
+        { id: "4BE0000000000801", type: "item", item: "deepfield:oxygen_generator" }
+        { id: "4BE0000000000802", type: "checkmark" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE0000000000109"
+      x: 15.6d
+      y: -2.3d
+      icon: { id: "minecraft:white_bed", count: 1 }
+      dependencies: ["4AE0000000000108"]
+      tasks: [
+        { id: "4BE0000000000901", type: "checkmark" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE000000000010A"
+      x: 10.5d
+      y: 0d
+      icon: { id: "minecraft:wheat_seeds", count: 1 }
+      dependencies: ["4AE0000000000104"]
+      tasks: [
+        { id: "4BE0000000000A01", type: "item", item: "minecraft:wheat_seeds" }
+        { id: "4BE0000000000A02", type: "checkmark" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE000000000010B"
+      x: 13.2d
+      y: 0d
+      icon: { id: "minecraft:bread", count: 1 }
+      dependencies: ["4AE000000000010A"]
+      tasks: [
+        { id: "4BE0000000000B01", type: "item", item: "minecraft:bread", count: 8L }
+        { id: "4BE0000000000B02", type: "checkmark" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE000000000010C"
+      x: 10.5d
+      y: 2.5d
+      icon: { id: "deepfield:wolf_ironstone_ore", count: 1 }
+      dependencies: ["4AE0000000000104"]
+      tasks: [
+        { id: "4BE0000000000C01", type: "item", item: "minecraft:raw_iron" }
+        { id: "4BE0000000000C02", type: "dimension", dimension: "deepfield:wolf1069b" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE000000000010D"
+      x: 13.2d
+      y: 2.5d
+      icon: { id: "deepfield:electric_furnace", count: 1 }
+      dependencies: ["4AE000000000010C"]
+      tasks: [
+        { id: "4BE0000000000D01", type: "item", item: "deepfield:electric_furnace" }
+        { id: "4BE0000000000D02", type: "checkmark" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE000000000010E"
+      x: 10.5d
+      y: 5d
+      icon: { id: "mekanism:teleporter", count: 1 }
+      dependencies: ["4AE0000000000104"]
+      tasks: [
+        { id: "4BE0000000000E01", type: "checkmark" }
+      ]
+      rewards: [
+        { id: "4CE0000000000E01", type: "command", command: "history global unlock m1_colony_logistics", permission_level: 2, team_reward: true }
+      ]
+      shape: "hexagon"
+      size: 1.26d
+    }
+    {
+      id: "4AE000000000010F"
+      x: 13.2d
+      y: 5d
+      icon: { id: "mekanism:teleporter_frame", count: 1 }
+      dependencies: ["4AE000000000010E"]
+      tasks: [
+        { id: "4BE0000000000F01", type: "checkmark" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE0000000000110"
+      x: 15.9d
+      y: 5d
+      icon: { id: "mekanism:teleporter", count: 1 }
+      dependencies: ["4AE000000000010F"]
+      tasks: [
+        { id: "4BE0000000001001", type: "advancement", advancement: "m1prototype:logistics/earth_to_colony" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE0000000000111"
+      x: 18.6d
+      y: 5d
+      icon: { id: "mekanism:teleporter", count: 1 }
+      dependencies: ["4AE0000000000110"]
+      tasks: [
+        { id: "4BE0000000001101", type: "advancement", advancement: "m1prototype:logistics/colony_to_earth" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE0000000000112"
+      x: 18.6d
+      y: -1.1d
+      icon: { id: "deepfield:colony_core", count: 1 }
+      dependencies: ["4AE0000000000106", "4AE0000000000109", "4AE000000000010B"]
+      tasks: [
+        { id: "4BE0000000001201", type: "advancement", advancement: "m1prototype:colony/wolf_core" }
+      ]
+      shape: "hexagon"
+      size: 1.26d
+    }
+    {
+      id: "4AE0000000000113"
+      x: 21.3d
+      y: -1.1d
+      icon: { id: "deepfield:colony_core", count: 1 }
+      dependencies: ["4AE0000000000112"]
+      tasks: [
+        { id: "4BE0000000001301", type: "advancement", advancement: "m1prototype:colony/working_shift" }
+      ]
+      shape: "hexagon"
+      size: 1.26d
+    }
+    {
+      id: "4AE0000000000114"
+      x: 25d
+      y: 0d
+      icon: { id: "deepfield:wolf1069b_globe", count: 1 }
+      dependencies: ["4AE000000000010D", "4AE0000000000111", "4AE0000000000113"]
+      tasks: [
+        { id: "4BE0000000001401", type: "dimension", dimension: "deepfield:wolf1069b" }
+        { id: "4BE0000000001402", type: "checkmark" }
+      ]
+      shape: "hexagon"
+      size: 1.26d
+    }
+    {
+      id: "4AE0000000000115"
+      x: 16.0d
+      y: -6.9d
+      icon: { id: "deepfield:combustion_generator", count: 1 }
+      dependencies: ["4AE0000000000106"]
+      optional: true
+      tasks: [
+        { id: "4BE0000000001501", type: "item", item: "deepfield:combustion_generator" }
+        { id: "4BE0000000001502", type: "checkmark" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE0000000000116"
+      x: 21.3d
+      y: -3.4d
+      icon: { id: "minecraft:writable_book", count: 1 }
+      dependencies: ["4AE0000000000112"]
+      optional: true
+      tasks: [
+        { id: "4BE0000000001601", type: "checkmark" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+    {
+      id: "4AE0000000000117"
+      x: 21.3d
+      y: 5d
+      icon: { id: "mekanism:quantum_entangloporter", count: 1 }
+      dependencies: ["4AE0000000000111"]
+      optional: true
+      tasks: [
+        { id: "4BE0000000001701", type: "item", item: "mekanism:quantum_entangloporter" }
+        { id: "4BE0000000001702", type: "checkmark" }
+      ]
+      shape: "square"
+      size: 0.95d
+    }
+  ]
+}
