@@ -3,6 +3,6 @@
   "minVersion": "0.8",
   "package": "dev.m1ssing0.packcompat.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": ["RecipeManagerAccessor", "GolemRecipeTablesMixin", "MekanismElectronicsMixin"],
+  "mixins": ["RecipeManagerAccessor", "GolemRecipeTablesMixin", "MekanismElectronicsMixin", "RainDelayMixin"],
   "injectors": {"defaultRequire": 1}
 }

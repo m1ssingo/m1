@@ -1,437 +1,431 @@
 {
-  "id": "4A30000000000001",
-  "filename": "heavy_industry",
-  "group": "",
-  "order_index": 2,
-  "icon": {"id": "hbm:machine_assembly_machine", "count": 1},
-  "title": "Тяжёлая промышленность",
-  "quests": [
+  id: "4A30000000000001"
+  filename: "heavy_industry"
+  group: "4AC0000000000002"
+  order_index: 3
+  icon: { id: "hbm:machine_assembly_machine", count: 1 }
+  quests: [
     {
-      "id": "4A30000000000101",
-      "x": 0.0,
-      "y": -1.2,
-      "title": "Мастерская NTM",
-      "dependencies": [
-        "4A20000000000106"
-      ],
-      "description": [
-        "У NTM собственная производственная цепочка: пресс, штампы, шаблоны и станки. Пресс даёт первые серии металлических деталей."
-        "Найди в руководстве первые операции. Его можно изготовить или получить за стальную наковальню в соседней ветке. Поставь пресс там, где помещаются сырьё и выдача."
-      ],
-      "tasks": [
+      id: "4A30000000000101"
+      x: 1.7835d
+      y: 0d
+      dependencies: ["4A30000000000102"]
+      tasks: [
+        { id: "4A30000000010100", type: "item", item: "hbm:book_guide_starter" }
+        { id: "4A30000000010101", type: "item", item: "hbm:machine_press" }
+      ]
+      shape: "hexagon"
+      size: 1.04d
+      icon: { id: "hbm:book_guide_starter", count: 1 }
+    }
+    {
+      id: "4A30000000000102"
+      x: 0d
+      y: 0d
+      dependencies: ["4A20000000000106"]
+      tasks: [
+        { id: "4A30000000010200", type: "item", item: "hbm:anvil_steel" }
+      ]
+      rewards: [
+        { id: "4A31000000000402", type: "item", item: "hbm:book_guide_starter" }
         {
-          "id": "4A30000000010100",
-          "type": "item",
-          "item": "hbm:book_guide_starter"
-        },
-        {
-          "id": "4A30000000010101",
-          "type": "item",
-          "item": "hbm:machine_press"
+          id: "4A31000000000502"
+          type: "item"
+          item: {
+            id: "guideme:guide"
+            count: 1
+            components: { "guideme:guide_id": "m1prototype:ntm" }
+          }
         }
       ]
-    },
+      shape: "hexagon"
+      size: 1.2d
+      icon: { id: "hbm:anvil_steel", count: 1 }
+    }
     {
-      "id": "4A30000000000102",
-      "x": 0.0,
-      "y": 1.2,
-      "title": "От наковальни к станку",
-      "dependencies": [
-        "4A20000000000106"
-      ],
-      "description": [
-        "Стальная наковальня открывает первые операции NTM. По этой ветке можно сначала познакомиться с руководством, а затем заняться прессом и более сложными заказами."
-        "Собери наковальню и забери руководство NTM за этот этап. Найди в нём назначение первых станков и в JEI проверь рецепты."
-      ],
-      "tasks": [
-        {
-          "id": "4A30000000010200",
-          "type": "item",
-          "item": "hbm:anvil_steel"
-        }
+      id: "4A30000000000103"
+      x: 3.567d
+      y: 0d
+      dependencies: ["4A30000000000101"]
+      tasks: [
+        { id: "4A30000000010300", type: "item", item: "hbm:template_folder" }
       ]
-      rewards: [{ id: "4A31000000000402", type: "item", item: "hbm:book_guide_starter" }]
-    },
+      shape: "square"
+      size: 1d
+      icon: { id: "hbm:template_folder", count: 1 }
+    }
     {
-      "id": "4A30000000000103",
-      "x": 2.0,
-      "y": -1.2,
-      "title": "Папка шаблонов",
-      "dependencies": [
-        "4A30000000000101"
-      ],
-      "description": [
-        "Для серии деталей NTM использует шаблоны. Папка помогает подготовить заказы на нужное изделие и сменить его, когда цех переключается на другой проект."
-        "Изучи, как получить нужный шаблон на примере сборочного станка. Проверь состав заказа в JEI до того, как собирать всё сырьё."
-      ],
-      "tasks": [
-        {
-          "id": "4A30000000010300",
-          "type": "item",
-          "item": "hbm:template_folder"
-        }
+      id: "4A30000000000104"
+      x: 5.3505d
+      y: 0d
+      dependencies: ["4A30000000000103"]
+      tasks: [
+        { id: "4A30000000010400", type: "item", item: "hbm:machine_assembly_machine" }
       ]
-    },
+      shape: "hexagon"
+      size: 1.04d
+      icon: { id: "hbm:machine_assembly_machine", count: 1 }
+    }
     {
-      "id": "4A30000000000104",
-      "x": 4.2,
-      "y": 0.0,
-      "title": "Сборочный станок",
-      "dependencies": [
-        "4A30000000000102",
-        "4A30000000000103"
-      ],
-      "description": [
-        "Сборочный станок объединяет шаблоны и промышленную электронику. Он нужен, чтобы из деталей мастерской делать полноценные механизмы."
-        "Подготовь обе продвинутые схемы по рецепту сборки. Выдели место под его собственную линию HE и проверь её на первой пробной операции."
-      ],
-      "tasks": [
-        {
-          "id": "4A30000000010400",
-          "type": "item",
-          "item": "hbm:machine_assembly_machine"
-        }
+      id: "4A30000000000105"
+      x: 7.134d
+      y: 0d
+      dependencies: ["4A30000000000104"]
+      tasks: [
+        { id: "4A30000000010500", type: "item", item: "hbm:machine_chemical_plant" }
       ]
-    },
+      shape: "square"
+      size: 1d
+      icon: { id: "hbm:machine_chemical_plant", count: 1 }
+    }
     {
-      "id": "4A30000000000105",
-      "x": 6.4,
-      "y": -1.2,
-      "title": "Химическая установка",
-      "dependencies": [
-        "4A30000000000104"
-      ],
-      "description": [
-        "Химическая установка выводит мастерскую из режима работы только с металлом. В следующей главе через неё можно подготовить один из вариантов подачи CO₂."
-        "Сверь режимы и требуемые детали в JEI. Оставь место под отдельные трубы и ёмкости, чтобы потом не разбирать соседние машины."
-      ],
-      "tasks": [
-        {
-          "id": "4A30000000010500",
-          "type": "item",
-          "item": "hbm:machine_chemical_plant"
-        }
+      id: "4A30000000000106"
+      x: 8.9175d
+      y: 0d
+      dependencies: ["4A30000000000105"]
+      tasks: [
+        { id: "4A30000000010600", type: "item", item: "hbm:fluid_duct_neo" }
+        { id: "4A30000000010601", type: "item", item: "hbm:barrel_steel" }
+        { id: "4A30000000010602", type: "checkmark" }
       ]
-    },
+      shape: "hexagon"
+      size: 1.04d
+      icon: { id: "hbm:fluid_duct_neo", count: 1 }
+    }
     {
-      "id": "4A30000000000106",
-      "x": 8.4,
-      "y": -1.2,
-      "title": "Проверка на воде",
-      "dependencies": [
-        "4A30000000000105"
-      ],
-      "description": [
-        "До опытов с реагентами стоит понять поведение трубы и приёмника на воде. Тогда при неполадке проще отличить неправильное соединение от отсутствия рецепта."
-        "Соедини ёмкость и линию NTM и проведи проверку передачи. Отметь, когда вода действительно дошла до выбранного приёмника."
-      ],
-      "tasks": [
-        {
-          "id": "4A30000000010600",
-          "type": "item",
-          "item": "hbm:fluid_duct_neo"
-        },
-        {
-          "id": "4A30000000010601",
-          "type": "item",
-          "item": "hbm:barrel_steel"
-        },
-        {
-          "id": "4A30000000010602",
-          "type": "checkmark"
-        }
+      id: "4A30000000000107"
+      x: 4.8575d
+      y: -2.494d
+      dependencies: ["4A30000000000102"]
+      tasks: [
+        { id: "4A30000000010700", type: "item", item: "hbm:geiger_counter" }
+        { id: "4A30000000010701", type: "checkmark" }
       ]
-    },
+      shape: "hexagon"
+      size: 1.04d
+      icon: { id: "hbm:geiger_counter", count: 1 }
+      dep_control_pts: {
+        4A30000000000102: [
+          1.218d
+          -1.3485d
+          2.9725d
+          -2.494d
+        ]
+      }
+    }
     {
-      "id": "4A30000000000107",
-      "x": 6.4,
-      "y": 1.2,
-      "title": "Фон площадки",
-      "dependencies": [
-        "4A30000000000104"
-      ],
-      "description": [
-        "Счётчик Гейгера даёт исходный фон площадки. Он поможет заметить, какой участок изменился после того, как в мастерскую привезут топливо."
-        "Измерь фон на предполагаемом рабочем маршруте и у будущего хранилища. Когда места разведены, проще выбрать проход и точку контроля."
-      ],
-      "tasks": [
-        {
-          "id": "4A30000000010700",
-          "type": "item",
-          "item": "hbm:geiger_counter"
-        },
-        {
-          "id": "4A30000000010701",
-          "type": "checkmark"
-        }
+      id: "4A30000000000108"
+      x: 11.0925d
+      y: 0d
+      dependencies: ["4A30000000000107", "4A30000000000106"]
+      icon: { id: "hbm:machine_zirnox", count: 1 }
+      shape: "hexagon"
+      tasks: [
+        { id: "4A30000000010800", type: "checkmark" }
       ]
-    },
+      size: 1.2d
+      dep_control_pts: {
+        4A30000000000107: [
+          7.134d
+          -2.494d
+          9.4685d
+          -1.2905d
+        ]
+      }
+    }
     {
-      "id": "4A30000000000108",
-      "x": 10.5,
-      "y": 0.0,
-      "title": "Площадка готова",
-      "dependencies": [
-        "4A30000000000106",
-        "4A30000000000107"
-      ],
-      "description": [
-        "Завод готов к следующему этапу, когда есть работающее производство деталей и понятная жидкостная линия. Для ZIRNOX понадобится место с доступом к обоим участкам."
-        "Проверь станок, тестовую подачу воды и рабочий маршрут. Подтверди готовность мастерской, когда по её схеме сможет ориентироваться и напарник."
-      ],
-      "icon": {"id": "hbm:machine_chemical_plant", "count": 1},
-      "shape": "hexagon",
-      "tasks": [
-        {
-          "id": "4A30000000010800",
-          "type": "checkmark"
-        }
+      id: "4A30000000000109"
+      x: 1.7835d
+      y: 1.914d
+      dependencies: ["4A30000000000101"]
+      optional: true
+      tasks: [
+        { id: "4A30000000010900", type: "item", item: "hbm:plate_steel" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "hbm:plate_steel", count: 1 }
+    }
     {
-      "id": "4A30000000000109",
-      "x": 0.0,
-      "y": -3.4,
-      "title": "Пробная штамповка",
-      "dependencies": [
-        "4A30000000000101"
-      ],
-      "description": [
-        "Найди в JEI штамп для пластин и прогони через пресс сталь. Сравни первую партию с изготовлением пластин молотом IE.",
-        "Реши, какой способ оставить для ручной работы, а какой использовать для серии."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A30000000010900",
-          "type": "item",
-          "item": "hbm:plate_steel"
-        }
+      id: "4A3000000000010A"
+      x: 5.3505d
+      y: 1.9285d
+      dependencies: ["4A30000000000104"]
+      optional: true
+      tasks: [
+        { id: "4A30000000010A00", type: "item", item: "hbm:red_cable_gauge" }
+        { id: "4A30000000010A01", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "hbm:red_cable_gauge", count: 1 }
+    }
     {
-      "id": "4A3000000000010A",
-      "x": 4.2,
-      "y": 3.4,
-      "title": "Нагрузка на линии HE",
-      "dependencies": [
-        "4A30000000000104"
-      ],
-      "description": [
-        "Подключи измеритель NTM на участке с красным медным кабелем. Сравни показания в простое и во время пробной партии.",
-        "Если питание проседает, проверь генератор и отдельный запас для этой линии."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A30000000010A00",
-          "type": "item",
-          "item": "hbm:red_cable_gauge"
-        },
-        {
-          "id": "4A30000000010A01",
-          "type": "checkmark"
-        }
+      id: "4A3000000000010B"
+      x: 3.625d
+      y: 1.9285d
+      dependencies: ["4A30000000000104"]
+      optional: true
+      tasks: [
+        { id: "4A30000000010B00", type: "item", item: "hbm:machine_centrifuge" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "hbm:machine_centrifuge", count: 1 }
+    }
     {
-      "id": "4A3000000000010B",
-      "x": 4.2,
-      "y": -3.4,
-      "title": "Пробная центрифуга",
-      "dependencies": [
-        "4A30000000000104"
-      ],
-      "description": [
-        "Собери центрифугу NTM. Выбери в JEI доступный рецепт на обычном сырье и подставь разные буферы для получившихся продуктов.",
-        "Проверь, как заполнение одного выхода влияет на партию. Сохрани схему, если её удобно расширять."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A30000000010B00",
-          "type": "item",
-          "item": "hbm:machine_centrifuge"
-        }
+      id: "4A3000000000010C"
+      x: 6.67d
+      y: -3.77d
+      dependencies: ["4A30000000000107"]
+      optional: true
+      tasks: [
+        { id: "4A30000000010C00", type: "item", item: "hbm:hazmat_helmet" }
+        { id: "4A30000000010C01", type: "item", item: "hbm:hazmat_plate" }
+        { id: "4A30000000010C02", type: "item", item: "hbm:hazmat_legs" }
+        { id: "4A30000000010C03", type: "item", item: "hbm:hazmat_boots" }
       ]
-    },
-    {
-      "id": "4A3000000000010C",
-      "x": 8.4,
-      "y": 3.4,
-      "title": "Рабочий комплект",
-      "dependencies": [
-        "4A30000000000107"
-      ],
-      "description": [
-        "Собери защитный костюм NTM. Держи его вместе со счётчиком у входа на отдельный участок.",
-        "Сравни комплекты по подсказкам игры. Используй показания прибора для выбора маршрута по площадке."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A30000000010C00",
-          "type": "item",
-          "item": "hbm:hazmat_helmet"
-        },
-        {
-          "id": "4A30000000010C01",
-          "type": "item",
-          "item": "hbm:hazmat_plate"
-        },
-        {
-          "id": "4A30000000010C02",
-          "type": "item",
-          "item": "hbm:hazmat_legs"
-        },
-        {
-          "id": "4A30000000010C03",
-          "type": "item",
-          "item": "hbm:hazmat_boots"
-        }
-      ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "hbm:hazmat_helmet", count: 1 }
+    }
     {
       id: "4A30000000000120"
-      x: 0.0d
-      y: -5.6d
-      title: "Пресс работает серией"
+      x: 1.7545d
+      y: 3.8425d
       optional: true
       dependencies: ["4A30000000000109"]
-      description: [
-        "Одна пластина нужна для первого ремонта, несколько одинаковых партий — для всего цеха. Штамп и свободный выход важнее, чем подкладывать сырьё по одному."
-        "Сделай повторяемую пробную партию и реши, где будут храниться штампы для разных операций. Оставь себе место для переналадки."
-      ]
       tasks: [
         { id: "4A31000000002000", type: "item", item: "hbm:machine_press" }
         { id: "4A31000000002001", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "hbm:machine_press", count: 1 }
+    }
     {
       id: "4A30000000000121"
-      x: 4.2d
-      y: 5.4d
-      title: "Запас HE на линии"
+      x: 4.5385d
+      y: 3.7265d
       optional: true
       dependencies: ["4A3000000000010A"]
-      description: [
-        "Когда NTM собирает детали по заказу, пуск очередной машины может просадить весь участок. Накопитель позволяет увидеть, как меняется расход под нагрузкой."
-        "Подготовь гнездо аккумулятора и используй совместимую батарею. Сравни показания кабельного измерителя до пуска и под нагрузкой; если заряд не восстанавливается, одного буфера мало."
-      ]
       tasks: [
         { id: "4A31000000002100", type: "item", item: "hbm:machine_battery_socket" }
         { id: "4A31000000002101", type: "item", item: "hbm:red_cable_gauge" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "hbm:machine_battery_socket", count: 1 }
+    }
     {
       id: "4A30000000000122"
-      x: 4.2d
-      y: -5.6d
-      title: "Труба, которую можно проверить"
+      x: 11.165d
+      y: 1.885d
       optional: true
-      dependencies: ["4A3000000000010B"]
-      description: [
-        "Пуск химического цеха проще, когда видно, какая ветка заполнена и где её можно отключить. При обслуживании пригодятся и измерение, и запорный узел."
-        "Сделай безопасный стенд на воде. Отключи одну ветку, проверь показания и убедись, что вторая остаётся доступной."
-      ]
+      dependencies: ["4A30000000000106"]
       tasks: [
         { id: "4A31000000002200", type: "item", item: "hbm:fluid_duct_gauge" }
         { id: "4A31000000002201", type: "item", item: "hbm:fluid_switch" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "hbm:fluid_duct_gauge", count: 1 }
+    }
     {
       id: "4A30000000000123"
-      x: 6.4d
-      y: -5.6d
-      title: "Замер на воде"
+      x: 13.05d
+      y: 1.885d
       optional: true
       dependencies: ["4A30000000000122"]
-      description: [
-        "Уровень в баке показывает запас, а расход во времени помогает найти узкое место. До подключения паровой схемы полезно потренироваться с обычной водой."
-        "Поставь счётный клапан на тестовой линии. Замерь выход за один интервал при двух положениях соседнего переключателя."
-      ]
       tasks: [
         { id: "4A31000000002300", type: "item", item: "hbm:fluid_counter_valve" }
         { id: "4A31000000002301", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "hbm:fluid_counter_valve", count: 1 }
+    }
     {
       id: "4A30000000000124"
-      x: 8.4d
-      y: -3.4d
-      title: "Проектор вместо замеров"
+      x: 8.9175d
+      y: 1.972d
       optional: true
       dependencies: ["4A30000000000106"]
-      description: [
-        "На большой площадке легко ошибиться на один блок. Проектор Immersive Petroleum переносит слои схемы прямо на площадку, где позднее встанет установка."
-        "Выбери крупную постройку из руководства IE и проверь, хватает ли места под её слои, порты и проходы."
-      ]
       tasks: [
         { id: "4A31000000002400", type: "item", item: "immersivepetroleum:projector" }
       ]
-    },
+      shape: "circle"
+      size: 1.04d
+      icon: { id: "immersivepetroleum:projector", count: 1 }
+    }
     {
       id: "4A30000000000125"
-      x: 10.6d
-      y: -3.4d
-      title: "Разведка под нефть"
+      x: 8.9175d
+      y: 3.915d
       optional: true
       dependencies: ["4A30000000000124"]
-      description: [
-        "Прежде чем тянуть трубы, выясни, есть ли под выбранным чанком сырьё. У двух участков карта может выглядеть одинаково, а керны показать разные запасы."
-        "Сними пробу керновым буром и проверь в руководстве IE записи Immersive Petroleum. Отметь место, которое реально снабжать питанием."
-      ]
       tasks: [
         { id: "4A31000000002500", type: "item", item: "immersiveengineering:sample_drill" }
         { id: "4A31000000002501", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "immersiveengineering:sample_drill", count: 1 }
+    }
     {
       id: "4A30000000000126"
-      x: 12.8d
-      y: -3.4d
-      title: "Нефть выходит из земли"
+      x: 12.6875d
+      y: 5.8d
       optional: true
-      dependencies: ["4A30000000000125"]
-      description: [
-        "Насосная качалка даёт поток сырья вместо ручного поиска по вёдрам. Выработку можно посвятить топливу или материалам будущей стройки."
-        "Собери Pumpjack по схеме руководства, выведи пробную порцию в ёмкость и проверь, как быстро она заполняется."
-      ]
+      dependencies: ["4A30000000000142"]
       tasks: [
         { id: "4A31000000002600", type: "checkmark" }
       ]
-    },
+      icon: { id: "immersivepetroleum:projector", count: 1 }
+      shape: "circle"
+      size: 0.88d
+    }
     {
       id: "4A30000000000127"
-      x: 15.0d
-      y: -3.4d
-      title: "Один поток, несколько продуктов"
+      x: 14.4275d
+      y: 7.685d
       optional: true
-      dependencies: ["4A30000000000126"]
-      description: [
-        "Перегонка даёт несколько выходов. На маленьком стенде можно решить, что использовать первым и где оставить место для остального."
-        "Подготовь Distillation Tower по схеме, проверь JEI и сделай пробную партию. Сравни пользу дизеля и смазки для двух своих потребителей."
-      ]
+      dependencies: ["4A30000000000141"]
       tasks: [
         { id: "4A31000000002700", type: "item", item: "immersivepetroleum:auto_lubricator" }
         { id: "4A31000000002701", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "immersivepetroleum:auto_lubricator", count: 1 }
+    }
     {
       id: "4A30000000000128"
-      x: 10.6d
-      y: 5.0d
-      title: "Фон по маршруту"
+      x: 8.6275d
+      y: -3.77d
       optional: true
       dependencies: ["4A3000000000010C"]
-      description: [
-        "Счётчик помогает оценить место, а дозиметр показывает накопленную дозу за время работы. При расстановке склада и приборов обе цифры могут привести к разным решениям."
-        "Проверь два безопасных рабочих маршрута на игровой площадке. Выбери, где удобнее разместить точку контроля и запасные комплекты."
-      ]
       tasks: [
         { id: "4A31000000002800", type: "item", item: "hbm:dosimeter" }
         { id: "4A31000000002801", type: "checkmark" }
       ]
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "hbm:dosimeter", count: 1 }
+    }
+    {
+      id: "4A30000000000130"
+      tasks: [
+        { id: "4B30000000003000", type: "item", item: "hbm:plate_steel" }
+        { id: "4B30000000003001", type: "checkmark" }
+      ]
+      dependencies: ["4A30000000000120"]
+      optional: true
+      x: 0d
+      y: 4.524d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "hbm:plate_steel", count: 1 }
+    }
+    {
+      id: "4A30000000000131"
+      tasks: [
+        { id: "4B30000000003100", type: "item", item: "minecraft:barrel" }
+        { id: "4B30000000003101", type: "checkmark" }
+      ]
+      dependencies: ["4A30000000000125"]
+      optional: true
+      x: 10.8025d
+      y: 3.915d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "minecraft:barrel", count: 1 }
+    }
+    {
+      id: "4A30000000000132"
+      tasks: [
+        { id: "4B30000000003200", type: "item", item: "hbm:red_cable_gauge" }
+        { id: "4B30000000003201", type: "checkmark" }
+      ]
+      dependencies: ["4A30000000000108"]
+      optional: true
+      x: 12.905d
+      y: 0d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "hbm:red_cable_gauge", count: 1 }
+    }
+    {
+      id: "4A30000000000140"
+      x: 5.655d
+      y: 5.539d
+      optional: true
+      icon: { id: "hbm:machine_battery_socket", count: 1 }
+      shape: "circle"
+      size: 0.88d
+      tasks: [
+        { id: "4B30000000014000", type: "item", item: "hbm:red_cable_gauge" }
+        { id: "4B30000000014001", type: "checkmark" }
+      ]
+      dependencies: ["4A30000000000121"]
+    }
+    {
+      id: "4A30000000000143"
+      x: 8.9175d
+      y: 5.8d
+      optional: true
+      icon: { id: "immersiveengineering:light_engineering", count: 1 }
+      shape: "circle"
+      size: 1.04d
+      tasks: [
+        { id: "4B30000000014300", type: "item", item: "immersiveengineering:fluid_pipe", count: 9 }
+        { id: "4B30000000014301", type: "item", item: "immersiveengineering:heavy_engineering", count: 2 }
+        { id: "4B30000000014302", type: "item", item: "immersiveengineering:light_engineering", count: 8 }
+        { id: "4B30000000014303", type: "item", item: "immersiveengineering:rs_engineering" }
+        { id: "4B30000000014304", type: "item", item: "immersiveengineering:slab_steel_scaffolding_grate_top", count: 4 }
+        { id: "4B30000000014305", type: "item", item: "immersiveengineering:steel_fence", count: 16 }
+        { id: "4B30000000014306", type: "item", item: "immersiveengineering:steel_scaffolding_standard", count: 19 }
+        { id: "4B30000000014307", type: "checkmark" }
+      ]
+      dependencies: ["4A30000000000125"]
+    }
+    {
+      id: "4A30000000000142"
+      x: 10.8025d
+      y: 5.8d
+      optional: true
+      icon: { id: "immersiveengineering:heavy_engineering", count: 1 }
+      shape: "circle"
+      size: 1.04d
+      tasks: [
+        { id: "4B30000000014200", type: "item", item: "immersiveengineering:fluid_pipe", count: 4 }
+        { id: "4B30000000014201", type: "item", item: "immersiveengineering:heavy_engineering", count: 2 }
+        { id: "4B30000000014202", type: "item", item: "immersiveengineering:light_engineering", count: 2 }
+        { id: "4B30000000014203", type: "item", item: "immersiveengineering:rs_engineering" }
+        { id: "4B30000000014204", type: "item", item: "immersiveengineering:sheetmetal_steel", count: 4 }
+        { id: "4B30000000014205", type: "item", item: "immersiveengineering:steel_scaffolding_standard", count: 11 }
+        { id: "4B30000000014206", type: "item", item: "immersiveengineering:storage_steel", count: 2 }
+        { id: "4B30000000014207", type: "item", item: "immersiveengineering:treated_fence", count: 6 }
+      ]
+      dependencies: ["4A30000000000143"]
+    }
+    {
+      id: "4A30000000000141"
+      x: 14.4275d
+      y: 5.8d
+      optional: true
+      icon: { id: "immersiveengineering:rs_engineering", count: 1 }
+      shape: "circle"
+      size: 1.04d
+      tasks: [
+        { id: "4B30000000014100", type: "item", item: "immersiveengineering:fluid_pipe", count: 17 }
+        { id: "4B30000000014101", type: "item", item: "immersiveengineering:heavy_engineering", count: 4 }
+        { id: "4B30000000014102", type: "item", item: "immersiveengineering:rs_engineering" }
+        { id: "4B30000000014103", type: "item", item: "immersiveengineering:sheetmetal_iron", count: 60 }
+        { id: "4B30000000014104", type: "item", item: "immersiveengineering:slab_steel_scaffolding_grate_top", count: 30 }
+        { id: "4B30000000014105", type: "item", item: "immersiveengineering:steel_scaffolding_standard", count: 25 }
+      ]
+      dependencies: ["4A30000000000126"]
     }
   ]
 }

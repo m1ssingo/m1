@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "controller_on_mars": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "deepfield:reactor_controller"
+          },
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "deepfield:mars"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,240 @@
+{
+  id: "4A00000000000001"
+  filename: "first_days"
+  icon: { id: "minecraft:stone_pickaxe", count: 1 }
+  quests: [
+    {
+      id: "4A00000000000101"
+      tasks: [
+        { id: "4B00000000000100", type: "item", item: "minecraft:crafting_table" }
+      ]
+      x: -5.8d
+      y: 0d
+      shape: "hexagon"
+      size: 1.2d
+      icon: { id: "minecraft:crafting_table", count: 1 }
+    }
+    {
+      id: "4A00000000000102"
+      tasks: [
+        { id: "4B00000000000200", type: "item", item: "minecraft:stone_pickaxe" }
+      ]
+      dependencies: ["4A00000000000101"]
+      x: -3.625d
+      y: 0d
+      shape: "hexagon"
+      size: 1.04d
+      icon: { id: "minecraft:stone_pickaxe", count: 1 }
+    }
+    {
+      id: "4A00000000000103"
+      tasks: [
+        { id: "4B00000000000300", type: "item", item: "minecraft:furnace" }
+      ]
+      dependencies: ["4A00000000000102"]
+      x: -1.45d
+      y: 0d
+      shape: "square"
+      size: 1d
+      icon: { id: "minecraft:furnace", count: 1 }
+    }
+    {
+      id: "4A00000000000104"
+      tasks: [
+        { id: "4B00000000000400", type: "item", item: "minecraft:iron_ingot", count: 3 }
+      ]
+      dependencies: ["4A00000000000103"]
+      x: 0.87d
+      y: 0d
+      shape: "hexagon"
+      size: 1.04d
+      icon: { id: "minecraft:iron_ingot", count: 1 }
+    }
+    {
+      id: "4A00000000000105"
+      tasks: [
+        { id: "4B00000000000500", type: "item", item: "minecraft:bucket" }
+      ]
+      dependencies: ["4A00000000000104"]
+      x: 3.19d
+      y: 0d
+      shape: "square"
+      size: 1d
+      icon: { id: "minecraft:bucket", count: 1 }
+    }
+    {
+      id: "4A00000000000106"
+      tasks: [
+        { id: "4B00000000000600", type: "item", item: "minecraft:clay_ball", count: 4 }
+        { id: "4B00000000000601", type: "item", item: "minecraft:brick", count: 4 }
+      ]
+      dependencies: ["4A00000000000105"]
+      x: 5.51d
+      y: 0d
+      shape: "hexagon"
+      size: 1.2d
+      icon: { id: "minecraft:clay_ball", count: 1 }
+    }
+    {
+      id: "4A00000000000110"
+      tasks: [
+        { id: "4B00000000001000", type: "item", item: "minecraft:torch", count: 4 }
+      ]
+      dependencies: ["4A00000000000101"]
+      optional: true
+      x: -4.785d
+      y: -2.175d
+      shape: "circle"
+      size: 1.04d
+      icon: { id: "minecraft:torch", count: 1 }
+    }
+    {
+      id: "4A00000000000111"
+      tasks: [
+        { id: "4B00000000001100", type: "advancement", advancement: "minecraft:adventure/sleep_in_bed" }
+      ]
+      dependencies: ["4A00000000000110"]
+      optional: true
+      icon: { id: "minecraft:red_bed", count: 1 }
+      x: -6.67d
+      y: -3.77d
+      shape: "circle"
+      size: 0.88d
+    }
+    {
+      id: "4A00000000000112"
+      tasks: [
+        { id: "4B00000000001200", type: "item", item: "sophisticatedbackpacks:backpack" }
+      ]
+      dependencies: ["4A00000000000102"]
+      optional: true
+      x: -3.19d
+      y: 2.1025d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "sophisticatedbackpacks:backpack", count: 1 }
+    }
+    {
+      id: "4A00000000000113"
+      tasks: [
+        { id: "4B00000000001300", type: "item", item: "minecraft:compass" }
+      ]
+      dependencies: ["4A00000000000104"]
+      optional: true
+      x: 1.74d
+      y: 2.03d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "minecraft:compass", count: 1 }
+    }
+    {
+      id: "4A00000000000114"
+      tasks: [
+        { id: "4B00000000001400", type: "item", item: "ironchest:iron_chest" }
+      ]
+      dependencies: ["4A00000000000104", "4A00000000000144"]
+      optional: true
+      x: 0d
+      y: 3.045d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "ironchest:iron_chest", count: 1 }
+    }
+    {
+      id: "4A0000000000011A"
+      tasks: [
+        { id: "4B00000000001A00", type: "item", item: "minecraft:shears" }
+        { id: "4B00000000001A01", type: "checkmark" }
+      ]
+      dependencies: ["4A00000000000105"]
+      optional: true
+      x: 3.48d
+      y: -1.8125d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "minecraft:shears", count: 1 }
+    }
+    {
+      id: "4A0000000000011B"
+      tasks: [
+        { id: "4B00000000001B00", type: "item", item: "chipped:carpenters_table" }
+        { id: "4B00000000001B01", type: "checkmark" }
+      ]
+      dependencies: ["4A00000000000106"]
+      optional: true
+      x: 5.51d
+      y: 1.8125d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "chipped:carpenters_table", count: 1 }
+    }
+    {
+      id: "4A00000000000140"
+      x: -4.785d
+      y: 1.8125d
+      dependencies: ["4A00000000000102"]
+      tasks: [
+        { id: "4B00000000014000", type: "item", item: "minecraft:stone_sword" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "minecraft:stone_sword", count: 1 }
+    }
+    {
+      id: "4A00000000000141"
+      x: 1.3775d
+      y: -1.8125d
+      dependencies: ["4A00000000000104"]
+      tasks: [
+        { id: "4B00000000014100", type: "item", item: "minecraft:shield" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "minecraft:shield", count: 1 }
+    }
+    {
+      id: "4A00000000000142"
+      x: -4.4225d
+      y: -4.06d
+      optional: true
+      icon: { id: "minecraft:campfire", count: 1 }
+      shape: "circle"
+      size: 0.88d
+      tasks: [
+        { id: "4B00000000014200", type: "item", item: "minecraft:campfire" }
+      ]
+      dependencies: ["4A00000000000110"]
+    }
+    {
+      id: "4A00000000000143"
+      x: -0.87d
+      y: -2.465d
+      optional: true
+      icon: { id: "minecraft:iron_pickaxe", count: 1 }
+      shape: "circle"
+      size: 0.88d
+      tasks: [
+        { id: "4B00000000014300", type: "item", item: "minecraft:iron_pickaxe" }
+        { id: "4B00000000014301", type: "item", item: "minecraft:torch", count: 4 }
+      ]
+      dependencies: ["4A00000000000104", "4A00000000000110"]
+    }
+    {
+      id: "4A00000000000144"
+      x: -1.3775d
+      y: 1.74d
+      optional: true
+      icon: { id: "minecraft:chest", count: 1 }
+      shape: "circle"
+      size: 0.88d
+      tasks: [
+        { id: "4B00000000014400", type: "item", item: "minecraft:chest" }
+      ]
+      dependencies: ["4A00000000000103"]
+    }
+  ]
+  group: "4AC0000000000001"
+  order_index: 0
+}

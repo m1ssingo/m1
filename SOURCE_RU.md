@@ -1,29 +1,45 @@
-# Исходники прототипа
+# Исходники M1 SciFi 0.10.0
 
-`compat/` — собственный мод `m1packcompat` (MIT). Golem Core при удалении рецептов с невыполненными зависимостями получает полную таблицу RecipeManager. В Mekanism проверка этапа добавлена к условию работы машин для рецептов с базовой схемой на выходе. Она вызывается даже для уже сохранённого в кэше рецепта наполнителя и фабрики. Точки внедрения рассчитаны на зафиксированные версии Golem Core и Mekanism.
+Репозиторий содержит настройки сборки, квесты, ресурсы и код собственных модов. Готовые комплекты передаются отдельными архивами. [Установка игры](README_RU.md)
 
-`overrides/` содержит семь глав FTB Quests, глобальные этапы History Stages, рецепты и достижения для переходов. Сторонние JAR берутся из зафиксированных релизов.
+| Путь | Содержимое |
+| --- | --- |
+| `mods.lock.json` | Minecraft 1.21.1, NeoForge 21.1.267, стороны установки, URL и контрольные суммы модов |
+| `overrides/` | Общие файлы клиента и сервера. Квесты лежат в `config/ftbquests/quests/`, этапы в `config/historystages/global/`, рецепты и достижения в `kubejs/data/`. |
+| `compat/` | `m1packcompat` 0.2.4. Блокировка базовой схемы Mekanism, совместимость Golem Core и History Stages, переходы Mekanism и проверка смены Colony Core. |
+| `client/` | `m1packclient` 0.4.4. Главное меню, клавиши, открытие рецепта из задачи FTB Quests и обзор главы. |
+| `server-template/` | Шаблон выделенного сервера Windows |
+| `testing/`, `tools/` | Диагностика и сборка архивов |
 
-`mods.lock.json` — источник точных URL и контрольных сумм, а не перечень «последних версий». `tools/resolve.py download` скачивает закреплённый набор в `work/jars`; команда `resolve` заново выбирает версии и перезаписывает lock-файл — для воспроизведения её запускать не нужно.
+Исходники двух собственных модов распространяются по [MIT](compat/LICENSE). Заставка и дорожка Ignition предоставлены авторами сборки. Регистрация книги находится в [ntm.json](overrides/kubejs/assets/m1prototype/guideme_guides/ntm.json), страницы и 3D-сцены — в [каталоге GuideME](overrides/kubejs/assets/m1prototype/guides/m1prototype/ntm/index.md).
 
-`tools/build_compat.py` собирает мод через javac Java 21. Передайте путь к установленной NeoForge через `--libraries`, путь к закреплённым JAR через `--mods` и при необходимости Java 21 через `--java`. Код совместимости проверяет этап связи перед межмировым переходом Mekanism и выдаёт квестовое достижение при прибытии.
+## Повторная упаковка 0.10.0
 
-`tools/smoke_server.py` запускает сервер именно из `work/server-test`, связывает его с локальным портом из его server.properties и отправляет диагностические команды. Он не устанавливает сам сервер, EULA и тестовый datapack. Эти предварительные настройки создавались в отдельном одноразовом мире. Сетевые параметры прокси берутся из среды только для тестовой машины; в комплекте нет учётных данных.
+Для упаковки выпущенной версии используйте Python 3.11 или новее и два JAR из `M1-SciFi-Prototype-0.10.0.zip`.
 
-`testing/disposable-datapack` — тестовая площадка, **не устанавливать в существующий игровой мир**: функция заменяет блоки на координатах от X=0 до 11, Y=100, Z=0, создаёт предметы и принудительно загружает тестовый чанк Луны. В комплекте для игры она автоматически не включается.
+1. Из `server/overrides/mods/` полного архива извлеките `m1packcompat-0.2.4.jar` в `overrides/mods/` рабочего дерева.
+2. Откройте вложенный `client/M1-SciFi-Prototype-0.10.0-CurseForge.zip`. Из его `overrides/mods/` извлеките `m1packclient-0.4.4.jar` в `client-overrides/mods/` рабочего дерева.
+3. Из корня рабочего дерева выполните `python tools/build_release.py --output dist`. При необходимости передайте `--verification` с JSON для версии 0.10.0, например из `evidence/verification.json` полного архива.
 
-`tools/smoke_server.py --industry` использует временный `testing/industry_fixture.js`. Он вызывает квестовую награду с тестовым игроком, ставит машины на Y=106 в одноразовом мире и проверяет их входы и выходы при закрытии и открытии этапа.
+Упаковщик проверяет суммы SHA-256 обоих JAR по lock-файлу и сверяет общие файлы клиентского и серверного комплектов. [Список модов](docs/MODS.md)
 
-Для проверки обновления книги запустите `tools/smoke_server.py --label quest-book-before-update --quest-book seed` на одноразовом сервере с главами 0.3.1. Сохраните два созданных файла команд `00000000-2320-4000-8000-*.snbt` из `world/ftbquests`. Установите общие файлы 0.4.0 в тот же сервер и запустите `tools/smoke_server.py --label quest-book-after-update --quest-book verify --industry`. Для повторной проверки финальных файлов верните сохранённые данные двух команд и запустите `tools/smoke_server.py --label quest-book-final-data --quest-book verify`. Тестовая команда доступна только при подключении временного файла `testing/quest_book_fixture.js` на одноразовом сервере.
+## Сборка собственных модов
 
-`tools/PcmProbe.java` использовался для проверки фактического AAC-декодера OpenFM на коротком фрагменте потока; нужен classpath с OpenFM и вложенным JAAD. Сам аудиофрагмент не распространяется.
+Нужны Java 21, Python 3.11 или новее и библиотеки установленного NeoForge. Для сборки `m1packclient` нужны также Pillow и NumPy. Для classpath используйте папку `mods` профиля с зафиксированными версиями.
 
-`tools/build_release.py` собирает комплект из lock-файла и двух собственных JAR. Положите мод совместимости в `overrides/mods/`, клиентский мод в `client-overrides/mods/`. Журнал проверок передаётся параметром `--verification`.
+- `python tools/build_compat.py --libraries PATH_TO_SERVER_LIBRARIES --mods PATH_TO_MODS --java PATH_TO_JAVA_EXE`
+- `python tools/build_client.py --animation PATH_TO_BACKGROUND_M1A --libraries PATH_TO_CLIENT_LIBRARIES --mods PATH_TO_MODS --java PATH_TO_JAVA_EXE`
 
-`client/` содержит мод `m1packclient` для главного меню. Он воспроизводит анимацию v4 и потоковую Vorbis-дорожку, размещает кнопки под заголовком между персонажами, исправляет ряд с кнопкой OpenFM в настройках и однократно меняет выбранные назначения клавиш. Лицензия MIT распространяется на код. Иллюстрация и музыка предоставлены авторами сборки. `client-overrides/` устанавливается только на клиент.
+Перед сборкой клиента извлеките из выпущенного `m1packclient-0.4.4.jar` звуковой файл `assets/m1packclient/sounds/ignition.ogg` в `client/resources/assets/m1packclient/sounds/`. Файлы `background.m1a` и `background.png` из `assets/m1packclient/textures/menu/` положите рядом друг с другом и передайте путь к `.m1a`. Упаковщик анимации также принимает GIF или WebP из 250 кадров 1672×941 по 80 мс.
 
-Для сборки нужны Java 21 и Python 3.11+ с Pillow и NumPy. Из выпущенного `m1packclient-0.4.2.jar` извлеките `ignition.ogg` в `client/resources/assets/m1packclient/sounds/` и положите рядом друг с другом `background.m1a` и `background.png` из `assets/m1packclient/textures/menu/`. Выполните `python tools/build_client.py --animation путь/к/background.m1a --libraries путь/к/Install/libraries`. Генератор также принимает GIF или WebP с кадрами 1672×941, длительностью 80 мс и 250 кадрами. В выпущенном JAR фон собран из полноцветных кадров v4.
+При упаковке изменённых JAR обновите их SHA-256 в lock-файле рабочего дерева. `tools/resolve.py download` получает версии из lock-файла и записывает метаданные и суммы по скачанным JAR. Для повторной упаковки выпущенной версии достаточно исходного lock-файла и двух JAR из её архива.
 
-`tools/client_smoke.py` запускает NeoForge-клиент в Xorg с виртуальным экраном и тестовым OpenAL-выходом. Он проверяет зацикливание анимации, расположение кнопок и переходы между главным меню, штатными настройками и настройками OpenFM. Скриншоты сохраняются в `work/`.
+## Диагностика
 
-`testing/interplanetary_fixture.js` предназначен для одноразового сервера. Он строит тестовые порталы, проверяет рецепты и состояние квестовых переходов. Файл находится вне игровых overrides.
+- `m1probe` выводит состояние этапа электроники и видимость двух рецептов. Команда работает в установленной сборке.
+- `testing/quest_polish_fixture.js` проверяет связи 334 заданий, справочные ссылки и семь наград исследований. Для запуска скопируйте скрипт в `kubejs/server_scripts/` одноразового сервера и выполните `m1questpolishfixture` в консоли.
+- `tools/smoke_server.py` предназначен для предварительно подготовленного сервера в `work/server-test`. Параметры `--industry` и `--quest-book` запускают отдельные проверки, часть которых рассчитана на старые наборы глав. `tools/client_smoke.py` предназначен для графического стенда Linux с Xorg.
+- `testing/disposable-datapack`, `testing/industry_fixture.js` и `testing/interplanetary_fixture.js` размещают блоки и создают тестовые данные. Подключайте их только в одноразовых мирах. Игровые архивы содержат эти файлы в исходниках для диагностики.
+- `tools/PcmProbe.java` проверяет AAC-декодер OpenFM с JAAD в classpath. Для него нужен свой тестовый аудиофрагмент.
+
+[Диагностика по наблюдениям в игре](docs/TEST_PROTOCOL_RU.md) · [Статус 0.10.0](docs/STATUS_RU.md)

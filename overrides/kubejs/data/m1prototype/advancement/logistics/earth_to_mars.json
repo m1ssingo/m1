@@ -1,0 +1,7 @@
+{
+  "criteria": {
+    "linked_transit": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

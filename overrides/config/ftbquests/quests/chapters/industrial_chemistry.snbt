@@ -1,492 +1,451 @@
 {
-  "id": "4A20000000000001",
-  "filename": "industrial_chemistry",
-  "group": "",
-  "order_index": 1,
-  "icon": {"id": "mekanism:electrolytic_separator", "count": 1},
-  "title": "Химия и точные механизмы",
-  "quests": [
+  id: "4A20000000000001"
+  filename: "industrial_chemistry"
+  group: "4AC0000000000001"
+  order_index: 2
+  icon: { id: "mekanism:electrolytic_separator", count: 1 }
+  quests: [
     {
-      "id": "4A20000000000101",
-      "x": 0.0,
-      "y": 0.0,
-      "title": "Раздробить и обогатить",
-      "description": [
-        "Мастерской уже нужны партии слитков. Камера обогащения повышает выход подходящих руд, а дробитель пригодится на следующих ступенях обработки."
-        "Сравни в JEI целый блок руды и сырой металл: набор рецептов и выход могут различаться. Прогони небольшую партию и разведи вход с выходом."
-      ],
-      "dependencies": [
-        "4A10000000000109"
-      ],
-      "tasks": [
-        {
-          "id": "4A20000000000210",
-          "type": "item",
-          "item": "mekanism:crusher"
-        },
-        {
-          "id": "4A20000000000211",
-          "type": "item",
-          "item": "mekanism:enrichment_chamber"
-        }
+      id: "4A20000000000101"
+      x: 0d
+      y: 0d
+      dependencies: ["4A10000000000109"]
+      tasks: [
+        { id: "4A20000000000210", type: "item", item: "mekanism:crusher" }
+        { id: "4A20000000000211", type: "item", item: "mekanism:enrichment_chamber" }
       ]
-    },
+      shape: "hexagon"
+      size: 1.2d
+      icon: { id: "mekanism:crusher", count: 1 }
+    }
     {
-      "id": "4A20000000000102",
-      "x": 3.8,
-      "y": -1.9,
-      "title": "От пыли к слитку",
-      "description": [
-        "Пыль имеет смысл только после переплавки. Связав две машины, можно оценить выход сырья и понять, где поставить буфер перед увеличением партии."
-        "Проверь цепочку «обогащение — плавильня» на железе. Сравни выход с обычной переплавкой и проверь запас FE под непрерывной нагрузкой."
-      ],
-      "dependencies": [
-        "4A20000000000101"
-      ],
-      "tasks": [
-        {
-          "id": "4A20000000000220",
-          "type": "item",
-          "item": "mekanism:energized_smelter"
-        }
+      id: "4A20000000000102"
+      x: 2.465d
+      y: -2.32d
+      dependencies: ["4A20000000000101"]
+      tasks: [
+        { id: "4A20000000000220", type: "item", item: "mekanism:energized_smelter" }
       ]
-    },
+      shape: "hexagon"
+      size: 1.04d
+      icon: { id: "mekanism:energized_smelter", count: 1 }
+    }
     {
-      "id": "4A20000000000103",
-      "x": 2.1,
-      "y": 1.6,
-      "title": "Красная добавка",
-      "description": [
-        "Красная добавка превращает медь в обогащённый сплав. Этого сплава скоро будет требовать почти каждый заказ на управляющую электронику."
-        "Загрузи медь и красную добавку в наполнитель. Если одна машина работает с несколькими добавками, заранее реши, как очищать буфер при смене рецепта."
-      ],
-      "dependencies": [
-        "4A20000000000101"
-      ],
-      "tasks": [
-        {
-          "id": "4A20000000000230",
-          "type": "item",
-          "item": "mekanism:alloy_infused"
-        }
+      id: "4A20000000000103"
+      x: 1.885d
+      y: 1.74d
+      dependencies: ["4A20000000000101"]
+      tasks: [
+        { id: "4A20000000000230", type: "item", item: "mekanism:alloy_infused" }
       ]
-    },
+      shape: "square"
+      size: 1d
+      icon: { id: "mekanism:alloy_infused", count: 1 }
+    }
     {
-      "id": "4A20000000000104",
-      "x": 4.2,
-      "y": 1.6,
-      "title": "Управляющая электроника",
-      "description": [
-        "Продвинутая схема нужна там, где базовой недостаточно: сначала для разделения воды, позже для оборудования NTM."
-        "Собери её из базовой схемы и двух обогащённых сплавов. Если серии стали регулярными, проверь боковую ветку заказа из ME."
-      ],
-      "dependencies": [
-        "4A20000000000103"
-      ],
-      "tasks": [
-        {
-          "id": "4A20000000000240",
-          "type": "item",
-          "item": "mekanism:advanced_control_circuit"
-        }
+      id: "4A20000000000104"
+      x: 4.06d
+      y: 2.465d
+      dependencies: ["4A20000000000103"]
+      tasks: [
+        { id: "4A20000000000240", type: "item", item: "mekanism:advanced_control_circuit" }
       ]
-    },
+      shape: "square"
+      size: 1d
+      icon: { id: "mekanism:advanced_control_circuit", count: 1 }
+    }
     {
-      "id": "4A20000000000105",
-      "x": 6.3,
-      "y": 1.6,
-      "title": "Разделить воду",
-      "description": [
-        "Сепаратор даёт два химических продукта из воды. Это открывает кислородную переработку, но линия будет простаивать, если хотя бы один выход заполнится."
-        "Проверь водяной вход и оба газовых выхода. Временно можно сбрасывать избыток в настройках, а в боковых ветках можно подобрать хранение или потребителя."
-      ],
-      "dependencies": [
-        "4A20000000000104"
-      ],
-      "tasks": [
-        {
-          "id": "4A20000000000250",
-          "type": "item",
-          "item": "mekanism:electrolytic_separator"
-        },
-        {
-          "id": "4A20000000000251",
-          "type": "item",
-          "item": "mekanism:basic_chemical_tank"
-        }
+      id: "4A20000000000105"
+      x: 6.5975d
+      y: 2.1025d
+      dependencies: ["4A20000000000104"]
+      tasks: [
+        { id: "4A20000000000250", type: "item", item: "mekanism:electrolytic_separator" }
+        { id: "4A20000000000251", type: "item", item: "mekanism:basic_chemical_tank" }
       ]
-    },
+      shape: "hexagon"
+      size: 1.04d
+      icon: { id: "mekanism:electrolytic_separator", count: 1 }
+    }
     {
-      "id": "4A20000000000106",
-      "x": 8.8,
-      "y": 0.0,
-      "title": "Первый химический участок",
-      "description": [
-        "Два исправных стенда ещё не гарантируют, что цех выдержит одновременный пуск. Этот этап проверяет готовность перейти к установкам NTM."
-        "Запусти переработку и сепаратор одновременно. После отключения и возврата питания убедись, что обе линии возобновили работу. Компоновку и автоматику выбираешь сам."
-      ],
-      "dependencies": [
-        "4A20000000000102",
-        "4A20000000000105"
-      ],
-      "tasks": [
-        {
-          "id": "4A200000000002FF",
-          "type": "checkmark"
-        }
-      ],
-      "shape": "hexagon"
-    },
-    {
-      "id": "4A20000000000107",
-      "x": 0.0,
-      "y": -2.1,
-      "title": "Стороны и потоки",
-      "dependencies": [
-        "4A20000000000101"
-      ],
-      "description": [
-        "Настрой на одном станке вход предметов и отдельный выход. Проверь перенос через логистическую трубу или соседний инвентарь.",
-        "Конфигуратором проверь режим трубы. В окне станка смотри раскладку сторон относительно его передней панели."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A20000000010700",
-          "type": "item",
-          "item": "mekanism:configurator"
-        }
+      id: "4A20000000000106"
+      x: 9.57d
+      y: -0.0725d
+      dependencies: ["4A20000000000102", "4A20000000000105"]
+      tasks: [
+        { id: "4A200000000002FF", type: "checkmark" }
       ]
-    },
+      shape: "hexagon"
+      icon: { id: "mekanism:electrolytic_separator", count: 1 }
+      size: 1.2d
+      dep_control_pts: {
+        4A20000000000102: [
+          4.64d
+          -2.755d
+          8.0475d
+          -2.2475d
+        ]
+      }
+    }
     {
-      "id": "4A20000000000108",
-      "x": 3.8,
-      "y": -3.9,
-      "title": "Одинаковая партия, разный расход",
-      "dependencies": [
-        "4A20000000000102"
-      ],
-      "description": [
-        "Возьми одну и ту же партию для двух прогонов. Попробуй улучшение энергии или скорости и сравни расход из буфера и время обработки.",
-        "Для непрерывной линии выбери режим, который выдерживает твоя сеть. Обе модернизации можно комбинировать."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A20000000010800",
-          "type": "item",
-          "item": "mekanism:upgrade_energy"
-        },
-        {
-          "id": "4A20000000010801",
-          "type": "checkmark"
-        }
+      id: "4A20000000000107"
+      x: 2.1025d
+      y: -0.174d
+      dependencies: ["4A20000000000101"]
+      optional: true
+      tasks: [
+        { id: "4A20000000010700", type: "item", item: "mekanism:configurator" }
       ]
-    },
+      shape: "circle"
+      size: 1.04d
+      icon: { id: "mekanism:configurator", count: 1 }
+    }
     {
-      "id": "4A20000000000109",
-      "x": 2.1,
-      "y": 3.6,
-      "title": "Запас красной добавки",
-      "dependencies": [
-        "4A20000000000103"
-      ],
-      "description": [
-        "Пропусти красную пыль через камеру обогащения. Сравни, сколько красной добавки получает наполнитель из обычной пыли и обогащённого предмета.",
-        "Попробуй дольше работать между пополнениями при том же запасе сырья."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A20000000010900",
-          "type": "item",
-          "item": "mekanism:enriched_redstone"
-        }
+      id: "4A20000000000108"
+      x: 4.06d
+      y: -4.2775d
+      dependencies: ["4A20000000000102"]
+      optional: true
+      tasks: [
+        { id: "4A20000000010800", type: "item", item: "mekanism:upgrade_energy" }
+        { id: "4A20000000010801", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "mekanism:upgrade_energy", count: 1 }
+    }
     {
-      "id": "4A2000000000010A",
-      "x": 4.2,
-      "y": 3.6,
-      "title": "Машина по заказу ME",
-      "dependencies": [
-        "4A20000000000104"
-      ],
-      "description": [
-        "Запиши в AE2 шаблон обработки на знакомый сплав и направь Pattern Provider в наполнитель. Химию приготовь заранее.",
-        "Закажи одну партию. Настрой возврат готового сплава в сеть и проверь, что заказ завершился."
-      ],
-      "icon": {"id": "ae2:processing_pattern", "count": 1},
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A20000000010A00",
-          "type": "checkmark"
-        }
+      id: "4A20000000000109"
+      x: 1.8125d
+      y: 3.6975d
+      dependencies: ["4A20000000000103"]
+      optional: true
+      tasks: [
+        { id: "4A20000000010900", type: "item", item: "mekanism:enriched_redstone" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "mekanism:enriched_redstone", count: 1 }
+    }
     {
-      "id": "4A2000000000010B",
-      "x": 6.3,
-      "y": 3.6,
-      "title": "Вода без ведра",
-      "dependencies": [
-        "4A20000000000105"
-      ],
-      "description": [
-        "Подключи электрическую помпу к источнику воды и подай воду механической трубой. Если труба не забирает жидкость, проверь режим соединения.",
-        "Сравни уровень воды в буфере при включённом сепараторе и в простое."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A20000000010B00",
-          "type": "item",
-          "item": "mekanism:electric_pump"
-        },
-        {
-          "id": "4A20000000010B01",
-          "type": "item",
-          "item": "mekanism:basic_mechanical_pipe"
-        }
+      id: "4A2000000000010A"
+      x: 4.205d
+      y: -0.3915d
+      dependencies: ["4A20000000000107"]
+      icon: { id: "ae2:pattern_provider", count: 1 }
+      optional: true
+      tasks: [
+        { id: "4A20000000010A00", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+    }
     {
-      "id": "4A2000000000010C",
-      "x": 8.5,
-      "y": 3.6,
-      "title": "Куда деть второй продукт",
-      "dependencies": [
-        "4A20000000000105"
-      ],
-      "description": [
-        "Выведи оба продукта сепаратора отдельными трубами. Проверь, как меняется заполнение, когда один продукт забирается быстрее.",
-        "Выбери для своей базы запас, постоянного потребителя или сброс избытка. Отметь, когда настроишь один из вариантов."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A20000000010C00",
-          "type": "item",
-          "item": "mekanism:basic_pressurized_tube"
-        },
-        {
-          "id": "4A20000000010C01",
-          "type": "checkmark"
-        }
+      id: "4A2000000000010B"
+      x: 8.265d
+      y: 3.77d
+      dependencies: ["4A20000000000105"]
+      optional: true
+      tasks: [
+        { id: "4A20000000010B00", type: "item", item: "mekanism:electric_pump" }
+        { id: "4A20000000010B01", type: "item", item: "mekanism:basic_mechanical_pipe" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "mekanism:electric_pump", count: 1 }
+    }
     {
-      "id": "4A2000000000010D",
-      "x": 8.5,
-      "y": -2.1,
-      "title": "Кислород в дело",
-      "dependencies": [
-        "4A20000000000105"
-      ],
-      "description": [
-        "Кислород может стать сырьём вместо лишнего выхода. Очистка займёт место и энергию, зато изменит выход выбранной руды."
-        "Открой цепочку очистки в JEI и рассчитай её для одного материала. В следующем боковом задании её можно собрать и сравнить с простой линией."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A20000000010D00",
-          "type": "item",
-          "item": "mekanism:purification_chamber"
-        }
+      id: "4A2000000000010C"
+      x: 5.945d
+      y: 4.1325d
+      dependencies: ["4A20000000000105"]
+      optional: true
+      tasks: [
+        { id: "4A20000000010C00", type: "item", item: "mekanism:basic_pressurized_tube" }
+        { id: "4A20000000010C01", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "mekanism:basic_pressurized_tube", count: 1 }
+    }
     {
-      "id": "4A2000000000010E",
-      "x": 0.0,
-      "y": -4.2,
-      "title": "Где брать руду",
-      "dependencies": [
-        "4A20000000000101"
-      ],
-      "description": [
-        "Поставь бур для кернов IE и запитай его. Сними пробу и прочитай состав месторождения.",
-        "Отметь перспективный чанк на карте. Можно сравнить две пробы и выбрать ту, которая лучше снабжает твою базу."
-      ],
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A20000000010E00",
-          "type": "item",
-          "item": "immersiveengineering:sample_drill"
-        },
-        {
-          "id": "4A20000000010E01",
-          "type": "checkmark"
-        }
+      id: "4A2000000000010D"
+      x: 4.495d
+      y: 5.4375d
+      dependencies: ["4A2000000000010C"]
+      optional: true
+      tasks: [
+        { id: "4A20000000010D00", type: "item", item: "mekanism:purification_chamber" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "mekanism:purification_chamber", count: 1 }
+    }
     {
-      "id": "4A2000000000010F",
-      "x": 1.8,
-      "y": -4.2,
-      "title": "Своя добыча",
-      "dependencies": [
-        "4A2000000000010E"
-      ],
-      "description": [
-        "Если запасов не хватает, собери экскаватор и ковшовое колесо по руководству IE. Размести рабочую часть над подходящим месторождением.",
-        "Подведи достаточное питание и выведи добычу в накопитель. Отметь задание после первой партии. Эта установка пригодится, когда вырастет потребление руды."
-      ],
-      "icon": {"id": "immersiveengineering:heavy_engineering", "count": 1},
-      "optional": true,
-      "tasks": [
-        {
-          "id": "4A20000000010F00",
-          "type": "checkmark"
-        }
+      id: "4A2000000000010E"
+      x: -1.3775d
+      y: -2.03d
+      dependencies: ["4A20000000000101"]
+      optional: true
+      tasks: [
+        { id: "4A20000000010E00", type: "item", item: "immersiveengineering:sample_drill" }
+        { id: "4A20000000010E01", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 1.04d
+      icon: { id: "immersiveengineering:sample_drill", count: 1 }
+    }
+    {
+      id: "4A2000000000010F"
+      x: -2.61d
+      y: -3.8425d
+      dependencies: ["4A2000000000010E"]
+      icon: { id: "immersiveengineering:sample_drill", count: 1 }
+      optional: true
+      tasks: [
+        { id: "4A20000000010F00", type: "checkmark" }
+      ]
+      shape: "circle"
+      size: 0.88d
+    }
     {
       id: "4A20000000000120"
-      x: 5.7d
-      y: -5.6d
-      title: "Параллельные слоты"
+      x: 6.1625d
+      y: -4.7125d
       optional: true
       dependencies: ["4A20000000000108"]
-      description: [
-        "Первая очередь заказов показывает, где важна не скорость одной операции, а несколько операций за раз. Фабрика обрабатывает несколько порций в одном корпусе."
-        "Выбери загруженную машину, например камеру обогащения. Подготовь базовый апгрейд и сравни работу с одной и несколькими занятыми ячейками."
-      ]
       tasks: [
         { id: "4A21000000002000", type: "item", item: "mekanism:basic_tier_installer" }
       ]
-    },
+      shape: "circle"
+      size: 1.04d
+      icon: { id: "mekanism:basic_tier_installer", count: 1 }
+    }
     {
       id: "4A20000000000121"
-      x: 8.0d
-      y: -5.6d
-      title: "Ограничитель производительности"
+      x: 8.41d
+      y: -4.7125d
       optional: true
       dependencies: ["4A20000000000120"]
-      description: [
-        "Больше слотов имеет смысл, только если хватает питания и не забивается выдача. Иногда дешевле сохранить меньшую фабрику и улучшить подачу."
-        "Измерь, что первым ограничивает твою очередь. Испытай расширенные слоты на одном материале и реши, в каком цехе они себя оправдывают."
-      ]
       tasks: [
         { id: "4A21000000002100", type: "item", item: "mekanism:advanced_tier_installer" }
         { id: "4A21000000002101", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "mekanism:advanced_tier_installer", count: 1 }
+    }
     {
       id: "4A20000000000122"
-      x: 10.8d
-      y: -2.4d
-      title: "Кислород в слитки"
+      x: 3.19d
+      y: 6.5975d
       optional: true
       dependencies: ["4A2000000000010D"]
-      description: [
-        "Кислород обычно считают побочным продуктом, пока добыча руды не начинает отставать от спроса. Очистка даёт ещё одну ступень перед обычной переработкой."
-        "Соедини выход сепаратора с камерой очистки. В JEI проследи выбранный вид руды через комки, грязную и чистую пыль до готового слитка."
-      ]
       tasks: [
         { id: "4A21000000002200", type: "item", item: "mekanism:purification_chamber" }
         { id: "4A21000000002201", type: "item", item: "mekanism:basic_pressurized_tube" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "mekanism:purification_chamber", count: 1 }
+    }
     {
       id: "4A20000000000123"
-      x: 13.0d
-      y: -2.4d
-      title: "Газ для экспедиции"
+      x: 1.305d
+      y: 6.67d
       optional: true
       dependencies: ["4A20000000000122"]
-      description: [
-        "Запас кислорода полезен и вне завода. Подводная работа — возможность превратить излишки сепаратора в практический инструмент добычи и строительства."
-        "Собери маску и заправляемый баллон Mekanism. Проверь режим подачи воздуха в неглубокой воде, прежде чем идти к глубоким руинам или водозабору."
-      ]
       tasks: [
         { id: "4A21000000002300", type: "item", item: "mekanism:scuba_mask" }
         { id: "4A21000000002301", type: "item", item: "mekanism:scuba_tank" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "mekanism:scuba_mask", count: 1 }
+    }
     {
       id: "4A20000000000124"
-      x: 1.8d
-      y: -2.1d
-      title: "Партии одного материала"
+      x: 3.422d
+      y: 0.986d
       optional: true
       dependencies: ["4A20000000000107"]
-      description: [
-        "В смешанном потоке трудно заметить, что редкий материал занимает выход массовой линии. Отдельный бункер и правило вывоза делают запасы видимыми."
-        "Проверь фильтр на двух предметах. Один положи в отдельный bin, второй направь дальше по трассе. Оставь доступ для ручной разгрузки."
-      ]
       tasks: [
         { id: "4A21000000002400", type: "item", item: "mekanism:logistical_sorter" }
         { id: "4A21000000002401", type: "item", item: "mekanism:basic_bin" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "mekanism:logistical_sorter", count: 1 }
+    }
     {
       id: "4A20000000000125"
-      x: 4.2d
-      y: 5.7d
-      title: "Серийный верстак"
+      x: 6.061d
+      y: 0.493d
       optional: true
       dependencies: ["4A2000000000010A"]
-      description: [
-        "ME умеет заказывать цепочки, а локальный станок может непрерывно выпускать одну деталь для соседней машины. Выбор зависит от того, кто будет забирать результат."
-        "Запиши простую формулу и сравни локальную серию с заказом той же детали через ME. Реши, какой из подходов удобнее для расходников."
-      ]
       tasks: [
         { id: "4A21000000002500", type: "item", item: "mekanism:formulaic_assemblicator" }
         { id: "4A21000000002501", type: "item", item: "mekanism:crafting_formula" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "mekanism:formulaic_assemblicator", count: 1 }
+    }
     {
       id: "4A20000000000126"
-      x: 6.8d
-      y: 5.7d
-      title: "Заказ дошёл обратно"
+      x: 7.917d
+      y: -0.3045d
       optional: true
-      dependencies: ["4A20000000000125"]
-      description: [
-        "Шаблон полезен, когда цех способен и принять нужные ингредиенты, и вернуть результат. После расширения поставщика проверить этот цикл важнее, чем заполнить все слоты."
-        "Поставь расширенный Pattern Provider на знакомую линию, а интерфейс используй как точку возврата или доступа к сети. Проверь завершение одной партии."
-      ]
+      dependencies: ["4A20000000000125", "4A20000000000142"]
       tasks: [
         { id: "4A21000000002600", type: "item", item: "ae2:interface" }
         { id: "4A21000000002601", type: "item", item: "extendedae:ex_pattern_provider" }
         { id: "4A21000000002602", type: "checkmark" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "ae2:interface", count: 1 }
+    }
     {
       id: "4A20000000000127"
-      x: 9.4d
-      y: 5.7d
-      title: "Два буфера, две среды"
+      x: 10.1935d
+      y: 4.2775d
       optional: true
       dependencies: ["4A2000000000010B"]
-      description: [
-        "Вода и химические продукты живут в разных системах. Буферы дают время заметить, что один из выходов заполнился раньше другого."
-        "На пробном участке подключи водяной бак механической трубой, а химический — герметичной. Выбери один бак, за уровнем которого стоит следить во время работы."
-      ]
       tasks: [
         { id: "4A21000000002700", type: "item", item: "mekanism:basic_fluid_tank" }
         { id: "4A21000000002701", type: "item", item: "mekanism:basic_chemical_tank" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "mekanism:basic_fluid_tank", count: 1 }
+    }
     {
       id: "4A20000000000128"
-      x: 11.5d
-      y: 0.0d
-      title: "Склад у станка"
+      x: 11.455d
+      y: -1.5225d
       optional: true
       dependencies: ["4A20000000000106"]
-      description: [
-        "Наладка занимает меньше времени, когда детали доступны прямо у линии. Беспроводной терминал удобен на площадке с покрытием и запасом энергии."
-        "Свяжи терминал со своей сетью и сравни, где он доступен. Если за пределом цеха связь пропадает, придумай место для ещё одной точки."
-      ]
       tasks: [
         { id: "4A21000000002800", type: "item", item: "ae2:wireless_access_point" }
         { id: "4A21000000002801", type: "item", item: "ae2:wireless_terminal" }
         { id: "4A21000000002802", type: "checkmark" }
       ]
+      shape: "circle"
+      size: 1.04d
+      icon: { id: "ae2:wireless_access_point", count: 1 }
+    }
+    {
+      id: "4A20000000000130"
+      tasks: [
+        { id: "4B20000000003000", type: "item", item: "appmek:chemical_storage_cell_1k" }
+        { id: "4B20000000003001", type: "checkmark" }
+      ]
+      dependencies: ["4A20000000000127"]
+      optional: true
+      x: 12.035d
+      y: 4.7125d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "appmek:chemical_storage_cell_1k", count: 1 }
+    }
+    {
+      id: "4A20000000000131"
+      tasks: [
+        { id: "4B20000000003100", type: "item", item: "minecraft:hopper" }
+        { id: "4B20000000003101", type: "item", item: "minecraft:chest" }
+        { id: "4B20000000003102", type: "checkmark" }
+      ]
+      dependencies: ["4A2000000000010F"]
+      optional: true
+      x: -3.2625d
+      y: -5.655d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "minecraft:hopper", count: 1 }
+    }
+    {
+      id: "4A20000000000132"
+      tasks: [
+        { id: "4B20000000003200", type: "item", item: "ae2:wireless_terminal" }
+        { id: "4B20000000003201", type: "checkmark" }
+      ]
+      dependencies: ["4A20000000000128"]
+      optional: true
+      x: 13.4125d
+      y: -1.885d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "ae2:wireless_terminal", count: 1 }
+    }
+    {
+      id: "4A20000000000133"
+      tasks: [
+        { id: "4B20000000003300", type: "item", item: "ironjetpacks:basic_coil" }
+        { id: "4B20000000003301", type: "checkmark" }
+      ]
+      dependencies: ["4A20000000000106"]
+      optional: true
+      x: 11.5275d
+      y: 1.305d
+      shape: "circle"
+      size: 1.04d
+      icon: { id: "ironjetpacks:basic_coil", count: 1 }
+    }
+    {
+      id: "4A20000000000136"
+      tasks: [
+        { id: "4B20000000003600", type: "advancement", advancement: "mutantmonsters:burn_zombie_burn" }
+      ]
+      dependencies: ["4A20000000000133"]
+      optional: true
+      icon: { id: "minecraft:flint_and_steel", count: 1 }
+      x: 13.4125d
+      y: 1.5225d
+      shape: "circle"
+      size: 0.88d
+    }
+    {
+      id: "4A20000000000140"
+      x: 6.09d
+      y: -6.496d
+      optional: true
+      icon: { id: "mekanism:basic_energy_cube", count: 1 }
+      shape: "circle"
+      size: 0.88d
+      tasks: [
+        { id: "4B20000000014000", type: "item", item: "mekanism:basic_energy_cube" }
+        { id: "4B20000000014001", type: "checkmark" }
+      ]
+      dependencies: ["4A20000000000120"]
+    }
+    {
+      id: "4A20000000000141"
+      x: 7.4675d
+      y: 5.51d
+      optional: true
+      icon: { id: "mekanism:electric_pump", count: 1 }
+      shape: "circle"
+      size: 0.88d
+      tasks: [
+        { id: "4B20000000014100", type: "item", item: "mekanism:basic_chemical_tank" }
+        { id: "4B20000000014101", type: "checkmark" }
+      ]
+      dependencies: ["4A2000000000010B", "4A2000000000010C"]
+    }
+    {
+      id: "4A20000000000142"
+      x: 5.597d
+      y: -1.1165d
+      optional: true
+      icon: { id: "ae2:interface", count: 1 }
+      shape: "circle"
+      size: 0.88d
+      tasks: [
+        { id: "4B20000000014200", type: "item", item: "minecraft:iron_ingot", count: 4 }
+        { id: "4B20000000014201", type: "checkmark" }
+      ]
+      dependencies: ["4A20000000000102", "4A2000000000010A"]
     }
   ]
 }

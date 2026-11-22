@@ -4,9 +4,9 @@ license="MIT"
 
 [[mods]]
 modId="m1packcompat"
-version="0.2.1"
+version="0.2.4"
 displayName="M1 Pack Compatibility"
-description='''Applies M1 research rules to recipe filtering, machine processing and interplanetary travel.'''
+description='''Applies M1 research rules to recipe filtering, machine processing and interplanetary travel, and adjusts natural weather.'''
 
 [[mixins]]
 config="m1packcompat.mixins.json"
@@ -43,5 +43,12 @@ side="BOTH"
 modId="mekanism"
 type="required"
 versionRange="[10.7.19,10.7.20)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.m1packcompat]]
+modId="deepfield"
+type="required"
+versionRange="[5.1.2,5.1.3)"
 ordering="AFTER"
 side="BOTH"

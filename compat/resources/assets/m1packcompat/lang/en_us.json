@@ -1,0 +1,7 @@
+{
+  "m1packcompat.colony.link_locked": "Claim the Colony Link Clearance reward to open this route.",
+  "m1packcompat.colony.pending": "Residents: %s. Beds with air: %s. Last haul: %s. Supply food and power, provide two beds with air, and let two residents finish a shift.",
+  "m1packcompat.colony.operational": "The Colony Core has finished its first working shift.",
+  "m1packcompat.colony.shift_title": "First Shift",
+  "m1packcompat.colony.shift_description": "Verify a completed Colony Core shift on Wolf 1069 b."
+}

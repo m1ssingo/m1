@@ -1,473 +1,383 @@
 {
-  "id": "4A50000000000001",
-  "filename": "first_space",
-  "group": "",
-  "order_index": 4,
-  "icon": {
-    "id": "deepfield:pathfinder_kit",
-    "count": 1
-  },
-  "title": "От грязи к звёздам",
-  "quests": [
+  id: "4A50000000000001"
+  filename: "first_space"
+  group: "4AC0000000000002"
+  order_index: 5
+  icon: { id: "deepfield:pathfinder_kit", count: 1 }
+  quests: [
     {
-      "id": "4A50000000000101",
-      "x": 0.0,
-      "y": 0.0,
-      "title": "Космическая программа",
-      "dependencies": [
-        "4A40000000000108"
-      ],
-      "description": [
-        "Следующая задача — разведка, а не постоянная база. Первый рейс проверит Pathfinder, маршрут обратно и то, что экипаж умеет работать с запасом воздуха."
-        "Забери общую награду команды, чтобы открыть элитные схемы и крафт первых ракет. Field Guide в награде поможет выбрать управление и порядок подготовки."
-      ],
-      "tasks": [
-        {
-          "id": "4A50000000010000",
-          "type": "checkmark"
-        }
-      ],
-      "icon": {
-        "id": "deepfield:field_guide",
-        "count": 1
-      },
-      "rewards": [
-        {
-          "id": "4A50000000000301",
-          "type": "command",
-          "command": "history global unlock m1_first_space",
-          "permission_level": 2,
-          "team_reward": true
-        },
+      id: "4A50000000000101"
+      x: 0d
+      y: 0d
+      dependencies: ["4A40000000000108"]
+      tasks: [
+        { id: "4A50000000010000", type: "checkmark" }
+      ]
+      icon: { id: "deepfield:field_guide", count: 1 }
+      rewards: [
+        { id: "4A50000000000301", type: "command", command: "history global unlock m1_first_space", permission_level: 2, team_reward: true }
         { id: "4A51000000000401", type: "item", item: "deepfield:field_guide" }
       ]
-    },
+      shape: "hexagon"
+      size: 1.2d
+    }
     {
-      "id": "4A50000000000102",
-      "x": 2.3,
-      "y": -2.0,
-      "title": "Электроника полёта",
-      "dependencies": [
-        "4A50000000000101"
-      ],
-      "description": [
-        "Для полётной электроники базовых схем уже мало. Элитная схема нужна инвентарю Pathfinder и части будущих лунных машин."
-        "Собери её из продвинутой схемы и усиленных сплавов. Если рецепт скрыт, забери награду за запуск космической программы."
-      ],
-      "tasks": [
-        {
-          "id": "4A50000000020000",
-          "type": "item",
-          "item": "mekanism:elite_control_circuit"
-        }
+      id: "4A50000000000102"
+      x: 2.175d
+      y: 0d
+      dependencies: ["4A50000000000101"]
+      tasks: [
+        { id: "4A50000000020000", type: "item", item: "mekanism:elite_control_circuit" }
       ]
-    },
+      shape: "hexagon"
+      size: 1.04d
+      icon: { id: "mekanism:elite_control_circuit", count: 1 }
+    }
     {
-      "id": "4A50000000000103",
-      "x": 2.3,
-      "y": 0.0,
-      "title": "Партия ракетного топлива",
-      "dependencies": [
-        "4A50000000000101"
-      ],
-      "description": [
-        "Топливо важно считать на весь маршрут. Четыре банки для задания — пробная партия, полный запас определяет консоль корабля."
-        "Сравни запас в консоли с ценой полёта туда и обратно. Часть банок возьми с собой для дозаправки на Луне."
-      ],
-      "tasks": [
-        {
-          "id": "4A50000000030000",
-          "type": "item",
-          "item": "deepfield:rocket_fuel",
-          "count": 4
-        }
+      id: "4A50000000000103"
+      x: 3.2625d
+      y: -2.6825d
+      dependencies: ["4A50000000000101"]
+      tasks: [
+        { id: "4A50000000030000", type: "item", item: "deepfield:rocket_fuel", count: 4 }
       ]
-    },
+      shape: "square"
+      size: 1d
+      icon: { id: "deepfield:rocket_fuel", count: 1 }
+    }
     {
-      "id": "4A50000000000104",
-      "x": 2.3,
-      "y": 2.0,
-      "title": "Скафандры экипажа",
-      "dependencies": [
-        "4A50000000000101"
-      ],
-      "description": [
-        "Корабль доставляет экипаж, но снаружи на Луне дышать будет негде. Скафандр и баллон нужны каждому игроку отдельно."
-        "Примерь полный комплект Deepfield и посмотри показания воздуха на HUD. Обговори, кто отвечает за общий запас, и где будут личные баллоны."
-      ],
-      "tasks": [
-        {
-          "id": "4A50000000040000",
-          "type": "item",
-          "item": "deepfield:space_suit_helmet"
-        },
-        {
-          "id": "4A50000000040001",
-          "type": "item",
-          "item": "deepfield:space_suit_chestplate"
-        },
-        {
-          "id": "4A50000000040002",
-          "type": "item",
-          "item": "deepfield:space_suit_leggings"
-        },
-        {
-          "id": "4A50000000040003",
-          "type": "item",
-          "item": "deepfield:space_suit_boots"
-        }
+      id: "4A50000000000104"
+      x: 2.32d
+      y: 2.3925d
+      dependencies: ["4A50000000000101"]
+      tasks: [
+        { id: "4A50000000040000", type: "item", item: "deepfield:space_suit_helmet" }
+        { id: "4A50000000040001", type: "item", item: "deepfield:space_suit_chestplate" }
+        { id: "4A50000000040002", type: "item", item: "deepfield:space_suit_leggings" }
+        { id: "4A50000000040003", type: "item", item: "deepfield:space_suit_boots" }
       ]
-    },
+      shape: "hexagon"
+      size: 1.04d
+      icon: { id: "deepfield:space_suit_helmet", count: 1 }
+    }
     {
-      "id": "4A50000000000105",
-      "x": 4.6,
-      "y": 2.0,
-      "title": "Запас воздуха",
-      "dependencies": [
-        "4A50000000000104"
-      ],
-      "description": [
-        "Баллон нужен на выход из модуля, поиск образцов и дорогу обратно. Полный резерв проще проверить на Земле, пока можно пополнить его на месте."
-        "Заполни баллон в пригодной для дыхания атмосфере и проверь подсказку. Каждый игрок должен взять свой резерв в доступную скафандру часть инвентаря."
-      ],
-      "tasks": [
-        {
-          "id": "4A50000000050000",
-          "type": "item",
-          "item": "deepfield:oxygen_tank"
-        },
-        {
-          "id": "4A50000000050001",
-          "type": "checkmark"
-        }
+      id: "4A50000000000105"
+      x: 4.524d
+      y: 2.3925d
+      dependencies: ["4A50000000000104"]
+      tasks: [
+        { id: "4A50000000050000", type: "item", item: "deepfield:oxygen_tank" }
+        { id: "4A50000000050001", type: "checkmark" }
       ]
-    },
+      shape: "square"
+      size: 1d
+      icon: { id: "deepfield:oxygen_tank", count: 1 }
+    }
     {
-      "id": "4A50000000000106",
-      "x": 4.6,
-      "y": -2.0,
-      "title": "Первый Pathfinder",
-      "dependencies": [
-        "4A50000000000102"
-      ],
-      "description": [
-        "Pathfinder — первый транспорт для разведки и возвращения груза. Запуск проще подготовить после того, как найдена свободная площадка и понятен маршрут."
-        "Крафт требует элитной схемы и стальных пластин IE. Оставь минимум 5×5 под ракету и свободное место для башни; зачти набор до размещения."
-      ],
-      "tasks": [
-        {
-          "id": "4A50000000060000",
-          "type": "item",
-          "item": "deepfield:pathfinder_kit"
-        }
+      id: "4A50000000000106"
+      x: 4.35d
+      y: 0d
+      dependencies: ["4A50000000000102"]
+      tasks: [
+        { id: "4A50000000060000", type: "item", item: "deepfield:pathfinder_kit" }
       ]
-    },
+      shape: "square"
+      size: 1d
+      icon: { id: "deepfield:pathfinder_kit", count: 1 }
+    }
     {
-      "id": "4A50000000000107",
-      "x": 7.0,
-      "y": 0.0,
-      "title": "Перед стартом",
-      "dependencies": [
-        "4A50000000000103",
-        "4A50000000000105",
-        "4A50000000000106"
-      ],
-      "description": [
-        "Топливо, скафандры и корабль сходятся в одном решении: успеет ли экипаж выполнить цель и вернуться. Перед стартом ещё можно сократить план вылазки."
-        "По консоли сверь цель «Луна» и запас топлива. Проверь места экипажа, личный воздух и инструмент. Договоритесь о времени возврата к модулю."
-      ],
-      "tasks": [
-        {
-          "id": "4A50000000070000",
-          "type": "checkmark"
-        }
-      ],
-      "icon": {
-        "id": "deepfield:pathfinder_kit",
-        "count": 1
-      }
-    },
-    {
-      "id": "4A50000000000108",
-      "x": 9.3,
-      "y": 0.0,
-      "title": "Посадка на Луне",
-      "dependencies": [
-        "4A50000000000107"
-      ],
-      "description": [
-        "Посадка превращает полёт в разведку. Теперь посадочный модуль — единственная знакомая точка, к которой надо вернуться до исчерпания воздуха."
-        "Достижение Deepfield подтвердит посадку. Запомни координаты, проверь возможность обратного старта и выбери короткий маршрут поиска."
-      ],
-      "tasks": [
-        {
-          "id": "4A50000000080000",
-          "type": "advancement",
-          "advancement": "deepfield:visit/moon"
-        }
-      ],
-      "icon": {
-        "id": "deepfield:moonglass_shard",
-        "count": 1
-      }
-    },
-    {
-      "id": "4A50000000000109",
-      "x": 11.6,
-      "y": 0.0,
-      "title": "Первый образец",
-      "dependencies": [
-        "4A50000000000108"
-      ],
-      "description": [
-        "Лунное стекло нужно для энергетики следующей экспедиции. Если рядом лежит ильменит, можно заодно привезти сырьё для стартового титана."
-        "Добудь Moonglass Shard без «Шёлкового касания». Ильменит можно взять обычной киркой и переплавить позже. Оставь запас воздуха на обратную дорогу."
-      ],
-      "tasks": [
-        {
-          "id": "4A50000000090000",
-          "type": "item",
-          "item": "deepfield:moonglass_shard"
-        }
+      id: "4A50000000000107"
+      x: 6.815d
+      y: 0d
+      dependencies: ["4A50000000000103", "4A50000000000105", "4A50000000000106"]
+      tasks: [
+        { id: "4A50000000070000", type: "checkmark" }
       ]
-    },
+      icon: { id: "deepfield:pathfinder_kit", count: 1 }
+      shape: "hexagon"
+      size: 1.2d
+    }
     {
-      "id": "4A5000000000010A",
-      "x": 13.9,
-      "y": 0.0,
-      "title": "Снова дома",
-      "dependencies": [
-        "4A50000000000109"
-      ],
-      "description": [
-        "Цель разведки выполнена, когда образцы приняты на Земле и экипаж вернулся. Следующая экспедиция сможет готовить уже не отдельную вылазку, а производство."
-        "Проверь топливо в консоли посадочного модуля и дозаправься при необходимости. После возвращения на Землю отметь приём образца и возврат команды."
-      ],
-      "tasks": [
-        {
-          "id": "4A500000000A0000",
-          "type": "checkmark"
-        },
+      id: "4A50000000000108"
+      x: 8.816d
+      y: 0d
+      dependencies: ["4A50000000000107"]
+      tasks: [
+        { id: "4A50000000080000", type: "advancement", advancement: "deepfield:visit/moon" }
+      ]
+      icon: { id: "deepfield:moon_globe", count: 1 }
+      shape: "hexagon"
+      size: 1.04d
+    }
+    {
+      id: "4A50000000000109"
+      x: 10.846d
+      y: 0d
+      dependencies: ["4A50000000000108"]
+      tasks: [
+        { id: "4A50000000090000", type: "item", item: "deepfield:moonglass_shard" }
+      ]
+      shape: "square"
+      size: 1d
+      icon: { id: "deepfield:moonglass_shard", count: 1 }
+    }
+    {
+      id: "4A5000000000010A"
+      x: 12.876d
+      y: 0d
+      dependencies: ["4A50000000000109"]
+      tasks: [
+        { id: "4A500000000A0000", type: "checkmark" }
         { id: "4A51000000000A08", type: "dimension", dimension: "minecraft:overworld" }
-      ],
-      "icon": {
-        "id": "deepfield:moonglass_shard",
-        "count": 1
-      },
-      "shape": "hexagon"
-    },
+      ]
+      icon: { id: "minecraft:compass", count: 1 }
+      shape: "hexagon"
+      size: 1.2d
+    }
     {
-      "id": "4A5000000000010B",
-      "x": 2.3,
-      "y": -4.2,
-      "title": "Руководство пилота",
-      "dependencies": [
-        "4A50000000000101"
-      ],
-      "description": [
-        "Field Guide пригодится, когда нужно вспомнить посадку или управление кораблём вне меню заданий. Это справочник для своих решений на маршруте."
-        "Возьми книгу из награды за старт программы или собери её из книги и компаса. Найди раздел Pathfinder и выбери понятное распределение ролей."
-      ],
-      "tasks": [
-        {
-          "id": "4A500000000B0000",
-          "type": "item",
-          "item": "deepfield:field_guide"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A5000000000010B"
+      x: -1.305d
+      y: -2.03d
+      dependencies: ["4A50000000000101"]
+      tasks: [
+        { id: "4A500000000B0000", type: "item", item: "deepfield:field_guide" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 1.04d
+      icon: { id: "deepfield:field_guide", count: 1 }
+    }
     {
-      "id": "4A5000000000010C",
-      "x": 4.6,
-      "y": 4.2,
-      "title": "Стенд жизнеобеспечения",
-      "dependencies": [
-        "4A50000000000104"
-      ],
-      "description": [
-        "Стенд на Земле позволяет проверить, как пополняется личный баллон, пока материалы для генератора воздуха ещё предстоит привезти с Луны."
-        "Возьми Oxygen Tank, сравни уровень до и после заполнения. Наметь размер пробного модуля, чтобы позже проверить помещение уже с кислородным генератором."
-      ],
-      "tasks": [
-        {
-          "id": "4A500000000C0000",
-          "type": "item",
-          "item": "deepfield:oxygen_tank"
-        },
-        {
-          "id": "4A500000000C0001",
-          "type": "checkmark"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A5000000000010C"
+      x: 1.8125d
+      y: 4.2775d
+      dependencies: ["4A50000000000104"]
+      tasks: [
+        { id: "4A500000000C0000", type: "item", item: "deepfield:oxygen_tank" }
+        { id: "4A500000000C0001", type: "checkmark" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "deepfield:oxygen_tank", count: 1 }
+    }
     {
-      "id": "4A5000000000010D",
-      "x": 9.3,
-      "y": 2.3,
-      "title": "Воздух вне Земли",
-      "dependencies": ["4A50000000000108", "4A5000000000010C", "4A60000000000129"],
-      "description": [
-        "Когда у экипажа появится титан для Oxygen Generator, короткую вылазку можно превратить в работу из герметичной базы. Сборка стен сама по себе не даёт воздуха."
-        "В отдельном рейсе собери закрытый объём, запитай генератор и проверь пригодный воздух по HUD. Отдельно проверь, что происходит после открытия входа. Зачёт подтверждает достижение Deepfield."
-      ],
-      "tasks": [
-        {
-          "id": "4A500000000D0000",
-          "type": "advancement",
-          "advancement": "deepfield:survival/sealed_room"
-        }
-      ],
-      "icon": {
-        "id": "deepfield:oxygen_generator",
-        "count": 1
-      },
-      "optional": true
-    },
+      id: "4A5000000000010D"
+      x: 8.6275d
+      y: 1.885d
+      dependencies: ["4A50000000000108", "4A60000000000129"]
+      tasks: [
+        { id: "4A500000000D0000", type: "advancement", advancement: "deepfield:survival/sealed_room" }
+      ]
+      icon: { id: "deepfield:airlock", count: 1 }
+      optional: true
+      shape: "circle"
+      size: 0.88d
+    }
     {
-      "id": "4A5000000000010E",
-      "x": 13.9,
-      "y": -2.3,
-      "title": "Лаборатория после экспедиции",
-      "dependencies": ["4A5000000000010A", "4A60000000000129"],
-      "description": [
-        "Первый образец дал материал для исследований. С появлением титана можно собрать Research Terminal и узнать, какие проекты доступны после разведки."
-        "Открой рецепт в JEI, поставь терминал рядом с приёмкой образцов и выбери исследование, которое пригодится следующей экспедиции."
-      ],
-      "tasks": [
-        {
-          "id": "4A500000000E0000",
-          "type": "item",
-          "item": "deepfield:research_terminal"
-        }
-      ],
-      "optional": true
-    },
+      id: "4A5000000000010E"
+      x: 12.876d
+      y: 1.885d
+      dependencies: ["4A5000000000010A", "4A60000000000129"]
+      tasks: [
+        { id: "4A500000000E0000", type: "item", item: "deepfield:research_terminal" }
+      ]
+      optional: true
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "deepfield:research_terminal", count: 1 }
+    }
     {
       id: "4A50000000000120"
-      x: 4.6d
-      y: -4.2d
-      title: "Откуда идёт отсчёт"
+      x: -0.87d
+      y: -4.089d
       optional: true
       dependencies: ["4A5000000000010B"]
-      description: [
-        "Космодром становится отправной точкой и для груза, и для возвращения экипажа. Привязка к местности пригодится, если внизу несколько одинаковых построек."
-        "Отметь точку старта и ближайший склад на карте или в путевых точках. Оставь координаты рядом с площадкой."
-      ]
       tasks: [
         { id: "4A51000000002000", type: "item", item: "minecraft:compass" }
         { id: "4A51000000002001", type: "item", item: "minecraft:map" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "minecraft:compass", count: 1 }
+    }
     {
       id: "4A50000000000121"
-      x: 7.0d
-      y: -4.2d
-      title: "Груз по ролям"
+      x: 1.1673d
+      y: -4.785d
       optional: true
       dependencies: ["4A50000000000120"]
-      description: [
-        "В первом рейсе самое дорогое — лишняя беготня за расходниками. Один участник может отвечать за воздух и еду, другой за образцы и ремонт."
-        "Отведи рюкзаку один понятный набор и держи важный баллон там, где его видит скафандр. Сверь груз перед посадкой."
-      ]
       tasks: [
         { id: "4A51000000002100", type: "item", item: "sophisticatedbackpacks:backpack" }
       ]
-    },
+      shape: "circle"
+      size: 1.04d
+      icon: { id: "sophisticatedbackpacks:backpack", count: 1 }
+    }
     {
       id: "4A50000000000122"
-      x: 9.3d
-      y: -4.2d
-      title: "Образцы отдельно от породы"
+      x: 0.725d
+      y: -6.641d
       optional: true
       dependencies: ["4A50000000000121"]
-      description: [
-        "Фильтр полезен, когда нужный образец теряется среди обычных блоков. Подбирать всё удобно в шахте, но в ограниченном грузовом отсеке важен отбор."
-        "Настрой подбор на пробной партии камня и руды на Земле. Проверь, что нужный материал попал в рюкзак, а остальной сохранил собственный маршрут."
-      ]
       tasks: [
         { id: "4A51000000002200", type: "item", item: "sophisticatedbackpacks:pickup_upgrade" }
         { id: "4A51000000002201", type: "item", item: "sophisticatedbackpacks:filter_upgrade" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "sophisticatedbackpacks:pickup_upgrade", count: 1 }
+    }
     {
       id: "4A50000000000123"
-      x: 11.6d
-      y: -4.2d
-      title: "Расходники под рукой"
+      x: 3.132d
+      y: -4.785d
       optional: true
       dependencies: ["4A50000000000121"]
-      description: [
-        "Во время короткого выхода важнее предсказуемость, чем полный инвентарь. Пополнение стопки и питание уменьшают число остановок, если подготовить правила заранее."
-        "На безопасной пробе проверь, что пополняется нужная стопка. Примерь режим питания так, чтобы не съедались припасы, которые хочешь оставить для обратного пути."
-      ]
       tasks: [
         { id: "4A51000000002300", type: "item", item: "sophisticatedbackpacks:refill_upgrade" }
         { id: "4A51000000002301", type: "item", item: "sophisticatedbackpacks:feeding_upgrade" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "sophisticatedbackpacks:refill_upgrade", count: 1 }
+    }
     {
       id: "4A50000000000124"
-      x: 7.0d
-      y: 4.2d
-      title: "Стенд герметичного модуля"
+      x: 1.8125d
+      y: 6.1625d
       optional: true
       dependencies: ["4A5000000000010C"]
-      description: [
-        "Полезнее отработать размер и вход на Земле, чем исправлять каждый торец в скафандре. Для макета подходят обычные материалы."
-        "Собери угол жилого объёма с окном и входом. На Луне используй проверенные на герметичность блоки и генератор кислорода."
-      ]
       tasks: [
         { id: "4A51000000002400", type: "item", item: "minecraft:glass" }
         { id: "4A51000000002401", type: "item", item: "minecraft:iron_door" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "minecraft:glass", count: 1 }
+    }
     {
       id: "4A50000000000125"
-      x: 9.3d
-      y: 4.5d
-      title: "Выход с запасом времени"
+      x: 3.6975d
+      y: 6.1625d
       optional: true
       dependencies: ["4A50000000000124"]
-      description: [
-        "Воздух нужен на дорогу в обе стороны и на случай задержки. Удобный вход в модуль может сэкономить больше времени, чем лишняя стопка блоков."
-        "Пройди на пробном стенде маршрут от рабочего места к входу. Наметь точку, после которой при низком запасе лучше возвращаться прямо к модулю."
-      ]
       tasks: [
         { id: "4A51000000002500", type: "checkmark" }
       ]
-    },
+      icon: { id: "deepfield:oxygen_tank", count: 1 }
+      shape: "circle"
+      size: 0.88d
+    }
     {
       id: "4A50000000000126"
-      x: 16.2d
-      y: -2.3d
-      title: "Образцы не теряются на складе"
+      x: 12.8325d
+      y: 3.8425d
       optional: true
       dependencies: ["4A5000000000010E"]
-      description: [
-        "После рейса важно понять, откуда пришёл образец, чтобы второй вылет не повторял первый. Место для маркировки пригодится и базе, и лаборатории."
-        "Поставь приёмный бокс и обозначь один образец. Отдельно оставь обычную породу, которую можно пустить на стройку."
-      ]
       tasks: [
         { id: "4A51000000002600", type: "item", item: "minecraft:barrel" }
         { id: "4A51000000002601", type: "item", item: "minecraft:item_frame" }
       ]
-    },
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "minecraft:barrel", count: 1 }
+    }
     {
       id: "4A50000000000127"
-      x: 11.6d
-      y: 4.5d
-      title: "Связь базы и экипажа"
+      x: 7.7575d
+      y: 3.6975d
       optional: true
       dependencies: ["4A5000000000010D"]
-      description: [
-        "После первого герметичного укрытия можно организовать работу снаружи. Радиус вылазки показывает, сколько реально успеваешь сделать между возвращениями."
-        "Выбери короткий рабочий маршрут с контрольной точкой и проверь его в следующем рейсе. Сравни, что больше экономит воздух: близкий склад или более удобный вход."
-      ]
       tasks: [
         { id: "4A51000000002700", type: "checkmark" }
       ]
+      icon: { id: "minecraft:compass", count: 1 }
+      shape: "circle"
+      size: 0.88d
+    }
+    {
+      id: "4A50000000000130"
+      tasks: [
+        { id: "4B50000000003000", type: "item", item: "mekanism:elite_control_circuit" }
+        { id: "4B50000000003001", type: "item", item: "deepfield:rocket_fuel" }
+        { id: "4B50000000003002", type: "checkmark" }
+      ]
+      dependencies: ["4A50000000000102", "4A50000000000103"]
+      optional: true
+      x: 3.2915d
+      y: -1.2325d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "mekanism:elite_control_circuit", count: 1 }
+    }
+    {
+      id: "4A50000000000131"
+      tasks: [
+        { id: "4B50000000003100", type: "item", item: "deepfield:suit_ration" }
+      ]
+      dependencies: ["4A50000000000105"]
+      optional: true
+      x: 4.8575d
+      y: 4.321d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "deepfield:suit_ration", count: 1 }
+    }
+    {
+      id: "4A50000000000132"
+      tasks: [
+        { id: "4B50000000003200", type: "item", item: "deepfield:field_guide" }
+        { id: "4B50000000003201", type: "checkmark" }
+      ]
+      dependencies: ["4A50000000000107"]
+      optional: true
+      x: 7.1775d
+      y: -1.885d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "deepfield:field_guide", count: 1 }
+    }
+    {
+      id: "4A50000000000133"
+      tasks: [
+        { id: "4B50000000003300", type: "item", item: "minecraft:barrel" }
+        { id: "4B50000000003301", type: "checkmark" }
+      ]
+      dependencies: ["4A50000000000109"]
+      optional: true
+      x: 10.846d
+      y: -1.885d
+      shape: "circle"
+      size: 0.88d
+      icon: { id: "minecraft:barrel", count: 1 }
+    }
+    {
+      id: "4A50000000000140"
+      x: 5.075d
+      y: -4.785d
+      optional: true
+      icon: { id: "minecraft:ender_chest", count: 1 }
+      shape: "circle"
+      size: 0.88d
+      tasks: [
+        { id: "4B50000000014000", type: "item", item: "minecraft:ender_chest" }
+      ]
+      dependencies: ["4A50000000000123"]
+    }
+    {
+      id: "4A50000000000141"
+      x: 9.6425d
+      y: 3.6975d
+      optional: true
+      icon: { id: "deepfield:airlock", count: 1 }
+      shape: "circle"
+      size: 0.88d
+      tasks: [
+        { id: "4B50000000014100", type: "item", item: "deepfield:airlock" }
+        { id: "4B50000000014101", type: "checkmark" }
+      ]
+      dependencies: ["4A5000000000010D"]
     }
   ]
 }

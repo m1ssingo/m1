@@ -29,11 +29,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--animation', type=Path, default=ROOT / 'work/M1-menu-animated-v4.gif')
     parser.add_argument('--libraries', type=Path, default=ROOT / 'work/client-test/libraries')
+    parser.add_argument('--mods', type=Path, default=ROOT / 'work/jars')
     parser.add_argument('--java', default='java')
     args = parser.parse_args()
 
     priority = {'neoforge-21.1.267-client.jar': 0, 'client-1.21.1-20240808.144430-srg.jar': 1}
-    libraries = sorted((path.resolve() for path in args.libraries.rglob('*.jar') if zipfile.is_zipfile(path)),
+    jars = [*args.libraries.rglob('*.jar'), *args.mods.glob('*.jar')]
+    libraries = sorted((path.resolve() for path in jars if zipfile.is_zipfile(path)),
                        key=lambda path: (priority.get(path.name, 2), path))
     sources = sorted((ROOT / 'client/src').rglob('*.java'))
     metadata = tomllib.loads((RESOURCES / 'META-INF/neoforge.mods.toml').read_text(encoding='utf-8'))

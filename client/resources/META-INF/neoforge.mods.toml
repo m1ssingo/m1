@@ -3,9 +3,9 @@ loaderVersion="[4,)"
 license="MIT"
 [[mods]]
 modId="m1packclient"
-version="0.4.2"
+version="0.4.4"
 displayName="M1 Pack Menu"
-description='''Pack title screen, menu music and default key mapping audit.'''
+description='''Pack menu, key mappings, quest recipe lookup and quest overview.'''
 [[mixins]]
 config="m1packclient.mixins.json"
 [[dependencies.m1packclient]]
@@ -13,4 +13,18 @@ modId="neoforge"
 type="required"
 versionRange="[21.1.267,)"
 ordering="NONE"
+side="CLIENT"
+
+[[dependencies.m1packclient]]
+modId="ftbquests"
+type="required"
+versionRange="[2101.1.39,2101.2)"
+ordering="AFTER"
+side="CLIENT"
+
+[[dependencies.m1packclient]]
+modId="jei"
+type="required"
+versionRange="[19.64.0.455,20)"
+ordering="AFTER"
 side="CLIENT"

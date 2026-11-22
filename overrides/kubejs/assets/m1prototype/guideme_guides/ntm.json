@@ -1,0 +1,19 @@
+{
+  "default_language": "ru_ru",
+  "item_settings": {
+    "display_name": {
+      "text": "NTM • Инженерный справочник"
+    },
+    "tooltip_lines": [
+      {
+        "text": "NTM Continuum 1.0.6 · M1 SciFi",
+        "color": "dark_aqua"
+      },
+      {
+        "text": "ПКМ, чтобы открыть оглавление",
+        "color": "gray"
+      }
+    ],
+    "model": "minecraft:item/knowledge_book"
+  }
+}

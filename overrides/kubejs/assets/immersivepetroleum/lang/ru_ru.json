@@ -1,0 +1,7 @@
+{
+  "item.immersivepetroleum.projector": "Проектор",
+  "item.immersivepetroleum.projector.specific": "Проектор: %s",
+  "block.immersivepetroleum.auto_lubricator": "Смазочное устройство",
+  "block.immersivepetroleum.pumpjack": "Штанговый насос",
+  "block.immersivepetroleum.distillationtower": "Ректификационная колонна"
+}
