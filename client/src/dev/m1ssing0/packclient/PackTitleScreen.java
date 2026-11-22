@@ -2,7 +2,6 @@ package dev.m1ssing0.packclient;
 
 import java.io.IOException;
 import java.util.List;
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.logging.LogUtils;
 import dev.m1ssing0.packclient.SteelButtonStyle.State;
 import net.minecraft.client.Minecraft;
@@ -22,9 +21,6 @@ import net.neoforged.neoforge.client.gui.ModListScreen;
 public final class PackTitleScreen extends Screen {
     private static final ResourceLocation BACKGROUND = ResourceLocation.fromNamespaceAndPath(
         "m1packclient", "textures/menu/background.png");
-    private static final ResourceLocation ROCKET = ResourceLocation.fromNamespaceAndPath(
-        "m1packclient", "textures/menu/rocket.png");
-    private static final int ROCKET_X = 1447, ROCKET_Y = 177, ROCKET_WIDTH = 73, ROCKET_HEIGHT = 234;
     private static final Music MUSIC = new Music(SoundEvents.MUSIC_MENU, 0, 0, true);
     private MenuAnimation animation;
     private Artwork artwork;
@@ -107,7 +103,7 @@ public final class PackTitleScreen extends Screen {
             LogUtils.getLogger().info("[M1-MENU] menu music is playing");
             musicObserved = true;
         }
-        if (height >= 300) graphics.drawString(font, "M1 SciFi 0.10.1", 8, height - 12, 0xffc6b69d);
+        if (height >= 300) graphics.drawString(font, "M1 SciFi 0.10.2", 8, height - 12, 0xffc6b69d);
     }
 
     @Override
@@ -162,10 +158,6 @@ public final class PackTitleScreen extends Screen {
             pose.scale(scale, scale, 1);
             graphics.blit(background, 0, 0, 0, 0, MenuAnimation.WIDTH, MenuAnimation.HEIGHT,
                 MenuAnimation.WIDTH, MenuAnimation.HEIGHT);
-            RenderSystem.enableBlend();
-            RenderSystem.defaultBlendFunc();
-            graphics.blit(ROCKET, ROCKET_X, ROCKET_Y, 0, 0, ROCKET_WIDTH, ROCKET_HEIGHT, ROCKET_WIDTH, ROCKET_HEIGHT);
-            RenderSystem.disableBlend();
             pose.popPose();
         }
     }

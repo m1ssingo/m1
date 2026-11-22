@@ -1,4 +1,4 @@
-# Зафиксированный состав 0.10.1
+# Зафиксированный состав 0.10.2
 
 Файлов CurseForge на клиенте: 58. На сервере: 53.
 Собственные моды входят в комплект согласно указанной стороне.
@@ -64,4 +64,4 @@
 | [xaeros-minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap/files/9067173) | `xaerominimap-neoforge-1.21.1-26.6.0.jar` | client |
 | [xaeros-world-map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map/files/9067277) | `xaeroworldmap-neoforge-1.21.1-1.47.0.jar` | client |
 | M1 | `m1packcompat-0.2.4.jar` | both |
-| M1 | `m1packclient-0.4.5.jar` | client |
+| M1 | `m1packclient-0.4.6.jar` | client |

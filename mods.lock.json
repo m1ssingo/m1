@@ -1264,8 +1264,8 @@
   "errors": [],
   "pack": {
     "name": "M1 SciFi Prototype",
-    "version": "0.10.1",
-    "status": "client-visuals"
+    "version": "0.10.2",
+    "status": "rocket-retouch"
   },
   "neoforge": "21.1.267",
   "neoforge_installer": {
@@ -1282,9 +1282,9 @@
       "source": "compat/src"
     },
     {
-      "path": "mods/m1packclient-0.4.5.jar",
-      "file_name": "m1packclient-0.4.5.jar",
-      "sha256": "4f8e3dce35b4e12b0e7dbb6085be3ef0580e4b78c3e2dfb5ce994d82a740dfa8",
+      "path": "mods/m1packclient-0.4.6.jar",
+      "file_name": "m1packclient-0.4.6.jar",
+      "sha256": "4fc962aff59c9964f8e6c72ea02296529dd2c7591f4f2ae07b5a1838c5d8b0e1",
       "side": "client",
       "source": "client/src",
       "license": "MIT (code); supplied image and audio assets"
@@ -1331,6 +1331,10 @@
     {
       "version": "0.10.1",
       "description": "Corrected rocket artwork, full-bleed title screen, and steel and brass styling for client buttons."
+    },
+    {
+      "version": "0.10.2",
+      "description": "Retouch the existing rocket in the static artwork and all animation frames while retaining the surrounding scene."
     }
   ]
 }
