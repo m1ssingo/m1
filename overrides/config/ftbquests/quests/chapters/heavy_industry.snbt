@@ -135,6 +135,9 @@
     }
     {
       id: "4A30000000000109"
+      rewards: [
+        { id: "5D00000110000009", type: "item", item: "minecraft:experience_bottle", count: 2 }
+      ]
       x: 1.7835d
       y: 1.914d
       dependencies: ["4A30000000000101"]
@@ -247,6 +250,9 @@
     }
     {
       id: "4A30000000000124"
+      rewards: [
+        { id: "5D0000011000000A", type: "item", item: "minecraft:yellow_carpet", count: 4 }
+      ]
       x: 8.9175d
       y: 1.972d
       optional: true

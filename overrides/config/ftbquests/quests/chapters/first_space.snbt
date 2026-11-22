@@ -99,6 +99,9 @@
     }
     {
       id: "4A50000000000108"
+      rewards: [
+        { id: "5D0000011000000D", type: "item", item: { id: "minecraft:blue_banner", count: 1, components: { "minecraft:custom_name": "{\"translate\":\"m1pack.reward.first_landing\"}" } }, team_reward: true }
+      ]
       x: 8.816d
       y: 0d
       dependencies: ["4A50000000000107"]
@@ -163,6 +166,9 @@
     }
     {
       id: "4A5000000000010D"
+      rewards: [
+        { id: "5D0000011000000E", type: "item", item: "minecraft:lantern", count: 2 }
+      ]
       x: 8.6275d
       y: 1.885d
       dependencies: ["4A50000000000108", "4A60000000000129"]

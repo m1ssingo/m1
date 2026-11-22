@@ -5,6 +5,9 @@
   quests: [
     {
       id: "4A00000000000101"
+      rewards: [
+        { id: "5D00000110000001", type: "item", item: "minecraft:stick", count: 4 }
+      ]
       tasks: [
         { id: "4B00000000000100", type: "item", item: "minecraft:crafting_table" }
       ]
@@ -28,6 +31,9 @@
     }
     {
       id: "4A00000000000103"
+      rewards: [
+        { id: "5D00000110000002", type: "item", item: "minecraft:baked_potato", count: 2 }
+      ]
       tasks: [
         { id: "4B00000000000300", type: "item", item: "minecraft:furnace" }
       ]
@@ -130,7 +136,7 @@
     {
       id: "4A00000000000114"
       tasks: [
-        { id: "4B00000000001400", type: "item", item: "ironchest:iron_chest" }
+        { id: "4B00000000001400", type: "item", item: { id: "ironchest:iron_chest", count: 1, components: { "minecraft:custom_data": { m1_storage_by_furnace: 1b } } } }
       ]
       dependencies: ["4A00000000000104", "4A00000000000144"]
       optional: true
@@ -209,6 +215,9 @@
     }
     {
       id: "4A00000000000143"
+      rewards: [
+        { id: "5D00000110000003", type: "item", item: "minecraft:torch", count: 4 }
+      ]
       x: -0.87d
       y: -2.465d
       optional: true

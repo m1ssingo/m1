@@ -35,7 +35,15 @@ function Get-Java21 {
 function Test-PinnedFile {
     param([string]$Path, [string]$Sha256)
     if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) { return $false }
-    return (Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToLowerInvariant() -eq $Sha256.ToLowerInvariant()
+    $algorithm = [Security.Cryptography.SHA256]::Create()
+    $file = [IO.File]::OpenRead($Path)
+    try {
+        $actual = [BitConverter]::ToString($algorithm.ComputeHash($file)).Replace('-', '')
+        return $actual -eq $Sha256
+    } finally {
+        $file.Dispose()
+        $algorithm.Dispose()
+    }
 }
 
 function Test-NeoForgeServer {

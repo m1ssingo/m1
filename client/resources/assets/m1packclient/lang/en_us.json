@@ -1,1 +1,12 @@
-{"m1pack.menu.mods":"Mods","m1pack.menu.sound":"Sound & Music"}
+{
+  "m1pack.menu.mods": "Mods",
+  "m1pack.menu.sound": "Sound & Music",
+  "m1pack.season.spring": "SPRING",
+  "m1pack.season.summer": "SUMMER",
+  "m1pack.season.autumn": "AUTUMN",
+  "m1pack.season.winter": "WINTER",
+  "m1pack.reward.first_landing": "First Landing",
+  "m1pack.reward.earth_terminal": "Earth Terminal",
+  "m1pack.reward.lunar_terminal": "Lunar Terminal",
+  "m1pack.reward.wolf_first_shift": "First Shift on Wolf 1069 b"
+}

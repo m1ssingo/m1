@@ -148,6 +148,9 @@
     }
     {
       id: "4A8000000000010C"
+      rewards: [
+        { id: "5D00000110000014", type: "item", item: "minecraft:painting", team_reward: true }
+      ]
       x: 15.0075d
       y: 0d
       icon: { id: "deepfield:mars_globe", count: 1 }
@@ -239,6 +242,9 @@
     }
     {
       id: "4A80000000000113"
+      rewards: [
+        { id: "5D00000110000015", type: "item", item: "minecraft:lantern", count: 2 }
+      ]
       x: 5.365d
       y: 4.959d
       icon: { id: "minecraft:iron_door", count: 1 }

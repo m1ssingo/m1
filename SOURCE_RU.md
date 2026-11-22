@@ -1,4 +1,4 @@
-# Исходники M1 SciFi 0.10.2
+# Исходники M1 SciFi 0.11.0
 
 Репозиторий содержит настройки сборки, квесты, ресурсы и код собственных модов. Готовые комплекты передаются отдельными архивами. [Установка игры](README_RU.md)
 
@@ -6,20 +6,20 @@
 | --- | --- |
 | `mods.lock.json` | Minecraft 1.21.1, NeoForge 21.1.267, стороны установки, URL и контрольные суммы модов |
 | `overrides/` | Общие файлы клиента и сервера. Квесты лежат в `config/ftbquests/quests/`, этапы в `config/historystages/global/`, рецепты и достижения в `kubejs/data/`. |
-| `compat/` | `m1packcompat` 0.2.4. Блокировка базовой схемы Mekanism, совместимость Golem Core и History Stages, переходы Mekanism и проверка смены Colony Core. |
-| `client/` | `m1packclient` 0.4.6. Оформление меню и кнопок, клавиши, открытие рецепта из задачи FTB Quests и обзор главы. |
+| `compat/` | `m1packcompat` 0.2.5. Блокировка базовой схемы Mekanism, совместимость Golem Core и History Stages, переходы Mekanism и проверка смены Colony Core, длительность суток и фильтр задания про склад. |
+| `client/` | `m1packclient` 0.5.0. Оформление меню, сезонные объявления, облака, клавиши, открытие рецепта из задачи FTB Quests и обзор главы. |
 | `server-template/` | Шаблон выделенного сервера Windows |
 | `testing/`, `tools/` | Диагностика и сборка архивов |
 
 Исходники двух собственных модов распространяются по [MIT](compat/LICENSE). Заставка и дорожка Ignition предоставлены авторами сборки. Регистрация книги находится в [ntm.json](overrides/kubejs/assets/m1prototype/guideme_guides/ntm.json), страницы и 3D-сцены — в [каталоге GuideME](overrides/kubejs/assets/m1prototype/guides/m1prototype/ntm/index.md).
 
-## Повторная упаковка 0.10.2
+## Повторная упаковка 0.11.0
 
-Для упаковки выпущенной версии используйте Python 3.11 или новее и два JAR из `M1-SciFi-Prototype-0.10.2.zip`.
+Для упаковки выпущенной версии используйте Python 3.11 или новее и два JAR из `M1-SciFi-Prototype-0.11.0.zip`.
 
-1. Из `server/overrides/mods/` полного архива извлеките `m1packcompat-0.2.4.jar` в `overrides/mods/` рабочего дерева.
-2. Откройте вложенный `client/M1-SciFi-Prototype-0.10.2-CurseForge.zip`. Из его `overrides/mods/` извлеките `m1packclient-0.4.6.jar` в `client-overrides/mods/` рабочего дерева.
-3. Из корня рабочего дерева выполните `python tools/build_release.py --output dist`. При необходимости передайте `--verification` с JSON для версии 0.10.2, например из `evidence/verification.json` полного архива.
+1. Из `server/overrides/mods/` полного архива извлеките `m1packcompat-0.2.5.jar` в `overrides/mods/` рабочего дерева.
+2. Откройте вложенный `client/M1-SciFi-Prototype-0.11.0-CurseForge.zip`. Из его `overrides/mods/` извлеките `m1packclient-0.5.0.jar` в `client-overrides/mods/` рабочего дерева.
+3. Из корня рабочего дерева выполните `python tools/build_release.py --output dist`. При необходимости передайте `--verification` с JSON для версии 0.11.0, например из `evidence/verification.json` полного архива.
 
 Упаковщик проверяет суммы SHA-256 обоих JAR по lock-файлу и сверяет общие файлы клиентского и серверного комплектов. [Список модов](docs/MODS.md)
 
@@ -30,15 +30,18 @@
 - `python tools/build_compat.py --libraries PATH_TO_SERVER_LIBRARIES --mods PATH_TO_MODS --java PATH_TO_JAVA_EXE`
 - `python tools/build_client.py --animation PATH_TO_BACKGROUND_M1A --libraries PATH_TO_CLIENT_LIBRARIES --mods PATH_TO_MODS --java PATH_TO_JAVA_EXE`
 
-Звуковой файл `assets/m1packclient/sounds/ignition.ogg` извлеките из клиентского JAR в `client/resources/assets/m1packclient/sounds/`. Файлы `background.m1a` и `background.png` из `assets/m1packclient/textures/menu/` положите рядом друг с другом. Если они взяты из выпуска 0.10.2, передайте путь к этому `.m1a` в `build_client.py`.
+Звуковой файл `assets/m1packclient/sounds/ignition.ogg` извлеките из клиентского JAR в `client/resources/assets/m1packclient/sounds/`. Файлы `background.m1a` и `background.png` из `assets/m1packclient/textures/menu/` положите рядом друг с другом. Если они взяты из выпуска 0.11.0, передайте путь к этому `.m1a` в `build_client.py`.
 
-Чтобы воспроизвести ретушь из исходников, возьмите пару `background.m1a` и `background.png` из `m1packclient-0.4.5.jar` версии 0.10.1. Ретушь из `client/art/rocket-retouch.png` встраивается в оба ресурса. Выполните команду из корня репозитория.
+Чтобы собрать визуальные ресурсы 0.11.0, извлеките пару `background.m1a` и `background.png` из `m1packclient-0.4.6.jar` выпуска 0.10.2 в `work/original/`. Обе команды выполняются из корня репозитория.
 
 ```text
-java tools/RetouchMenuAnimation.java work/original/background.m1a client/art/rocket-retouch.png 1447 177 work/retouched.m1a
+java tools/RetouchMenuAnimation.java work/original/background.m1a client/art/rocket-plume-retouch.png 1438 169 work/plume-fixed.m1a
+java tools/AnimateMenuSmoke.java work/plume-fixed.m1a client/art/chimney-smoke.png work/revised.m1a
 ```
 
-Передайте `work/retouched.m1a` в `build_client.py --animation`.
+Передайте `work/revised.m1a` в `build_client.py --animation`.
+
+Патч для установленного профиля можно собрать командой `python tools/build_patch.py ПРЕЖНИЙ_АРХИВ НОВЫЙ_АРХИВ --output dist`. Для сторонних модов сценарий использует зафиксированные ссылки и контрольные суммы.
 
 При упаковке изменённых JAR обновите их SHA-256 в lock-файле рабочего дерева. `tools/resolve.py download` получает версии из lock-файла и записывает метаданные и суммы по скачанным JAR. Для повторной упаковки выпущенной версии достаточно исходного lock-файла и двух JAR из её архива.
 

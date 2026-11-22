@@ -1,1 +1,12 @@
-{"m1pack.menu.mods":"Моды","m1pack.menu.sound":"Звук и музыка"}
+{
+  "m1pack.menu.mods": "Моды",
+  "m1pack.menu.sound": "Звук и музыка",
+  "m1pack.season.spring": "ВЕСНА",
+  "m1pack.season.summer": "ЛЕТО",
+  "m1pack.season.autumn": "ОСЕНЬ",
+  "m1pack.season.winter": "ЗИМА",
+  "m1pack.reward.first_landing": "Первая посадка",
+  "m1pack.reward.earth_terminal": "Земной терминал",
+  "m1pack.reward.lunar_terminal": "Лунный терминал",
+  "m1pack.reward.wolf_first_shift": "Первая смена на Wolf 1069 b"
+}

@@ -236,6 +236,9 @@
     }
     {
       id: "4AE0000000000113"
+      rewards: [
+        { id: "5D0000011000001C", type: "item", item: { id: "minecraft:cyan_banner", count: 1, components: { "minecraft:custom_name": "{\"translate\":\"m1pack.reward.wolf_first_shift\"}" } }, team_reward: true }
+      ]
       x: 21.3d
       y: -1.1d
       icon: { id: "deepfield:colony_core", count: 1 }
@@ -248,6 +251,9 @@
     }
     {
       id: "4AE0000000000114"
+      rewards: [
+        { id: "5D0000011000001D", type: "item", item: "minecraft:cake", team_reward: true }
+      ]
       x: 25d
       y: 0d
       icon: { id: "deepfield:wolf1069b_globe", count: 1 }

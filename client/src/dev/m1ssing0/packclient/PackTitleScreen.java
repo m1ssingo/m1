@@ -7,6 +7,8 @@ import dev.m1ssing0.packclient.SteelButtonStyle.State;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.screens.GenericMessageScreen;
+import net.minecraft.client.gui.screens.ReceivingLevelScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen;
 import net.minecraft.client.gui.screens.worldselection.SelectWorldScreen;
@@ -14,6 +16,7 @@ import net.minecraft.client.gui.screens.options.OptionsScreen;
 import net.minecraft.client.gui.screens.options.SoundOptionsScreen;
 import net.minecraft.sounds.Music;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.neoforged.neoforge.client.gui.ModListScreen;
@@ -34,6 +37,12 @@ public final class PackTitleScreen extends Screen {
     public static void drawSubmenuBackdrop(GuiGraphics graphics, int screenWidth, int screenHeight) {
         Artwork.cover(screenWidth, screenHeight).draw(graphics, BACKGROUND);
         graphics.flush();
+    }
+
+    public static boolean isWorldTransition(Screen screen) {
+        if (screen instanceof ReceivingLevelScreen) return true;
+        return screen instanceof GenericMessageScreen && screen.getTitle().getContents() instanceof TranslatableContents title
+            && title.getKey().equals("menu.savingLevel");
     }
 
     @Override
@@ -103,7 +112,7 @@ public final class PackTitleScreen extends Screen {
             LogUtils.getLogger().info("[M1-MENU] menu music is playing");
             musicObserved = true;
         }
-        if (height >= 300) graphics.drawString(font, "M1 SciFi 0.10.2", 8, height - 12, 0xffc6b69d);
+        if (height >= 300) graphics.drawString(font, "M1 SciFi 0.11.0", 8, height - 12, 0xffc6b69d);
     }
 
     @Override
