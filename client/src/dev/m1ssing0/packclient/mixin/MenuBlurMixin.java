@@ -1,5 +1,6 @@
 package dev.m1ssing0.packclient.mixin;
 
+import dev.m1ssing0.packclient.PackTitleScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Options;
 import net.minecraft.client.renderer.GameRenderer;
@@ -13,6 +14,8 @@ abstract class MenuBlurMixin {
         target = "Lnet/minecraft/client/Options;getMenuBackgroundBlurriness()I"))
     private int m1$menuBlurRadius(Options options) {
         // The vanilla menu scale runs from 0 to 10.
-        return Minecraft.getInstance().level == null ? 3 : options.getMenuBackgroundBlurriness();
+        var client = Minecraft.getInstance();
+        return client.level == null || PackTitleScreen.isWorldTransition(client.screen)
+            ? 3 : options.getMenuBackgroundBlurriness();
     }
 }

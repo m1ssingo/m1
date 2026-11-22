@@ -44,6 +44,9 @@
     }
     {
       id: "4A10000000000104"
+      rewards: [
+        { id: "5D00000110000004", type: "item", item: "minecraft:lantern", count: 2 }
+      ]
       x: 8.7d
       y: 0d
       dependencies: ["4A10000000000103"]
@@ -113,6 +116,9 @@
     }
     {
       id: "4A10000000000109"
+      rewards: [
+        { id: "5D00000110000005", type: "item", item: "minecraft:experience_bottle", count: 2 }
+      ]
       x: 18.85d
       y: 0d
       dependencies: ["4A10000000000133"]
@@ -265,6 +271,9 @@
     }
     {
       id: "4A10000000000123"
+      rewards: [
+        { id: "5D00000110000006", type: "item", item: "minecraft:birch_sign", count: 2 }
+      ]
       x: 3.19d
       y: -3.625d
       optional: true

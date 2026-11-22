@@ -11,9 +11,11 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.EventPriority;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.server.ServerStartedEvent;
 
 @Mod("m1packcompat")
 public final class InterplanetaryTravel {
@@ -30,11 +32,17 @@ public final class InterplanetaryTravel {
     private static final ResourceLocation COLONY_TO_EARTH = id("colony_to_earth");
     private final Map<ServerPlayer, Crossing> departures = new WeakHashMap<>();
 
-    public InterplanetaryTravel() {
+    public InterplanetaryTravel(IEventBus modBus) {
+        modBus.addListener(StorageQuestFilter::setup);
         NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, this::beforeTravel);
         NeoForge.EVENT_BUS.addListener(this::afterTravel);
+        NeoForge.EVENT_BUS.addListener(this::setDayLength);
         // Inspect the core before Deepfield handles the same click to open colony management.
         NeoForge.EVENT_BUS.addListener(EventPriority.HIGH, ColonyReadiness::inspect);
+    }
+
+    private void setDayLength(ServerStartedEvent event) {
+        event.getServer().overworld().setDayTimePerTick(2.0f / 3.0f);
     }
 
     private void beforeTravel(MekanismTeleportEvent.GlobalTeleport event) {

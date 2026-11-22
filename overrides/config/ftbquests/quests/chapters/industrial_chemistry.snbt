@@ -69,6 +69,9 @@
     }
     {
       id: "4A20000000000106"
+      rewards: [
+        { id: "5D00000110000007", type: "item", item: "minecraft:lantern", count: 2 }
+      ]
       x: 9.57d
       y: -0.0725d
       dependencies: ["4A20000000000102", "4A20000000000105"]
@@ -265,6 +268,9 @@
     }
     {
       id: "4A20000000000124"
+      rewards: [
+        { id: "5D00000110000008", type: "item", item: "minecraft:yellow_carpet", count: 4 }
+      ]
       x: 3.422d
       y: 0.986d
       optional: true

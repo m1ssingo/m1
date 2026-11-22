@@ -79,23 +79,27 @@ ServerEvents.commandRegistry(event => {
         const id = String(quest.getCodeString())
         require(!nodes[id], 'Duplicate quest ' + id)
         nodes[id] = quest
-        const title = String(translations.getStringTranslation(quest, 'ru_ru', key.TITLE).orElseThrow())
-        require(title.length > 2 && title === String(translations.getStringTranslation(quest, 'en_us', key.TITLE).orElseThrow()), 'Missing title or stale fallback ' + id)
-        const description = translations.getStringListTranslation(quest, 'ru_ru', key.QUEST_DESC)
-        require(description.isPresent(), 'Missing description ' + id)
-        const fallback = translations.getStringListTranslation(quest, 'en_us', key.QUEST_DESC).orElseThrow()
-        require(description.get().equals(fallback), 'Stale description fallback ' + id)
-        let hasProse = false
-        description.get().forEach(paragraph => {
-          const line = String(paragraph)
-          if (line.startsWith('{')) {
-            const component = text.parseRawText(line, registry)
-            const click = component.getStyle().getClickEvent()
-            require(click !== null && String(click.getAction().getSerializedName()) === 'change_page', 'Unreadable guide link ' + id)
-            links.push(String(click.getValue()))
-          } else if (line.trim()) hasProse = true
+        const linksByLanguage = ['ru_ru', 'en_us'].map(language => {
+          const title = String(translations.getStringTranslation(quest, language, key.TITLE).orElseThrow())
+          require(title.trim().length > 2, 'Missing title ' + language + ' ' + id)
+          const description = translations.getStringListTranslation(quest, language, key.QUEST_DESC)
+          require(description.isPresent(), 'Missing description ' + language + ' ' + id)
+          let hasProse = false
+          const targets = []
+          description.get().forEach(paragraph => {
+            const line = String(paragraph)
+            if (line.startsWith('{')) {
+              const component = text.parseRawText(line, registry)
+              const click = component.getStyle().getClickEvent()
+              require(click !== null && String(click.getAction().getSerializedName()) === 'change_page', 'Unreadable guide link ' + language + ' ' + id)
+              targets.push(String(click.getValue()))
+            } else if (line.trim()) hasProse = true
+          })
+          require(hasProse, 'Missing quest text ' + language + ' ' + id)
+          return targets
         })
-        require(hasProse, 'Missing quest text ' + id)
+        require(linksByLanguage[0].slice().sort().join(',') === linksByLanguage[1].sort().join(','), 'Mismatched guide links ' + id)
+        linksByLanguage[0].forEach(target => links.push(target))
         const parents = []
         quest.streamDependencies().forEach(parent => parents.push(String(parent.getCodeString())))
         dependencies[id] = parents

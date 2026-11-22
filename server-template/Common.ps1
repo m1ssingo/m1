@@ -5,10 +5,13 @@ function Get-Java21 {
     $candidates = New-Object 'System.Collections.Generic.List[string]'
     $candidates.Add($Requested)
     if ($env:JAVA_HOME) { $candidates.Add((Join-Path $env:JAVA_HOME 'bin\java.exe')) }
-    $cfRuntime = Join-Path $env:USERPROFILE 'curseforge\minecraft\Install\runtime'
-    if (Test-Path -LiteralPath $cfRuntime) {
-        Get-ChildItem -LiteralPath $cfRuntime -Filter java.exe -Recurse -File -ErrorAction SilentlyContinue |
-            ForEach-Object { $candidates.Add($_.FullName) }
+    $cfInstall = Join-Path $env:USERPROFILE 'curseforge\minecraft\Install'
+    foreach ($runtimeDir in @('java', 'runtime')) {
+        $cfRuntime = Join-Path $cfInstall $runtimeDir
+        if (Test-Path -LiteralPath $cfRuntime) {
+            Get-ChildItem -LiteralPath $cfRuntime -Filter java.exe -Recurse -File -ErrorAction SilentlyContinue |
+                ForEach-Object { $candidates.Add($_.FullName) }
+        }
     }
     foreach ($candidate in $candidates) {
         $command = Get-Command $candidate -CommandType Application -ErrorAction SilentlyContinue
@@ -35,7 +38,15 @@ function Get-Java21 {
 function Test-PinnedFile {
     param([string]$Path, [string]$Sha256)
     if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) { return $false }
-    return (Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToLowerInvariant() -eq $Sha256.ToLowerInvariant()
+    $algorithm = [Security.Cryptography.SHA256]::Create()
+    $file = [IO.File]::OpenRead($Path)
+    try {
+        $actual = [BitConverter]::ToString($algorithm.ComputeHash($file)).Replace('-', '')
+        return $actual -eq $Sha256
+    } finally {
+        $file.Dispose()
+        $algorithm.Dispose()
+    }
 }
 
 function Test-NeoForgeServer {

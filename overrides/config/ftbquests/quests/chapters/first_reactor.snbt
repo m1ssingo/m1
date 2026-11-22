@@ -95,6 +95,9 @@
     }
     {
       id: "4A40000000000108"
+      rewards: [
+        { id: "5D0000011000000B", type: "item", item: "minecraft:painting", team_reward: true }
+      ]
       x: 12.2525d
       y: 0d
       dependencies: ["4A40000000000107"]
@@ -188,6 +191,9 @@
     }
     {
       id: "4A40000000000122"
+      rewards: [
+        { id: "5D0000011000000C", type: "item", item: "minecraft:experience_bottle", count: 2 }
+      ]
       x: 4.2775d
       y: -3.19d
       optional: true

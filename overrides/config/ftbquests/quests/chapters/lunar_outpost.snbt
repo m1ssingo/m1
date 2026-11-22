@@ -138,6 +138,9 @@
     }
     {
       id: "4A6000000000010B"
+      rewards: [
+        { id: "5D0000011000000F", type: "item", item: "minecraft:painting", team_reward: true }
+      ]
       x: 5.8d
       y: 4.2485d
       dependencies: ["4A60000000000103"]
@@ -247,6 +250,9 @@
     }
     {
       id: "4A60000000000125"
+      rewards: [
+        { id: "5D00000110000010", type: "item", item: "minecraft:birch_sign", count: 2 }
+      ]
       x: 11.5275d
       y: 2.03d
       optional: true

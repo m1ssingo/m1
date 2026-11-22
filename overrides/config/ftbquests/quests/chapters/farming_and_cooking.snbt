@@ -130,6 +130,9 @@
     }
     {
       id: "4A90000000000140"
+      rewards: [
+        { id: "5D00000110000017", type: "item", item: "minecraft:flower_pot" }
+      ]
       x: -3.8425d
       y: -1.885d
       optional: true
@@ -145,6 +148,9 @@
     }
     {
       id: "4A90000000000141"
+      rewards: [
+        { id: "5D00000110000016", type: "item", item: "minecraft:cookie", count: 3 }
+      ]
       x: 3.8425d
       y: -0.0725d
       optional: true

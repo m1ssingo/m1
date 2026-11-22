@@ -7,6 +7,9 @@
   quests: [
     {
       id: "4AD0000000000101"
+      rewards: [
+        { id: "5D0000011000001A", type: "item", item: "minecraft:yellow_carpet", count: 4 }
+      ]
       x: 0d
       y: 0d
       icon: { id: "deepfield:mars_globe", count: 1 }
@@ -213,6 +216,9 @@
     }
     {
       id: "4AD0000000000111"
+      rewards: [
+        { id: "5D0000011000001B", type: "item", item: "minecraft:experience_bottle", count: 2 }
+      ]
       x: 21.7d
       y: 0d
       icon: { id: "deepfield:reactor_control_rod", count: 1 }

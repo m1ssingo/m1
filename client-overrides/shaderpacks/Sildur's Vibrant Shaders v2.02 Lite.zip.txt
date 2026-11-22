@@ -1,0 +1,12 @@
+Bloom=false
+Clouds=1
+Depth_of_Field=false
+Distance_Blur=false
+Fog=false
+Godrays=false
+Lens_Flares=false
+Motionblur=false
+TAA=false
+Volumetric_Lighting=false
+customStars=false
+defskybox=true

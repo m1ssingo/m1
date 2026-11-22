@@ -1,10 +1,15 @@
 package dev.m1ssing0.packclient;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.List;
 import com.mojang.logging.LogUtils;
+import dev.m1ssing0.packclient.SteelButtonStyle.State;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.screens.GenericMessageScreen;
+import net.minecraft.client.gui.screens.ReceivingLevelScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen;
 import net.minecraft.client.gui.screens.worldselection.SelectWorldScreen;
@@ -12,6 +17,7 @@ import net.minecraft.client.gui.screens.options.OptionsScreen;
 import net.minecraft.client.gui.screens.options.SoundOptionsScreen;
 import net.minecraft.sounds.Music;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.neoforged.neoforge.client.gui.ModListScreen;
@@ -20,6 +26,7 @@ public final class PackTitleScreen extends Screen {
     private static final ResourceLocation BACKGROUND = ResourceLocation.fromNamespaceAndPath(
         "m1packclient", "textures/menu/background.png");
     private static final Music MUSIC = new Music(SoundEvents.MUSIC_MENU, 0, 0, true);
+    private static final String PACK_LABEL = readPackLabel();
     private MenuAnimation animation;
     private Artwork artwork;
     private boolean musicObserved;
@@ -29,50 +36,65 @@ public final class PackTitleScreen extends Screen {
         super(Component.literal("Лютая технологическая сборка"));
     }
 
+    private static String readPackLabel() {
+        try (var stream = PackTitleScreen.class.getResourceAsStream("/META-INF/m1pack-label.txt")) {
+            if (stream != null) return new String(stream.readAllBytes(), StandardCharsets.UTF_8).strip();
+        } catch (IOException e) {
+            LogUtils.getLogger().warn("Could not read the pack label", e);
+        }
+        return "M1 SciFi";
+    }
+
     public static void drawSubmenuBackdrop(GuiGraphics graphics, int screenWidth, int screenHeight) {
-        double scale = Math.max((double) screenWidth / MenuAnimation.WIDTH,
-            (double) screenHeight / MenuAnimation.HEIGHT);
-        int imageWidth = (int) Math.ceil(MenuAnimation.WIDTH * scale);
-        int imageHeight = (int) Math.ceil(MenuAnimation.HEIGHT * scale);
-        graphics.blit(BACKGROUND, (screenWidth - imageWidth) / 2, (screenHeight - imageHeight) / 2,
-            imageWidth, imageHeight, 0, 0, MenuAnimation.WIDTH, MenuAnimation.HEIGHT,
-            MenuAnimation.WIDTH, MenuAnimation.HEIGHT);
+        Artwork.cover(screenWidth, screenHeight).draw(graphics, BACKGROUND);
         graphics.flush();
+    }
+
+    public static boolean isWorldTransition(Screen screen) {
+        if (screen instanceof ReceivingLevelScreen) return true;
+        return screen instanceof GenericMessageScreen && screen.getTitle().getContents() instanceof TranslatableContents title
+            && title.getKey().equals("menu.savingLevel");
     }
 
     @Override
     protected void init() {
-        artwork = Artwork.fit(width, height);
+        artwork = Artwork.cover(width, height);
         // Keep controls below the byline, between the two foreground characters.
         int gap = 8;
         int rowGap = 4;
-        int buttonWidth = Math.min(140, (Math.round(artwork.width() * 0.44f) - gap) / 2);
-        int y = artwork.y() + Math.round(artwork.height() * 0.68f);
-        int bottom = artwork.y() + Math.round(artwork.height() * 0.96f);
-        int buttonHeight = Math.min(21, (bottom - y - 2 * rowGap) / 3);
+        int margin = 6;
+        int spaceBelowByline = height - margin - Math.round(artwork.y() + artwork.height() * 0.64f);
+        int rows = spaceBelowByline >= 71 ? 3 : spaceBelowByline >= 46 ? 2 : 1;
+        int columns = 6 / rows;
+        int span = Math.min(width - 2 * margin, Math.round(artwork.width() * (columns == 2 ? 0.44f : 0.66f)));
+        int buttonWidth = Math.min(140, (span - (columns - 1) * gap) / columns);
+        int buttonHeight = Math.min(21, (height - 2 * margin - (rows - 1) * rowGap) / rows);
+        int lastY = height - margin - rows * buttonHeight - (rows - 1) * rowGap;
+        int y = Math.clamp(Math.round(artwork.y() + artwork.height() * 0.68f), margin, lastY);
         int pitch = buttonHeight + rowGap;
-        int left = (width - 2 * buttonWidth - gap) / 2;
-        int right = left + buttonWidth + gap;
-        add(left, y, buttonWidth, buttonHeight, "menu.singleplayer",
-            () -> minecraft.setScreen(new SelectWorldScreen(this)));
-        add(right, y, buttonWidth, buttonHeight, "menu.multiplayer",
-            () -> minecraft.setScreen(new JoinMultiplayerScreen(this)));
-        add(left, y + pitch, buttonWidth, buttonHeight, "menu.options",
-            () -> minecraft.setScreen(new OptionsScreen(this, minecraft.options)));
-        add(right, y + pitch, buttonWidth, buttonHeight, "m1pack.menu.mods",
-            () -> minecraft.setScreen(new ModListScreen(this)));
-        add(left, y + 2 * pitch, buttonWidth, buttonHeight, "m1pack.menu.sound",
-            () -> minecraft.setScreen(new SoundOptionsScreen(this, minecraft.options)));
-        add(right, y + 2 * pitch, buttonWidth, buttonHeight, "menu.quit", () -> minecraft.stop());
+        int groupWidth = columns * buttonWidth + (columns - 1) * gap;
+        int left = Math.clamp(Math.round(artwork.x() + (artwork.width() - groupWidth) / 2), margin,
+            width - margin - groupWidth);
+        var entries = List.of(
+            new MenuEntry("menu.singleplayer", () -> minecraft.setScreen(new SelectWorldScreen(this))),
+            new MenuEntry("menu.multiplayer", () -> minecraft.setScreen(new JoinMultiplayerScreen(this))),
+            new MenuEntry("menu.options", () -> minecraft.setScreen(new OptionsScreen(this, minecraft.options))),
+            new MenuEntry("m1pack.menu.mods", () -> minecraft.setScreen(new ModListScreen(this))),
+            new MenuEntry("m1pack.menu.sound", () -> minecraft.setScreen(new SoundOptionsScreen(this, minecraft.options))),
+            new MenuEntry("menu.quit", () -> minecraft.stop()));
+        for (int index = 0; index < entries.size(); ++index) {
+            int x = left + (index % columns) * (buttonWidth + gap);
+            int top = y + (index / columns) * pitch;
+            var entry = entries.get(index);
+            addRenderableWidget(new SteelButton(x, top, buttonWidth, buttonHeight, Component.translatable(entry.label()),
+                button -> entry.action().run()));
+        }
         if (Boolean.getBoolean("m1pack.smoke")) {
             LogUtils.getLogger().info("[M1-MENU-LAYOUT] {} {} {} {} {} {} {} {} {} {} {} {}",
-                width, height, artwork.x(), artwork.y(), artwork.width(), artwork.height(),
-                left, right, y, buttonWidth, buttonHeight, pitch);
+                width, height, Math.round(artwork.x()), Math.round(artwork.y()), Math.round(artwork.width()),
+                Math.round(artwork.height()),
+                left, left + buttonWidth + gap, y, buttonWidth, buttonHeight, pitch);
         }
-    }
-
-    private void add(int x, int y, int w, int h, String label, Runnable action) {
-        addRenderableWidget(new SteelButton(x, y, w, h, Component.translatable(label), button -> action.run()));
     }
 
     @Override
@@ -91,9 +113,7 @@ public final class PackTitleScreen extends Screen {
                 animation = null;
             }
         }
-        graphics.fill(0, 0, width, height, 0xff090e13);
-        graphics.blit(background, artwork.x(), artwork.y(), artwork.width(), artwork.height(),
-            0, 0, MenuAnimation.WIDTH, MenuAnimation.HEIGHT, MenuAnimation.WIDTH, MenuAnimation.HEIGHT);
+        artwork.draw(graphics, background);
     }
 
     @Override
@@ -103,7 +123,7 @@ public final class PackTitleScreen extends Screen {
             LogUtils.getLogger().info("[M1-MENU] menu music is playing");
             musicObserved = true;
         }
-        if (height >= 300) graphics.drawString(font, "M1 SciFi 0.8.2", 8, height - 12, 0xffc6b69d);
+        if (height >= 300) graphics.drawString(font, PACK_LABEL, 8, height - 12, 0xffc6b69d);
     }
 
     @Override
@@ -126,12 +146,39 @@ public final class PackTitleScreen extends Screen {
         return false;
     }
 
-    private record Artwork(int x, int y, int width, int height) {
-        static Artwork fit(int width, int height) {
-            double scale = Math.min((double) width / MenuAnimation.WIDTH, (double) height / MenuAnimation.HEIGHT);
-            int fitWidth = (int) Math.round(MenuAnimation.WIDTH * scale);
-            int fitHeight = (int) Math.round(MenuAnimation.HEIGHT * scale);
-            return new Artwork((width - fitWidth) / 2, (height - fitHeight) / 2, fitWidth, fitHeight);
+    private record MenuEntry(String label, Runnable action) {}
+
+    private record Artwork(float x, float y, float scale) {
+        static Artwork cover(int width, int height) {
+            float scale = Math.max((float) width / MenuAnimation.WIDTH, (float) height / MenuAnimation.HEIGHT);
+            float x = (width - MenuAnimation.WIDTH * scale) / 2;
+            float y = (height - MenuAnimation.HEIGHT * scale) / 2;
+            if (width / scale >= 1100) {
+                // Keep the rocket visible as the sides are cropped in taller windows.
+                x = Math.min(x, width - 1540 * scale);
+            }
+            if (height / scale >= 450) {
+                y = Math.max(y, -183 * scale);
+            }
+            return new Artwork(x, y, scale);
+        }
+
+        float width() {
+            return MenuAnimation.WIDTH * scale;
+        }
+
+        float height() {
+            return MenuAnimation.HEIGHT * scale;
+        }
+
+        void draw(GuiGraphics graphics, ResourceLocation background) {
+            var pose = graphics.pose();
+            pose.pushPose();
+            pose.translate(x, y, 0);
+            pose.scale(scale, scale, 1);
+            graphics.blit(background, 0, 0, 0, 0, MenuAnimation.WIDTH, MenuAnimation.HEIGHT,
+                MenuAnimation.WIDTH, MenuAnimation.HEIGHT);
+            pose.popPose();
         }
     }
 
@@ -143,26 +190,16 @@ public final class PackTitleScreen extends Screen {
         @Override
         protected void renderWidget(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
             int x = getX(), y = getY(), w = getWidth(), h = getHeight();
-            boolean focus = isHoveredOrFocused();
-            graphics.fill(x - 1, y - 1, x + w + 1, y + h + 1, 0xe6090b0e);
-            graphics.fillGradient(x, y, x + w, y + h, focus ? 0xff665044 : 0xf0394045,
-                focus ? 0xff292a2c : 0xf0181d22);
-            int edge = focus ? 0xffffad42 : 0xff9b7244;
-            graphics.fill(x, y, x + w, y + 1, edge);
-            graphics.fill(x, y + h - 1, x + w, y + h, 0xff69451d);
-            graphics.fill(x, y, x + 3, y + h, focus ? 0xffffa024 : 0xffbe7d23);
-            for (int rivetX : new int[]{x + 8, x + w - 9}) {
-                graphics.fill(rivetX, y + 4, rivetX + 2, y + 6, 0xffa59d8b);
-                graphics.fill(rivetX, y + h - 6, rivetX + 2, y + h - 4, 0xff676760);
-            }
+            State state = State.of(active, isHoveredOrFocused());
+            SteelButtonStyle.draw(graphics, x - 1, y - 1, w + 2, h + 2, state);
             var font = Minecraft.getInstance().font;
             int textWidth = font.width(getMessage());
-            float scale = Math.min(1.0f, (w - 22) / (float) Math.max(1, textWidth));
+            float scale = Math.min(1.0f, Math.max(1, w - 22) / (float) Math.max(1, textWidth));
             var pose = graphics.pose();
             pose.pushPose();
             pose.translate(x + w / 2.0f, y + h / 2.0f, 0);
             pose.scale(scale, scale, 1);
-            graphics.drawCenteredString(font, getMessage(), 0, -4, focus ? 0xffffe1aa : 0xffeee4d4);
+            graphics.drawCenteredString(font, getMessage(), 0, -4, state.textColor());
             pose.popPose();
         }
     }

@@ -16,6 +16,11 @@ def sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def bundle_basename(lock):
+    pack = lock['pack']
+    return f"{pack['name'].replace(' ', '-')}-{pack['version']}"
+
+
 def json_bytes(value):
     return (json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
 
@@ -53,7 +58,7 @@ def build(output, verification):
     if lock['errors']:
         raise ValueError('The mod lock contains unresolved errors')
     version = lock['pack']['version']
-    name = f'M1-SciFi-Prototype-{version}'
+    name = bundle_basename(lock)
     client_name = name + '-CurseForge.zip'
     files = lock['files']
     projects = {entry['project_id'] for entry in files}
@@ -62,7 +67,9 @@ def build(output, verification):
     client_files = [entry for entry in files if entry['side'] != 'server']
     server_files = [entry for entry in files if entry['side'] != 'client']
     common = files_under('overrides')
-    clients = {}
+    client_source = files_under('client-overrides')
+    clients = {'overrides/' + path.removeprefix('client-overrides/'): data
+               for path, data in client_source.items()}
     for entry in lock['extra_files']:
         path = 'overrides/' + entry['path']
         if entry['side'] == 'client':
@@ -104,7 +111,7 @@ def build(output, verification):
     for entry in lock['extra_files']:
         summary.append(f'| M1 | `{entry["file_name"]}` | {entry["side"]} |')
     docs['docs/MODS.md'] = ('\n'.join(summary) + '\n').encode('utf-8')
-    code = {**server_template, **common, **docs}
+    code = {**server_template, **common, **client_source, **docs}
     for directory in ('compat', 'client', 'tools', 'testing'):
         code.update(files_under(directory))
     for filename in ('README.md', 'README_RU.md', 'SOURCE_RU.md', '.gitignore'):

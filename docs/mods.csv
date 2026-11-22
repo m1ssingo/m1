@@ -1,4 +1,4 @@
-﻿slug,project_id,file_id,file_name,side,sha256,source
+slug,project_id,file_id,file_name,side,sha256,source
 ae2-network-analyser,961856,7622554,AE2NetworkAnalyzer-1.21-2.1.5-neoforge.jar,both,74b68e9ec57dbf21a0417ce099d61b834f88efb0de3cccba4413e5dcf9d69f3c,https://www.curseforge.com/minecraft/mc-mods/ae2-network-analyser/files/7622554
 applied-energistics-2,223794,9519988,appliedenergistics2-19.2.19.jar,both,7db959595ca8734acccac51c963567460e7db9f31b145b23dea72778b692777b,https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2/files/9519988
 applied-energistics-2-wireless-terminals,459929,8450398,ae2wtlib-19.5.1.jar,both,407e7300351353cb4cb7698286e180aef2bd6e7a97ec7efc6493f9daa4dbffe5,https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2-wireless-terminals/files/8450398
@@ -10,6 +10,7 @@ carry-on,274259,8512888,carryon-neoforge-1.21.1-2.2.6.13.jar,both,d4f9576b6593db
 chipped,456956,5813117,chipped-neoforge-1.21.1-4.0.2.jar,both,18ac6fd6b30db4922ccc6ee8bea5b113f69587505b7529834f37ace506427291,https://www.curseforge.com/minecraft/mc-mods/chipped/files/5813117
 chunk-loaders,402924,6832703,chunkloaders-1.2.9-neoforge-mc1.21.jar,both,6802c2b7ea859711462f64114c9e7ff4352a92c844a9a8f195056c8383a29147,https://www.curseforge.com/minecraft/mc-mods/chunk-loaders/files/6832703
 cucumber,272335,8035802,Cucumber-1.21.1-8.0.16.jar,both,371f9551c676b76a39d5580be28f5cfeff364e131ad138fbf7108aeb2712f43f,https://www.curseforge.com/minecraft/mc-mods/cucumber/files/8035802
+decocraft,79616,7899863,decocraft-3.0.11-1.21.1-neoforge.jar,both,b0589eb7d03b13bbf3b9c45df7f50db556a721882e9ad2bb6be0ff23e5a64526,https://www.curseforge.com/minecraft/mc-mods/decocraft/files/7899863
 deepfield-project,1759685,9598774,deepfield-neoforge-1.21.1-5.1.2.jar,both,07ba9f4c8e25800abcd998298570501e7087a5131383c1c3cbe38283e9095d25,https://www.curseforge.com/minecraft/mc-mods/deepfield-project/files/9598774
 ex-pattern-provider,892005,9391213,ExtendedAE-1.21-2.2.43-neoforge.jar,both,d723ad922d51868eaa393aa6c5439ce21ead37562dc48f29a08ef5828e841838,https://www.curseforge.com/minecraft/mc-mods/ex-pattern-provider/files/9391213
 falling-tree,349559,6835168,FallingTree-1.21.1-1.21.1.11.jar,both,70ee147602d2239e7a093e166fdf0c0abcef959d5d457c0f8f3669ef9b483dc4,https://www.curseforge.com/minecraft/mc-mods/falling-tree/files/6835168
@@ -29,11 +30,13 @@ history-stages,1473453,9209318,historystages-6.1.0-1.21.1.jar,both,573d114049d26
 immersive-engineering,231951,6733669,ImmersiveEngineering-1.21.1-12.4.2-194.jar,both,45942985a4a4aebf265b8e22a0c54a96208637471f36f2532ff5d4911322debc,https://www.curseforge.com/minecraft/mc-mods/immersive-engineering/files/6733669
 immersive-petroleum,268250,8420142,ImmersivePetroleum-1.21.1-4.5.0-39.jar,both,c1bfef3290dd8c2c68519155e395059766f5d258a52d5e08faf63eb627312e8b,https://www.curseforge.com/minecraft/mc-mods/immersive-petroleum/files/8420142
 inventory-tweaks-refoxed,976858,9488021,invtweaks-1.21.1-1.4.0.jar,client,1a3b54d390c784daab0548fdf0273a1a88c8259e0d6b236630546d24f869fc95,https://www.curseforge.com/minecraft/mc-mods/inventory-tweaks-refoxed/files/9488021
+irisshaders,455508,8242804,iris-neoforge-1.8.14-beta.1+mc1.21.1.jar,client,60d5f8bf52f25e9986440f4a4270a6bd986d9cff994510e1108ac1547063b314,https://www.curseforge.com/minecraft/mc-mods/irisshaders/files/8242804
 iron-chests,228756,5491156,ironchest-1.21-neoforge-16.0.7.jar,both,dae66a38a33c2adac6ca0b7a4fbf4b365ba37a6a1f7a10961028617965c1fcaf,https://www.curseforge.com/minecraft/mc-mods/iron-chests/files/5491156
 iron-jetpacks,284497,7105279,IronJetpacks-1.21.1-8.0.11.jar,both,aa589c0a9cec53f554cacef95dd4af45c1bbd351aab4c12104240f8a8d79b909,https://www.curseforge.com/minecraft/mc-mods/iron-jetpacks/files/7105279
 jade,324717,8591319,Jade-1.21.1-NeoForge-15.10.6.jar,both,276f1f65a20d04f536989c4f311949d770b52c440c23c2b904a08860f3c93810,https://www.curseforge.com/minecraft/mc-mods/jade/files/8591319
 jei,238222,9205121,jei-1.21.1-neoforge-19.64.0.455.jar,both,f7a9de3d7ee07eed8d293a1a1a0f6afaac556eb43c103523457bd07ebb551e7b,https://www.curseforge.com/minecraft/mc-mods/jei/files/9205121
 kubejs,238086,9396059,kubejs-neoforge-2101.7.2-build.381.jar,both,e4539156a6e93badf140d050306d2b4d7975037541b3c51f746cf78bf6fe14a2,https://www.curseforge.com/minecraft/mc-mods/kubejs/files/9396059
+lambdynamiclights,393442,8780227,lambdynamiclights-4.8.11+1.21.1.jar,client,913b0358b1031828f1e060ea0ee361232dc2a1c82464f488a0a920739ce7c763,https://www.curseforge.com/minecraft/mc-mods/lambdynamiclights/files/8780227
 lithostitched,936015,9170709,lithostitched-1.8.1-neoforge-21.1.jar,both,e0da669fa5facc61a09b9b7bae21b322993de1fcd1eb05787adffb7309598cca,https://www.curseforge.com/minecraft/mc-mods/lithostitched/files/9170709
 lootr,361276,8968561,lootr-neoforge-1.21.1-1.11.38.127.jar,both,5c74de4709d1c13b25880fdd241a89d5d9f331346d20edc76f80ccd4d99dc66c,https://www.curseforge.com/minecraft/mc-mods/lootr/files/8968561
 mega-cells,622112,7952621,megacells-4.11.0.jar,both,a386bbf12afb11729b0dcf77f64221893d250f22e6185a4d728b9799b230bc55,https://www.curseforge.com/minecraft/mc-mods/mega-cells/files/7952621
@@ -46,6 +49,7 @@ puzzles-lib,495476,9331322,puzzleslib-v21.1.66-mc1.21.1+neoforge.jar,both,cb02de
 resourceful-lib,570073,5973188,resourcefullib-neoforge-1.21-3.0.12.jar,both,5e36f2c69de008dc5795f730c84ab767688f15c810944b585485349a0c911261,https://www.curseforge.com/minecraft/mc-mods/resourceful-lib/files/5973188
 rhino,416294,8218748,rhino-2101.2.7-build.85.jar,both,95df92ce578b2504cb16d8c9fc285303bf062eb15452246a18e57b7cf091c19a,https://www.curseforge.com/minecraft/mc-mods/rhino/files/8218748
 serene-seasons,291874,6182596,SereneSeasons-neoforge-1.21.1-10.1.0.3.jar,both,86d89fce593f868cb6b542943c0f82850ca56970fe0327e401966d8d0420861d,https://www.curseforge.com/minecraft/mc-mods/serene-seasons/files/6182596
+sildurs-vibrant-shaders,544096,8889128,Sildur's Vibrant Shaders v2.02 Lite.zip,client,16746ee127e4c0b07f7e62018589100845338e633eea6bed8cf8c09939aa9eea,https://www.curseforge.com/minecraft/shaders/sildurs-vibrant-shaders/files/8889128
 sodium,394468,8756580,sodium-neoforge-0.8.13+mc1.21.1.jar,client,575d187b15328d7bddd8a9b1bee64333c22c14735f5780ec49eac0cd5503c08d,https://www.curseforge.com/minecraft/mc-mods/sodium/files/8756580
 sophisticated-backpacks,422301,9524812,sophisticatedbackpacks-1.21.1-3.26.21.2249.jar,both,a1b865474155922e3a9e83fc02aa32db968d43d35b2ef31b1fc50537f8536bf5,https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks/files/9524812
 sophisticated-core,618298,9651537,sophisticatedcore-1.21.1-1.5.38.2484.jar,both,a06e4c371d30ed5f552673bbd8129866e210bd54dfb3975052214dc6384dbbc7,https://www.curseforge.com/minecraft/mc-mods/sophisticated-core/files/9651537
@@ -55,5 +59,6 @@ supermartijn642s-config-lib,438332,5546996,supermartijn642configlib-1.1.8-neofor
 supermartijn642s-core-lib,454372,9447150,supermartijn642corelib-1.1.26a-neoforge-mc1.21.jar,both,f7e032e74ab404062e2fa2fe224ba97e29b8f618ffbbdcf4cecb01076b3a41b6,https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-core-lib/files/9447150
 tectonic,686836,8855043,tectonic-3.0.28-neoforge-21.1.jar,both,cf188c70e7dd94f6e3a81cef9fe99f1151f13217809f7576aaedb0c3e6547ae1,https://www.curseforge.com/minecraft/mc-mods/tectonic/files/8855043
 terralith,513688,8222737,Terralith_1.21.x_v2.6.2.jar,both,d38bd304897731b42f6c013cdc07e082e74411e80c74aabcee385251beb3b546,https://www.curseforge.com/minecraft/mc-mods/terralith/files/8222737
+trash-cans,394535,9289326,trashcans-1.1.2-neoforge-mc1.21.jar,both,7759029b3d169cc0ed333ca771259a127db62848cc10356b9f4caaf385ba7464,https://www.curseforge.com/minecraft/mc-mods/trash-cans/files/9289326
 xaeros-minimap,263420,9067173,xaerominimap-neoforge-1.21.1-26.6.0.jar,client,d3398221b2262abfe2d394b588122e5b3fd2e4d8c4bf66a5fd357352fcf51b2e,https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap/files/9067173
 xaeros-world-map,317780,9067277,xaeroworldmap-neoforge-1.21.1-1.47.0.jar,client,6a42b6f01bd96b496e5fcc07d4541bad1a699d9ec8ad58ad40d5dcfe23a7d4c7,https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map/files/9067277

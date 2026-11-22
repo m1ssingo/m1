@@ -258,6 +258,25 @@
       "sha512": "fbc63f23f827061b2a45f33a3867e105268b5a51d9ca92ba3bacd2e2a0af847eb4c367e726a62a455b841e503f8ce73ea9e180285670ddf3ec18a8ba4e72da7d"
     },
     {
+      "slug": "decocraft",
+      "project_id": 79616,
+      "file_id": 7899863,
+      "file_name": "decocraft-3.0.11-1.21.1-neoforge.jar",
+      "display_name": "Decocraft 3.0.11",
+      "size": 93170262,
+      "published": "2026-04-09",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/decocraft/files/7899863",
+      "download_url": "https://edge.forgecdn.net/files/7899/863/decocraft-3.0.11-1.21.1-neoforge.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "b0589eb7d03b13bbf3b9c45df7f50db556a721882e9ad2bb6be0ff23e5a64526",
+      "sha512": "0d7c71592760a95113d38d5d8f4bd7b247ab0e9e0c8b4230ed0f3a9170ba08c70f8b0b17eea9794e8faa46a7c94461a01a72fcc2574eb751aec5540f04f6ffb5"
+    },
+    {
       "slug": "deepfield-project",
       "project_id": 1759685,
       "file_id": 9598774,
@@ -676,6 +695,30 @@
       "sha512": "907bace942aa3e9ad898a7700668936ed36bcd874798179099e42eebd322c4c0541bb6e445b99308a59789240e882fd2ec6da1825ec7ba7ee2ff6ffae6327bbc"
     },
     {
+      "slug": "irisshaders",
+      "project_id": 455508,
+      "file_id": 8242804,
+      "file_name": "iris-neoforge-1.8.14-beta.1+mc1.21.1.jar",
+      "display_name": "Iris 1.8.14 Beta 1 for NeoForge 1.21.1",
+      "size": 2540723,
+      "published": "2026-06-13T15:57:14.116693Z",
+      "release_type": 1,
+      "side": "client",
+      "required_dependencies": [
+        {
+          "slug": "sodium",
+          "project_id": 394468
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/irisshaders/files/8242804",
+      "download_url": "https://edge.forgecdn.net/files/8242/804/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "60d5f8bf52f25e9986440f4a4270a6bd986d9cff994510e1108ac1547063b314",
+      "sha512": "33fddb430e16222902eac75b8b3d57c381b0f3cc729f3b56c4628df12ca108f23a0b11e2feb167923d6d14d1fc7e8ee1a977ec421b19d1951bdca74c4092b9c5"
+    },
+    {
       "slug": "iron-chests",
       "project_id": 228756,
       "file_id": 5491156,
@@ -788,6 +831,25 @@
       ],
       "sha256": "e4539156a6e93badf140d050306d2b4d7975037541b3c51f746cf78bf6fe14a2",
       "sha512": "a77488c2ead57b1195244a7176abbe982d6197ccce09996376c36c78560cd7795c1b09bad9053037d3931d47b921bb5de0d58149d0704207c39e21f024361b58"
+    },
+    {
+      "slug": "lambdynamiclights",
+      "project_id": 393442,
+      "file_id": 8780227,
+      "file_name": "lambdynamiclights-4.8.11+1.21.1.jar",
+      "display_name": "LambDynamicLights 4.8.11",
+      "size": 2023375,
+      "published": "2026-08-31",
+      "release_type": 1,
+      "side": "client",
+      "required_dependencies": [],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/lambdynamiclights/files/8780227",
+      "download_url": "https://edge.forgecdn.net/files/8780/227/lambdynamiclights-4.8.11%2B1.21.1.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "913b0358b1031828f1e060ea0ee361232dc2a1c82464f488a0a920739ce7c763",
+      "sha512": "0286076e8b2922dfbe90cd4544a0d16e6d07d7249c732a37479ea4281e9cf96c86dd2e1ce5261489bd5553ceba33044bc550a04b9eb582645eb97f15c9c6a64c"
     },
     {
       "slug": "lithostitched",
@@ -1042,6 +1104,31 @@
       "sha512": "9df9c5bebe0a97ac026676ac49c27e5f5412ffdf1ff9370fc9194e014e8fab8d029fb8cda214932a71a1154e6bf1f211e657ff4b353018b974a85f72fb4a005c"
     },
     {
+      "slug": "sildurs-vibrant-shaders",
+      "project_id": 544096,
+      "file_id": 8889128,
+      "file_name": "Sildur's Vibrant Shaders v2.02 Lite.zip",
+      "display_name": "Sildur's Vibrant Shaders 2.02 Lite",
+      "size": 251380,
+      "published": "2026-09-15T19:18:19.836961Z",
+      "release_type": 1,
+      "side": "client",
+      "required_dependencies": [
+        {
+          "slug": "irisshaders",
+          "project_id": 455508
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/shaders/sildurs-vibrant-shaders/files/8889128",
+      "download_url": "https://edge.forgecdn.net/files/8889/128/Sildur%27s%20Vibrant%20Shaders%20v2.02%20Lite.zip",
+      "metadata_paths": [
+        "shaders/shaders.properties"
+      ],
+      "sha256": "16746ee127e4c0b07f7e62018589100845338e633eea6bed8cf8c09939aa9eea",
+      "sha512": "6b92c668fce8dcf933b129ad4967cfc32fb88c47961d64b8dfac49fb4e060d46db2322eabe1196bf88e9d3e45cbdd141d79c42f0d0837d48736c0638e5155331",
+      "path": "shaderpacks/Sildur's Vibrant Shaders v2.02 Lite.zip"
+    },
+    {
       "slug": "sodium",
       "project_id": 394468,
       "file_id": 8756580,
@@ -1223,6 +1310,34 @@
       "sha512": "35298f1682567f63dc16658b04cee5498b30819f1c05f9712b4480d7f5eb17059db3b13ab14f81a05fe257149d11ced2cce2030d3727c1747edd8657c53e2a85"
     },
     {
+      "slug": "trash-cans",
+      "project_id": 394535,
+      "file_id": 9289326,
+      "file_name": "trashcans-1.1.2-neoforge-mc1.21.jar",
+      "display_name": "Trash Cans 1.1.2",
+      "size": 169363,
+      "published": "2026-10-22",
+      "release_type": 1,
+      "side": "both",
+      "required_dependencies": [
+        {
+          "project_id": 438332,
+          "slug": "supermartijn642s-config-lib"
+        },
+        {
+          "project_id": 454372,
+          "slug": "supermartijn642s-core-lib"
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/trash-cans/files/9289326",
+      "download_url": "https://edge.forgecdn.net/files/9289/326/trashcans-1.1.2-neoforge-mc1.21.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "7759029b3d169cc0ed333ca771259a127db62848cc10356b9f4caaf385ba7464",
+      "sha512": "77596fa36ed03564bdd290871d4987f8e7b24a626de99b1e23536a00e6400d0c6d4a6c528462338c88554817e7963308b0be97d1a2d55c9c138083a54ca2f36c"
+    },
+    {
       "slug": "xaeros-minimap",
       "project_id": 263420,
       "file_id": 9067173,
@@ -1263,9 +1378,9 @@
   ],
   "errors": [],
   "pack": {
-    "name": "M1 SciFi Prototype",
-    "version": "0.10.0",
-    "status": "wolf-colony"
+    "name": "M1 SciFi",
+    "version": "1.0.0",
+    "status": "release"
   },
   "neoforge": "21.1.267",
   "neoforge_installer": {
@@ -1274,23 +1389,23 @@
   },
   "extra_files": [
     {
-      "path": "mods/m1packcompat-0.2.4.jar",
-      "file_name": "m1packcompat-0.2.4.jar",
-      "sha256": "ba2e81f9dc8a7b66a24ad90afd0da1b5f0dd7fa300a87a1bcb21e18cd9fe7677",
+      "path": "mods/m1packcompat-0.2.5.jar",
+      "file_name": "m1packcompat-0.2.5.jar",
+      "sha256": "ebd0de79f03ec461c423f0f48eb8e6b8923a94d2bdca42bc0c445a5f83427232",
       "side": "both",
       "license": "MIT",
       "source": "compat/src"
     },
     {
-      "path": "mods/m1packclient-0.4.4.jar",
-      "file_name": "m1packclient-0.4.4.jar",
-      "sha256": "0b599119e5b47f7b57ebf16b5e2c400ad05f7cc21adba56e2c9bcaf628433210",
+      "path": "mods/m1packclient-0.5.2.jar",
+      "file_name": "m1packclient-0.5.2.jar",
+      "sha256": "994a8eb25aea579ee973cc3c6248fb5cb5835bc641101e7e146af89c7716741b",
       "side": "client",
       "source": "client/src",
       "license": "MIT (code); supplied image and audio assets"
     }
   ],
-  "locked_at_utc": "2026-11-17T22:45:30.322333+00:00",
+  "locked_at_utc": "2026-11-22T15:32:30+00:00",
   "changes": [
     {
       "version": "0.1.1",
@@ -1327,6 +1442,26 @@
     {
       "version": "0.8.1",
       "description": "First days, redesigned quest maps, Russian quest text, in-book examples, survival radio recipes and a pre-Mars specification audit."
+    },
+    {
+      "version": "0.10.1",
+      "description": "Corrected rocket artwork, full-bleed title screen, and steel and brass styling for client buttons."
+    },
+    {
+      "version": "0.10.2",
+      "description": "Retouch the existing rocket in the static artwork and all animation frames while retaining the surrounding scene."
+    },
+    {
+      "version": "0.11.0",
+      "description": "Balanced quest rewards and storage alternative, longer daylight, season announcements, torch light, world generation and tree settings, decoration, and menu visuals."
+    },
+    {
+      "version": "0.11.1",
+      "description": "Pinned Iris and a clear Sildur’s Lite preset with Stellar View, steel in-game interface, metallic season names, a localized rocket retouch and thinner chimney smoke."
+    },
+    {
+      "version": "1.0.0",
+      "description": "First stable release with dimensional season titles and a black and orange interface."
     }
   ]
 }
