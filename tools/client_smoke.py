@@ -82,7 +82,7 @@ def wait_for(process, pattern, offset=0, timeout=45):
 
 
 def layout(process, name, count, offset=0):
-    pattern = r'\[M1-' + name + r'-LAYOUT\]' + r' (\d+)' * count
+    pattern = r'\[M1-' + name + r'-LAYOUT\]' + r' (-?\d+)' * count
     return tuple(int(value) for value in wait_for(process, pattern, offset).groups())
 
 
@@ -147,6 +147,7 @@ def check_screens(process, game, width, height, suffix, resize=False):
     menu = layout(process, 'MENU', 12, offset)
     gw, gh, ax, ay, aw, ah, left, right, top, bw, bh, pitch = menu
     assert abs(aw - ah * 1672 / 941) <= 2, menu
+    assert ax <= 0 and ay <= 0 and ax + aw >= gw - 1 and ay + ah >= gh - 1, menu
     assert (gw, gh) in {(math.ceil(width / scale), math.ceil(height / scale))
                         for scale in range(1, 5)}, menu
     # The title/byline ends above 0.66h, with the foreground characters outside this center area.
@@ -155,7 +156,7 @@ def check_screens(process, game, width, height, suffix, resize=False):
     assert ay + ah * 0.66 < top - 1 < top + bh < top + pitch, menu
     assert top + 2 * pitch + bh + 1 <= ay + ah * 0.97, menu
     if not resize:
-        wait_for(process, r'\[M1-ANIMATION\] 1672x941 200 frames every 80ms')
+        wait_for(process, r'\[M1-ANIMATION\] 1672x941 250 frames every 80ms')
         wait_for(process, r'\[M1-MENU\] menu music is playing')
         wait_for(process, r'\[M1-ANIMATION\] loop')
     time.sleep(0.5)

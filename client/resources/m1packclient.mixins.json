@@ -3,6 +3,8 @@
   "minVersion": "0.8",
   "package": "dev.m1ssing0.packclient.mixin",
   "compatibilityLevel": "JAVA_21",
-  "client": ["LoginErrorMixin", "OptionsFooterMixin", "MenuBackgroundMixin", "MenuBlurMixin", "QuestViewportMixin"],
+  "client": ["LoginErrorMixin", "OptionsFooterMixin", "MenuBackgroundMixin", "MenuBlurMixin",
+    "QuestViewportMixin", "WidgetSkinMixin", "FtbButtonSkinMixin", "SodiumButtonSkinMixin",
+    "SodiumCategorySkinMixin", "JeiButtonSkinMixin"],
   "injectors": {"defaultRequire": 1}
 }
