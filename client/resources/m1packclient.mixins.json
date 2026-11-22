@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "client": ["LoginErrorMixin", "OptionsFooterMixin", "MenuBackgroundMixin", "MenuBlurMixin",
     "QuestViewportMixin", "WidgetSkinMixin", "FtbButtonSkinMixin", "SodiumButtonSkinMixin",
-    "SodiumCategorySkinMixin", "JeiButtonSkinMixin", "CloudHeightMixin", "WorldTransitionBackgroundMixin"],
+    "SodiumCategorySkinMixin", "JeiButtonSkinMixin", "CloudHeightMixin", "WorldTransitionBackgroundMixin",
+    "ClientLanguageMixin"],
   "injectors": {"defaultRequire": 1}
 }

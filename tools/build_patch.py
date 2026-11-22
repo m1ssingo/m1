@@ -7,15 +7,15 @@ from pathlib import Path
 import tempfile
 from zipfile import ZipFile
 
-from build_release import ROOT, json_bytes, sha, zip_entries
+from build_release import ROOT, bundle_basename, json_bytes, sha, zip_entries
 
 
-def read_overrides(archive, side, version):
+def read_overrides(archive, side, lock):
     if side == 'server':
         prefix = 'server/overrides/'
         return {name.removeprefix(prefix): archive.read(name)
                 for name in archive.namelist() if name.startswith(prefix)}
-    profile = f'client/M1-SciFi-Prototype-{version}-CurseForge.zip'
+    profile = f'client/{bundle_basename(lock)}-CurseForge.zip'
     with ZipFile(BytesIO(archive.read(profile))) as client:
         prefix = 'overrides/'
         return {name.removeprefix(prefix): client.read(name)
@@ -43,13 +43,14 @@ def build_patch(previous, current, output):
         }
         deltas = {}
         for side in ('client', 'server'):
-            old, new = [read_overrides(archive, side, release)
-                        for archive, release in ((before, old_version), (after, version))]
+            old, new = [read_overrides(archive, side, lock)
+                        for archive, lock in ((before, old_lock), (after, new_lock))]
             old_side, new_side = side_mods(old_lock, side), side_mods(new_lock, side)
             prefix = 'm1packclient-' if side == 'client' else 'm1packcompat-'
-            retired = sorted(set(old_side) - set(new_side))
+            retired = sorted(old_side[name].get('path', 'mods/' + name)
+                             for name in set(old_side) - set(new_side))
             removed = set(old) - set(new)
-            if removed - {'mods/' + name for name in retired}:
+            if removed - set(retired):
                 raise ValueError(f'Update requires removing non-mod files: {removed}')
             deltas[side] = {path: data for path, data in new.items() if old.get(path) != data}
             plan[side] = {

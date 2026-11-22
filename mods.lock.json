@@ -695,6 +695,30 @@
       "sha512": "907bace942aa3e9ad898a7700668936ed36bcd874798179099e42eebd322c4c0541bb6e445b99308a59789240e882fd2ec6da1825ec7ba7ee2ff6ffae6327bbc"
     },
     {
+      "slug": "irisshaders",
+      "project_id": 455508,
+      "file_id": 8242804,
+      "file_name": "iris-neoforge-1.8.14-beta.1+mc1.21.1.jar",
+      "display_name": "Iris 1.8.14 Beta 1 for NeoForge 1.21.1",
+      "size": 2540723,
+      "published": "2026-06-13T15:57:14.116693Z",
+      "release_type": 1,
+      "side": "client",
+      "required_dependencies": [
+        {
+          "slug": "sodium",
+          "project_id": 394468
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/irisshaders/files/8242804",
+      "download_url": "https://edge.forgecdn.net/files/8242/804/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar",
+      "metadata_paths": [
+        "META-INF/neoforge.mods.toml"
+      ],
+      "sha256": "60d5f8bf52f25e9986440f4a4270a6bd986d9cff994510e1108ac1547063b314",
+      "sha512": "33fddb430e16222902eac75b8b3d57c381b0f3cc729f3b56c4628df12ca108f23a0b11e2feb167923d6d14d1fc7e8ee1a977ec421b19d1951bdca74c4092b9c5"
+    },
+    {
       "slug": "iron-chests",
       "project_id": 228756,
       "file_id": 5491156,
@@ -1080,6 +1104,31 @@
       "sha512": "9df9c5bebe0a97ac026676ac49c27e5f5412ffdf1ff9370fc9194e014e8fab8d029fb8cda214932a71a1154e6bf1f211e657ff4b353018b974a85f72fb4a005c"
     },
     {
+      "slug": "sildurs-vibrant-shaders",
+      "project_id": 544096,
+      "file_id": 8889128,
+      "file_name": "Sildur's Vibrant Shaders v2.02 Lite.zip",
+      "display_name": "Sildur's Vibrant Shaders 2.02 Lite",
+      "size": 251380,
+      "published": "2026-09-15T19:18:19.836961Z",
+      "release_type": 1,
+      "side": "client",
+      "required_dependencies": [
+        {
+          "slug": "irisshaders",
+          "project_id": 455508
+        }
+      ],
+      "source": "https://www.curseforge.com/minecraft/shaders/sildurs-vibrant-shaders/files/8889128",
+      "download_url": "https://edge.forgecdn.net/files/8889/128/Sildur%27s%20Vibrant%20Shaders%20v2.02%20Lite.zip",
+      "metadata_paths": [
+        "shaders/shaders.properties"
+      ],
+      "sha256": "16746ee127e4c0b07f7e62018589100845338e633eea6bed8cf8c09939aa9eea",
+      "sha512": "6b92c668fce8dcf933b129ad4967cfc32fb88c47961d64b8dfac49fb4e060d46db2322eabe1196bf88e9d3e45cbdd141d79c42f0d0837d48736c0638e5155331",
+      "path": "shaderpacks/Sildur's Vibrant Shaders v2.02 Lite.zip"
+    },
+    {
       "slug": "sodium",
       "project_id": 394468,
       "file_id": 8756580,
@@ -1329,9 +1378,9 @@
   ],
   "errors": [],
   "pack": {
-    "name": "M1 SciFi Prototype",
-    "version": "0.11.0",
-    "status": "world-comfort"
+    "name": "M1 SciFi",
+    "version": "1.0.0",
+    "status": "release"
   },
   "neoforge": "21.1.267",
   "neoforge_installer": {
@@ -1348,15 +1397,15 @@
       "source": "compat/src"
     },
     {
-      "path": "mods/m1packclient-0.5.0.jar",
-      "file_name": "m1packclient-0.5.0.jar",
-      "sha256": "fcd5df4297c3c50b0fabbad5b4da5619005ccf8e3d2eafba754093e298d9d9a9",
+      "path": "mods/m1packclient-0.5.2.jar",
+      "file_name": "m1packclient-0.5.2.jar",
+      "sha256": "994a8eb25aea579ee973cc3c6248fb5cb5835bc641101e7e146af89c7716741b",
       "side": "client",
       "source": "client/src",
       "license": "MIT (code); supplied image and audio assets"
     }
   ],
-  "locked_at_utc": "2026-11-17T22:45:30.322333+00:00",
+  "locked_at_utc": "2026-11-22T15:32:30+00:00",
   "changes": [
     {
       "version": "0.1.1",
@@ -1405,6 +1454,14 @@
     {
       "version": "0.11.0",
       "description": "Balanced quest rewards and storage alternative, longer daylight, season announcements, torch light, world generation and tree settings, decoration, and menu visuals."
+    },
+    {
+      "version": "0.11.1",
+      "description": "Pinned Iris and a clear Sildur’s Lite preset with Stellar View, steel in-game interface, metallic season names, a localized rocket retouch and thinner chimney smoke."
+    },
+    {
+      "version": "1.0.0",
+      "description": "First stable release with dimensional season titles and a black and orange interface."
     }
   ]
 }

@@ -1,6 +1,7 @@
 package dev.m1ssing0.packclient;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import com.mojang.logging.LogUtils;
 import dev.m1ssing0.packclient.SteelButtonStyle.State;
@@ -25,6 +26,7 @@ public final class PackTitleScreen extends Screen {
     private static final ResourceLocation BACKGROUND = ResourceLocation.fromNamespaceAndPath(
         "m1packclient", "textures/menu/background.png");
     private static final Music MUSIC = new Music(SoundEvents.MUSIC_MENU, 0, 0, true);
+    private static final String PACK_LABEL = readPackLabel();
     private MenuAnimation animation;
     private Artwork artwork;
     private boolean musicObserved;
@@ -32,6 +34,15 @@ public final class PackTitleScreen extends Screen {
 
     public PackTitleScreen() {
         super(Component.literal("Лютая технологическая сборка"));
+    }
+
+    private static String readPackLabel() {
+        try (var stream = PackTitleScreen.class.getResourceAsStream("/META-INF/m1pack-label.txt")) {
+            if (stream != null) return new String(stream.readAllBytes(), StandardCharsets.UTF_8).strip();
+        } catch (IOException e) {
+            LogUtils.getLogger().warn("Could not read the pack label", e);
+        }
+        return "M1 SciFi";
     }
 
     public static void drawSubmenuBackdrop(GuiGraphics graphics, int screenWidth, int screenHeight) {
@@ -112,7 +123,7 @@ public final class PackTitleScreen extends Screen {
             LogUtils.getLogger().info("[M1-MENU] menu music is playing");
             musicObserved = true;
         }
-        if (height >= 300) graphics.drawString(font, "M1 SciFi 0.11.0", 8, height - 12, 0xffc6b69d);
+        if (height >= 300) graphics.drawString(font, PACK_LABEL, 8, height - 12, 0xffc6b69d);
     }
 
     @Override

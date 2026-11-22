@@ -31,6 +31,59 @@ if ($targets.Count -eq 2 -and $targets[0].root -eq $targets[1].root) {
     throw 'ClientPath and ServerPath must point to different game directories.'
 }
 
+function Get-DownloadPath($File) {
+    if ($File.PSObject.Properties['path'] -and $File.path) { return $File.path }
+    return 'mods/' + $File.file_name
+}
+
+function Get-UpdateDownload($File, $Path) {
+    if (Test-PinnedFile $Path $File.sha256) { return }
+    $curl = Get-Command curl.exe -ErrorAction SilentlyContinue
+    if ($curl) {
+        $partial = $Path + '.' + [guid]::NewGuid().ToString('N') + '.part'
+        try {
+            & $curl.Source --fail --silent --show-error --location --retry 1 --max-time 35 `
+                --output $partial $File.download_url
+            if ($LASTEXITCODE -eq 0 -and (Test-PinnedFile $partial $File.sha256)) {
+                Move-Item -LiteralPath $partial -Destination $Path -Force
+                return
+            }
+        } finally {
+            if (Test-Path -LiteralPath $partial) { Remove-Item -LiteralPath $partial -Force }
+        }
+    }
+    Get-PinnedFile $File.download_url $Path $File.sha256
+}
+
+function Merge-ClientPreset($RelativePath, $Source, $Destination) {
+    if ($RelativePath -notin @('config/stellarview-client.toml', 'config/iris.properties')) { return $false }
+    if (-not (Test-Path -LiteralPath $Destination -PathType Leaf)) { return $false }
+    $text = [IO.File]::ReadAllText($Destination)
+    if ($RelativePath -eq 'config/stellarview-client.toml') {
+        $setting = '(?m)^([ \t]*static_sky[ \t]*=[ \t]*)(?:true|false)'
+        $section = '(?m)^[ \t]*\["Stellar View Client Config"\."General Config"\.client\][^\r\n]*'
+        if ($text -match $setting) {
+            $text = [regex]::Replace($text, $setting, '${1}true')
+        } elseif ($text -match $section) {
+            $text = [regex]::Replace($text, $section, '$0' + "`nstatic_sky = true")
+        } else {
+            $text = $text.TrimEnd() + "`n`n" + [IO.File]::ReadAllText($Source)
+        }
+    } else {
+        foreach ($line in [IO.File]::ReadAllLines($Source)) {
+            if ($line -notmatch '^([a-zA-Z]+)=') { continue }
+            $setting = '(?m)^[ \t]*' + [regex]::Escape($Matches[1]) + '[ \t]*[=:][^\r\n]*'
+            if ($text -match $setting) {
+                $text = [regex]::Replace($text, $setting, $line)
+            } else {
+                $text = $text.TrimEnd() + "`n" + $line + "`n"
+            }
+        }
+    }
+    [IO.File]::WriteAllText($Destination, $text, [Text.UTF8Encoding]::new($false))
+    return $true
+}
+
 $cache = Join-Path $PSScriptRoot 'downloads'
 [void](New-Item -ItemType Directory -Path $cache -Force)
 foreach ($mod in $plan.downloads) {
@@ -38,13 +91,13 @@ foreach ($mod in $plan.downloads) {
     if ($relevant.Count -eq 0) { continue }
     $file = Join-Path $cache $mod.file_name
     foreach ($target in $relevant) {
-        $present = Join-Path $target.mods $mod.file_name
+        $present = Join-Path $target.root (Get-DownloadPath $mod)
         if (Test-PinnedFile $present $mod.sha256) {
             Copy-Item -LiteralPath $present -Destination $file -Force
             break
         }
     }
-    Get-PinnedFile $mod.download_url $file $mod.sha256
+    Get-UpdateDownload $mod $file
 }
 
 foreach ($target in $targets) {
@@ -65,6 +118,7 @@ foreach ($target in $targets) {
             Copy-Item -LiteralPath $to -Destination $backupFile
         }
         [void](New-Item -ItemType Directory -Path (Split-Path -Parent $to) -Force)
+        if ($target.side -eq 'client' -and (Merge-ClientPreset $file.target $from $to)) { continue }
         if ($file.target -eq 'config/fallingtree.json' -and (Test-Path -LiteralPath $to -PathType Leaf)) {
             $config = Get-Content -LiteralPath $to -Raw -Encoding UTF8 | ConvertFrom-Json
             $default = Get-Content -LiteralPath $from -Raw -Encoding UTF8 | ConvertFrom-Json
@@ -81,21 +135,24 @@ foreach ($target in $targets) {
     }
     foreach ($mod in $plan.downloads) {
         if ($mod.side -ne 'both' -and $mod.side -ne $target.side) { continue }
-        $to = Join-Path $target.mods $mod.file_name
+        $relativePath = Get-DownloadPath $mod
+        $to = Join-Path $target.root $relativePath
         if (Test-PinnedFile $to $mod.sha256) { continue }
         if (Test-Path -LiteralPath $to -PathType Leaf) {
-            $backupMods = Join-Path $backup 'mods'
-            [void](New-Item -ItemType Directory -Path $backupMods -Force)
-            Copy-Item -LiteralPath $to -Destination $backupMods
+            $backupFile = Join-Path $backup $relativePath
+            [void](New-Item -ItemType Directory -Path (Split-Path -Parent $backupFile) -Force)
+            Copy-Item -LiteralPath $to -Destination $backupFile
         }
+        [void](New-Item -ItemType Directory -Path (Split-Path -Parent $to) -Force)
         Copy-Item -LiteralPath (Join-Path $cache $mod.file_name) -Destination $to -Force
     }
     foreach ($old in $target.spec.retire) {
-        $oldFile = Join-Path $target.mods $old
+        $relativePath = if ($old.Contains('/')) { $old } else { 'mods/' + $old }
+        $oldFile = Join-Path $target.root $relativePath
         if (Test-Path -LiteralPath $oldFile -PathType Leaf) {
-            $backupMods = Join-Path $backup 'mods'
-            [void](New-Item -ItemType Directory -Path $backupMods -Force)
-            Move-Item -LiteralPath $oldFile -Destination (Join-Path $backupMods $old)
+            $backupFile = Join-Path $backup $relativePath
+            [void](New-Item -ItemType Directory -Path (Split-Path -Parent $backupFile) -Force)
+            Move-Item -LiteralPath $oldFile -Destination $backupFile
         }
     }
     Write-Host ("Updated " + $target.root + " to " + $plan.version)

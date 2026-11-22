@@ -1,6 +1,7 @@
 """Build the client menu addon against the installed NeoForge client."""
 import argparse
 import gzip
+import json
 import os
 from pathlib import Path
 import shutil
@@ -40,6 +41,7 @@ def main():
     sources = sorted((ROOT / 'client/src').rglob('*.java'))
     metadata = tomllib.loads((RESOURCES / 'META-INF/neoforge.mods.toml').read_text(encoding='utf-8'))
     version = metadata['mods'][0]['version']
+    pack_info = json.loads((ROOT / 'mods.lock.json').read_text(encoding='utf-8'))['pack']
     out = ROOT / f'client-overrides/mods/m1packclient-{version}.jar'
     out.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(dir=out.parent) as temp:
@@ -70,6 +72,8 @@ def main():
         jar = staging / out.name
         with zipfile.ZipFile(jar, 'w') as archive:
             add_file(archive, ROOT / 'compat/LICENSE', 'META-INF/LICENSE')
+            archive.writestr(zipfile.ZipInfo('META-INF/m1pack-label.txt'),
+                             f"{pack_info['name']} {pack_info['version']}\n".encode('utf-8'))
             for base in (classes, RESOURCES):
                 for file in sorted(base.rglob('*')):
                     name = file.relative_to(base).as_posix()

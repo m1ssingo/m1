@@ -1,7 +1,7 @@
-# Зафиксированный состав 0.11.0
+# Зафиксированный состав 1.0.0
 
-Файлов CurseForge на клиент: 61. На сервер: 55.
-Собственные моды входят в комплекты согласно указанной стороне.
+Файлов CurseForge на клиенте: 63. На сервере: 55.
+Собственные моды входят в комплект согласно указанной стороне.
 
 | Проект | Зафиксированный файл | Сторона |
 |---|---|---|
@@ -36,6 +36,7 @@
 | [immersive-engineering](https://www.curseforge.com/minecraft/mc-mods/immersive-engineering/files/6733669) | `ImmersiveEngineering-1.21.1-12.4.2-194.jar` | both |
 | [immersive-petroleum](https://www.curseforge.com/minecraft/mc-mods/immersive-petroleum/files/8420142) | `ImmersivePetroleum-1.21.1-4.5.0-39.jar` | both |
 | [inventory-tweaks-refoxed](https://www.curseforge.com/minecraft/mc-mods/inventory-tweaks-refoxed/files/9488021) | `invtweaks-1.21.1-1.4.0.jar` | client |
+| [irisshaders](https://www.curseforge.com/minecraft/mc-mods/irisshaders/files/8242804) | `iris-neoforge-1.8.14-beta.1+mc1.21.1.jar` | client |
 | [iron-chests](https://www.curseforge.com/minecraft/mc-mods/iron-chests/files/5491156) | `ironchest-1.21-neoforge-16.0.7.jar` | both |
 | [iron-jetpacks](https://www.curseforge.com/minecraft/mc-mods/iron-jetpacks/files/7105279) | `IronJetpacks-1.21.1-8.0.11.jar` | both |
 | [jade](https://www.curseforge.com/minecraft/mc-mods/jade/files/8591319) | `Jade-1.21.1-NeoForge-15.10.6.jar` | both |
@@ -54,6 +55,7 @@
 | [resourceful-lib](https://www.curseforge.com/minecraft/mc-mods/resourceful-lib/files/5973188) | `resourcefullib-neoforge-1.21-3.0.12.jar` | both |
 | [rhino](https://www.curseforge.com/minecraft/mc-mods/rhino/files/8218748) | `rhino-2101.2.7-build.85.jar` | both |
 | [serene-seasons](https://www.curseforge.com/minecraft/mc-mods/serene-seasons/files/6182596) | `SereneSeasons-neoforge-1.21.1-10.1.0.3.jar` | both |
+| [sildurs-vibrant-shaders](https://www.curseforge.com/minecraft/shaders/sildurs-vibrant-shaders/files/8889128) | `Sildur's Vibrant Shaders v2.02 Lite.zip` | client |
 | [sodium](https://www.curseforge.com/minecraft/mc-mods/sodium/files/8756580) | `sodium-neoforge-0.8.13+mc1.21.1.jar` | client |
 | [sophisticated-backpacks](https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks/files/9524812) | `sophisticatedbackpacks-1.21.1-3.26.21.2249.jar` | both |
 | [sophisticated-core](https://www.curseforge.com/minecraft/mc-mods/sophisticated-core/files/9651537) | `sophisticatedcore-1.21.1-1.5.38.2484.jar` | both |
@@ -67,4 +69,4 @@
 | [xaeros-minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap/files/9067173) | `xaerominimap-neoforge-1.21.1-26.6.0.jar` | client |
 | [xaeros-world-map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map/files/9067277) | `xaeroworldmap-neoforge-1.21.1-1.47.0.jar` | client |
 | M1 | `m1packcompat-0.2.5.jar` | both |
-| M1 | `m1packclient-0.5.0.jar` | client |
+| M1 | `m1packclient-0.5.2.jar` | client |

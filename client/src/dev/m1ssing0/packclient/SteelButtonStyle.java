@@ -3,12 +3,16 @@ package dev.m1ssing0.packclient;
 import net.minecraft.client.gui.GuiGraphics;
 
 public final class SteelButtonStyle {
+    public static final int ORANGE = 0xffe58229;
+    public static final int ORANGE_HIGHLIGHT = 0xffffa024;
+    public static final int LABEL = 0xfff6d6b2;
+
     private SteelButtonStyle() {}
 
     public enum State {
-        NORMAL(0xf0394045, 0xf0181d22, 0xff9b7244, 0xffbe7d23, 0xffeee4d4),
-        HIGHLIGHTED(0xff665044, 0xff292a2c, 0xffffad42, 0xffffa024, 0xffffe1aa),
-        DISABLED(0xf02d3135, 0xf01c2024, 0xff555456, 0xff57504a, 0xffa0a0a0);
+        NORMAL(0xf0372922, 0xf0171412, 0xff934a1e, ORANGE, 0xffffe5cc),
+        HIGHLIGHTED(0xff543421, 0xff241812, 0xffffb15e, ORANGE_HIGHLIGHT, 0xffffe9cd),
+        DISABLED(0xf02c2825, 0xf01d1a18, 0xff56504b, 0xff504640, 0xffa9a19b);
 
         private final int top;
         private final int bottom;
@@ -39,12 +43,12 @@ public final class SteelButtonStyle {
 
         int right = x + width - 1;
         int bottom = y + height - 1;
-        graphics.fill(x, y, right + 1, bottom + 1, 0xe6090b0e);
+        graphics.fill(x, y, right + 1, bottom + 1, 0xef0d0b0a);
         ++x;
         ++y;
         graphics.fillGradient(x, y, right, bottom, state.top, state.bottom);
         graphics.fill(x, y, right, y + 1, state.rim);
-        graphics.fill(x, bottom - 1, right, bottom, state == State.DISABLED ? 0xff49413b : 0xff69451d);
+        graphics.fill(x, bottom - 1, right, bottom, state == State.DISABLED ? 0xff49413b : 0xff71391b);
         int stripeWidth = Math.min(3, Math.max(1, width / 8));
         graphics.fill(x, y, x + stripeWidth, bottom, state.stripe);
         if (width >= 32 && height >= 15 && state != State.DISABLED) {
@@ -59,10 +63,10 @@ public final class SteelButtonStyle {
     }
 
     public static void drawSliderHandle(GuiGraphics graphics, int x, int y, int width, int height, boolean focused) {
-        int rim = focused ? 0xffffd181 : 0xffba945f;
+        int rim = focused ? ORANGE_HIGHLIGHT : ORANGE;
         int bottom = y + height - 1;
-        graphics.fill(x, bottom - 5, x + width, bottom, 0xff171a1d);
-        graphics.fillGradient(x + 1, bottom - 4, x + width - 1, bottom, rim, 0xff715033);
+        graphics.fill(x, bottom - 5, x + width, bottom, 0xff181310);
+        graphics.fillGradient(x + 1, bottom - 4, x + width - 1, bottom, rim, 0xff854118);
     }
 
     public enum Icon {
@@ -81,7 +85,7 @@ public final class SteelButtonStyle {
                 graphics.fill(lock + 2, centerY - 4, lock + 3, centerY, color);
                 if (icon == Icon.LOCKED) graphics.fill(lock - 2, centerY - 4, lock - 1, centerY, color);
                 graphics.fill(centerX - 3, centerY, centerX + 4, centerY + 5, color);
-                graphics.fill(centerX, centerY + 1, centerX + 1, centerY + 4, 0xff282b2e);
+                graphics.fill(centerX, centerY + 1, centerX + 1, centerY + 4, 0xff28201b);
             }
             case CLOSE -> {
                 for (int offset = -3; offset <= 3; ++offset) {

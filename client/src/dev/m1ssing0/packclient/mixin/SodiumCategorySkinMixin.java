@@ -37,7 +37,7 @@ abstract class SodiumCategorySkinMixin {
     @ModifyArg(method = "render", index = 5, at = @At(value = "INVOKE", ordinal = 1,
         target = "Lnet/caffeinemc/mods/sodium/client/gui/widgets/CenteredFlatWidget;drawRect"
             + "(Lnet/minecraft/client/gui/GuiGraphics;IIIII)V"))
-    private int m1$useAmberIndicator(int originalColor) {
-        return isSelectable ? 0xffbe7d23 : originalColor;
+    private int m1$useOrangeIndicator(int originalColor) {
+        return isSelectable ? SteelButtonStyle.ORANGE : originalColor;
     }
 }

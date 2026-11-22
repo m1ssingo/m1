@@ -21,10 +21,10 @@ public final class AnimateMenuSmoke {
     private static final int MAGIC = 0x4d314131;
     private static final int PUFFS = 12;
     private static final List<Chimney> CHIMNEYS = List.of(
-        new Chimney(324, 462, 8, 92, 36, 0.18, 0.39f),
-        new Chimney(462, 465, 11, 111, 52, 0.69, 0.52f),
-        new Chimney(528, 546, 10, 84, 42, 0.31, 0.37f),
-        new Chimney(594, 619, 8, 76, 40, 0.52, 0.32f));
+        new Chimney(324, 462, 8, 92, 36, 0.18, 0.16f),
+        new Chimney(462, 465, 11, 111, 52, 0.69, 0.21f),
+        new Chimney(528, 546, 10, 84, 42, 0.31, 0.15f),
+        new Chimney(594, 619, 8, 76, 40, 0.52, 0.13f));
 
     public static void main(String[] args) throws IOException {
         if (args.length != 3) {
